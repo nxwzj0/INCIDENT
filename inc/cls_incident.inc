@@ -9,8 +9,7 @@ $SYSTEM_COMPANY_NAME = "メタウォーター";
 
 //サーバ環境別の定数定義インクルード
 //$CONFIG_FILE = str_replace(":","_",$HTTP_HOST) . ".conf";
-//$CONFIG_FILE = $SERVER_ADDR."_".$SERVER_PORT.".conf";
-$CONFIG_FILE = "192.168.0.204_80.conf";
+$CONFIG_FILE = $SERVER_ADDR."_".$SERVER_PORT.".conf";
 // $INC_REL_PATHはenv.incで定義済み
 require("$INC_REL_PATH/$CONFIG_FILE");
 //ディレクトリ別の定数定義インクルード
@@ -91,7 +90,7 @@ function CustomErrorHandler($errno, $errmsg, $filename, $linenum, $vars){
 set_error_handler("CustomErrorHandler");
 
 //GETリクエストの防御(クッキーにユーザIDがない場合GETリクエストは制限される)
-//require_once("$COMMON_BASE_PATH/../AUTH/check_get_method.php");
+require_once("$COMMON_BASE_PATH/../AUTH/check_get_method.php");
 if( $_COOKIE["COOKIE_LOGIN_ID"] != "" ){
 	//if( $_SERVER["REQUEST_METHOD"] == "GET" ){
 		//クッキーにユーザIDがある場合、GET/POSTされたユーザIDを上書きする

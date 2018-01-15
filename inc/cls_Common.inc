@@ -1,8 +1,8 @@
 <?php // autotool_migration Ver2 20121214075930 このファイルは自動化ツールにより編集されました ?>
-<?php //require_once('ADFlib/func_Common.inc.php'); ?>
-<?php //require_once('ADFlib/global_reg_emu.inc.php'); ?>
+<?php require_once('ADFlib/func_Common.inc.php'); ?>
+<?php require_once('ADFlib/global_reg_emu.inc.php'); ?>
 <?php
-define("DEBUG_LOGGING_LEVEL",0);
+define("DEBUG_LOGGING_LEVEL",1);
 define("LOGGING_DELETE_INTERVAL_DAY",3);
 
 //$COMMON_CONVERT_SQL_SJIS=1; //NLS_LANGはSJISが前提
@@ -94,7 +94,7 @@ Class Logging
 	var $logfilepath;
 	var $logfilename;
 
-	function __construct($logfilepath, $mode = 1){ //$mode = LOGGING_MODE_?
+	function Logging($logfilepath, $mode = 1){ //$mode = LOGGING_MODE_?
 		global $REMOTE_ADDR;
 
 		$this->mode = $mode;
@@ -187,7 +187,7 @@ Class OraConnection extends BaseObject{
 	var $con;
 	var $mode;
 
-	function __construct(
+	function OraConnection(
 		$user = "_default_",
 		$passwd = "_default_",
 		$oracle = "_default_",
@@ -197,7 +197,7 @@ Class OraConnection extends BaseObject{
 		if( $passwd == "_default_" ) $passwd = $GLOBALS["COMMON_ORA_PASSWD"];
 		if( $oracle == "_default_" ) $oracle = $GLOBALS["COMMON_ORA_SERVER"];
 
-		parent::__construct("OraConnection");
+		$this->BaseObject("OraConnection");
 		$this->writeLog("OraConnection($user,$passwd,$oracle,$mode)");
 
 		$this->mode = $mode;
@@ -243,7 +243,7 @@ Class OraCursor extends BaseObject{
 	var $con;
 	var $cur;
 
-	function __construct($con){
+	function OraCursor($con){
 		$this->BaseObject("OraCursor");
 		$this->writeLog("OraCursor()");
 
@@ -398,7 +398,7 @@ Class ExecTemplate Extends BaseObject{
 	var $callback_func_output;
 	var $result_ary;
 
-	function __construct(&$htmltpl, &$sql, $con = 0){
+	function ExecTemplate(&$htmltpl, &$sql, $con = 0){
 		$this->BaseObject("ExecTemplate");
 		$this->writeLog("ExecTemplate()");
 
@@ -530,7 +530,7 @@ Class TextFile Extends BaseObject{
 
 	var $BUFSIZE = 4096;
 
-	function __construct($filename, $mode = 1){
+	function TextFile($filename, $mode = 1){
 		$this->BaseObject("TextFile");
 		$this->writeLog("TextFile($filename, $mode)");
 
@@ -599,8 +599,8 @@ Class TextFile Extends BaseObject{
 //複数のSQLを実行する（COMMIT、ROLLBACKあり）
 class MultiExecSql extends BaseObject{
 	var $oc;
-	function __construct($username="",$passwd="",$server=""){
-		parent::__construct("OraConnection");
+	function MultiExecSql($username="",$passwd="",$server=""){
+		$this->BaseObject("OraConnection");
 		if( strlen($username) ){
 			$this->oc = new OraConnection($username,$passwd,$server,3);
 		}
@@ -623,7 +623,6 @@ class MultiExecSql extends BaseObject{
 		$exec_sql = convert_sql_charcode($sql);
 		$GLOBALS["RECENT_SQL"] = $exec_sql;
 		$cur = oci_parse($this->oc->getConnection(),$exec_sql);
-
 		if( oci_execute($cur,OCI_DEFAULT) ){
 			while(1){
 				$tmp = set_error_handler("ExecTemplate_fetch_error_handler");
@@ -643,8 +642,6 @@ class MultiExecSql extends BaseObject{
 	}
 
 	function get(&$cur,&$rslt){
-                //print_r($cur);
-                //exit();
 		$results = oci_fetch_array($cur,OCI_ASSOC|OCI_RETURN_NULLS);
 		if( $results ){
 			if( $GLOBALS["COMMON_CONVERT_SQL_SJIS"] && count($results) ){
