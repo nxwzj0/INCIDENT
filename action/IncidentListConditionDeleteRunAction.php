@@ -12,19 +12,24 @@ require_once('./action/CommonAction.php');
 // logic処理読み込み
 require_once('./logic/IncidentListConditionDeleteRunLogic.php');
 
+// dto処理読み込み
+require_once('./dto/IncidentListConditionDeleteRunDto.php');
 
 class IncidentListConditionDeleteRunAction extends CommonAction {
 
     public function index() {
 
-        $P = $GLOBALS[P]; // 共通パラメータ配列取得
+        // 実例化Dto
+        $IncidentListConditionDeleteRunDto = new IncidentListConditionDeleteRunDto();
+        // 共通パラメータ配列取得
+        $P = $GLOBALS[P];
         // 画面からパラメータ取得
-        $condNm = $P['condNm'];
+        $IncidentListConditionDeleteRunDto->setCondNm($P['condNm']);
 
         // 実例化Logic
         $IncidentListConditionDeleteRunLogic = new IncidentListConditionDeleteRunLogic();
         // 実行Logic
-        $eventResult = $IncidentListConditionDeleteRunLogic->execute($condNm);
+        $eventResult = $IncidentListConditionDeleteRunLogic->execute($IncidentListConditionDeleteRunDto);
 
         // 値を返す(Angular)
         echo $this->returnAngularJSONP($eventResult);

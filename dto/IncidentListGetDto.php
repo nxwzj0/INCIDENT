@@ -76,6 +76,29 @@ require_once('./dto/CommonDto.php');
  * @property String $productHindo
  * @property String $productGensyo
  * @property String $productStatus
+ * @property String $incidentTypeSyougai
+ * @property String $incidentTypeJiko
+ * @property String $incidentTypeClaim
+ * @property String $incidentTypeToiawase
+ * @property String $incidentTypeInfo
+ * @property String $incidentTypeOther
+ * @property String $incidentStatusCall
+ * @property String $incidentStatusTaio
+ * @property String $incidentStatusAct
+ * @property String $industryTypeMachinery
+ * @property String $industryTypeElectricalMachinery
+ * @property String $industryTypeInstrumentation
+ * @property String $industryTypeInfo
+ * @property String $industryTypeEnvironment
+ * @property String $industryTypeWBC
+ * @property String $industryTypeOther
+ * @property String $prefCd
+ * @property String $custTypeNenkan
+ * @property String $custTypeTenken
+ * @property String $custTypeNasi
+ * @property String $custTypeKasi
+ * @property String $custTypeOther
+ * @property String $condId
  */
 class IncidentListGetDto extends CommonDto{
     private $RelateFlg;
@@ -142,7 +165,31 @@ class IncidentListGetDto extends CommonDto{
     private $productHindo;
     private $productGensyo;
     private $productStatus;
-
+    //2018.01.09 Newtouch追加 start
+    private $incidentTypeSyougai;
+    private $incidentTypeJiko;
+    private $incidentTypeClaim;
+    private $incidentTypeToiawase;
+    private $incidentTypeInfo;
+    private $incidentTypeOther;
+    private $incidentStatusCall;
+    private $incidentStatusTaio;
+    private $incidentStatusAct;
+    private $industryTypeMachinery;
+    private $industryTypeElectricalMachinery;
+    private $industryTypeInstrumentation;
+    private $industryTypeInfo;
+    private $industryTypeEnvironment;
+    private $industryTypeWBC;
+    private $industryTypeOther;
+    private $prefCd;
+    private $custTypeNenkan;
+    private $custTypeTenken;
+    private $custTypeNasi;
+    private $custTypeKasi;
+    private $custTypeOther;
+    private $condId;
+    //2018.01.09 Newtouch追加 end
 
     /**
      * @return boolean
@@ -1040,5 +1087,328 @@ class IncidentListGetDto extends CommonDto{
     public function setProductStatus($productStatus) {
         $this->productStatus = $productStatus;
     }
+
+    /**
+     * @return String
+     */
+    public function getIncidentTypeSyougai() {
+        return $this->incidentTypeSyougai;
+    }
+
+    /**
+     * @param $incidentTypeSyougai 
+     */
+    public function setIncidentTypeSyougai($incidentTypeSyougai) {
+        $this->incidentTypeSyougai = $incidentTypeSyougai;
+    }
+
+    /**
+     * @return String
+     */
+    public function getIncidentTypeJiko() {
+        return $this->incidentTypeJiko;
+    }
+
+    /**
+     * @param $incidentTypeJiko 
+     */
+    public function setIncidentTypeJiko($incidentTypeJiko) {
+        $this->incidentTypeJiko = $incidentTypeJiko;
+    }
+
+    /**
+     * @return String
+     */
+    public function getIncidentTypeClaim() {
+        return $this->incidentTypeClaim;
+    }
+
+    /**
+     * @param $incidentTypeClaim 
+     */
+    public function setIncidentTypeClaim($incidentTypeClaim) {
+        $this->incidentTypeClaim = $incidentTypeClaim;
+    }
+
+    /**
+     * @return String
+     */
+    public function getIncidentTypeToiawase() {
+        return $this->incidentTypeToiawase;
+    }
+
+    /**
+     * @param $incidentTypeToiawase 
+     */
+    public function setIncidentTypeToiawase($incidentTypeToiawase) {
+        $this->incidentTypeToiawase = $incidentTypeToiawase;
+    }
+
+    /**
+     * @return String
+     */
+    public function getIncidentTypeInfo() {
+        return $this->incidentTypeInfo;
+    }
+
+    /**
+     * @param $incidentTypeInfo 
+     */
+    public function setIncidentTypeInfo($incidentTypeInfo) {
+        $this->incidentTypeInfo = $incidentTypeInfo;
+    }
+
+    /**
+     * @return String
+     */
+    public function getIncidentTypeOther() {
+        return $this->incidentTypeOther;
+    }
+
+    /**
+     * @param $incidentTypeOther 
+     */
+    public function setIncidentTypeOther($incidentTypeOther) {
+        $this->incidentTypeOther = $incidentTypeOther;
+    }
+
+    /**
+     * @return String
+     */
+    public function getIncidentStatusCall() {
+        return $this->incidentStatusCall;
+    }
+
+    /**
+     * @param $incidentStatusCall 
+     */
+    public function setIncidentStatusCall($incidentStatusCall) {
+        $this->incidentStatusCall = $incidentStatusCall;
+    }
+
+    /**
+     * @return String
+     */
+    public function getIncidentStatusTaio() {
+        return $this->incidentStatusTaio;
+    }
+
+    /**
+     * @param $incidentStatusTaio 
+     */
+    public function setIncidentStatusTaio($incidentStatusTaio) {
+        $this->incidentStatusTaio = $incidentStatusTaio;
+    }
+
+    /**
+     * @return String
+     */
+    public function getIncidentStatusAct() {
+        return $this->incidentStatusAct;
+    }
+
+    /**
+     * @param $incidentStatusAct 
+     */
+    public function setIncidentStatusAct($incidentStatusAct) {
+        $this->incidentStatusAct = $incidentStatusAct;
+    }
+
+    /**
+     * @return String
+     */
+    public function getIndustryTypeMachinery() {
+        return $this->industryTypeMachinery;
+    }
+
+    /**
+     * @param $industryTypeMachinery 
+     */
+    public function setIndustryTypeMachinery($industryTypeMachinery) {
+        $this->industryTypeMachinery = $industryTypeMachinery;
+    }
+
+    /**
+     * @return String
+     */
+    public function getIndustryTypeElectricalMachinery() {
+        return $this->industryTypeElectricalMachinery;
+    }
+
+    /**
+     * @param $industryTypeElectricalMachinery 
+     */
+    public function setIndustryTypeElectricalMachinery($industryTypeElectricalMachinery) {
+        $this->industryTypeElectricalMachinery = $industryTypeElectricalMachinery;
+    }
+
+    /**
+     * @return String
+     */
+    public function getIndustryTypeInstrumentation() {
+        return $this->industryTypeInstrumentation;
+    }
+
+    /**
+     * @param $industryTypeInstrumentation 
+     */
+    public function setIndustryTypeInstrumentation($industryTypeInstrumentation) {
+        $this->industryTypeInstrumentation = $industryTypeInstrumentation;
+    }
+
+    /**
+     * @return String
+     */
+    public function getIndustryTypeInfo() {
+        return $this->industryTypeInfo;
+    }
+
+    /**
+     * @param $industryTypeInfo 
+     */
+    public function setIndustryTypeInfo($industryTypeInfo) {
+        $this->industryTypeInfo = $industryTypeInfo;
+    }
+
+    /**
+     * @return String
+     */
+    public function getIndustryTypeEnvironment() {
+        return $this->industryTypeEnvironment;
+    }
+
+    /**
+     * @param $industryTypeEnvironment 
+     */
+    public function setIndustryTypeEnvironment($industryTypeEnvironment) {
+        $this->industryTypeEnvironment = $industryTypeEnvironment;
+    }
+
+    /**
+     * @return String
+     */
+    public function getIndustryTypeWBC() {
+        return $this->industryTypeWBC;
+    }
+
+    /**
+     * @param $industryTypeWBC 
+     */
+    public function setIndustryTypeWBC($industryTypeWBC) {
+        $this->industryTypeWBC = $industryTypeWBC;
+    }
+
+    /**
+     * @return String
+     */
+    public function getIndustryTypeOther() {
+        return $this->industryTypeOther;
+    }
+
+    /**
+     * @param $industryTypeOther 
+     */
+    public function setIndustryTypeOther($industryTypeOther) {
+        $this->industryTypeOther = $industryTypeOther;
+    }
+
+    /**
+     * @return String
+     */
+    public function getPrefCd() {
+        return $this->prefCd;
+    }
+
+    /**
+     * @param $prefCd 
+     */
+    public function setPrefCd($prefCd) {
+        $this->prefCd = $prefCd;
+    }
+
+    /**
+     * @return String
+     */
+    public function getCustTypeNenkan() {
+        return $this->custTypeNenkan;
+    }
+
+    /**
+     * @param $custTypeNenkan 
+     */
+    public function setCustTypeNenkan($custTypeNenkan) {
+        $this->custTypeNenkan = $custTypeNenkan;
+    }
+
+    /**
+     * @return String
+     */
+    public function getCustTypeTenken() {
+        return $this->custTypeTenken;
+    }
+
+    /**
+     * @param $custTypeTenken 
+     */
+    public function setCustTypeTenken($custTypeTenken) {
+        $this->custTypeTenken = $custTypeTenken;
+    }
+
+    /**
+     * @return String
+     */
+    public function getCustTypeNasi() {
+        return $this->custTypeNasi;
+    }
+
+    /**
+     * @param $custTypeNasi 
+     */
+    public function setCustTypeNasi($custTypeNasi) {
+        $this->custTypeNasi = $custTypeNasi;
+    }
+
+    /**
+     * @return String
+     */
+    public function getCustTypeKasi() {
+        return $this->custTypeKasi;
+    }
+
+    /**
+     * @param $custTypeKasi 
+     */
+    public function setCustTypeKasi($custTypeKasi) {
+        $this->custTypeKasi = $custTypeKasi;
+    }
+
+    /**
+     * @return String
+     */
+    public function getCustTypeOther() {
+        return $this->custTypeOther;
+    }
+
+    /**
+     * @param $custTypeOther 
+     */
+    public function setCustTypeOther($custTypeOther) {
+        $this->custTypeOther = $custTypeOther;
+    }
+
+    /**
+     * @return String
+     */
+    public function getCondId() {
+        return $this->condId;
+    }
+
+    /**
+     * @param $condId 
+     */
+    public function setCondId($condId) {
+        $this->condId = $condId;
+    }
+
 
 }
