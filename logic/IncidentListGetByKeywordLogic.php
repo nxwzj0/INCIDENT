@@ -2,8 +2,8 @@
 //*****************************************************************************
 //	システム名　　　：インシデント管理システム
 //	サブシステム名　：
-//	処理名　　　　　：IncidentListGetLogic
-//	作成日付・作成者：2017.11.06 NEWTOUCH)newtouch
+//	処理名　　　　　：IncidentListGetByKeywordLogic
+//	作成日付・作成者：2018.01.17 NEWTOUCH)newtouch
 //	修正履歴　　　　：
 //*****************************************************************************
 require_once("./env.inc");
@@ -34,7 +34,7 @@ require_once('./dto/CommonDto.php');
 require_once('./dto/IncidentListGetDto.php');
 require_once('./dto/IncidentListGetResultDto.php');
 
-class IncidentListGetLogic extends CommonLogic {
+class IncidentListGetByKeywordLogic extends CommonLogic {
 
     public function execute(IncidentListGetDto $IncidentListGetDto) {
         // 戻りオブジェクト(IncidentListGetResultDto)を作成
@@ -51,92 +51,7 @@ class IncidentListGetLogic extends CommonLogic {
         $logFlg = $IncidentListGetDto->getLogFlg();
         // IncidentListGetDtoから、パラメータを取得する、$conditionsを作成
         $conditions = array();
-        $conditions['keywordStr'] = $IncidentListGetDto->getKeywordStr();
-        $conditions['incidentId'] = $IncidentListGetDto->getIncidentId();
-        $conditions['incidentNo'] = $IncidentListGetDto->getIncidentNo();
-        $conditions['parentIncidentNo'] = $IncidentListGetDto->getParentIncidentNo();
-        $conditions['incidentStartDateTimeFrom'] = $IncidentListGetDto->getIncidentStartDateTimeFrom();
-        $conditions['incidentStartDateTimeTo'] = $IncidentListGetDto->getIncidentStartDateTimeTo();
-        $conditions['infoSource'] = $IncidentListGetDto->getInfoSource();
-        $conditions['infoProvider'] = $IncidentListGetDto->getInfoProvider();
-        $conditions['infoProviderTel'] = $IncidentListGetDto->getInfoProviderTel();
-        $conditions['relateNm'] = $IncidentListGetDto->getRelateNm();
-        $conditions['memo'] = $IncidentListGetDto->getMemo();
-        $conditions['kijoNm'] = $IncidentListGetDto->getKijoNm();
-        $conditions['jigyosyutaiNm'] = $IncidentListGetDto->getJigyosyutaiNm();
-        $conditions['setubiNm'] = $IncidentListGetDto->getSetubiNm();
-        $conditions['prefNm'] = $IncidentListGetDto->getPrefNm();
-        $conditions['deliveryPjNm'] = $IncidentListGetDto->getDeliveryPjNm();
-        $conditions['custNm'] = $IncidentListGetDto->getCustNm();
-        $conditions['custTypeNm'] = $IncidentListGetDto->getCustTypeNm();
-        $conditions['custDept'] = $IncidentListGetDto->getCustDept();
-        $conditions['requester'] = $IncidentListGetDto->getRequester();
-        $conditions['contactTel'] = $IncidentListGetDto->getContactTel();
-        $conditions['contactFax'] = $IncidentListGetDto->getContactFax();
-        $conditions['contactMail'] = $IncidentListGetDto->getContactMail();
-        $conditions['salesDeptNm'] = $IncidentListGetDto->getSalesDeptNm();
-        $conditions['salesUserNm'] = $IncidentListGetDto->getSalesUserNm();
-        $conditions['skanDeptNm'] = $IncidentListGetDto->getSkanDeptNm();
-        $conditions['skanUserNm'] = $IncidentListGetDto->getSkanUserNm();
-        $conditions['callStartDateFrom'] = $IncidentListGetDto->getCallStartDateFrom();
-        $conditions['callStartDateTo'] = $IncidentListGetDto->getCallStartDateTo();
-        $conditions['callEndDateFrom'] = $IncidentListGetDto->getCallEndDateFrom();
-        $conditions['callEndDateTo'] = $IncidentListGetDto->getCallEndDateTo();
-        $conditions['callDeptNm'] = $IncidentListGetDto->getCallDeptNm();
-        $conditions['callUserNm'] = $IncidentListGetDto->getCallUserNm();
-        $conditions['callTel'] = $IncidentListGetDto->getCallTel();
-        $conditions['callMail'] = $IncidentListGetDto->getCallMail();
-        $conditions['callContent'] = $IncidentListGetDto->getCallContent();
-        $conditions['taioStartDateFrom'] = $IncidentListGetDto->getTaioStartDateFrom();
-        $conditions['taioStartDateTo'] = $IncidentListGetDto->getTaioStartDateTo();
-        $conditions['taioEndDateFrom'] = $IncidentListGetDto->getTaioEndDateFrom();
-        $conditions['taioEndDateTo'] = $IncidentListGetDto->getTaioEndDateTo();
-        $conditions['taioDeptNm'] = $IncidentListGetDto->getTaioDeptNm();
-        $conditions['taioUserNm'] = $IncidentListGetDto->getTaioUserNm();
-        $conditions['taioTel'] = $IncidentListGetDto->getTaioTel();
-        $conditions['taioMail'] = $IncidentListGetDto->getTaioMail();
-        $conditions['taioContent'] = $IncidentListGetDto->getTaioContent();
-        $conditions['actDateFrom'] = $IncidentListGetDto->getActDateFrom();
-        $conditions['actDateTo'] = $IncidentListGetDto->getActDateTo();
-        $conditions['actType'] = $IncidentListGetDto->getActType();
-        $conditions['actStartTimeFrom'] = $IncidentListGetDto->getActStartTimeFrom();
-        $conditions['actStartTimeTo'] = $IncidentListGetDto->getActStartTimeTo();
-        $conditions['actEndTimeFrom'] = $IncidentListGetDto->getActEndTimeFrom();
-        $conditions['actEndTimeTo'] = $IncidentListGetDto->getActEndTimeTo();
-        $conditions['actDeptNm'] = $IncidentListGetDto->getActDeptNm();
-        $conditions['actUserNm'] = $IncidentListGetDto->getActUserNm();
-        $conditions['actTel'] = $IncidentListGetDto->getActTel();
-        $conditions['actMail'] = $IncidentListGetDto->getActMail();
-        $conditions['actContent'] = $IncidentListGetDto->getActContent();
-        $conditions['productType'] = $IncidentListGetDto->getProductType();
-        $conditions['productTrigger'] = $IncidentListGetDto->getProductTrigger();
-        $conditions['productHindo'] = $IncidentListGetDto->getProductHindo();
-        $conditions['productGensyo'] = $IncidentListGetDto->getProductGensyo();
-        $conditions['productStatus'] = $IncidentListGetDto->getProductStatus();
-        // 2018.01.09 Newtouch追加　start
-        $conditions['incidentTypeSyougai'] = $IncidentListGetDto->getIncidentTypeSyougai();
-        $conditions['incidentTypeJiko'] = $IncidentListGetDto->getIncidentTypeJiko();
-        $conditions['incidentTypeClaim'] = $IncidentListGetDto->getIncidentTypeClaim();
-        $conditions['incidentTypeToiawase'] = $IncidentListGetDto->getIncidentTypeToiawase();
-        $conditions['incidentTypeInfo'] = $IncidentListGetDto->getIncidentTypeInfo();
-        $conditions['incidentTypeOther'] = $IncidentListGetDto->getIncidentTypeOther();
-        $conditions['incidentStatusCall'] = $IncidentListGetDto->getIncidentStatusCall();
-        $conditions['incidentStatusTaio'] = $IncidentListGetDto->getIncidentStatusTaio();
-        $conditions['incidentStatusAct'] = $IncidentListGetDto->getIncidentStatusAct();
-        $conditions['industryTypeMachinery'] = $IncidentListGetDto->getIndustryTypeMachinery();
-        $conditions['industryTypeElectricalMachinery'] = $IncidentListGetDto->getIndustryTypeElectricalMachinery();
-        $conditions['industryTypeInstrumentation'] = $IncidentListGetDto->getIndustryTypeInstrumentation();
-        $conditions['industryTypeInfo'] = $IncidentListGetDto->getIndustryTypeInfo();
-        $conditions['industryTypeEnvironment'] = $IncidentListGetDto->getIndustryTypeEnvironment();
-        $conditions['industryTypeWBC'] = $IncidentListGetDto->getIndustryTypeWBC();
-        $conditions['industryTypeOther'] = $IncidentListGetDto->getIndustryTypeOther();
-        $conditions['prefCd'] = $IncidentListGetDto->getPrefCd();
-        $conditions['custTypeNenkan'] = $IncidentListGetDto->getCustTypeNenkan();
-        $conditions['custTypeTenken'] = $IncidentListGetDto->getCustTypeTenken();
-        $conditions['custTypeNasi'] = $IncidentListGetDto->getCustTypeNasi();
-        $conditions['custTypeKasi'] = $IncidentListGetDto->getCustTypeKasi();
-        $conditions['custTypeOther'] = $IncidentListGetDto->getCustTypeOther();
-        // 2018.01.09 Newtouch追加　end
+        $conditions['keyword'] = $IncidentListGetDto->getKeywordStr();
         try {
             // O_インシデントモデルを作成
             $OIdentTIncidentModel = new OIdentTIncidentModel();
@@ -144,10 +59,10 @@ class IncidentListGetLogic extends CommonLogic {
             //関連フラグ true : 関連有り、false : 関連無し
             if ($relateFlg == RELATE_FLG_ON) {
                 // インシデント情報、プロジェクト情報、MR2情報、事故クレーム情報、費用決裁申請情報を取得
-                $incidentDataAll = $OIdentTIncidentModel->getIncidentWithRel($conditions);
+                $incidentDataAll = $OIdentTIncidentModel->getIncidentWithRelByKeyword($conditions);
             } else {
                 // インシデント情報を取得
-                $incidentDataAll = $OIdentTIncidentModel->getIncident($conditions);
+                $incidentDataAll = $OIdentTIncidentModel->getIncidentByKeyword($conditions);
             }
         } catch (Exception $e) {
             // LOGIC結果　SQLエラー '1' をセット
@@ -297,9 +212,7 @@ class IncidentListGetLogic extends CommonLogic {
                 $IncidentMainDto->addRelateList($UserDto);
             }
 
-            // 2018.01.18 Newtouch追加 start
             if(parent::checkDataExistence($incidentRelationDataByKijiIdAll) == SAVE_TRUE){
-            // 2018.01.18 Newtouch追加 end
                 // 機場IDでインシデントメイン情報の取得(相関機場IDで取得)
                 $incidentRelationDataByKijiId = array();
                 foreach($incidentRelationDataByKijiIdAll as $incidentRelationDataByKijiIdOne){
@@ -324,13 +237,9 @@ class IncidentListGetLogic extends CommonLogic {
                     // インシデントメイン情報⇒IncidentDtoのセット
                     $IncidentDto->addRelateIncidentList($IncidentRelationDto);
                 }
-            // 2018.01.18 Newtouch追加 start
             }
-            // 2018.01.18 Newtouch追加 end
 
-            // 2018.01.18 Newtouch追加 start
-            if(parent::checkDataExistence($incidentRelationDataByCustNm) == SAVE_TRUE){
-            // 2018.01.18 Newtouch追加 end
+            if(parent::checkDataExistence($incidentRelationDataByCustNmAll) == SAVE_TRUE){
                 // 顧客名でインシデントメイン情報の取得(相関インシデントIDで取得)
                 $incidentRelationDataByCustNm = array();
                 foreach($incidentRelationDataByCustNmAll as $incidentRelationDataByCustNmOne){
@@ -355,14 +264,13 @@ class IncidentListGetLogic extends CommonLogic {
                     // インシデントメイン情報⇒IncidentDtoのセット
                     $IncidentDto->addRelateIncidentList($IncidentRelationDto);
                 }
-            // 2018.01.18 Newtouch追加 start
             }
-            // 2018.01.18 Newtouch追加 end
 
             // インシデントメイン情報(IncidentMainDto)⇒IncidentDtoのセット
             if (isset($IncidentMainDto)) {
                 $IncidentDto->setIncidentMainInfo($IncidentMainDto);
             }
+
             // 関連リンク情報(LinkRelationDto)⇒IncidentDtoのセット
             if (isset($LinkRelationDto)) {
                 $IncidentDto->setRelateLink($LinkRelationDto);
@@ -377,55 +285,5 @@ class IncidentListGetLogic extends CommonLogic {
         // 戻りオブジェクト(IncidentListGetResultDto)
         return $IncidentListGetResultDto;
     }
-
-// ::: 2018.01.22 [#23] 入力補助モーダル　インシデント Add Start newtouch
-    public function executeCommon(IncidentListGetDto $incidentListGetDto) {
-        // 戻りオブジェクト(IncidentListGetResultDto)を作成
-        $incidentListGetResultDto = new IncidentListGetResultDto();
-
-        // IncidentListGetDtoから、パラメータを取得する、$conditionsを作成
-        $conditions = array();
-        $conditions['incidentNo'] = $incidentListGetDto->getIncidentNo();
-        $conditions['callContent'] = $incidentListGetDto->getCallContent();
-        $conditions['callStartDateFrom'] = $incidentListGetDto->getCallStartDateFrom();
-        $conditions['callStartDateTo'] = $incidentListGetDto->getCallStartDateTo();
-        $conditions['incidentType'] = $incidentListGetDto->getIncidentType();
-        $conditions['incidentStatus'] = $incidentListGetDto->getIncidentStatus();
-
-        try {
-            // インシデント情報を取得
-            $model = new IdentTIncidentModel();
-            $incidentList = $model->getIncidentListCommon($conditions);
-        } catch (Exception $e) {
-            // LOGIC結果　SQLエラー '1' をセット
-            $IncidentGetResultDto->setLogicResult(LOGIC_RESULT_SQL_ERROR);
-            // 戻りオブジェクト(IncidentListGetResultDto)
-            return $incidentListGetResultDto;
-        }
-
-        // 個数分インシデント情報リストをループ
-        foreach ($incidentList as $incidentData) {
-            // IncidentDtoを作成
-            $incidentDto = new IncidentDto();
-
-            // 情報の取得
-            $incidentDto->setIncidentId($incidentData["INCIDENT_ID"]);
-            $incidentDto->setIncidentNo($incidentData["INCIDENT_NO"]);
-            $incidentDto->setCallContent($incidentData["CALL_CONTENT"]);
-            $incidentDto->setCallDate($incidentData["CALL_DATE"]);
-            $incidentDto->setIncidentType($incidentData["INCIDENT_TYPE"]);
-            $incidentDto->setIncidentTypeString($model->findValueByNameAndKey("INCIDENT_TYPE", $incidentDto->getIncidentType()));
-            $incidentDto->setIncidentStatus($incidentData["INCIDENT_STS"]);
-            $incidentDto->setIncidentStatusString($model->findValueByNameAndKey("INCIDENT_STS", $incidentDto->getIncidentStatus()));
-            // IncidentDto⇒IncidentListGetResultDtoのセット
-            $incidentListGetResultDto->addIncidentList($incidentDto);
-        }
-
-        // LOGIC結果　正常時 '0' をセット
-        $incidentListGetResultDto->setLogicResult(LOGIC_RESULT_SEIJOU);
-        // 戻りオブジェクト(IncidentListGetResultDto)
-        return $incidentListGetResultDto;
-    }
-// ::: 2018.01.22 [#23] 入力補助モーダル　インシデント Add End   newtouch
 
 }

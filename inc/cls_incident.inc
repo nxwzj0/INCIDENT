@@ -90,7 +90,7 @@ function CustomErrorHandler($errno, $errmsg, $filename, $linenum, $vars){
 set_error_handler("CustomErrorHandler");
 
 //GETリクエストの防御(クッキーにユーザIDがない場合GETリクエストは制限される)
-require_once("$COMMON_BASE_PATH/../AUTH/check_get_method.php");
+//require_once("$COMMON_BASE_PATH/../AUTH/check_get_method.php");
 if( $_COOKIE["COOKIE_LOGIN_ID"] != "" ){
 	//if( $_SERVER["REQUEST_METHOD"] == "GET" ){
 		//クッキーにユーザIDがある場合、GET/POSTされたユーザIDを上書きする
@@ -382,7 +382,7 @@ Class SelectTag Extends BaseObject{
 
 //--------------------------------------------------------------------
 //ログ記録共通関数インクルード
-require("logwriter_helper.inc");
+//require("logwriter_helper.inc");
 function CMN_LogEntry($log_type,$ary_user,$ary_class,$ary_operation,$ary_additional=""){
 	CMN_log($GLOBALS["COMMON_LOG_WRITER_URL"],"project",$log_type,$ary_user,$ary_class,$ary_operation,$ary_additional);
 }
