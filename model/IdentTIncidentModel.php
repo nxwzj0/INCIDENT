@@ -781,7 +781,7 @@ SQL_INCIDENT_INFO;
                 FROM
                     IDENT_T_INCIDENT T1 
                 WHERE
-                    NVL(DEL_FLG,'0') = '0' 
+                    DEL_FLG = '0' 
 SQL_USER_INFO;
 
         // インシデント番号
