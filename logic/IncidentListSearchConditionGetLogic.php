@@ -15,6 +15,8 @@ require_once('./common/CommonService.php');
 require_once('./model/IdentTSearchCondDtModel.php');
 // dto読み込み
 require_once('./dto/IncidentListGetDto.php');
+require_once('./dto/IncidentListSearchConditionGetResultDto.php');
+require_once('./dto/ConditionDtDto.php');
 
 class IncidentListSearchConditionGetLogic extends CommonLogic {
 
@@ -22,14 +24,35 @@ class IncidentListSearchConditionGetLogic extends CommonLogic {
         // 実例化model
         $IdentTSearchCondDtModel = new IdentTSearchCondDtModel();
 
+        // 実例化dto
+        $IncidentListSearchConditionGetResultDto = new IncidentListSearchConditionGetResultDto();
+
         // 検索条件Idを取得
         $condId = $IncidentListGetDto->getCondId();
 
-        // 検索条件を取得
-        $conditionResult = $IdentTSearchCondDtModel->selectCondition($condId);
+        try{
+            // 検索条件を取得
+            $conditionResult = $IdentTSearchCondDtModel->selectCondition($condId);
+        }catch(Exception $e){
+            // LOGIC結果　SQLエラー '1' をセット
+            $IncidentListSearchConditionGetResultDto->setLogicResult(LOGIC_RESULT_SQL_ERROR);
+            // 戻りオブジェクト($IncidentListSearchConditionGetResultDto)
+            return $IncidentListSearchConditionGetResultDto;
+        }
 
-        // 戻りオブジェクト
-        return $conditionResult;
+        foreach($conditionResult as $one){
+            // 実例化dto
+            $conditionDtDto = new conditionDtDto();
+            $conditionDtDto->setCondFld($one['COND_FLD']);
+            $conditionDtDto->setCondVal($one['COND_VAL']);
+            // 検索条件情報⇒$IncidentListSearchConditionGetResultDtoのセット
+            $IncidentListSearchConditionGetResultDto->addConditionDtList($conditionDtDto);
+        }
+
+        // LOGIC結果　正常時 '0' をセット
+        $IncidentListSearchConditionGetResultDto->setLogicResult(LOGIC_RESULT_SEIJOU);
+        // 戻りオブジェクト($IncidentListSearchConditionGetResultDto)
+        return $IncidentListSearchConditionGetResultDto;
     }
 
 }

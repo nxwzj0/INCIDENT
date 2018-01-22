@@ -24,15 +24,31 @@ class IncidentListConditionDeleteRunAction extends CommonAction {
         // 共通パラメータ配列取得
         $P = $GLOBALS[P];
         // 画面からパラメータ取得
-        $IncidentListConditionDeleteRunDto->setCondNm($P['condNm']);
+        $IncidentListConditionDeleteRunDto->setCondId($P['condId']);
 
         // 実例化Logic
         $IncidentListConditionDeleteRunLogic = new IncidentListConditionDeleteRunLogic();
         // 実行Logic
         $eventResult = $IncidentListConditionDeleteRunLogic->execute($IncidentListConditionDeleteRunDto);
 
+        // 戻り値配列の作成
+        $rtnAry = $this->createReturnArray($eventResult);
+
         // 値を返す(Angular)
-        echo $this->returnAngularJSONP($eventResult);
+        echo $this->returnAngularJSONP($rtnAry);
+    }
+
+     public function createReturnArray($eventResult) {
+
+        // 戻り値の作成
+        $resultListAry = array();
+        $resultAty = array();
+        $resultAty['resultFlg'] = $eventResult->getLogicResult();
+        $resultAty['resultMsg'] = $eventResult->getResultMsg();
+        array_push($resultListAry, $resultAty);
+
+        return $resultListAry;
+
     }
 
 }

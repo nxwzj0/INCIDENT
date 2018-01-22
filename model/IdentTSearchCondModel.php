@@ -100,14 +100,16 @@ SQL_INCIDENT_INFO;
         return SAVE_TRUE;
     }
 
-    public function deleteCond($condName,$MultiExecSql) {
+    public function deleteCond($condId,$MultiExecSql) {
         $SQL_INCIDENT_INFO = <<< SQL_INCIDENT_INFO
                 UPDATE
                     IDENT_T_SEARCH_COND
                 SET
                     DEL_FLG = '1'
                 WHERE
-                    COND_NM = '$condName'
+                    COND_ID = '$condId'
+                AND
+                    DEL_FLG = '0'
 SQL_INCIDENT_INFO;
 
         try{

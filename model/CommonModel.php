@@ -24,5 +24,23 @@ class CommonModel {
         }
         return $inConditionStr;
     }
+
+    // 2018.01.18 Newtouch追加 start
+    // チェック日付フォーマット
+    function valid_date($date){
+        // 日付フォーマット
+        if (preg_match ("/^([0-9]{4})([0-9]{2})([0-9]{2})$/", $date, $parts)){
+            //チェック日付フォーマット,checkdateは月日年
+            if(checkdate($parts[2],$parts[3],$parts[1])){
+                return true;
+            }else{
+                return false;
+            }
+        }else{
+            return false;
+        }
+    }
+    // 2018.01.18 Newtouch追加 end
+
 }
 

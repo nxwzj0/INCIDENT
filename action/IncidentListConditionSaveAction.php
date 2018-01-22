@@ -9,9 +9,6 @@
 // 共通処理読み込み
 require_once('./action/CommonAction.php');
 
-// model処理読み込み
-require_once('./model/IdentTSearchCondModel.php');
-
 // logic処理読み込み
 require_once('./logic/IncidentListConditionSaveLogic.php');
 
@@ -28,7 +25,6 @@ class IncidentListConditionSaveAction extends CommonAction {
         $P = $GLOBALS[P];
         // 画面からパラメータ取得
         // 検索条件名
-        $condNm = $P['condNm'];
         $IncidentListConditionSaveDto->setCondNm($P['condNm']);
         // 登録者ID
         $IncidentListConditionSaveDto->setUpdUserId($P['userId']);
@@ -111,58 +107,30 @@ class IncidentListConditionSaveAction extends CommonAction {
         // 関係者
         $IncidentListConditionSaveDto->setRelateUserNm($P['relateUserNm']);
 
-        // 実例化model
-        $IdentTSearchCondModel = new IdentTSearchCondModel();
-        // 検索条件名の重複チェックFlg
-        $CondNmExisFlg = $this->checkDataExistence($IdentTSearchCondModel->findCondNm($condNm));
+        // 実例化Logic
+        $IncidentListConditionSaveLogic = new IncidentListConditionSaveLogic();
+        // 実行Logic
+        $eventResult = $IncidentListConditionSaveLogic->execute($IncidentListConditionSaveDto);
 
-        if(!$CondNmExisFlg){// 検索条件名重複しないの場合
-            // 実例化Logic
-            $IncidentListConditionSaveLogic = new IncidentListConditionSaveLogic();
-            // 実行Logic
-            $eventResult = $IncidentListConditionSaveLogic->execute($IncidentListConditionSaveDto);
-            // 戻り値配列の作成
-            $rtnAry = $this->createReturnArray($eventResult,false);
-        }else{// 検索条件名重複の場合
-            // 戻り値配列の作成
-            $rtnAry = $this->createReturnArray(SAVE_FALSE,SAVE_TRUE);
-        }
-            // 値を返す(Angular)
-            echo $this->returnAngularJSONP($rtnAry);
+        // 戻り値配列の作成
+        $rtnAry = $this->createReturnArray($eventResult);
+
+        // 値を返す(Angular)
+        echo $this->returnAngularJSONP($rtnAry);
+
     }
 
-    public function createReturnArray($resultFlg,$exitFlg) {
-        // 戻るArray作成
-        $condSaveAry = array();
-        // 戻るッセージ作成
-        $strMsg = "";
+    public function createReturnArray($eventResult) {
 
-        // メッセージ設定
-        if ($exitFlg) {// 検索条件名存在
-            $resultFlg = SAVE_FALSE;
-            $strMsg = "検索条件名が重複しています";
-        } else {// 検索条件名存在しない
-            if ($resultFlg) {// 登録成功
-                $resultFlg = SAVE_TRUE;
-                $strMsg = "登録完了";
-            } else {// 登録失敗
-                $resultFlg = SAVE_FALSE;
-                $strMsg = "登録に失敗しました";
-            }
-        }
-        // 戻る値作成
-        array_push($condSaveAry, array("resultFlg" => $resultFlg));
-        array_push($condSaveAry, array("resultMsg" => $strMsg));
-        return $condSaveAry;
-    }
+        // 戻り値の作成
+        $resultListAry = array();
+        $resultAty = array();
+        $resultAty['resultFlg'] = $eventResult->getLogicResult();
+        $resultAty['resultMsg'] = $eventResult->getResultMsg();
+        array_push($resultListAry, $resultAty);
 
-    // Arrayのnull判断
-    public function checkDataExistence($ary) {
-        if (isset($ary) && is_array($ary) && count($ary) > 0) {
-            return SAVE_TRUE;
-        } else {
-            return SAVE_FALSE;
-        }
+        return $resultListAry;
+
     }
 
 }

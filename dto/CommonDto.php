@@ -21,6 +21,7 @@
  * @property String $updSectionCd
  * @property String $updSectionNm
  * @property String $logicResult
+ * @property String $resultMsg
  */
 class CommonDto {
     private $insDate;
@@ -34,6 +35,7 @@ class CommonDto {
     private $updSectionCd;
     private $updSectionNm;
     private $logicResult;
+    private $resultMsg;
 
     /**
      * @return String
@@ -187,6 +189,20 @@ class CommonDto {
      */
     public function setLogicResult($logicResult) {
         $this->logicResult = $logicResult;
+    }
+
+    /**
+     * @return String
+     */
+    public function getResultMsg() {
+        return $this->resultMsg;
+    }
+
+    /**
+     * @param String $resultMsg
+     */
+    public function setResultMsg($resultMsg) {
+        $this->resultMsg = $resultMsg;
     }
 
 }

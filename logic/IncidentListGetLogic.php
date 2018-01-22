@@ -113,7 +113,30 @@ class IncidentListGetLogic extends CommonLogic {
         $conditions['productHindo'] = $IncidentListGetDto->getProductHindo();
         $conditions['productGensyo'] = $IncidentListGetDto->getProductGensyo();
         $conditions['productStatus'] = $IncidentListGetDto->getProductStatus();
-
+        // 2018.01.09 Newtouch追加　start
+        $conditions['incidentTypeSyougai'] = $IncidentListGetDto->getIncidentTypeSyougai();
+        $conditions['incidentTypeJiko'] = $IncidentListGetDto->getIncidentTypeJiko();
+        $conditions['incidentTypeClaim'] = $IncidentListGetDto->getIncidentTypeClaim();
+        $conditions['incidentTypeToiawase'] = $IncidentListGetDto->getIncidentTypeToiawase();
+        $conditions['incidentTypeInfo'] = $IncidentListGetDto->getIncidentTypeInfo();
+        $conditions['incidentTypeOther'] = $IncidentListGetDto->getIncidentTypeOther();
+        $conditions['incidentStatusCall'] = $IncidentListGetDto->getIncidentStatusCall();
+        $conditions['incidentStatusTaio'] = $IncidentListGetDto->getIncidentStatusTaio();
+        $conditions['incidentStatusAct'] = $IncidentListGetDto->getIncidentStatusAct();
+        $conditions['industryTypeMachinery'] = $IncidentListGetDto->getIndustryTypeMachinery();
+        $conditions['industryTypeElectricalMachinery'] = $IncidentListGetDto->getIndustryTypeElectricalMachinery();
+        $conditions['industryTypeInstrumentation'] = $IncidentListGetDto->getIndustryTypeInstrumentation();
+        $conditions['industryTypeInfo'] = $IncidentListGetDto->getIndustryTypeInfo();
+        $conditions['industryTypeEnvironment'] = $IncidentListGetDto->getIndustryTypeEnvironment();
+        $conditions['industryTypeWBC'] = $IncidentListGetDto->getIndustryTypeWBC();
+        $conditions['industryTypeOther'] = $IncidentListGetDto->getIndustryTypeOther();
+        $conditions['prefCd'] = $IncidentListGetDto->getPrefCd();
+        $conditions['custTypeNenkan'] = $IncidentListGetDto->getCustTypeNenkan();
+        $conditions['custTypeTenken'] = $IncidentListGetDto->getCustTypeTenken();
+        $conditions['custTypeNasi'] = $IncidentListGetDto->getCustTypeNasi();
+        $conditions['custTypeKasi'] = $IncidentListGetDto->getCustTypeKasi();
+        $conditions['custTypeOther'] = $IncidentListGetDto->getCustTypeOther();
+        // 2018.01.09 Newtouch追加　end
         try {
             // O_インシデントモデルを作成
             $OIdentTIncidentModel = new OIdentTIncidentModel();
@@ -274,55 +297,67 @@ class IncidentListGetLogic extends CommonLogic {
                 $IncidentMainDto->addRelateList($UserDto);
             }
 
-            // 機場IDでインシデントメイン情報の取得(相関機場IDで取得)
-            $incidentRelationDataByKijiId = array();
-            foreach($incidentRelationDataByKijiIdAll as $incidentRelationDataByKijiIdOne){
-                if($incidentRelationDataByKijiIdOne['IN_KIJO_ID'] == $incidentData['IN_KIJO_ID'] &&
-                    $incidentRelationDataByKijiIdOne['IN_INCIDENT_ID'] != $incidentData['IN_INCIDENT_ID'] ){ // 自身のインシデント情報は除外する
-                    array_push($incidentRelationDataByKijiId,$incidentRelationDataByKijiIdOne);
+            // 2018.01.18 Newtouch追加 start
+            if(parent::checkDataExistence($incidentRelationDataByKijiIdAll) == SAVE_TRUE){
+            // 2018.01.18 Newtouch追加 end
+                // 機場IDでインシデントメイン情報の取得(相関機場IDで取得)
+                $incidentRelationDataByKijiId = array();
+                foreach($incidentRelationDataByKijiIdAll as $incidentRelationDataByKijiIdOne){
+                    if($incidentRelationDataByKijiIdOne['IN_KIJO_ID'] == $incidentData['IN_KIJO_ID'] &&
+                        $incidentRelationDataByKijiIdOne['IN_INCIDENT_ID'] != $incidentData['IN_INCIDENT_ID'] ){ // 自身のインシデント情報は除外する
+                        array_push($incidentRelationDataByKijiId,$incidentRelationDataByKijiIdOne);
+                    }
                 }
-            }
 
-            foreach($incidentRelationDataByKijiId as $one){
-                $IncidentRelationDto = new IncidentRelationDto();
+                foreach($incidentRelationDataByKijiId as $one){
+                    $IncidentRelationDto = new IncidentRelationDto();
 
-                $IncidentRelationDto->setRelateType(RELATE_INCIDENT_TYPE_KIJO);
-                $IncidentRelationDto->setRelateIncidentId($one['IN_INCIDENT_ID']);
-                $IncidentRelationDto->setRelateIncidentContent($one['IN_CALL_CONTENT']);
-                $IncidentRelationDto->setRelateIncidentNo($one['IN_INCIDENT_NO']);
-                $incidentTypeNm = $CommonService->getConstArrayString(unserialize(INCIDENT_TYPE),$one['IN_INCIDENT_TYPE']);
-                $IncidentRelationDto->setRelateIncidentType($incidentTypeNm);
-                $IncidentRelationDto->setRelateIncidentStartDateTime($one['IN_INCIDENT_START_DATETIME']);
-                $IncidentRelationDto->setRelateIncidentKijoNm($one['IN_KIJO_NM']);
+                    $IncidentRelationDto->setRelateType(RELATE_INCIDENT_TYPE_KIJO);
+                    $IncidentRelationDto->setRelateIncidentId($one['IN_INCIDENT_ID']);
+                    $IncidentRelationDto->setRelateIncidentContent($one['IN_CALL_CONTENT']);
+                    $IncidentRelationDto->setRelateIncidentNo($one['IN_INCIDENT_NO']);
+                    $incidentTypeNm = $CommonService->getConstArrayString(unserialize(INCIDENT_TYPE),$one['IN_INCIDENT_TYPE']);
+                    $IncidentRelationDto->setRelateIncidentType($incidentTypeNm);
+                    $IncidentRelationDto->setRelateIncidentStartDateTime($one['IN_INCIDENT_START_DATETIME']);
+                    $IncidentRelationDto->setRelateIncidentKijoNm($one['IN_KIJO_NM']);
 
-                // インシデントメイン情報⇒IncidentDtoのセット
-                $IncidentDto->addRelateIncidentList($IncidentRelationDto);
-            }
-
-            // 顧客名でインシデントメイン情報の取得(相関インシデントIDで取得)
-            $incidentRelationDataByCustNm = array();
-            foreach($incidentRelationDataByCustNmAll as $incidentRelationDataByCustNmOne){
-                if($incidentRelationDataByCustNmOne['IN_CUST_NM'] == $incidentData['IN_CUST_NM'] &&
-                    $incidentRelationDataByCustNmOne['IN_INCIDENT_ID'] != $incidentData['IN_INCIDENT_ID'] ){ // 自身のインシデント情報は除外する
-                    array_push($incidentRelationDataByCustNm,$incidentRelationDataByCustNmOne);
+                    // インシデントメイン情報⇒IncidentDtoのセット
+                    $IncidentDto->addRelateIncidentList($IncidentRelationDto);
                 }
+            // 2018.01.18 Newtouch追加 start
             }
+            // 2018.01.18 Newtouch追加 end
 
-            foreach($incidentRelationDataByCustNm as $one){
-                $IncidentRelationDto = new IncidentRelationDto();
+            // 2018.01.18 Newtouch追加 start
+            if(parent::checkDataExistence($incidentRelationDataByCustNm) == SAVE_TRUE){
+            // 2018.01.18 Newtouch追加 end
+                // 顧客名でインシデントメイン情報の取得(相関インシデントIDで取得)
+                $incidentRelationDataByCustNm = array();
+                foreach($incidentRelationDataByCustNmAll as $incidentRelationDataByCustNmOne){
+                    if($incidentRelationDataByCustNmOne['IN_CUST_NM'] == $incidentData['IN_CUST_NM'] &&
+                        $incidentRelationDataByCustNmOne['IN_INCIDENT_ID'] != $incidentData['IN_INCIDENT_ID'] ){ // 自身のインシデント情報は除外する
+                        array_push($incidentRelationDataByCustNm,$incidentRelationDataByCustNmOne);
+                    }
+                }
 
-                $IncidentRelationDto->setRelateType(RELATE_INCIDENT_TYPE_CUST);
-                $IncidentRelationDto->setRelateIncidentId($one['IN_INCIDENT_ID']);
-                $IncidentRelationDto->setRelateIncidentContent($one['IN_CALL_CONTENT']);
-                $IncidentRelationDto->setRelateIncidentNo($one['IN_INCIDENT_NO']);
-                $incidentTypeNm = $CommonService->getConstArrayString(unserialize(INCIDENT_TYPE),$one['IN_INCIDENT_TYPE']);
-                $IncidentRelationDto->setRelateIncidentType($incidentTypeNm);
-                $IncidentRelationDto->setRelateIncidentStartDateTime($one['IN_INCIDENT_START_DATETIME']);
-                $IncidentRelationDto->setRelateIncidentKijoNm($one['IN_KIJO_NM']);
+                foreach($incidentRelationDataByCustNm as $one){
+                    $IncidentRelationDto = new IncidentRelationDto();
 
-                // インシデントメイン情報⇒IncidentDtoのセット
-                $IncidentDto->addRelateIncidentList($IncidentRelationDto);
+                    $IncidentRelationDto->setRelateType(RELATE_INCIDENT_TYPE_CUST);
+                    $IncidentRelationDto->setRelateIncidentId($one['IN_INCIDENT_ID']);
+                    $IncidentRelationDto->setRelateIncidentContent($one['IN_CALL_CONTENT']);
+                    $IncidentRelationDto->setRelateIncidentNo($one['IN_INCIDENT_NO']);
+                    $incidentTypeNm = $CommonService->getConstArrayString(unserialize(INCIDENT_TYPE),$one['IN_INCIDENT_TYPE']);
+                    $IncidentRelationDto->setRelateIncidentType($incidentTypeNm);
+                    $IncidentRelationDto->setRelateIncidentStartDateTime($one['IN_INCIDENT_START_DATETIME']);
+                    $IncidentRelationDto->setRelateIncidentKijoNm($one['IN_KIJO_NM']);
+
+                    // インシデントメイン情報⇒IncidentDtoのセット
+                    $IncidentDto->addRelateIncidentList($IncidentRelationDto);
+                }
+            // 2018.01.18 Newtouch追加 start
             }
+            // 2018.01.18 Newtouch追加 end
 
             // インシデントメイン情報(IncidentMainDto)⇒IncidentDtoのセット
             if (isset($IncidentMainDto)) {

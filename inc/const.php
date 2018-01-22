@@ -16,20 +16,37 @@ define('RELATE_FLG_OFF', FALSE);
 define('LOG_FLG_ON', TRUE);
 define('LOG_FLG_OFF', FALSE);
 
-//  異常結果　正常時 '0'
+// LOGIC結果　正常時 '0'
 define('LOGIC_RESULT_SEIJOU', '0');
-//  異常結果　SQLエラー '1'
+// LOGIC結果　SQLエラー '1'
 define('LOGIC_RESULT_SQL_ERROR', '1');
-//  異常結果　ファイルが見つからない '2'
+// LOGIC結果　ファイルが見つからない '2'
 define('LOGIC_RESULT_FILE_ERROR', '2');
+// LOGICメッセージ　検索条件名が重複しています
+define('LOGIC_RESULT_CONDNM_DUPLICATE', '検索条件名が重複しています');
+// LOGICメッセージ　登録完了
+define('LOGIC_RESULT_INSERT_SUCCESS', '登録完了');
+// LOGICメッセージ　登録に失敗しました
+define('LOGIC_RESULT_INSERT_FAIL', '登録に失敗しました');
+// LOGICメッセージ　削除完了
+define('LOGIC_RESULT_DELETE_SUCCESS', '削除完了');
+// LOGICメッセージ　削除に失敗しました
+define('LOGIC_RESULT_DELETE_FAIL', '削除に失敗しました');
 
 // 登録と更新処理成功判定フラグ　true : 成功、false : 失敗
 define('SAVE_TRUE', TRUE);
 define('SAVE_FALSE', FALSE);
 
-// インシデント関係者のデータ 有無のFlg   true : 有、false : 無し
+// インシデント関係者のデータ 有無のFlg　true : 有、false : 無し
 define('RELATE_USER_FLG_TRUE', TRUE);
 define('RELATE_USER_FLG_FALSE', FALSE);
+
+// 日付フォーマット
+define('Ymd', 'Y/m/d');
+define('YYYYMMDD', 'YYYY/MM/DD');
+
+// 定数0
+define('ZERO', '0');
 
 // 新規作成
 define('SINKI_SAKUSEI', '新規作成');

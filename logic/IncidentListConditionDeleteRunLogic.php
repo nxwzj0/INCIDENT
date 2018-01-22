@@ -17,6 +17,7 @@ require_once('./model/IdentTSearchCondModel.php');
 require_once('./model/IdentTSearchCondDtModel.php');
 // dto処理読み込み
 require_once('./dto/IncidentListConditionDeleteRunDto.php');
+require_once('./dto/IncidentListConditionDeleteRunResultDto.php');
 
 class IncidentListConditionDeleteRunLogic extends CommonLogic {
 
@@ -25,29 +26,40 @@ class IncidentListConditionDeleteRunLogic extends CommonLogic {
         $IdentTSearchCondModel = new IdentTSearchCondModel();
         $IdentTSearchCondDtModel = new IdentTSearchCondDtModel();
 
+        // 実例化dto
+        $IncidentListConditionDeleteRunResultDto = new IncidentListConditionDeleteRunResultDto();
+
         // 登録用の MultiExecSql　オブジェクトを作成
         $MultiExecSql = new MultiExecSql();
 
-        // 検索条件名
-        $condNm = $IncidentListConditionDeleteRunDto->getCondNm();
+        // 検索条件Id
+        $condId = $IncidentListConditionDeleteRunDto->getCondId();
 
         // IDENT_T_SEARCH_COND_DTの削除処理
-        $deleteCondDtResultFlg = $IdentTSearchCondDtModel->deleteCondDt($condNm,$MultiExecSql);
+        $deleteCondDtResultFlg = $IdentTSearchCondDtModel->deleteCondDt($condId,$MultiExecSql);
         // IDENT_T_SEARCH_CONDの削除処理
-        $deleteCondResultFlg = $IdentTSearchCondModel->deleteCond($condNm,$MultiExecSql);
+        $deleteCondResultFlg = $IdentTSearchCondModel->deleteCond($condId,$MultiExecSql);
 
-        // 登録処理成功判定フラグ FALSE
+        // 削除処理成功判定フラグ FALSE
         if($deleteCondResultFlg == SAVE_FALSE || $deleteCondDtResultFlg == SAVE_FALSE){
             // MultiExecSql　オブジェクトのrollback()を実行
             $MultiExecSql->rollback();
-            // 戻る結果
-            return SAVE_FALSE;
+            // LOGIC結果　SQLエラー '1' をセット
+            $IncidentListConditionDeleteRunResultDto->setLogicResult(LOGIC_RESULT_SQL_ERROR);
+            // LOGIC結果メッセージ　'削除に失敗しました'
+            $IncidentListConditionDeleteRunResultDto->setResultMsg(LOGIC_RESULT_DELETE_FAIL);
+            // 戻りオブジェクト(IncidentListConditionDeleteRunResultDto)
+            return $IncidentListConditionDeleteRunResultDto;
         }
 
         // MultiExecSql　オブジェクトのcommit()を実行
         $MultiExecSql->commit();
-        // 戻る結果
-        return SAVE_TRUE;
+        // LOGIC結果　正常時 '0' をセット
+        $IncidentListConditionDeleteRunResultDto->setLogicResult(LOGIC_RESULT_SEIJOU);
+        // LOGIC結果メッセージ　'削除完了'
+        $IncidentListConditionDeleteRunResultDto->setResultMsg(LOGIC_RESULT_DELETE_SUCCESS);
+        // 戻りオブジェクト(IncidentListConditionDeleteResultDto)
+        return $IncidentListConditionDeleteRunResultDto;
     }
 
 }

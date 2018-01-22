@@ -60,6 +60,8 @@ SQL_INCIDENT_INFO;
                     IDENT_T_SEARCH_COND_DT
                 WHERE
                     IDENT_T_SEARCH_COND_DT.COND_ID = '$condId'
+                AND 
+                    IDENT_T_SEARCH_COND_DT.DEL_FLG = '0'
 SQL_INCIDENT_INFO;
 
         $MultiExecSql = new MultiExecSql();
@@ -68,14 +70,16 @@ SQL_INCIDENT_INFO;
         return $sqlResult;
     }
 
-    public function deleteCondDt($condName,$MultiExecSql) {
+    public function deleteCondDt($condId,$MultiExecSql) {
         $SQL_INCIDENT_INFO = <<< SQL_INCIDENT_INFO
                 UPDATE
                     IDENT_T_SEARCH_COND_DT COND_DT
                 SET
                     COND_DT.DEL_FLG = '1'
                 WHERE
-                    COND_DT.COND_ID = (SELECT COND.COND_ID FROM IDENT_T_SEARCH_COND COND WHERE COND.COND_NM = '$condName' AND COND.DEL_FLG = '0')
+                    COND_DT.COND_ID = '$condId'
+                AND
+                    COND_DT.DEL_FLG = '0'
 SQL_INCIDENT_INFO;
 
         try{

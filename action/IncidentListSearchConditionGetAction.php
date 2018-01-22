@@ -29,125 +29,237 @@ class IncidentListSearchConditionGetAction extends CommonAction {
         $IncidentListGetDto->setLogFlg(FALSE);
         $IncidentListGetDto->setCondId($condId);
 
-        if($condId != "0"){
+        if($condId != ZERO){
             // 検索条件を取得
             $IncidentListSearchConditionGetLogic = new IncidentListSearchConditionGetLogic();
             $conditionResult = $IncidentListSearchConditionGetLogic->execute($IncidentListGetDto);
 
+            $conditionAry = array();
+            $conditionListAry = array();
             // 検索条件からパラメータ取得
-            foreach ($conditionResult as $one){
-                switch ($one['COND_FLD'])
-                {
-                case "incidentTypeSyougai":// インシデント分類（障害）
-                    $incidentTypeSyougai = $one['COND_VAL'];
-                    break;
-                case "incidentTypeJiko":// インシデント分類（事故）
-                    $incidentTypeJiko = $one['COND_VAL'];
-                    break;
-                case "incidentTypeClaim":// インシデント分類（クレーム）
-                    $incidentTypeClaim = $one['COND_VAL'];
-                    break;
-                case "incidentTypeToiawase":// インシデント分類（問合せ）
-                    $incidentTypeToiawase = $one['COND_VAL'];
-                    break;
-                case "incidentTypeInfo":// インシデント分類（情報）
-                    $incidentTypeInfo = $one['COND_VAL'];
-                    break;
-                case "incidentTypeOther":// インシデント分類（その他）
-                    $incidentTypeOther = $one['COND_VAL'];
-                    break;
-                case "incidentStatusCall":// ステータス（受入済）
-                    $incidentStatusCall = $one['COND_VAL'];
-                    break;
-                case "incidentStatusTaio":// ステータス（対応入力済）
-                    $incidentStatusTaio = $one['COND_VAL'];
-                    break;
-                case "incidentStatusAct":// ステータス（処置入力済）
-                    $incidentStatusAct = $one['COND_VAL'];
-                    break;
-                case "incidentNo":// インシデント番号
-                    $incidentNo = $one['COND_VAL'];
-                    break;
-                case "callContent":// 受付内容
-                    $callContent = $one['COND_VAL'];
-                    break;
-                case "parentIncidentNo":// 親インシデント番号
-                    $parentIncidentNo = $one['COND_VAL'];
-                    break;
-                case "incidentStartDateTimeFrom":// 発生日時（開始）
-                    $incidentStartDateTimeFrom = $one['COND_VAL'];
-                    break;
-                case "incidentStartDateTimeTo":// 発生日時（終了）
-                    $incidentStartDateTimeTo = $one['COND_VAL'];
-                    break;
-                case "callStartDateFrom":// 受付日（開始）
-                    $callStartDateFrom = $one['COND_VAL'];
-                    break;
-                case "callStartDateTo":// 受付日（終了）
-                    $callStartDateTo = $one['COND_VAL'];
-                    break;
-                case "industryTypeMachinery":// 業種区分（機械）
-                    $industryTypeMachinery = $one['COND_VAL'];
-                    break;
-                case "industryTypeElectricalMachinery":// 業種区分（電機（E））
-                    $industryTypeElectricalMachinery = $one['COND_VAL'];
-                    break;
-                case "industryTypeInstrumentation":// 業種区分（計装（I））
-                    $industryTypeInstrumentation = $one['COND_VAL'];
-                    break;
-                case "industryTypeInfo":// 業種区分（情報（C））
-                    $industryTypeInfo = $one['COND_VAL'];
-                    break;
-                case "industryTypeEnvironment":// 業種区分（環境）
-                    $industryTypeEnvironment = $one['COND_VAL'];
-                    break;
-                case "industryTypeWBC":// 業種区分（WBC）
-                    $industryTypeWBC = $one['COND_VAL'];
-                    break;
-                case "industryTypeOther":// 業種区分（その他）
-                    $industryTypeOther = $one['COND_VAL'];
-                    break;
-                case "kijoNm":// 機場
-                    $kijoNm = $one['COND_VAL'];
-                    break;
-                case "jigyosyutaiNm":// 事業主体
-                    $jigyosyutaiNm = $one['COND_VAL'];
-                    break;
-                case "setubiNm":// 設備
-                    $setubiNm = $one['COND_VAL'];
-                    break;
-                case "prefCd":// 都道府県
-                    $prefCd = $one['COND_VAL'];
-                    break;
-                case "custNm":// 顧客
-                    $custNm = $one['COND_VAL'];
-                    break;
-                case "custTypeNenkan":// 顧客分類（年間契約）
-                    $custTypeNenkan = $one['COND_VAL'];
-                    break;
-                case "custTypeTenken":// 顧客分類（点検契約）
-                    $custTypeTenken = $one['COND_VAL'];
-                    break;
-                case "custTypeNasi":// 顧客分類（契約なし）
-                    $custTypeNasi = $one['COND_VAL'];
-                    break;
-                case "custTypeKasi":// 顧客分類（瑕疵期間中）
-                    $custTypeKasi = $one['COND_VAL'];
-                    break;
-                case "custTypeOther":// 顧客分類（その他）
-                    $custTypeOther = $one['COND_VAL'];
-                    break;
-                case "salesDeptNm":// 営業部門
-                    $custNm = $one['COND_VAL'];
-                    break;
-                case "salesUserNm":// 営業担当者
-                    $custNm = $one['COND_VAL'];
-                    break;
-                case "relateUserNm":// 関係者
-                    $custNm = $one['COND_VAL'];
-                    break;
-                default:
-                  echo NULL;
+            if ($conditionResult->getConditionDtList() && is_array($conditionResult->getConditionDtList()) && count($conditionResult->getConditionDtList()) > 0) {
+                foreach ($conditionResult->getConditionDtList() as $conditionDt){
+                    switch ($conditionDt->getCondFld())
+                    {
+                    case "incidentTypeSyougai":// インシデント分類（障害）
+                        $incidentTypeSyougai = $conditionDt->getCondVal();
+                        $conditionAry['condFld'] = "incidentTypeSyougai";
+                        $conditionAry['condVal'] = $incidentTypeSyougai;
+                        array_push($conditionListAry,$conditionAry);
+                        break;
+                    case "incidentTypeJiko":// インシデント分類（事故）
+                        $incidentTypeJiko = $conditionDt->getCondVal();
+                        $conditionAry['condFld'] = "incidentTypeJiko";
+                        $conditionAry['condVal'] = $incidentTypeJiko;
+                        array_push($conditionListAry,$conditionAry);
+                        break;
+                    case "incidentTypeClaim":// インシデント分類（クレーム）
+                        $incidentTypeClaim = $conditionDt->getCondVal();
+                        $conditionAry['condFld'] = "incidentTypeClaim";
+                        $conditionAry['condVal'] = $incidentTypeClaim;
+                        array_push($conditionListAry,$conditionAry);
+                        break;
+                    case "incidentTypeToiawase":// インシデント分類（問合せ）
+                        $incidentTypeToiawase = $conditionDt->getCondVal();
+                        $conditionAry['condFld'] = "incidentTypeToiawase";
+                        $conditionAry['condVal'] = $incidentTypeToiawase;
+                        array_push($conditionListAry,$conditionAry);
+                        break;
+                    case "incidentTypeInfo":// インシデント分類（情報）
+                        $incidentTypeInfo = $conditionDt->getCondVal();
+                        $conditionAry['condFld'] = "incidentTypeInfo";
+                        $conditionAry['condVal'] = $incidentTypeInfo;
+                        array_push($conditionListAry,$conditionAry);
+                        break;
+                    case "incidentTypeOther":// インシデント分類（その他）
+                        $incidentTypeOther = $conditionDt->getCondVal();
+                        $conditionAry['condFld'] = "incidentTypeOther";
+                        $conditionAry['condVal'] = $incidentTypeOther;
+                        array_push($conditionListAry,$conditionAry);
+                        break;
+                    case "incidentStatusCall":// ステータス（受入済）
+                        $incidentStatusCall = $conditionDt->getCondVal();
+                        $conditionAry['condFld'] = "incidentStatusCall";
+                        $conditionAry['condVal'] = $incidentStatusCall;
+                        array_push($conditionListAry,$conditionAry);
+                        break;
+                    case "incidentStatusTaio":// ステータス（対応入力済）
+                        $incidentStatusTaio = $conditionDt->getCondVal();
+                        $conditionAry['condFld'] = "incidentStatusTaio";
+                        $conditionAry['condVal'] = $incidentStatusTaio;
+                        array_push($conditionListAry,$conditionAry);
+                        break;
+                    case "incidentStatusAct":// ステータス（処置入力済）
+                        $incidentStatusAct = $conditionDt->getCondVal();
+                        $conditionAry['condFld'] = "incidentStatusAct";
+                        $conditionAry['condVal'] = $incidentStatusAct;
+                        array_push($conditionListAry,$conditionAry);
+                        break;
+                    case "incidentNo":// インシデント番号
+                        $incidentNo = $conditionDt->getCondVal();
+                        $conditionAry['condFld'] = "incidentNo";
+                        $conditionAry['condVal'] = $incidentNo;
+                        array_push($conditionListAry,$conditionAry);
+                        break;
+                    case "callContent":// 受付内容
+                        $callContent = $conditionDt->getCondVal();
+                        $conditionAry['condFld'] = "callContent";
+                        $conditionAry['condVal'] = $callContent;
+                        array_push($conditionListAry,$conditionAry);
+                        break;
+                    case "parentIncidentNo":// 親インシデント番号
+                        $parentIncidentNo = $conditionDt->getCondVal();
+                        $conditionAry['condFld'] = "parentIncidentNo";
+                        $conditionAry['condVal'] = $parentIncidentNo;
+                        array_push($conditionListAry,$conditionAry);
+                        break;
+                    case "incidentStartDateTimeFrom":// 発生日時（開始）
+                        $incidentStartDateTimeFrom = $conditionDt->getCondVal();
+                        $conditionAry['condFld'] = "incidentStartDateTimeFrom";
+                        $conditionAry['condVal'] = $incidentStartDateTimeFrom;
+                        array_push($conditionListAry,$conditionAry);
+                        break;
+                    case "incidentStartDateTimeTo":// 発生日時（終了）
+                        $incidentStartDateTimeTo = $conditionDt->getCondVal();
+                        $conditionAry['condFld'] = "incidentStartDateTimeTo";
+                        $conditionAry['condVal'] = $incidentStartDateTimeTo;
+                        array_push($conditionListAry,$conditionAry);
+                        break;
+                    case "callStartDateFrom":// 受付日（開始）
+                        $callStartDateFrom = $conditionDt->getCondVal();
+                        $conditionAry['condFld'] = "callStartDateFrom";
+                        $conditionAry['condVal'] = $callStartDateFrom;
+                        array_push($conditionListAry,$conditionAry);
+                        break;
+                    case "callStartDateTo":// 受付日（終了）
+                        $callStartDateTo = $conditionDt->getCondVal();
+                        $conditionAry['condFld'] = "callStartDateTo";
+                        $conditionAry['condVal'] = $callStartDateTo;
+                        array_push($conditionListAry,$conditionAry);
+                        break;
+                    case "industryTypeMachinery":// 業種区分（機械）
+                        $industryTypeMachinery = $conditionDt->getCondVal();
+                        $conditionAry['condFld'] = "industryTypeMachinery";
+                        $conditionAry['condVal'] = $industryTypeMachinery;
+                        array_push($conditionListAry,$conditionAry);
+                        break;
+                    case "industryTypeElectricalMachinery":// 業種区分（電機（E））
+                        $industryTypeElectricalMachinery = $conditionDt->getCondVal();
+                        $conditionAry['condFld'] = "industryTypeElectricalMachinery";
+                        $conditionAry['condVal'] = $industryTypeElectricalMachinery;
+                        array_push($conditionListAry,$conditionAry);
+                        break;
+                    case "industryTypeInstrumentation":// 業種区分（計装（I））
+                        $industryTypeInstrumentation = $conditionDt->getCondVal();
+                        $conditionAry['condFld'] = "industryTypeInstrumentation";
+                        $conditionAry['condVal'] = $industryTypeInstrumentation;
+                        array_push($conditionListAry,$conditionAry);
+                        break;
+                    case "industryTypeInfo":// 業種区分（情報（C））
+                        $industryTypeInfo = $conditionDt->getCondVal();
+                        $conditionAry['condFld'] = "industryTypeInfo";
+                        $conditionAry['condVal'] = $industryTypeInfo;
+                        array_push($conditionListAry,$conditionAry);
+                        break;
+                    case "industryTypeEnvironment":// 業種区分（環境）
+                        $industryTypeEnvironment = $conditionDt->getCondVal();
+                        $conditionAry['condFld'] = "industryTypeEnvironment";
+                        $conditionAry['condVal'] = $industryTypeEnvironment;
+                        array_push($conditionListAry,$conditionAry);
+                        break;
+                    case "industryTypeWBC":// 業種区分（WBC）
+                        $industryTypeWBC = $conditionDt->getCondVal();
+                        $conditionAry['condFld'] = "industryTypeWBC";
+                        $conditionAry['condVal'] = $industryTypeWBC;
+                        array_push($conditionListAry,$conditionAry);
+                        break;
+                    case "industryTypeOther":// 業種区分（その他）
+                        $industryTypeOther = $conditionDt->getCondVal();
+                        $conditionAry['condFld'] = "industryTypeOther";
+                        $conditionAry['condVal'] = $industryTypeOther;
+                        array_push($conditionListAry,$conditionAry);
+                        break;
+                    case "kijoNm":// 機場
+                        $kijoNm = $conditionDt->getCondVal();
+                        $conditionAry['condFld'] = "kijoNm";
+                        $conditionAry['condVal'] = $kijoNm;
+                        array_push($conditionListAry,$conditionAry);
+                        break;
+                    case "jigyosyutaiNm":// 事業主体
+                        $jigyosyutaiNm = $conditionDt->getCondVal();
+                        $conditionAry['condFld'] = "jigyosyutaiNm";
+                        $conditionAry['condVal'] = $jigyosyutaiNm;
+                        array_push($conditionListAry,$conditionAry);
+                        break;
+                    case "setubiNm":// 設備
+                        $setubiNm = $conditionDt->getCondVal();
+                        $conditionAry['condFld'] = "setubiNm";
+                        $conditionAry['condVal'] = $setubiNm;
+                        array_push($conditionListAry,$conditionAry);
+                        break;
+                    case "prefCd":// 都道府県
+                        $prefCd = $conditionDt->getCondVal();
+                        $conditionAry['condFld'] = "prefCd";
+                        $conditionAry['condVal'] = $prefCd;
+                        array_push($conditionListAry,$conditionAry);
+                        break;
+                    case "custNm":// 顧客
+                        $custNm = $conditionDt->getCondVal();
+                        $conditionAry['condFld'] = "custNm";
+                        $conditionAry['condVal'] = $custNm;
+                        array_push($conditionListAry,$conditionAry);
+                        break;
+                    case "custTypeNenkan":// 顧客分類（年間契約）
+                        $custTypeNenkan = $conditionDt->getCondVal();
+                        $conditionAry['condFld'] = "custTypeNenkan";
+                        $conditionAry['condVal'] = $custTypeNenkan;
+                        array_push($conditionListAry,$conditionAry);
+                        break;
+                    case "custTypeTenken":// 顧客分類（点検契約）
+                        $custTypeTenken = $conditionDt->getCondVal();
+                        $conditionAry['condFld'] = "custTypeTenken";
+                        $conditionAry['condVal'] = $custTypeTenken;
+                        array_push($conditionListAry,$conditionAry);
+                        break;
+                    case "custTypeNasi":// 顧客分類（契約なし）
+                        $custTypeNasi = $conditionDt->getCondVal();
+                        $conditionAry['condFld'] = "custTypeNasi";
+                        $conditionAry['condVal'] = $custTypeNasi;
+                        array_push($conditionListAry,$conditionAry);
+                        break;
+                    case "custTypeKasi":// 顧客分類（瑕疵期間中）
+                        $custTypeKasi = $conditionDt->getCondVal();
+                        $conditionAry['condFld'] = "custTypeKasi";
+                        $conditionAry['condVal'] = $custTypeKasi;
+                        array_push($conditionListAry,$conditionAry);
+                        break;
+                    case "custTypeOther":// 顧客分類（その他）
+                        $custTypeOther = $conditionDt->getCondVal();
+                        $conditionAry['condFld'] = "custTypeOther";
+                        $conditionAry['condVal'] = $custTypeOther;
+                        array_push($conditionListAry,$conditionAry);
+                        break;
+                    case "salesDeptNm":// 営業部門
+                        $salesDeptNm = $conditionDt->getCondVal();
+                        $conditionAry['condFld'] = "salesDeptNm";
+                        $conditionAry['condVal'] = $salesDeptNm;
+                        array_push($conditionListAry,$conditionAry);
+                        break;
+                    case "salesUserNm":// 営業担当者
+                        $salesUserNm = $conditionDt->getCondVal();
+                        $conditionAry['condFld'] = "salesUserNm";
+                        $conditionAry['condVal'] = $salesUserNm;
+                        array_push($conditionListAry,$conditionAry);
+                        break;
+                    case "relateUserNm":// 関係者
+                        $relateUserNm = $conditionDt->getCondVal();
+                        $conditionAry['condFld'] = "relateUserNm";
+                        $conditionAry['condVal'] = $relateUserNm;
+                        array_push($conditionListAry,$conditionAry);
+                        break;
+                    default:
+                      echo NULL;
+                    }
                 }
             }
 
@@ -184,6 +296,9 @@ class IncidentListSearchConditionGetAction extends CommonAction {
             $IncidentListGetDto->setCustTypeNasi($custTypeNasi);
             $IncidentListGetDto->setCustTypeKasi($custTypeKasi);
             $IncidentListGetDto->setCustTypeOther($custTypeOther);
+            $IncidentListGetDto->setSalesDeptNm($salesDeptNm);
+            $IncidentListGetDto->setSalesUserNm($salesUserNm);
+            $IncidentListGetDto->setRelateNm($relateUserNm);
         }
 
         // インシデントリスト情報を取得
@@ -193,7 +308,7 @@ class IncidentListSearchConditionGetAction extends CommonAction {
         
         // 戻り値配列の作成
         $rtnAry = $this->createReturnArray($eventResult);
-        array_push($rtnAry, $conditionResult);
+        array_push($rtnAry, $conditionListAry);
         
         // 値を返す(Angular)
         echo $this->returnAngularJSONP($rtnAry);

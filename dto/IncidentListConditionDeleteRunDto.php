@@ -12,25 +12,24 @@ require_once('./dto/CommonDto.php');
 /**
  * Class IncidentListConditionDeleteRunDto
  *
- * @property String $condNm
+ * @property String $condId
  */
 class IncidentListConditionDeleteRunDto extends CommonDto{
 
-    private $condNm;
+    private $condId;
 
     /**
      * @return String
      */
-    public function getCondNm() {
-        return $this->condNm;
+    public function getCondId() {
+        return $this->condId;
     }
 
     /**
-     * @param String $condNm
+     * @param String $condId
      */
-    public function setCondNm($condNm) {
-        $this->condNm = $condNm;
+    public function setCondId($condId) {
+        $this->condId = $condId;
     }
 
 }
-

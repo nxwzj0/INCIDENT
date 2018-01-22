@@ -93,25 +93,27 @@ AppComponent = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__edit_edit_component__ = __webpack_require__("../../../../../src/app/edit/edit.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__mr2_mr2_component__ = __webpack_require__("../../../../../src/app/mr2/mr2.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__project_project_component__ = __webpack_require__("../../../../../src/app/project/project.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__modal_relateUserAdd_modal_component__ = __webpack_require__("../../../../../src/app/modal/relateUserAdd.modal.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__modal_incidentSearch_modal_component__ = __webpack_require__("../../../../../src/app/modal/incidentSearch.modal.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__modal_kijoSearch_modal_component__ = __webpack_require__("../../../../../src/app/modal/kijoSearch.modal.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__modal_userSearch_modal_component__ = __webpack_require__("../../../../../src/app/modal/userSearch.modal.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__modal_sectionSearch_modal_component__ = __webpack_require__("../../../../../src/app/modal/sectionSearch.modal.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__modal_conditionSave_modal_component__ = __webpack_require__("../../../../../src/app/modal/conditionSave.modal.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__modal_conditionDelete_modal_component__ = __webpack_require__("../../../../../src/app/modal/conditionDelete.modal.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__modal_projectSearch_modal_component__ = __webpack_require__("../../../../../src/app/modal/projectSearch.modal.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__modal_customerSearch_modal_component__ = __webpack_require__("../../../../../src/app/modal/customerSearch.modal.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__modal_equipmentSearch_modal_component__ = __webpack_require__("../../../../../src/app/modal/equipmentSearch.modal.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__jsonp_service__ = __webpack_require__("../../../../../src/app/jsonp.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__windowRef_service__ = __webpack_require__("../../../../../src/app/windowRef.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__pipe_order_by_pipe__ = __webpack_require__("../../../../../src/app/pipe/order.by.pipe.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__modal_common_modal_component__ = __webpack_require__("../../../../../src/app/modal/common.modal.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__modal_relateUserAdd_modal_component__ = __webpack_require__("../../../../../src/app/modal/relateUserAdd.modal.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__modal_incidentSearch_modal_component__ = __webpack_require__("../../../../../src/app/modal/incidentSearch.modal.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__modal_kijoSearch_modal_component__ = __webpack_require__("../../../../../src/app/modal/kijoSearch.modal.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__modal_userSearch_modal_component__ = __webpack_require__("../../../../../src/app/modal/userSearch.modal.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__modal_sectionSearch_modal_component__ = __webpack_require__("../../../../../src/app/modal/sectionSearch.modal.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__modal_conditionSave_modal_component__ = __webpack_require__("../../../../../src/app/modal/conditionSave.modal.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__modal_conditionDelete_modal_component__ = __webpack_require__("../../../../../src/app/modal/conditionDelete.modal.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__modal_projectSearch_modal_component__ = __webpack_require__("../../../../../src/app/modal/projectSearch.modal.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__modal_customerSearch_modal_component__ = __webpack_require__("../../../../../src/app/modal/customerSearch.modal.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__modal_equipmentSearch_modal_component__ = __webpack_require__("../../../../../src/app/modal/equipmentSearch.modal.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__jsonp_service__ = __webpack_require__("../../../../../src/app/jsonp.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__windowRef_service__ = __webpack_require__("../../../../../src/app/windowRef.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__pipe_order_by_pipe__ = __webpack_require__("../../../../../src/app/pipe/order.by.pipe.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -161,17 +163,18 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_12__edit_edit_component__["a" /* EditComponent */],
             __WEBPACK_IMPORTED_MODULE_13__mr2_mr2_component__["a" /* Mr2Component */],
             __WEBPACK_IMPORTED_MODULE_14__project_project_component__["a" /* ProjectComponent */],
-            __WEBPACK_IMPORTED_MODULE_15__modal_relateUserAdd_modal_component__["a" /* RelateUserAddModalComponent */],
-            __WEBPACK_IMPORTED_MODULE_16__modal_incidentSearch_modal_component__["a" /* IncidentSearchModalComponent */],
-            __WEBPACK_IMPORTED_MODULE_17__modal_kijoSearch_modal_component__["a" /* KijoSearchModalComponent */],
-            __WEBPACK_IMPORTED_MODULE_18__modal_userSearch_modal_component__["a" /* UserSearchModalComponent */],
-            __WEBPACK_IMPORTED_MODULE_19__modal_sectionSearch_modal_component__["a" /* SectionSearchModalComponent */],
-            __WEBPACK_IMPORTED_MODULE_20__modal_conditionSave_modal_component__["a" /* ConditionSaveModalComponent */],
-            __WEBPACK_IMPORTED_MODULE_21__modal_conditionDelete_modal_component__["a" /* ConditionDeleteModalComponent */],
-            __WEBPACK_IMPORTED_MODULE_22__modal_projectSearch_modal_component__["a" /* ProjectSearchModalComponent */],
-            __WEBPACK_IMPORTED_MODULE_23__modal_customerSearch_modal_component__["a" /* CustomerSearchModalComponent */],
-            __WEBPACK_IMPORTED_MODULE_24__modal_equipmentSearch_modal_component__["a" /* EquipmentSearchModalComponent */],
-            __WEBPACK_IMPORTED_MODULE_27__pipe_order_by_pipe__["b" /* OrderByPipe */]
+            __WEBPACK_IMPORTED_MODULE_15__modal_common_modal_component__["a" /* CommonModalComponent */],
+            __WEBPACK_IMPORTED_MODULE_16__modal_relateUserAdd_modal_component__["a" /* RelateUserAddModalComponent */],
+            __WEBPACK_IMPORTED_MODULE_17__modal_incidentSearch_modal_component__["a" /* IncidentSearchModalComponent */],
+            __WEBPACK_IMPORTED_MODULE_18__modal_kijoSearch_modal_component__["a" /* KijoSearchModalComponent */],
+            __WEBPACK_IMPORTED_MODULE_19__modal_userSearch_modal_component__["a" /* UserSearchModalComponent */],
+            __WEBPACK_IMPORTED_MODULE_20__modal_sectionSearch_modal_component__["a" /* SectionSearchModalComponent */],
+            __WEBPACK_IMPORTED_MODULE_21__modal_conditionSave_modal_component__["a" /* ConditionSaveModalComponent */],
+            __WEBPACK_IMPORTED_MODULE_22__modal_conditionDelete_modal_component__["a" /* ConditionDeleteModalComponent */],
+            __WEBPACK_IMPORTED_MODULE_23__modal_projectSearch_modal_component__["a" /* ProjectSearchModalComponent */],
+            __WEBPACK_IMPORTED_MODULE_24__modal_customerSearch_modal_component__["a" /* CustomerSearchModalComponent */],
+            __WEBPACK_IMPORTED_MODULE_25__modal_equipmentSearch_modal_component__["a" /* EquipmentSearchModalComponent */],
+            __WEBPACK_IMPORTED_MODULE_28__pipe_order_by_pipe__["b" /* OrderByPipe */]
         ],
         imports: [
             __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
@@ -181,10 +184,11 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_4_ngx_bootstrap__["d" /* PaginationModule */].forRoot(),
             __WEBPACK_IMPORTED_MODULE_4_ngx_bootstrap__["a" /* BsDatepickerModule */].forRoot(),
             __WEBPACK_IMPORTED_MODULE_4_ngx_bootstrap__["e" /* PopoverModule */].forRoot(),
-            __WEBPACK_IMPORTED_MODULE_2__angular_http__["b" /* JsonpModule */],
+            __WEBPACK_IMPORTED_MODULE_2__angular_http__["d" /* JsonpModule */],
             __WEBPACK_IMPORTED_MODULE_3__angular_forms__["a" /* FormsModule */],
+            __WEBPACK_IMPORTED_MODULE_2__angular_http__["b" /* HttpModule */],
         ],
-        providers: [__WEBPACK_IMPORTED_MODULE_25__jsonp_service__["a" /* JsonpService */], __WEBPACK_IMPORTED_MODULE_26__windowRef_service__["a" /* WindowRefService */]],
+        providers: [__WEBPACK_IMPORTED_MODULE_26__jsonp_service__["a" /* JsonpService */], __WEBPACK_IMPORTED_MODULE_27__windowRef_service__["a" /* WindowRefService */]],
         bootstrap: [__WEBPACK_IMPORTED_MODULE_6__app_component__["a" /* AppComponent */]],
     })
 ], AppModule);
@@ -216,11 +220,14 @@ AppModule = __decorate([
 
 var myRoutes = [
     { path: 'detail/:incidentId', component: __WEBPACK_IMPORTED_MODULE_4__detail_detail_component__["a" /* DetailComponent */], data: { category: 'detail' } },
+    { path: 'edit/:incidentId', component: __WEBPACK_IMPORTED_MODULE_5__edit_edit_component__["a" /* EditComponent */], data: { category: 'edit' } },
     { path: 'edit', component: __WEBPACK_IMPORTED_MODULE_5__edit_edit_component__["a" /* EditComponent */], data: { category: 'edit' } },
+    { path: 'list/k/:keyword', component: __WEBPACK_IMPORTED_MODULE_3__list_list_component__["a" /* ListComponent */], data: { category: 'list' } },
+    { path: 'list/c/:condId', component: __WEBPACK_IMPORTED_MODULE_3__list_list_component__["a" /* ListComponent */], data: { category: 'list' } },
     { path: 'list', component: __WEBPACK_IMPORTED_MODULE_3__list_list_component__["a" /* ListComponent */], data: { category: 'list' } },
     { path: 'top', component: __WEBPACK_IMPORTED_MODULE_2__top_top_component__["a" /* TopComponent */], data: { category: 'top' } },
     { path: 'project', component: __WEBPACK_IMPORTED_MODULE_7__project_project_component__["a" /* ProjectComponent */], data: { category: 'project' } },
-    { path: 'mr2', component: __WEBPACK_IMPORTED_MODULE_6__mr2_mr2_component__["a" /* Mr2Component */], data: { category: 'mr2' } },
+    { path: 'mr2/:mkbId', component: __WEBPACK_IMPORTED_MODULE_6__mr2_mr2_component__["a" /* Mr2Component */], data: { category: 'mr2' } },
     { path: '', component: __WEBPACK_IMPORTED_MODULE_2__top_top_component__["a" /* TopComponent */], data: { category: 'top' } },
     { path: '**', component: __WEBPACK_IMPORTED_MODULE_1__error_component__["a" /* ErrorComponent */] },
 ];
@@ -250,7 +257,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/detail/detail.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<!--\n//*****************************************************************************\n//\tシステム名　　　：インシデント管理システム\n//\tサブシステム名　：\n//\t画面名　　　　　：インシデント閲覧画面\n//\tHTMLID　　　　 ：IncidentDetailView.php\n//\t作成日付・作成者：2017.10.05 ADF)S.Yoshida\n//\t修正履歴　　　　：\n//*****************************************************************************\n-->\n<my-header></my-header>\n<relateUserAdd-modal #relateUser></relateUserAdd-modal>\n\n<div ng-cloak>\n  <div class=\"container-fluid\">\n    <div class=\"text-right transition-button\">\n      <span>\n        <button type=\"button\" class=\"btn btn-warning\">事故／クレーム連絡登録</button>\n      </span>\n      <span>\n        <button type=\"button\" class=\"btn btn-warning\">費用決済申請登録</button>\n      </span>\n      <span>\n        <button type=\"button\" class=\"btn btn-danger\" routerLink=\"/edit\" routerLinkActive=\"current\" [routerLinkActiveOptions]=\"{ exact: true }\">\n          編集\n        </button>\n      </span>\n      <span>\n        <button type=\"button\" class=\"btn btn-danger\" routerLink=\"/list\" routerLinkActive=\"current\" [routerLinkActiveOptions]=\"{ exact: true }\">\n          一覧へ戻る\n        </button>\n      </span>\n    </div>\n    <div class=\"row\">\n      <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\">\n\n        <div class=\"panel panel-danger\">\n          <div class=\"panel-heading clearfix\">\n            <span class=\"h3 incident-title-status\">{{incidentNo}}</span>\n            <span class=\"h4 incident-title-status\">　{{incidentStatusNm}} {{incidentTypeNm}}</span>\n            <div class=\"pull-right\">\n              <strong>登録日：{{insDate}} {{insUserNm}}　最終更新日：{{updDate}} {{updUserNm}}</strong>\n            </div>\n          </div>\n          <!-- /.panel-heading -->\n          <div class=\"panel-body context-margin\">\n            <div class=\"row\">\n              <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                <strong>親インシデント番号：</strong>\n              </div>\n              <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">{{parentIncidentNo}}</div>\n              <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                <strong>発生日時：</strong>\n              </div>\n              <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">{{incidentStartDateTime}}</div>\n            </div>\n            <div class=\"row\">\n              <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                <strong>業種区分：</strong>\n              </div>\n              <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">{{industryTypeNm}}</div>\n              <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                <strong>情報提供元：</strong>\n              </div>\n              <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">{{infoSourceNm}}</div>\n            </div>\n            <div class=\"row\">\n              <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                <strong>情報提供者：</strong>\n              </div>\n              <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">{{infoProvider}}</div>\n              <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                <strong>情報提供TEL：</strong>\n              </div>\n              <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">{{infoProvidedTel}}</div>\n            </div>\n            <div class=\"row\">\n              <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                <strong>添付ファイル：</strong>\n              </div>\n              <div class=\"col-lg-9 col-md-9 col-sm-6 col-xs-6\">\n                {{incidentFileNm}}\n              </div>\n            </div>\n            <!-- <div class=\"row\">\n              <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                <strong>関係者：</strong>\n              </div>\n              <div class=\"col-lg-9 col-md-9 col-sm-6 col-xs-6\">\n                <span *ngFor=\"let relateUser of relateList; last as last;\">\n                  {{relateUser.name}}\n                  <span>{{ !last ? ',' : '' }}</span>\n                </span>\n              </div>\n            </div> -->\n            <div class=\"row\">\n              <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                <strong>注記：</strong>\n              </div>\n              <div class=\"col-lg-9 col-md-9 col-sm-6 col-xs-6\">\n                <!-- TODO:改行コード反映 -->\n                {{memo}}\n              </div>\n            </div>\n\n            <h5 class=\"context-header\">\n              <strong>設備情報及び顧客情報</strong>\n            </h5>\n            <div class=\"setubi-and-cust-info-border\">\n              <div class=\"row\">\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>機場：</strong>\n                </div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">{{kijoNm}}</div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>事業主体：</strong>\n                </div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">{{jigyosyutaiNm}}</div>\n              </div>\n              <div class=\"row\">\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>設備：</strong>\n                </div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">{{setubiNm}}</div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>都道府県：</strong>\n                </div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">{{prefNm}}</div>\n              </div>\n              <div class=\"row\">\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>納入プロジェクト：</strong>\n                </div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">{{deliveryPjNm}}</div>\n              </div>\n              <div class=\"row\">\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>顧客：</strong>\n                </div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">{{custNm}}</div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>顧客分類：</strong>\n                </div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">{{custTypeNm}}</div>\n              </div>\n              <div class=\"row\">\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>会社名・所属部署：</strong>\n                </div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">{{custDept}}</div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>依頼者：</strong>\n                </div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">{{requester}}</div>\n              </div>\n              <div class=\"row\">\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>連絡先(TEL)：</strong>\n                </div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">{{contactTel}}</div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>連絡先(FAX)：</strong>\n                </div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">{{contactFax}}</div>\n              </div>\n              <div class=\"row\">\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>連絡先(E-mail)：</strong>\n                </div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">{{contactMail}}</div>\n              </div>\n              <div class=\"row\">\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>営業部門：</strong>\n                </div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">{{salesDeptNm}}</div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>営業担当者：</strong>\n                </div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">{{salesUserNm}}</div>\n              </div>\n              <div class=\"row\">\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>主管部門：</strong>\n                </div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">{{skanDeptNm}}</div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>主管担当者：</strong>\n                </div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">{{skanUserNm}}</div>\n              </div>\n\n            </div>\n\n            <h5 class=\"context-header\">\n              <strong>受付情報</strong>\n            </h5>\n            <div class=\"call-info-border\">\n              <div class=\"row\">\n                <div class=\"col-lg-2 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>受付日：</strong>\n                </div>\n                <div class=\"col-lg-2 col-md-3 col-sm-6 col-xs-6\">{{callDate}}</div>\n                <div class=\"col-lg-4 col-md-6 col-sm-6 col-xs-6\">\n                  <!-- <strong>開始：</strong>&nbsp;&nbsp;{{callStartDate | date: 'shortTime'}}&nbsp;&nbsp;&nbsp;&nbsp; -->\n                  <strong>開始：</strong>&nbsp;&nbsp;10:00&nbsp;&nbsp;&nbsp;&nbsp;\n                  <!-- <strong>終了：</strong>&nbsp;&nbsp;{{callEndDate | date: 'shortTime'}}</div> -->\n                  <strong>終了：</strong>&nbsp;&nbsp;10:30</div>\n              </div>\n              <div class=\"row\">\n                <div class=\"col-lg-2 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>受付部署：</strong>\n                </div>\n                <div class=\"col-lg-4 col-md-3 col-sm-6 col-xs-6\">{{callDeptNm}}</div>\n                <div class=\"col-lg-2 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>受付者：</strong>\n                </div>\n                <div class=\"col-lg-4 col-md-3 col-sm-6 col-xs-6\">{{callUserNm}}</div>\n              </div>\n              <div class=\"row\">\n                <div class=\"col-lg-2 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>\n                    <strong>TEL：</strong>\n                  </strong>\n                </div>\n                <div class=\"col-lg-4 col-md-3 col-sm-6 col-xs-6\">{{callTel}}</div>\n                <div class=\"col-lg-2 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>E-mail：</strong>\n                </div>\n                <div class=\"col-lg-4 col-md-3 col-sm-6 col-xs-6\">{{callMail}}</div>\n              </div>\n              <div class=\"info-detail-area\">{{callContent}}</div>\n            </div>\n\n            <h5 class=\"context-header\">\n              <strong>対応情報</strong>\n            </h5>\n            <div class=\"taio-info-border\">\n              <div class=\"row\">\n                <div class=\"col-lg-2 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>対応日：</strong>\n                </div>\n                <div class=\"col-lg-2 col-md-3 col-sm-6 col-xs-6\">{{taioDate}}</div>\n                <div class=\"col-lg-4 col-md-6 col-sm-6 col-xs-6\">\n                  <!-- <strong>開始：</strong>&nbsp;&nbsp;{{taioStartDate | date: 'shortTime'}} -->\n                  <strong>開始：</strong>&nbsp;&nbsp;10:00\n                  <!-- <strong>&nbsp;&nbsp;&nbsp;&nbsp;終了：</strong>&nbsp;&nbsp;{{taioEndDate | date: 'shortTime'}}</div> -->\n                  <strong>&nbsp;&nbsp;&nbsp;&nbsp;終了：</strong>&nbsp;&nbsp;10:30</div>\n              </div>\n              <div class=\"row\">\n                <div class=\"col-lg-2 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>対応部署：</strong>\n                </div>\n                <div class=\"col-lg-4 col-md-3 col-sm-6 col-xs-6\">{{taioDeptNm}}</div>\n                <div class=\"col-lg-2 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>対応者：</strong>\n                </div>\n                <div class=\"col-lg-4 col-md-3 col-sm-6 col-xs-6\">{{taioUserNm}}</div>\n              </div>\n              <div class=\"row\">\n                <div class=\"col-lg-2 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>TEL：</strong>\n                </div>\n                <div class=\"col-lg-4 col-md-3 col-sm-6 col-xs-6\">{{taioTel}}</div>\n                <div class=\"col-lg-2 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>E-mail：</strong>\n                </div>\n                <div class=\"col-lg-4 col-md-3 col-sm-6 col-xs-6\">{{taioMail}}</div>\n              </div>\n              <div class=\"info-detail-area\">{{taioContent}}</div>\n            </div>\n\n            <h5 class=\"context-header\">\n              <strong>処置情報</strong>\n            </h5>\n            <div class=\"action-info-border\">\n              <div class=\"row\">\n                <div class=\"col-lg-2 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>処置予定日：</strong>\n                </div>\n                <div class=\"col-lg-4 col-md-3 col-sm-6 col-xs-6\">{{actDate}} </div>\n                <div class=\"col-lg-2 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>処置区分：</strong>\n                </div>\n                <div class=\"col-lg-4 col-md-3 col-sm-6 col-xs-6\">{{actTypeNm}} </div>\n              </div>\n              <div class=\"row\">\n                <div class=\"col-lg-2 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>処置開始日時：</strong>\n                </div>\n                <div class=\"col-lg-4 col-md-3 col-sm-6 col-xs-6\">{{actStartDateTime}} </div>\n                <div class=\"col-lg-2 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>処置終了日時：</strong>\n                </div>\n                <div class=\"col-lg-4 col-md-3 col-sm-6 col-xs-6\">{{actEndDateTime}} </div>\n              </div>\n              <div class=\"row\">\n                <div class=\"col-lg-2 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>処置部署：</strong>\n                </div>\n                <div class=\"col-lg-4 col-md-3 col-sm-6 col-xs-6\">{{actDeptNm}} </div>\n                <div class=\"col-lg-2 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>処置者：</strong>\n                </div>\n                <div class=\"col-lg-4 col-md-3 col-sm-6 col-xs-6\">{{actUserNm}} </div>\n              </div>\n              <div class=\"row\">\n                <div class=\"col-lg-2 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>TEL：</strong>\n                </div>\n                <div class=\"col-lg-4 col-md-3 col-sm-6 col-xs-6\">{{actTel}} </div>\n                <div class=\"col-lg-2 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>E-mail：</strong>\n                </div>\n                <div class=\"col-lg-4 col-md-3 col-sm-6 col-xs-6\">{{actMail}} </div>\n              </div>\n              <div class=\"info-detail-area\">{{actContent}} </div>\n            </div>\n\n            <h5 class=\"context-header\">\n              <strong>製品情報</strong>\n            </h5>\n            <div class=\"product-info-border\">\n              <div class=\"row\">\n                <div class=\"col-lg-2 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>機種区分：</strong>\n                </div>\n                <div class=\"col-lg-4 col-md-3 col-sm-6 col-xs-6\">{{productTypeNm}}</div>\n              </div>\n              <h5 class=\"context-sub-header\">\n                <strong>障害状況</strong>\n              </h5>\n              <div class=\"row\">\n                <div class=\"col-lg-2 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>　トリガー：</strong>\n                </div>\n                <div class=\"col-lg-4 col-md-3 col-sm-6 col-xs-6\">{{productTriggerNm}}</div>\n                <div class=\"col-lg-2 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>頻度：</strong>\n                </div>\n                <div class=\"col-lg-4 col-md-3 col-sm-6 col-xs-6\">{{productHindoNm}}</div>\n              </div>\n              <div class=\"row\">\n                <div class=\"col-lg-2 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>　現象：</strong>\n                </div>\n                <div class=\"col-lg-4 col-md-3 col-sm-6 col-xs-6\">{{productGensyoNm}}</div>\n                <div class=\"col-lg-2 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>状態：</strong>\n                </div>\n                <div class=\"col-lg-4 col-md-3 col-sm-6 col-xs-6\">{{productStatusNm}}</div>\n              </div>\n            </div>\n          </div>\n          <!-- /.panel-body -->\n        </div>\n        <!-- /.panel -->\n\n        <h4 class=\"panel-header text-primary\">\n          <strong>▼関係者</strong>\n        </h4>\n        <div class=\"panel panel-default\">\n          <div class=\"panel-body context-margin\">\n            <h5 class=\"context-header\">\n              <strong>\n                <i class=\"fa fa-dot-circle-o\" aria-hidden=\"true\"></i> 変更を通知する／\n                <i class=\"fa fa-circle-o\" aria-hidden=\"true\"></i> 変更を通知しない\n              </strong>\n              <a class=\"relate-user-add-link\" (click)=\"relateUser.openModal()\">\n                <u>関係者を追加</u>\n              </a>\n            </h5>\n            <div class=\"context-margin\">\n              <div>サービスソリューション事業本部 ＣＥ事業部 東京サービス部 第一グループ</div>\n              <div>\n                <span class=\"context-margin relate-user-nm\"> 水道　一郎 （既読日：2017/12/18）</span>\n                <button type=\"button\" class=\"btn btn-sx-ori btn-danger btn-close\">\n                  <i class=\"fa fa-trash\"></i>\n                </button>\n              </div>\n              <div>\n                <span class=\"context-margin relate-user-nm\"> 水道　二郎 　　　　　　　　　　　</span>\n                <button type=\"button\" class=\"btn btn-sx-ori btn-danger btn-close\">\n                  <i class=\"fa fa-trash\"></i>\n                </button>\n              </div>\n              <div>品質保証統括室 　品質管理グループ</div>\n              <div>\n                <span class=\"context-margin relate-user-nm\"> 水道　花子 （既読日：2017/12/19）</span>\n                <button type=\"button\" class=\"btn btn-sx-ori btn-danger btn-close\">\n                  <i class=\"fa fa-trash\"></i>\n                </button>\n              </div>\n            </div>\n          </div>\n          <!-- /.panel-body -->\n        </div>\n        <!-- /.panel -->\n\n        <h4 class=\"panel-header text-primary\">\n          <strong>▼関連リンク</strong>\n        </h4>\n        <div class=\"panel panel-default\">\n          <div class=\"panel-body context-margin\">\n            <h5 class=\"context-header\">\n              <strong>プロジェクト情報\n                <span class=\"text-danger\">※プロジェクト情報はＡＲＣＳから行なってください。（ＡＲＣＳ登録後の翌日反映）</span>\n              </strong>\n            </h5>\n            <div class=\"context-margin\">\n              <div class=\"row\">\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>プロジェクト番号：</strong>\n                </div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                  <a (click)=\"showPj()\">\n                    <u>J1000000</u>\n                  </a>\n                </div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>PJ主管部門：</strong>\n                </div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">プロ主管</div>\n              </div>\n              <div class=\"row\">\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>プロジェクト名：</strong>\n                </div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">ｘｘｘｘｘｘｘｘｘｘｘｘｘ</div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>PM：</strong>\n                </div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">川本　健</div>\n              </div>\n              <div class=\"row\">\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>代表機場：</strong>\n                </div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">ｘｘｘｘｘｘｘｘｘｘｘｘｘ</div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>都道府県：</strong>\n                </div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">東京都</div>\n              </div>\n            </div>\n            <h5 class=\"context-header\">\n              <strong>障害対応報告書(MR2)</strong>\n            </h5>\n            <div class=\"context-margin\">\n              <div class=\"row\">\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>件名：</strong>\n                </div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                  <a (click)=\"showMr2()\">\n                    <u>XXXXXXXXXXシーケンサ異常</u>\n                  </a>\n                </div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>作成日：</strong>\n                </div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">2017/1/4</div>\n              </div>\n              <div class=\"row\">\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>依頼元：</strong>\n                </div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">依頼元</div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>作業担当者：</strong>\n                </div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">川本　健</div>\n              </div>\n            </div>\n            <h5 class=\"context-header\">\n              <strong>労災・事故・クレーム連絡</strong>\n            </h5>\n            <div class=\"context-margin\">\n              <div class=\"row\">\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>状態：</strong>\n                </div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">第1報 正式発行</div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>区分：</strong>\n                </div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">品質（ランクＡ）</div>\n              </div>\n              <div class=\"row\">\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>概要：</strong>\n                </div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                  <a (click)=\"showJiko()\">\n                    <u>XXXXXXXXXXXXXXXXXXXXXX</u>\n                  </a>\n                </div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>顧客名：</strong>\n                </div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">川本　健</div>\n              </div>\n              <div class=\"row\">\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>機場名：</strong>\n                </div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">ｘｘｘｘｘｘｘｘｘｘｘｘｘ</div>\n              </div>\n              <div class=\"row\">\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>発行日：</strong>\n                </div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">2017/1/1</div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>発行元：</strong>\n                </div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">ｘｘｘｘｘｘｘｘｘｘｘｘｘ</div>\n              </div>\n            </div>\n            <h5 class=\"context-header\">\n              <strong>費用決済申請</strong>\n            </h5>\n            <div class=\"context-margin\">\n              <div class=\"row\">\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>ID番号：</strong>\n                </div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                  <a (click)=\"showHiyo('dsp','dsp',416161,'','1282')\">\n                    <u>XXXXXXXXXX</u>\n                  </a>\n                </div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>ステータス：</strong>\n                </div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">決裁</div>\n              </div>\n              <div class=\"row\">\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>区分：</strong>\n                </div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">クレーム対応</div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>決裁番号：</strong>\n                </div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">無償 第X号</div>\n              </div>\n              <div class=\"row\">\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>件名：</strong>\n                </div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">XXXXXXXXXXXXXXXXXXXXXX</div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>概算金額：</strong>\n                </div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                  <div class=\"pull-right\">123,456</div>\n                </div>\n              </div>\n            </div>\n          </div>\n          <!-- /.panel-body -->\n        </div>\n        <!-- /.panel -->\n\n        <h4 class=\"panel-header text-primary\">\n          <strong>▼関連インシデント</strong>\n        </h4>\n        <div class=\"panel panel-default\">\n          <div class=\"panel-body context-margin\">\n            <h5 class=\"context-header\">\n              <strong>同一機場インシデント</strong>\n            </h5>\n            <div class=\"context-margin\">\n              <a (click)=\"showRelateIncident()\">\n                <u>#12390 障害 2016/12/31 ○○○浄水場 ○○○市</u>\n              </a>\n              <div class=\"context-margin\">\n                Ａ系水処理設備の終沈（１、２号）の監視操作不能なので対応頂きたい。\n              </div>\n            </div>\n            <h5 class=\"context-header\">\n              <strong>同一顧客インシデント</strong>\n            </h5>\n            <div class=\"context-margin\">\n              <a (click)=\"showRelateIncident()\">\n                <u>#12312 問合せ 2016/12/31 ○○○センター ○○○企業局</u>\n              </a>\n              <div class=\"context-margin\">\n                富士電機製変圧器のＰＣＢ含有問合せ。以下の型式の変圧器にＰＣＢが含まれているかを教えて下さい。\n              </div>\n            </div>\n          </div>\n          <!-- /.panel-body -->\n        </div>\n        <!-- /.panel -->\n\n        <h4 class=\"panel-header text-primary\">\n          <strong>▼変更履歴</strong>\n        </h4>\n        <div class=\"panel panel-default\">\n          <div class=\"panel-body context-margin\">\n            <h5 class=\"context-header\">\n              <strong>更新者：川本　健(2017/1/2)</strong>\n            </h5>\n            <ul>\n              <li>\n                <strong>ステータス</strong> 対応中 から 完了 に変更</li>\n              <li>\n                <strong>営業部門</strong> ○○部門 に設定</li>\n              <li>\n                <strong>対応内容</strong> 更新</li>\n            </ul>\n            <h5 class=\"context-header\">\n              <strong>更新者：吉原　聡(2017/1/2)</strong>\n            </h5>\n            <ul>\n              <li>\n                <strong>ステータス</strong> 対応中 に設定</li>\n              <li>\n                <strong>対応内容</strong> 更新</li>\n            </ul>\n            <h5 class=\"context-header\">\n              <strong>更新者：川本　健(2017/1/1)</strong>\n            </h5>\n            <ul>\n              <li>\n                <strong>ステータス</strong> 受付済 に設定</li>\n              <li>\n                <strong>対応内容</strong> 更新</li>\n            </ul>\n          </div>\n          <!-- /.panel-body -->\n        </div>\n        <!-- /.panel -->\n      </div>\n    </div>\n    <!-- /.row -->\n  </div>\n</div>"
+module.exports = "<!--\n//*****************************************************************************\n//\tシステム名　　　：インシデント管理システム\n//\tサブシステム名　：\n//\t画面名　　　　　：インシデント閲覧画面\n//\tHTMLID　　　　 ：IncidentDetailView.php\n//\t作成日付・作成者：2017.10.05 ADF)S.Yoshida\n//\t修正履歴　　　　：\n//*****************************************************************************\n-->\n<my-header></my-header>\n<relateUserAdd-modal #relateUser></relateUserAdd-modal>\n\n<div ng-cloak>\n  <div class=\"container-fluid\">\n    <div class=\"text-right transition-button\">\n      <span>\n        <button type=\"button\" class=\"btn btn-warning\">事故／クレーム連絡登録</button>\n      </span>\n      <span>\n        <button type=\"button\" class=\"btn btn-warning\">費用決済申請登録</button>\n      </span>\n      <span>\n        <button type=\"button\" class=\"btn btn-danger\" routerLink=\"/edit/{{incidentId}}\" routerLinkActive=\"current\" [routerLinkActiveOptions]=\"{ exact: true }\">\n          編集\n        </button>\n      </span>\n      <span>\n        <button type=\"button\" class=\"btn btn-danger\" routerLink=\"/list\" routerLinkActive=\"current\" [routerLinkActiveOptions]=\"{ exact: true }\">\n          一覧へ戻る\n        </button>\n      </span>\n    </div>\n    <div class=\"row\">\n      <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\">\n\n        <div class=\"panel panel-danger\">\n          <div class=\"panel-heading clearfix\">\n            <span class=\"h3 incident-title-status\">{{incidentNo}}</span>\n            <span class=\"h4 incident-title-status\">　{{incidentStatusNm}} {{incidentTypeNm}}</span>\n            <div class=\"pull-right\">\n              <strong>登録日：{{insDate}} {{insUserNm}}　最終更新日：{{updDate}} {{updUserNm}}</strong>\n            </div>\n          </div>\n          <!-- /.panel-heading -->\n          <div class=\"panel-body context-margin\">\n            <div class=\"row\">\n              <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                <strong>親インシデント番号：</strong>\n              </div>\n              <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">{{parentIncidentNo}}</div>\n              <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                <strong>発生日時：</strong>\n              </div>\n              <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">{{incidentStartDateTime}}</div>\n            </div>\n            <div class=\"row\">\n              <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                <strong>業種区分：</strong>\n              </div>\n              <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">{{industryTypeNm}}</div>\n              <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                <strong>情報提供元：</strong>\n              </div>\n              <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">{{infoSourceNm}}</div>\n            </div>\n            <div class=\"row\">\n              <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                <strong>情報提供者：</strong>\n              </div>\n              <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">{{infoProvider}}</div>\n              <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                <strong>情報提供TEL：</strong>\n              </div>\n              <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">{{infoProvidedTel}}</div>\n            </div>\n            <div class=\"row\">\n              <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                <strong>添付ファイル：</strong>\n              </div>\n              <div class=\"col-lg-9 col-md-9 col-sm-6 col-xs-6\">\n                {{incidentFileNm}}\n              </div>\n            </div>\n            <!-- <div class=\"row\">\n              <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                <strong>関係者：</strong>\n              </div>\n              <div class=\"col-lg-9 col-md-9 col-sm-6 col-xs-6\">\n                <span *ngFor=\"let relateUser of relateList; last as last;\">\n                  {{relateUser.name}}\n                  <span>{{ !last ? ',' : '' }}</span>\n                </span>\n              </div>\n            </div> -->\n            <div class=\"row\">\n              <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                <strong>注記：</strong>\n              </div>\n              <div class=\"col-lg-9 col-md-9 col-sm-6 col-xs-6\">\n                <!-- TODO:改行コード反映 -->\n                {{memo}}\n              </div>\n            </div>\n\n            <h5 class=\"context-header\">\n              <strong>設備情報及び顧客情報</strong>\n            </h5>\n            <div class=\"setubi-and-cust-info-border\">\n              <div class=\"row\">\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>機場：</strong>\n                </div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">{{kijoNm}}</div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>事業主体：</strong>\n                </div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">{{jigyosyutaiNm}}</div>\n              </div>\n              <div class=\"row\">\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>設備：</strong>\n                </div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">{{setubiNm}}</div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>都道府県：</strong>\n                </div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">{{prefNm}}</div>\n              </div>\n              <div class=\"row\">\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>納入プロジェクト：</strong>\n                </div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">{{deliveryPjNm}}</div>\n              </div>\n              <div class=\"row\">\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>顧客：</strong>\n                </div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">{{custNm}}</div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>顧客分類：</strong>\n                </div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">{{custTypeNm}}</div>\n              </div>\n              <div class=\"row\">\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>会社名・所属部署：</strong>\n                </div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">{{custDept}}</div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>依頼者：</strong>\n                </div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">{{requester}}</div>\n              </div>\n              <div class=\"row\">\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>連絡先(TEL)：</strong>\n                </div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">{{contactTel}}</div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>連絡先(FAX)：</strong>\n                </div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">{{contactFax}}</div>\n              </div>\n              <div class=\"row\">\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>連絡先(E-mail)：</strong>\n                </div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">{{contactMail}}</div>\n              </div>\n              <div class=\"row\">\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>営業部門：</strong>\n                </div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">{{salesDeptNm}}</div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>営業担当者：</strong>\n                </div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">{{salesUserNm}}</div>\n              </div>\n              <div class=\"row\">\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>主管部門：</strong>\n                </div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">{{skanDeptNm}}</div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>主管担当者：</strong>\n                </div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">{{skanUserNm}}</div>\n              </div>\n\n            </div>\n\n            <h5 class=\"context-header\">\n              <strong>受付情報</strong>\n            </h5>\n            <div class=\"call-info-border\">\n              <div class=\"row\">\n                <div class=\"col-lg-2 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>受付日：</strong>\n                </div>\n                <div class=\"col-lg-2 col-md-3 col-sm-6 col-xs-6\">{{callDate}}</div>\n                <div class=\"col-lg-4 col-md-6 col-sm-6 col-xs-6\">\n                  <!-- <strong>開始：</strong>&nbsp;&nbsp;{{callStartDate | date: 'shortTime'}}&nbsp;&nbsp;&nbsp;&nbsp; -->\n                  <strong>開始：</strong>&nbsp;&nbsp;10:00&nbsp;&nbsp;&nbsp;&nbsp;\n                  <!-- <strong>終了：</strong>&nbsp;&nbsp;{{callEndDate | date: 'shortTime'}}</div> -->\n                  <strong>終了：</strong>&nbsp;&nbsp;10:30</div>\n              </div>\n              <div class=\"row\">\n                <div class=\"col-lg-2 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>受付部署：</strong>\n                </div>\n                <div class=\"col-lg-4 col-md-3 col-sm-6 col-xs-6\">{{callDeptNm}}</div>\n                <div class=\"col-lg-2 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>受付者：</strong>\n                </div>\n                <div class=\"col-lg-4 col-md-3 col-sm-6 col-xs-6\">{{callUserNm}}</div>\n              </div>\n              <div class=\"row\">\n                <div class=\"col-lg-2 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>\n                    <strong>TEL：</strong>\n                  </strong>\n                </div>\n                <div class=\"col-lg-4 col-md-3 col-sm-6 col-xs-6\">{{callTel}}</div>\n                <div class=\"col-lg-2 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>E-mail：</strong>\n                </div>\n                <div class=\"col-lg-4 col-md-3 col-sm-6 col-xs-6\">{{callMail}}</div>\n              </div>\n              <div class=\"info-detail-area\">{{callContent}}</div>\n            </div>\n\n            <h5 class=\"context-header\">\n              <strong>対応情報</strong>\n            </h5>\n            <div class=\"taio-info-border\">\n              <div class=\"row\">\n                <div class=\"col-lg-2 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>対応日：</strong>\n                </div>\n                <div class=\"col-lg-2 col-md-3 col-sm-6 col-xs-6\">{{taioDate}}</div>\n                <div class=\"col-lg-4 col-md-6 col-sm-6 col-xs-6\">\n                  <!-- <strong>開始：</strong>&nbsp;&nbsp;{{taioStartDate | date: 'shortTime'}} -->\n                  <strong>開始：</strong>&nbsp;&nbsp;10:00\n                  <!-- <strong>&nbsp;&nbsp;&nbsp;&nbsp;終了：</strong>&nbsp;&nbsp;{{taioEndDate | date: 'shortTime'}}</div> -->\n                  <strong>&nbsp;&nbsp;&nbsp;&nbsp;終了：</strong>&nbsp;&nbsp;10:30</div>\n              </div>\n              <div class=\"row\">\n                <div class=\"col-lg-2 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>対応部署：</strong>\n                </div>\n                <div class=\"col-lg-4 col-md-3 col-sm-6 col-xs-6\">{{taioDeptNm}}</div>\n                <div class=\"col-lg-2 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>対応者：</strong>\n                </div>\n                <div class=\"col-lg-4 col-md-3 col-sm-6 col-xs-6\">{{taioUserNm}}</div>\n              </div>\n              <div class=\"row\">\n                <div class=\"col-lg-2 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>TEL：</strong>\n                </div>\n                <div class=\"col-lg-4 col-md-3 col-sm-6 col-xs-6\">{{taioTel}}</div>\n                <div class=\"col-lg-2 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>E-mail：</strong>\n                </div>\n                <div class=\"col-lg-4 col-md-3 col-sm-6 col-xs-6\">{{taioMail}}</div>\n              </div>\n              <div class=\"info-detail-area\">{{taioContent}}</div>\n            </div>\n\n            <h5 class=\"context-header\">\n              <strong>処置情報</strong>\n            </h5>\n            <div class=\"action-info-border\">\n              <div class=\"row\">\n                <div class=\"col-lg-2 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>処置予定日：</strong>\n                </div>\n                <div class=\"col-lg-4 col-md-3 col-sm-6 col-xs-6\">{{actDate}} </div>\n                <div class=\"col-lg-2 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>処置区分：</strong>\n                </div>\n                <div class=\"col-lg-4 col-md-3 col-sm-6 col-xs-6\">{{actTypeNm}} </div>\n              </div>\n              <div class=\"row\">\n                <div class=\"col-lg-2 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>処置開始日時：</strong>\n                </div>\n                <div class=\"col-lg-4 col-md-3 col-sm-6 col-xs-6\">{{actStartDateTime}} </div>\n                <div class=\"col-lg-2 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>処置終了日時：</strong>\n                </div>\n                <div class=\"col-lg-4 col-md-3 col-sm-6 col-xs-6\">{{actEndDateTime}} </div>\n              </div>\n              <div class=\"row\">\n                <div class=\"col-lg-2 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>処置部署：</strong>\n                </div>\n                <div class=\"col-lg-4 col-md-3 col-sm-6 col-xs-6\">{{actDeptNm}} </div>\n                <div class=\"col-lg-2 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>処置者：</strong>\n                </div>\n                <div class=\"col-lg-4 col-md-3 col-sm-6 col-xs-6\">{{actUserNm}} </div>\n              </div>\n              <div class=\"row\">\n                <div class=\"col-lg-2 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>TEL：</strong>\n                </div>\n                <div class=\"col-lg-4 col-md-3 col-sm-6 col-xs-6\">{{actTel}} </div>\n                <div class=\"col-lg-2 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>E-mail：</strong>\n                </div>\n                <div class=\"col-lg-4 col-md-3 col-sm-6 col-xs-6\">{{actMail}} </div>\n              </div>\n              <div class=\"info-detail-area\">{{actContent}} </div>\n            </div>\n\n            <h5 class=\"context-header\">\n              <strong>製品情報</strong>\n            </h5>\n            <div class=\"product-info-border\">\n              <div class=\"row\">\n                <div class=\"col-lg-2 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>機種区分：</strong>\n                </div>\n                <div class=\"col-lg-4 col-md-3 col-sm-6 col-xs-6\">{{productTypeNm}}</div>\n              </div>\n              <h5 class=\"context-sub-header\">\n                <strong>障害状況</strong>\n              </h5>\n              <div class=\"row\">\n                <div class=\"col-lg-2 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>　トリガー：</strong>\n                </div>\n                <div class=\"col-lg-4 col-md-3 col-sm-6 col-xs-6\">{{productTriggerNm}}</div>\n                <div class=\"col-lg-2 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>頻度：</strong>\n                </div>\n                <div class=\"col-lg-4 col-md-3 col-sm-6 col-xs-6\">{{productHindoNm}}</div>\n              </div>\n              <div class=\"row\">\n                <div class=\"col-lg-2 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>　現象：</strong>\n                </div>\n                <div class=\"col-lg-4 col-md-3 col-sm-6 col-xs-6\">{{productGensyoNm}}</div>\n                <div class=\"col-lg-2 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>状態：</strong>\n                </div>\n                <div class=\"col-lg-4 col-md-3 col-sm-6 col-xs-6\">{{productStatusNm}}</div>\n              </div>\n            </div>\n          </div>\n          <!-- /.panel-body -->\n        </div>\n        <!-- /.panel -->\n\n        <h4 class=\"panel-header text-primary\">\n          <strong>▼関係者</strong>\n        </h4>\n        <div class=\"panel panel-default\">\n          <div class=\"panel-body context-margin\">\n            <h5 class=\"context-header\">\n              <strong>\n                <i class=\"fa fa-dot-circle-o\" aria-hidden=\"true\"></i> 変更を通知する／\n                <i class=\"fa fa-circle-o\" aria-hidden=\"true\"></i> 変更を通知しない\n              </strong>\n              <a class=\"relate-user-add-link\" (click)=\"relateUser.openModal()\">\n                <u>関係者を追加</u>\n              </a>\n            </h5>\n            <div class=\"context-margin\">\n              <div>サービスソリューション事業本部 ＣＥ事業部 東京サービス部 第一グループ</div>\n              <div>\n                <span class=\"context-margin relate-user-nm\"> 水道　一郎 （既読日：2017/12/18）</span>\n                <button type=\"button\" class=\"btn btn-sx-ori btn-danger btn-close\">\n                  <i class=\"fa fa-trash\"></i>\n                </button>\n              </div>\n              <div>\n                <span class=\"context-margin relate-user-nm\"> 水道　二郎 　　　　　　　　　　　</span>\n                <button type=\"button\" class=\"btn btn-sx-ori btn-danger btn-close\">\n                  <i class=\"fa fa-trash\"></i>\n                </button>\n              </div>\n              <div>品質保証統括室 　品質管理グループ</div>\n              <div>\n                <span class=\"context-margin relate-user-nm\"> 水道　花子 （既読日：2017/12/19）</span>\n                <button type=\"button\" class=\"btn btn-sx-ori btn-danger btn-close\">\n                  <i class=\"fa fa-trash\"></i>\n                </button>\n              </div>\n            </div>\n          </div>\n          <!-- /.panel-body -->\n        </div>\n        <!-- /.panel -->\n\n        <h4 class=\"panel-header text-primary\">\n          <strong>▼関連リンク</strong>\n        </h4>\n        <div class=\"panel panel-default\">\n          <div class=\"panel-body context-margin\">\n            <h5 class=\"context-header\">\n              <strong>プロジェクト情報\n                <span class=\"text-danger\">※プロジェクト情報はＡＲＣＳから行なってください。（ＡＲＣＳ登録後の翌日反映）</span>\n              </strong>\n            </h5>\n            <div class=\"context-margin\">\n              <div class=\"row\">\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>プロジェクト番号：</strong>\n                </div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                  <a (click)=\"showPj()\">\n                    <u>J1000000</u>\n                  </a>\n                </div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>PJ主管部門：</strong>\n                </div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">プロ主管</div>\n              </div>\n              <div class=\"row\">\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>プロジェクト名：</strong>\n                </div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">ｘｘｘｘｘｘｘｘｘｘｘｘｘ</div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>PM：</strong>\n                </div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">川本　健</div>\n              </div>\n              <div class=\"row\">\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>代表機場：</strong>\n                </div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">ｘｘｘｘｘｘｘｘｘｘｘｘｘ</div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>都道府県：</strong>\n                </div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">東京都</div>\n              </div>\n            </div>\n            <h5 class=\"context-header\">\n              <strong>障害対応報告書(MR2)</strong>\n            </h5>\n            <div class=\"context-margin\">\n              <div class=\"row\">\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>件名：</strong>\n                </div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                  <a (click)=\"showMr2()\">\n                    <u>XXXXXXXXXXシーケンサ異常</u>\n                  </a>\n                </div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>作成日：</strong>\n                </div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">2017/1/4</div>\n              </div>\n              <div class=\"row\">\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>依頼元：</strong>\n                </div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">依頼元</div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>作業担当者：</strong>\n                </div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">川本　健</div>\n              </div>\n            </div>\n            <h5 class=\"context-header\">\n              <strong>労災・事故・クレーム連絡</strong>\n            </h5>\n            <div class=\"context-margin\">\n              <div class=\"row\">\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>状態：</strong>\n                </div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">第1報 正式発行</div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>区分：</strong>\n                </div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">品質（ランクＡ）</div>\n              </div>\n              <div class=\"row\">\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>概要：</strong>\n                </div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                  <a (click)=\"showJiko()\">\n                    <u>XXXXXXXXXXXXXXXXXXXXXX</u>\n                  </a>\n                </div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>顧客名：</strong>\n                </div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">川本　健</div>\n              </div>\n              <div class=\"row\">\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>機場名：</strong>\n                </div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">ｘｘｘｘｘｘｘｘｘｘｘｘｘ</div>\n              </div>\n              <div class=\"row\">\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>発行日：</strong>\n                </div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">2017/1/1</div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>発行元：</strong>\n                </div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">ｘｘｘｘｘｘｘｘｘｘｘｘｘ</div>\n              </div>\n            </div>\n            <h5 class=\"context-header\">\n              <strong>費用決済申請</strong>\n            </h5>\n            <div class=\"context-margin\">\n              <div class=\"row\">\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>ID番号：</strong>\n                </div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                  <a (click)=\"showHiyo('dsp','dsp',416161,'','1282')\">\n                    <u>XXXXXXXXXX</u>\n                  </a>\n                </div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>ステータス：</strong>\n                </div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">決裁</div>\n              </div>\n              <div class=\"row\">\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>区分：</strong>\n                </div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">クレーム対応</div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>決裁番号：</strong>\n                </div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">無償 第X号</div>\n              </div>\n              <div class=\"row\">\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>件名：</strong>\n                </div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">XXXXXXXXXXXXXXXXXXXXXX</div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>概算金額：</strong>\n                </div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                  <div class=\"pull-right\">123,456</div>\n                </div>\n              </div>\n            </div>\n          </div>\n          <!-- /.panel-body -->\n        </div>\n        <!-- /.panel -->\n\n        <h4 class=\"panel-header text-primary\">\n          <strong>▼関連インシデント</strong>\n        </h4>\n        <div class=\"panel panel-default\">\n          <div class=\"panel-body context-margin\">\n            <h5 class=\"context-header\">\n              <strong>同一機場インシデント</strong>\n            </h5>\n            <div class=\"context-margin\">\n              <a (click)=\"showRelateIncident()\">\n                <u>#12390 障害 2016/12/31 ○○○浄水場 ○○○市</u>\n              </a>\n              <div class=\"context-margin\">\n                Ａ系水処理設備の終沈（１、２号）の監視操作不能なので対応頂きたい。\n              </div>\n            </div>\n            <h5 class=\"context-header\">\n              <strong>同一顧客インシデント</strong>\n            </h5>\n            <div class=\"context-margin\">\n              <a (click)=\"showRelateIncident()\">\n                <u>#12312 問合せ 2016/12/31 ○○○センター ○○○企業局</u>\n              </a>\n              <div class=\"context-margin\">\n                富士電機製変圧器のＰＣＢ含有問合せ。以下の型式の変圧器にＰＣＢが含まれているかを教えて下さい。\n              </div>\n            </div>\n          </div>\n          <!-- /.panel-body -->\n        </div>\n        <!-- /.panel -->\n\n        <h4 class=\"panel-header text-primary\">\n          <strong>▼変更履歴</strong>\n        </h4>\n        <div class=\"panel panel-default\">\n          <div class=\"panel-body context-margin\">\n            <h5 class=\"context-header\">\n              <strong>更新者：川本　健(2017/1/2)</strong>\n            </h5>\n            <ul>\n              <li>\n                <strong>ステータス</strong> 対応中 から 完了 に変更</li>\n              <li>\n                <strong>営業部門</strong> ○○部門 に設定</li>\n              <li>\n                <strong>対応内容</strong> 更新</li>\n            </ul>\n            <h5 class=\"context-header\">\n              <strong>更新者：吉原　聡(2017/1/2)</strong>\n            </h5>\n            <ul>\n              <li>\n                <strong>ステータス</strong> 対応中 に設定</li>\n              <li>\n                <strong>対応内容</strong> 更新</li>\n            </ul>\n            <h5 class=\"context-header\">\n              <strong>更新者：川本　健(2017/1/1)</strong>\n            </h5>\n            <ul>\n              <li>\n                <strong>ステータス</strong> 受付済 に設定</li>\n              <li>\n                <strong>対応内容</strong> 更新</li>\n            </ul>\n          </div>\n          <!-- /.panel-body -->\n        </div>\n        <!-- /.panel -->\n      </div>\n    </div>\n    <!-- /.row -->\n  </div>\n</div>"
 
 /***/ }),
 
@@ -283,9 +290,6 @@ var DetailComponent = (function () {
         this.route = route;
         this.jsonpService = jsonpService;
         this.SUB_WIN = null;
-        // 画面表示パラメータの初期化
-        // １．メインパネル
-        // １－１．ヘッダー
         this.incidentNo = ""; // インシデント番号
         this.incidentStatusCd = ""; // インシデントステータスCD
         this.incidentStatusNm = ""; // インシデントステータス名
@@ -413,7 +417,7 @@ var DetailComponent = (function () {
     DetailComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.route.data.subscribe(function (obj) { return console.log(obj['category']); });
-        var ps = new __WEBPACK_IMPORTED_MODULE_2__angular_http__["c" /* URLSearchParams */]();
+        var ps = new __WEBPACK_IMPORTED_MODULE_2__angular_http__["e" /* URLSearchParams */]();
         var prmIncientId = this.route.snapshot.paramMap.get('incidentId');
         if (prmIncientId) {
             ps.set('incidentId', prmIncientId);
@@ -457,7 +461,7 @@ var DetailComponent = (function () {
     DetailComponent.prototype.showMr2 = function () {
         if (this.SUB_WIN)
             this.SUB_WIN.close();
-        this.SUB_WIN = this.CMN_openNewWindow1("./#/mr2", "sub_mr2", 1000, 760);
+        this.SUB_WIN = this.CMN_openNewWindow1("./#/mr2/0", "sub_mr2", 1000, 760);
     };
     // 関連プロジェクト表示処理
     DetailComponent.prototype.showPj = function () {
@@ -540,6 +544,7 @@ var DetailComponent = (function () {
     };
     // 画面表示パラメータのセット処理
     DetailComponent.prototype.setDspParam = function (data) {
+        this.incidentId = data.incidentId; // インシデントID
         this.incidentNo = data.incidentNo; // インシデント番号
         this.incidentStatusCd = data.incidentStatusCd; // インシデントステータスCD
         this.incidentStatusNm = data.incidentStatusNm; // インシデントステータス名
@@ -662,7 +667,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/edit/edit.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<!--\n//*****************************************************************************\n//\tシステム名　　　：インシデント管理システム\n//\tサブシステム名　：\n//\t画面名　　　　　：インシデント登録画面\n//\tHTML_ID　　　　 ：IncidentEditView.php\n//\t作成日付・作成者：2017.10.05 ADF)S.Yoshida\n//\t修正履歴　　　　：\n//*****************************************************************************\n-->\n<my-header></my-header>\n<incidentSearch-modal #incident></incidentSearch-modal>\n<kijoSearch-modal #kijo></kijoSearch-modal>\n<userSearch-modal #salesUser (salesUserSelect)=\"onSalesUserSelected($event)\"></userSearch-modal>\n<userSearch-modal #skanUser></userSearch-modal>\n<userSearch-modal #callUser></userSearch-modal>\n<userSearch-modal #taioUser></userSearch-modal>\n<userSearch-modal #actUser></userSearch-modal>\n<sectionSearch-modal #salesSection></sectionSearch-modal>\n<sectionSearch-modal #skanSection></sectionSearch-modal>\n<sectionSearch-modal #callSection></sectionSearch-modal>\n<sectionSearch-modal #taioSection></sectionSearch-modal>\n<sectionSearch-modal #actSection></sectionSearch-modal>\n<projectSearch-modal #project></projectSearch-modal>\n<customerSearch-modal #customer></customerSearch-modal>\n<equipmentSearch-modal #equipment></equipmentSearch-modal>\n\n<div id=\"editApp\">\n  <div ng-controller=\"EditController as main\" class=\"container-fluid\">\n    <!--\n                <button onclick=\"onHrefLink('./IncidentEdit.php')\">load</button>\n                <button ng-click=\"onHrefLink('./IncidentEdit.php')\">load angular</button>\n                <button ng-click=\"main.test()\">load angular</button>\n                -->\n    <div class=\"text-right transition-button\">\n      <span>\n        <button type=\"button\" class=\"btn btn-danger\" (click)=\"entryIncident()\">登録</button>\n      </span>\n      <span>\n        <button type=\"button\" class=\"btn btn-danger\" routerLink=\"/detail\" routerLinkActive=\"current\" [routerLinkActiveOptions]=\"{ exact: true }\">\n          閲覧へ戻る\n        </button>\n      </span>\n    </div>\n    <div class=\"row\">\n      <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\">\n        <div class=\"panel panel-danger\">\n          <div class=\"panel-heading clearfix\">\n            <span class=\"h3 incident-title-status\">{{incidentNo}}</span>\n            <span class=\"h4 incident-title-status\">　{{incidentStatusNm}}</span>\n            <div class=\"pull-right\">\n              <strong>登録日：{{insDate}} {{insUserNm}}　最終更新日：{{updDate}} {{updUserNm}}</strong>\n            </div>\n          </div>\n          <!-- /.panel-heading -->\n          <div class=\"panel-body context-margin\">\n            <form>\n              <div class=\"row\">\n                <div class=\"col-lg-2 col-md-3 col-sm-3 col-xs-3\">\n                  <label>\n                    <strong>インシデント分類：\n                      <span class=\"require\">＊</span>\n                    </strong>\n                  </label>\n                </div>\n                <div class=\"col-lg-3 col-md-3 col-sm-3 col-xs-3\">\n                  <select name=\"sel_incidentType\" class=\"form-control edit-dropdown\" [(ngModel)]=\"incidentTypeCd\">\n                    <option value=\"\"></option>\n                    <option *ngFor=\"let item of incidentTypeArray\" [value]='item.value'>\n                      {{item.label}}\n                    </option>\n                  </select>\n                </div>\n                <div class=\"col-lg-offset-2 col-lg-2 col-md-3 col-sm-3 col-xs-3\">\n                  <label>\n                    <strong>親インシデント番号：</strong>\n                  </label>\n                </div>\n                <div class=\"col-lg-3 col-md-3 col-sm-3 col-xs-3\">\n                  <div class=\"input-group\">\n                    <input name=\"txt_parentIncidentNo\" type=\"text\" class=\"form-control\" [(ngModel)]=\"parentIncidentNo\">\n                    <input name=\"hid_parentIncidentId\" type=\"hidden\" [(ngModel)]=\"parentIncidentId\">\n                    <span class=\"input-group-btn\">\n                      <button type=\"button\" class=\"btn btn-input-support\" (click)=\"incident.openModal()\">\n                        <i class=\"fa fa-search\"></i>\n                      </button>\n                    </span>\n                  </div>\n                </div>\n              </div>\n              <div class=\"row\">\n                <div class=\"col-lg-2 col-md-3 col-sm-3 col-xs-3\">\n                  <label>\n                    <strong>発生日時：</strong>\n                  </label>\n                </div>\n                <div class=\"col-lg-2 col-md-2 col-sm-2 col-xs-3 form-group\">\n                  <div class=\"input-group\">\n                    <input name=\"txt_incidentStartDate\" type=\"text\" class=\"form-control\" #dpIncidentStartDate=\"bsDatepicker\" bsDatepicker [bsConfig]=\"bsConfig\"\n                      [(bsValue)]=\"incidentStartDate\" value=\"{{incidentStartDate | date:'yyyy/MM/dd'}}\">\n                    <span class=\"input-group-btn\">\n                      <button type=\"button\" class=\"btn btn-input-support\" (click)=\"dpIncidentStartDate.toggle()\">\n                        <i class=\"fa fa-calendar\"></i>\n                      </button>\n                    </span>\n                  </div>\n                </div>\n                <div class=\"col-lg-2 col-md-2 col-sm-2 col-xs-3\">\n                  <!-- <div class=\"input-group\"> -->\n                  <!-- <input name=\"txt_incidentStartTime\" type=\"text\" class=\"form-control\" [(ngModel)]=\"incidentStartTime\" value=\"{{incidentStartTime | date:'HH:mm'}}\"> -->\n                  <input name=\"txt_incidentStartTime\" type=\"text\" class=\"form-control\" value=\"10:00\">\n                  <!-- <input name=\"txt_incidentStartTime\" type=\"text\" class=\"form-control\" value=\"{{incidentStartTime | date:'shortTime'}}\" readonly>\n                    <ng-template #popIncidentStartTime>\n                      <timepicker name='txt_incidentStartTime' [(ngModel)]='incidentStartTime' [showMeridian]='ismeridian'></timepicker>\n                    </ng-template>\n                    <span class=\"input-group-btn\">\n                      <button type=\"button\" class=\"btn btn-input-support\" [popover]=\"popIncidentStartTime\" [outsideClick]=\"true\">\n                        <i class=\"fa fa-clock-o\"></i>\n                      </button>\n                    </span> -->\n                  <!-- </div> -->\n                </div>\n              </div>\n              <div class=\"row\">\n                <div class=\"col-lg-2 col-md-3 col-sm-3 col-xs-3\">\n                  <label>\n                    <strong>業種区分：</strong>\n                  </label>\n                </div>\n                <div class=\"col-lg-3 col-md-3 col-sm-3 col-xs-3\">\n                  <select name=\"sel_industryTypeCd\" class=\"form-control edit-dropdown\" [(ngModel)]=\"industryTypeCd\">\n                    <option value=\"\"></option>\n                    <option *ngFor=\"let item of industryTypeArray\" [value]='item.value'>\n                      {{item.label}}\n                    </option>\n                  </select>\n                </div>\n                <div class=\"col-lg-offset-2 col-lg-2 col-md-3 col-sm-3 col-xs-3\">\n                  <label>\n                    <strong>情報提供元：</strong>\n                  </label>\n                </div>\n                <div class=\"col-lg-3 col-md-3 col-sm-3 col-xs-3\">\n                  <select name=\"sel_infoSourceCd\" class=\"form-control edit-dropdown\" [(ngModel)]=\"infoSourceCd\">\n                    <option value=\"\"></option>\n                    <option *ngFor=\"let item of infoSourceArray\" [value]='item.value'>\n                      {{item.label}}\n                    </option>\n                  </select>\n                </div>\n              </div>\n              <div class=\"row\">\n                <div class=\"col-lg-2 col-md-3 col-sm-3 col-xs-3\">\n                  <label>\n                    <strong>情報提供者：</strong>\n                  </label>\n                </div>\n                <div class=\"col-lg-3 col-md-3 col-sm-3 col-xs-3\">\n                  <input name=\"txt_infoProvider\" type=\"text\" class=\"form-control\" [(ngModel)]=\"infoProvider\">\n                </div>\n                <div class=\"col-lg-offset-2 col-lg-2 col-md-3 col-sm-3 col-xs-3\">\n                  <label>\n                    <strong>情報提供TEL：</strong>\n                  </label>\n                </div>\n                <div class=\"col-lg-3 col-md-3 col-sm-3 col-xs-3\">\n                  <input name=\"infoProvidedTel\" type=\"text\" class=\"form-control\" [(ngModel)]=\"infoProvidedTel\">\n                </div>\n              </div>\n              <div class=\"row file-row\">\n                <div class=\"col-lg-2 col-md-3 col-sm-3 col-xs-3\">\n                  <label>\n                    <strong>添付ファイル：</strong>\n                  </label>\n                </div>\n                <div class=\"col-lg-3 col-md-3 col-sm-3 col-xs-3\">\n                  <input name=\"incidentFile\" type=\"file\">\n                </div>\n              </div>\n              <!-- <div class=\"row\">\n                <div class=\"col-lg-2 col-md-3 col-sm-3 col-xs-3\">\n                  <label>\n                    <strong>関係者：</strong>\n                  </label>\n                </div>\n                <div class=\"col-lg-3 col-md-3 col-sm-3 col-xs-3\">\n                  <div class=\"input-group\">\n                    <input type=\"text\" class=\"form-control\">\n                    <span class=\"input-group-btn\">\n                      <button type=\"button\" class=\"btn btn-input-support\">\n                        <i class=\"fa fa-user\"></i>\n                      </button>\n                    </span>\n                  </div>\n                </div>\n              </div>\n              <div class=\"row\">\n                <div class=\"col-lg-offset-2 col-md-offset-3 col-sm-offset-3 col-xs-offset-3 col-lg-2 col-md-3 col-sm-3 col-xs-3\">\n                  &nbsp;&nbsp;\n                  <a>\n                    <u>関係者を追加</u>\n                  </a>\n                </div>\n              </div> -->\n              <div class=\"row\">\n                <div class=\"col-lg-2 col-md-3 col-sm-3 col-xs-3\">\n                  <label for=\"InputTextarea\">\n                    <strong>注記：</strong>\n                  </label>\n                </div>\n                <div class=\"col-lg-10 col-md-9 col-sm-9 col-xs-9\">\n                  <textarea name=\"memo\" class=\"form-control\" id=\"InputTextarea\" rows=\"3\" [(ngModel)]=\"memo\"></textarea>\n                </div>\n              </div>\n              <h5 class=\"context-header\">\n                <strong>設備情報及び顧客情報</strong>\n              </h5>\n              <div class=\"setubi-and-cust-info-border\">\n                <div class=\"row\">\n                  <div class=\"col-lg-2 col-md-3 col-sm-3 col-xs-3\">\n                    <label>\n                      <strong>機場：\n                        <span class=\"require\">＊</span>\n                      </strong>\n                    </label>\n                  </div>\n                  <div class=\"col-lg-10 col-md-9 col-sm-9 col-xs-9\">\n                    <div class=\"input-group\">\n                      <input name=\"txt_kijoNm\" type=\"text\" class=\"form-control\" [(ngModel)]=\"kijoNm\">\n                      <input name=\"hid_kijoId\" type=\"hidden\" [(ngModel)]=\"kijoId\">\n                      <span class=\"input-group-btn\">\n                        <button type=\"button\" class=\"btn btn-input-support\" (click)=\"kijo.openModal()\">\n                          <i class=\"fa fa-industry\"></i>\n                        </button>\n                      </span>\n                    </div>\n                  </div>\n                </div>\n                <!-- <div class=\"row\">\n                  <div class=\"col-lg-2 col-md-3 col-sm-3 col-xs-3\">\n                    <label>\n                      <strong>事業主体：</strong>\n                    </label>\n                  </div>\n                  <div class=\"col-lg-3 col-md-3 col-sm-3 col-xs-3\">\n                    <div class=\"input-group\">\n                      <input name=\"jigyosyutaiNm\" type=\"text\" class=\"form-control\" [(ngModel)]=\"jigyosyutaiNm\">\n                      <input name=\"hid_jigyosyutaiId\" type=\"hidden\" [(ngModel)]=\"jigyosyutaiId\">\n                      <span class=\"input-group-btn\">\n                        <button type=\"button\" class=\"btn btn-input-support\">\n                          <i class=\"fa fa-building\"></i>\n                        </button>\n                      </span>\n                    </div>\n                  </div>\n                </div> -->\n                <div class=\"row\">\n                  <div class=\"col-lg-2 col-md-3 col-sm-3 col-xs-3\">\n                    <label>\n                      <strong>事業主体：</strong>\n                    </label>\n                  </div>\n                  <div class=\"col-lg-3 col-md-3 col-sm-3 col-xs-3\">\n                    <input name=\"jigyosyutaiNm\" type=\"text\" class=\"form-control\" [(ngModel)]=\"jigyosyutaiNm\" readonly>\n                    <input name=\"hid_jigyosyutaiId\" type=\"hidden\" [(ngModel)]=\"jigyosyutaiId\">\n                  </div>\n                  <div class=\"col-lg-7 col-md-6 col-sm-6 col-xs-6\">\n                    <button type=\"button\" (click)=\"jigyosyutaiClear()\" class=\"btn btn-xs btn-warning\">クリア</button>\n                  </div>\n                </div>\n                <div class=\"row\">\n                  <div class=\"col-lg-2 col-md-3 col-sm-3 col-xs-3\">\n                    <label>\n                      <strong>設備：\n                        <span class=\"require\">＊</span>\n                      </strong>\n                    </label>\n                  </div>\n                  <div class=\"col-lg-10 col-md-9 col-sm-9 col-xs-9\">\n                    <div class=\"input-group\">\n                      <input name=\"setubiNm\" type=\"text\" class=\"form-control\" [(ngModel)]=\"setubiNm\">\n                      <input name=\"hid_setubiId\" type=\"hidden\" [(ngModel)]=\"setubiId\">\n                      <span class=\"input-group-btn\">\n                        <!-- <button type=\"button\" class=\"btn btn-input-support\"> -->\n                        <button type=\"button\" class=\"btn btn-input-support\" (click)=\"equipment.openModal()\">\n                          <i class=\"fa fa-cog\"></i>\n                        </button>\n                      </span>\n                    </div>\n                  </div>\n                </div>\n                <div class=\"row\">\n                  <div class=\"col-lg-2 col-md-3 col-sm-3 col-xs-3\">\n                    <label>\n                      <strong>都道府県：</strong>\n                    </label>\n                  </div>\n                  <div class=\"col-lg-3 col-md-3 col-sm-3 col-xs-3\">\n                    <select name=\"sel_prefId\" class=\"form-control edit-dropdown\" [(ngModel)]=\"prefId\">\n                      <option value=\"\"></option>\n                      <option *ngFor=\"let item of prefArray\" [value]='item.value'>\n                        {{item.label}}\n                      </option>\n                    </select>\n                  </div>\n                </div>\n                <div class=\"row\">\n                  <div class=\"col-lg-2 col-md-3 col-sm-3 col-xs-3\">\n                    <label>\n                      <strong>納入プロジェクト：</strong>\n                    </label>\n                  </div>\n                  <div class=\"col-lg-3 col-md-3 col-sm-3 col-xs-3\">\n                    <div class=\"input-group\">\n                      <input name=\"deliveryPjNm\" type=\"text\" class=\"form-control\" [(ngModel)]=\"deliveryPjNm\">\n                      <input name=\"hid_deliveryPjId\" type=\"hidden\" [(ngModel)]=\"deliveryPjId\">\n                      <span class=\"input-group-btn\">\n                        <!-- <button type=\"button\" class=\"btn btn-input-support\"> -->\n                        <button type=\"button\" class=\"btn btn-input-support\" (click)=\"project.openModal()\">\n                          <i class=\"fa fa-wrench\"></i>\n                        </button>\n                      </span>\n                    </div>\n                  </div>\n                </div>\n                <div class=\"row\">\n                  <div class=\"col-lg-2 col-md-3 col-sm-3 col-xs-3\">\n                    <label>\n                      <strong>顧客：</strong>\n                    </label>\n                  </div>\n                  <div class=\"col-lg-3 col-md-3 col-sm-3 col-xs-3\">\n                    <div class=\"input-group\">\n                      <input name=\"custNm\" type=\"text\" class=\"form-control\" [(ngModel)]=\"custNm\">\n                      <input name=\"hid_cudtId\" type=\"hidden\" [(ngModel)]=\"custId\">\n                      <span class=\"input-group-btn\">\n                        <!-- <button type=\"button\" class=\"btn btn-input-support\"> -->\n                        <button type=\"button\" class=\"btn btn-input-support\" (click)=\"customer.openModal()\">\n                          <i class=\"fa fa-address-card-o\"></i>\n                        </button>\n                      </span>\n                    </div>\n                  </div>\n                  <div class=\"col-lg-offset-2 col-lg-2 col-md-3 col-sm-3 col-xs-3\">\n                    <label>\n                      <strong>顧客分類：</strong>\n                    </label>\n                  </div>\n                  <div class=\"col-lg-3 col-md-3 col-sm-3 col-xs-3\">\n                    <select name=\"sel_custTypeCd\" class=\"form-control edit-dropdown\" [(ngModel)]=\"custTypeCd\">\n                      <option value=\"\"></option>\n                      <option *ngFor=\"let item of custTypeArray\" [value]='item.value'>\n                        {{item.label}}\n                      </option>\n                    </select>\n                  </div>\n                </div>\n                <div class=\"row\">\n                  <div class=\"col-lg-2 col-md-3 col-sm-3 col-xs-3\">\n                    <label>\n                      <strong>会社名・所属部署：</strong>\n                    </label>\n                  </div>\n                  <div class=\"col-lg-3 col-md-3 col-sm-3 col-xs-3\">\n                    <input name=\"custDept\" type=\"text\" class=\"form-control\" [(ngModel)]=\"custDept\">\n                  </div>\n                  <div class=\"col-lg-offset-2 col-lg-2 col-md-3 col-sm-3 col-xs-3\">\n                    <label>\n                      <strong>依頼者：</strong>\n                    </label>\n                  </div>\n                  <div class=\"col-lg-3 col-md-3 col-sm-3 col-xs-3\">\n                    <input name=\"requester\" type=\"text\" class=\"form-control\" [(ngModel)]=\"requester\">\n                  </div>\n                </div>\n                <div class=\"row\">\n                  <div class=\"col-lg-2 col-md-3 col-sm-3 col-xs-3\">\n                    <label>\n                      <strong>連絡先(TEL)：</strong>\n                    </label>\n                  </div>\n                  <div class=\"col-lg-3 col-md-3 col-sm-3 col-xs-3\">\n                    <input name=\"contactTel\" type=\"text\" class=\"form-control\" [(ngModel)]=\"contactTel\">\n                  </div>\n                  <div class=\"col-lg-offset-2 col-lg-2 col-md-3 col-sm-3 col-xs-3\">\n                    <label>\n                      <strong>連絡先(FAX)：</strong>\n                    </label>\n                  </div>\n                  <div class=\"col-lg-3 col-md-3 col-sm-3 col-xs-3\">\n                    <input name=\"contactFax\" type=\"text\" class=\"form-control\" [(ngModel)]=\"contactFax\">\n                  </div>\n                </div>\n                <div class=\"row\">\n                  <div class=\"col-lg-2 col-md-3 col-sm-3 col-xs-3\">\n                    <label>\n                      <strong>連絡先(E-mail)：</strong>\n                    </label>\n                  </div>\n                  <div class=\"col-lg-3 col-md-3 col-sm-3 col-xs-3\">\n                    <input name=\"contactMail\" type=\"text\" class=\"form-control\" [(ngModel)]=\"contactMail\">\n                  </div>\n                </div>\n                <div class=\"row\">\n                  <div class=\"col-lg-2 col-md-3 col-sm-3 col-xs-3\">\n                    <label>\n                      <strong>営業部門：</strong>\n                    </label>\n                  </div>\n                  <div class=\"col-lg-3 col-md-3 col-sm-3 col-xs-3\">\n                    <div class=\"input-group\">\n                      <input name=\"txt_salesDeptNm\" type=\"text\" class=\"form-control\" [(ngModel)]=\"salesDeptNm\">\n                      <span class=\"input-group-btn\">\n                        <button type=\"button\" class=\"btn btn-input-support\" (click)=\"salesSection.openModal()\">\n                          <i class=\"fa fa-building\"></i>\n                        </button>\n                      </span>\n                    </div>\n                    <input name=\"hid_salesDeptCd\" type=\"hidden\" [(ngModel)]=\"salesDeptCd\">\n                  </div>\n                  <div class=\"col-lg-offset-2 col-lg-2 col-md-3 col-sm-3 col-xs-3\">\n                    <label>\n                      <strong>営業担当者：</strong>\n                    </label>\n                  </div>\n                  <div class=\"col-lg-3 col-md-3 col-sm-3 col-xs-3\">\n                    <div class=\"input-group\">\n                      <input name=\"txt_salesUserNm\" type=\"text\" class=\"form-control\" [(ngModel)]=\"salesUserNm\">\n                      <span class=\"input-group-btn\">\n                        <button type=\"button\" class=\"btn btn-input-support\" (click)=\"salesUser.openModal('salesUser')\">\n                          <i class=\"fa fa-user\"></i>\n                        </button>\n                      </span>\n                    </div>\n                    <input name=\"hid_salesUserId\" type=\"hidden\" [(ngModel)]=\"salesUserId\">\n                  </div>\n                </div>\n                <div class=\"row\">\n                  <div class=\"col-lg-2 col-md-3 col-sm-3 col-xs-3\">\n                    <label>\n                      <strong>主管部門：</strong>\n                    </label>\n                  </div>\n                  <div class=\"col-lg-3 col-md-3 col-sm-3 col-xs-3\">\n                    <div class=\"input-group\">\n                      <input name=\"txt_skanDeptNm\" type=\"text\" class=\"form-control\" [(ngModel)]=\"skanDeptNm\">\n                      <span class=\"input-group-btn\">\n                        <button type=\"button\" class=\"btn btn-input-support\" (click)=\"skanSection.openModal()\">\n                          <i class=\"fa fa-building\"></i>\n                        </button>\n                      </span>\n                    </div>\n                    <input name=\"hid_skanDeptCd\" type=\"hidden\" [(ngModel)]=\"skanDeptCd\">\n                  </div>\n                  <div class=\"col-lg-offset-2 col-lg-2 col-md-3 col-sm-3 col-xs-3\">\n                    <label>\n                      <strong>主管担当者：</strong>\n                    </label>\n                  </div>\n                  <div class=\"col-lg-3 col-md-3 col-sm-3 col-xs-3\">\n                    <div class=\"input-group\">\n                      <input name=\"txt_skanUserNm\" type=\"text\" class=\"form-control\" [(ngModel)]=\"skanUserNm\">\n                      <span class=\"input-group-btn\">\n                        <button type=\"button\" class=\"btn btn-input-support\" (click)=\"skanUser.openModal()\">\n                          <i class=\"fa fa-user\"></i>\n                        </button>\n                      </span>\n                    </div>\n                    <input name=\"hid_skanUserId\" type=\"hidden\" [(ngModel)]=\"skanUserId\">\n                  </div>\n                </div>\n              </div>\n              <h5 class=\"context-header\">\n                <strong>受付情報</strong>\n              </h5>\n              <div class=\"call-info-border\">\n                <div class=\"row\">\n                  <div class=\"col-lg-2 col-md-2 col-sm-3 col-xs-3\">\n                    <label>\n                      <strong>受付日：\n                        <span class=\"require\">＊</span>\n                      </strong>\n                    </label>\n                  </div>\n                  <div class=\"col-lg-3 col-md-3 col-sm-3 col-xs-3\">\n                    <div class=\"input-group\">\n                      <input name=\"txt_callDate\" type=\"text\" class=\"form-control\" #dpCallDate=\"bsDatepicker\" bsDatepicker [bsConfig]=\"bsConfig\"\n                        [(bsValue)]=\"callDate\" value=\"{{callDate | date:'yyyy/MM/dd'}}\">\n                      <span class=\"input-group-btn\">\n                        <button type=\"button\" class=\"btn btn-input-support\" (click)=\"dpCallDate.toggle()\">\n                          <i class=\"fa fa-calendar\"></i>\n                        </button>\n                      </span>\n                    </div>\n                  </div>\n                  <div class=\"col-lg-offset-2 col-md-offset-2 col-lg-2 col-md-2 col-sm-3 col-xs-3\">\n                    <label>\n                      <strong>受付開始時刻：</strong>\n                    </label>\n                  </div>\n                  <div class=\"col-lg-3 col-md-3 col-sm-3 col-xs-3\">\n                    <!-- <div class=\"input-group\"> -->\n                    <!-- <input name=\"callStartDate\" type=\"text\" class=\"form-control\" [(ngModel)]=\"callStartDate\"> -->\n                    <input name=\"callStartDate\" type=\"text\" class=\"form-control\" value=\"10:00\">\n                    <!-- <input name=\"txt_callStartDate\" type=\"text\" class=\"form-control\" value=\"{{callStartDate | date:'shortTime'}}\" readonly>\n                      <ng-template #popCallStartDate>\n                        <timepicker name='txt_callStartDate' [(ngModel)]='callStartDate' [showMeridian]='ismeridian'></timepicker>\n                      </ng-template>\n                      <span class=\"input-group-btn\">\n                        <button type=\"button\" class=\"btn btn-input-support\" [popover]=\"popCallStartDate\" [outsideClick]=\"true\">\n                          <i class=\"fa fa-clock-o\"></i>\n                        </button>\n                      </span> -->\n                    <!-- </div> -->\n                  </div>\n                </div>\n                <div class=\"row\">\n                  <div class=\"col-lg-offset-7 col-md-offset-7 col-sm-offset-6 col-xs-offset-6 col-lg-2 col-md-2 col-sm-3 col-xs-3\">\n                    <label>\n                      <strong>受付終了時刻：</strong>\n                    </label>\n                  </div>\n                  <div class=\"col-lg-3 col-md-3 col-sm-3 col-xs-3\">\n                    <!-- <div class=\"input-group\"> -->\n                    <!-- <input name=\"callEndDate\" type=\"text\" class=\"form-control\" [(ngModel)]=\"callEndDate\"> -->\n                    <input name=\"callEndDate\" type=\"text\" class=\"form-control\" value=\"10:30\">\n                    <!-- <input name=\"txt_callEndDate\" type=\"text\" class=\"form-control\" value=\"{{callEndDate | date:'shortTime'}}\" readonly>\n                      <ng-template #popCallEndDate>\n                        <timepicker name='txt_callEndDate' [(ngModel)]='callEndDate' [showMeridian]='ismeridian'></timepicker>\n                      </ng-template>\n                      <span class=\"input-group-btn\">\n                        <button type=\"button\" class=\"btn btn-input-support\" [popover]=\"popCallEndDate\" [outsideClick]=\"true\">\n                          <i class=\"fa fa-clock-o\"></i>\n                        </button>\n                      </span> -->\n                    <!-- </div> -->\n                  </div>\n                </div>\n                <div class=\"row\">\n                  <div class=\"col-lg-2 col-md-2 col-sm-3 col-xs-3\">\n                    <label>\n                      <strong>受付部署：</strong>\n                    </label>\n                  </div>\n                  <div class=\"col-lg-3 col-md-3 col-sm-3 col-xs-3\">\n                    <div class=\"input-group\">\n                      <input name=\"callDeptNm\" type=\"text\" class=\"form-control\" [(ngModel)]=\"callDeptNm\">\n                      <span class=\"input-group-btn\">\n                        <button type=\"button\" class=\"btn btn-input-support\" (click)=\"callSection.openModal()\">\n                          <i class=\"fa fa-building\"></i>\n                        </button>\n                      </span>\n                    </div>\n                  </div>\n                  <div class=\"col-lg-offset-2 col-md-offset-2 col-lg-2 col-md-2 col-sm-3 col-xs-3\">\n                    <label>\n                      <strong>受付者：</strong>\n                    </label>\n                  </div>\n                  <div class=\"col-lg-3 col-md-3 col-sm-3 col-xs-3\">\n                    <div class=\"input-group\">\n                      <input name=\"callUserNm\" type=\"text\" class=\"form-control\" [(ngModel)]=\"callUserNm\">\n                      <span class=\"input-group-btn\">\n                        <button type=\"button\" class=\"btn btn-input-support\" (click)=\"callUser.openModal()\">\n                          <i class=\"fa fa-user\"></i>\n                        </button>\n                      </span>\n                    </div>\n                  </div>\n                </div>\n                <div class=\"row\">\n                  <div class=\"col-lg-2 col-md-2 col-sm-3 col-xs-3\">\n                    <label>\n                      <strong>TEL：</strong>\n                    </label>\n                  </div>\n                  <div class=\"col-lg-3 col-md-3 col-sm-3 col-xs-3\">\n                    <input name=\"callTel\" type=\"text\" class=\"form-control\" [(ngModel)]=\"callTel\">\n                  </div>\n                  <div class=\"col-lg-offset-2 col-md-offset-2 col-lg-2 col-md-2 col-sm-3 col-xs-3\">\n                    <label>\n                      <strong>E-mail：</strong>\n                    </label>\n                  </div>\n                  <div class=\"col-lg-3 col-md-3 col-sm-3 col-xs-3\">\n                    <input name=\"callMail\" type=\"text\" class=\"form-control\" [(ngModel)]=\"callMail\">\n                  </div>\n                </div>\n                <div class=\"row\">\n                  <div class=\"col-lg-2 col-md-2 col-sm-3 col-xs-3\">\n                    <label for=\"InputTextarea\">\n                      <strong>受付内容：\n                        <span class=\"require\">＊</span>\n                      </strong>\n                    </label>\n                  </div>\n                  <div class=\"col-lg-10 col-md-10 col-sm-9 col-xs-9\">\n                    <textarea name=\"callContent\" class=\"form-control\" id=\"InputTextarea\" rows=\"4\" [(ngModel)]=\"callContent\"></textarea>\n                  </div>\n                </div>\n              </div>\n              <h5 class=\"context-header\">\n                <strong>対応情報</strong>\n              </h5>\n              <div class=\"taio-info-border\">\n                <div class=\"row\">\n                  <div class=\"col-lg-2 col-md-2 col-sm-3 col-xs-3\">\n                    <label>\n                      <strong>対応日：</strong>\n                    </label>\n                  </div>\n                  <div class=\"col-lg-3 col-md-3 col-sm-3 col-xs-3\">\n                    <div class=\"input-group\">\n                      <input name=\"txt_taioDate\" type=\"text\" class=\"form-control\" #dpTaioDate=\"bsDatepicker\" bsDatepicker [bsConfig]=\"bsConfig\"\n                        [(bsValue)]=\"taioDate\" value=\"{{taioDate | date:'yyyy/MM/dd'}}\">\n                      <span class=\"input-group-btn\">\n                        <button type=\"button\" class=\"btn btn-input-support\" (click)=\"dpTaioDate.toggle();\">\n                          <i class=\"fa fa-calendar\"></i>\n                        </button>\n                      </span>\n                    </div>\n                  </div>\n                  <div class=\"col-lg-offset-2 col-md-offset-2 col-lg-2 col-md-2 col-sm-3 col-xs-3\">\n                    <label>\n                      <strong>対応開始時刻：</strong>\n                    </label>\n                  </div>\n                  <div class=\"col-lg-3 col-md-3 col-sm-3 col-xs-3\">\n                    <!-- <div class=\"input-group\"> -->\n                    <!-- <input name=\"taioStartDate\" type=\"text\" class=\"form-control\" [(ngModel)]=\"taioStartDate\"> -->\n                    <input name=\"taioStartDate\" type=\"text\" class=\"form-control\" value=\"10:00\">\n                    <!-- <input name=\"txt_taioStartDate\" type=\"text\" class=\"form-control\" value=\"{{taioStartDate | date:'shortTime'}}\" readonly>\n                      <ng-template #popTaioStartDate>\n                        <timepicker name='txt_taioStartDate' [(ngModel)]='taioStartDate' [showMeridian]='ismeridian'></timepicker>\n                      </ng-template>\n                      <span class=\"input-group-btn\">\n                        <button type=\"button\" class=\"btn btn-input-support\" [popover]=\"popTaioStartDate\" [outsideClick]=\"true\">\n                          <i class=\"fa fa-clock-o\"></i>\n                        </button>\n                      </span> -->\n                    <!-- </div> -->\n                  </div>\n                </div>\n                <div class=\"row\">\n                  <div class=\"col-lg-offset-7 col-md-offset-7 col-sm-offset-6 col-xs-offset-6 col-lg-2 col-md-2 col-sm-3 col-xs-3\">\n                    <label>\n                      <strong>対応終了時刻：</strong>\n                    </label>\n                  </div>\n                  <div class=\"col-lg-3 col-md-3 col-sm-3 col-xs-3\">\n                    <!-- <div class=\"input-group\"> -->\n                    <!-- <input name=\"taioEndDate\" type=\"text\" class=\"form-control\" [(ngModel)]=\"taioEndDate\"> -->\n                    <input name=\"taioEndDate\" type=\"text\" class=\"form-control\" value=\"10:30\">\n                    <!-- <input name=\"txt_taioEndDate\" type=\"text\" class=\"form-control\" value=\"{{taioEndDate | date:'shortTime'}}\" readonly>\n                      <ng-template #popTaioEndDate>\n                        <timepicker name='txt_taioEndDate' [(ngModel)]='taioEndDate' [showMeridian]='ismeridian'></timepicker>\n                      </ng-template>\n                      <span class=\"input-group-btn\">\n                        <button type=\"button\" class=\"btn btn-input-support\" [popover]=\"popTaioEndDate\" [outsideClick]=\"true\">\n                          <i class=\"fa fa-clock-o\"></i>\n                        </button>\n                      </span> -->\n                    <!-- </div> -->\n                  </div>\n                </div>\n                <div class=\"row\">\n                  <div class=\"col-lg-2 col-md-2 col-sm-3 col-xs-3\">\n                    <label>\n                      <strong>対応部署：</strong>\n                    </label>\n                  </div>\n                  <div class=\"col-lg-3 col-md-3 col-sm-3 col-xs-3\">\n                    <div class=\"input-group\">\n                      <input name=\"taioDeptNm\" type=\"text\" class=\"form-control\" [(ngModel)]=\"taioDeptNm\">\n                      <span class=\"input-group-btn\">\n                        <button type=\"button\" class=\"btn btn-input-support\" (click)=\"taioSection.openModal()\">\n                          <i class=\"fa fa-building\"></i>\n                        </button>\n                      </span>\n                    </div>\n                  </div>\n                  <div class=\"col-lg-offset-2 col-md-offset-2 col-lg-2 col-md-2 col-sm-3 col-xs-3\">\n                    <label>\n                      <strong>対応者：</strong>\n                    </label>\n                  </div>\n                  <div class=\"col-lg-3 col-md-3 col-sm-3 col-xs-3\">\n                    <div class=\"input-group\">\n                      <input name=\"taioUserNm\" type=\"text\" class=\"form-control\" [(ngModel)]=\"taioUserNm\">\n                      <span class=\"input-group-btn\">\n                        <button type=\"button\" class=\"btn btn-input-support\" (click)=\"taioUser.openModal()\">\n                          <i class=\"fa fa-user\"></i>\n                        </button>\n                      </span>\n                    </div>\n                  </div>\n                </div>\n                <div class=\"row\">\n                  <div class=\"col-lg-2 col-md-2 col-sm-3 col-xs-3\">\n                    <label>\n                      <strong>TEL：</strong>\n                    </label>\n                  </div>\n                  <div class=\"col-lg-3 col-md-3 col-sm-3 col-xs-3\">\n                    <input name=\"taioTel\" type=\"text\" class=\"form-control\" [(ngModel)]=\"taioTel\">\n                  </div>\n                  <div class=\"col-lg-offset-2 col-md-offset-2 col-lg-2 col-md-2 col-sm-3 col-xs-3\">\n                    <label>\n                      <strong>E-mail：</strong>\n                    </label>\n                  </div>\n                  <div class=\"col-lg-3 col-md-3 col-sm-3 col-xs-3\">\n                    <input name=\"taioMail\" type=\"text\" class=\"form-control\" [(ngModel)]=\"taioMail\">\n                  </div>\n                </div>\n                <div class=\"row\">\n                  <div class=\"col-lg-2 col-md-2 col-sm-3 col-xs-3\">\n                    <label for=\"InputTextarea\">\n                      <strong>対応内容：</strong>\n                    </label>\n                  </div>\n                  <div class=\"col-lg-10 col-md-10 col-sm-9 col-xs-9\">\n                    <textarea name=\"taioContent\" class=\"form-control\" id=\"InputTextarea\" rows=\"4\" [(ngModel)]=\"taioContent\"></textarea>\n                  </div>\n                </div>\n              </div>\n              <h5 class=\"context-header\">\n                <strong>処置情報</strong>\n              </h5>\n              <div class=\"action-info-border\">\n                <div class=\"row\">\n                  <div class=\"col-lg-2 col-md-2 col-sm-3 col-xs-3\">\n                    <label>\n                      <strong>処置予定日：</strong>\n                    </label>\n                  </div>\n                  <div class=\"col-lg-3 col-md-3 col-sm-3 col-xs-3\">\n                    <div class=\"input-group\">\n                      <input name=\"txt_actDate\" type=\"text\" class=\"form-control\" #dpActDate=\"bsDatepicker\" bsDatepicker [bsConfig]=\"bsConfig\" [(bsValue)]=\"actDate\"\n                        value=\"{{actDate | date:'yyyy/MM/dd'}}\">\n                      <span class=\"input-group-btn\">\n                        <button type=\"button\" class=\"btn btn-input-support\" (click)=\"dpActDate.toggle();\">\n                          <i class=\"fa fa-calendar\"></i>\n                        </button>\n                      </span>\n                    </div>\n                  </div>\n                  <div class=\"col-lg-offset-2 col-md-offset-2 col-lg-2 col-md-2 col-sm-3 col-xs-3\">\n                    <label>\n                      <strong>処置区分：</strong>\n                    </label>\n                  </div>\n                  <div class=\"col-lg-3 col-md-3 col-sm-3 col-xs-3\">\n                    <select name=\"sel_actTypeCd\" class=\"form-control edit-dropdown\" [(ngModel)]=\"actTypeCd\">\n                      <option value=\"\"></option>\n                      <option *ngFor=\"let item of actTypeArray\" [value]='item.value'>\n                        {{item.label}}\n                      </option>\n                    </select>\n                  </div>\n                </div>\n                <div class=\"row\">\n                  <div class=\"col-lg-2 col-md-2 col-sm-3 col-xs-3\">\n                    <label>\n                      <strong>処置開始日時：</strong>\n                    </label>\n                  </div>\n                  <div class=\"col-lg-2 col-md-2 col-sm-2 col-xs-3\">\n                    <div class=\"input-group\">\n                      <input name=\"txt_actStartDate\" type=\"text\" class=\"form-control\" #dpActStartDate=\"bsDatepicker\" bsDatepicker [bsConfig]=\"bsConfig\"\n                        [(bsValue)]=\"actStartDate\" value=\"{{actStartDate | date:'yyyy/MM/dd'}}\">\n                      <span class=\"input-group-btn\">\n                        <button type=\"button\" class=\"btn btn-input-support\" (click)=\"dpActStartDate.toggle();\">\n                          <i class=\"fa fa-calendar\"></i>\n                        </button>\n                      </span>\n                    </div>\n                  </div>\n                  <div class=\"col-lg-2 col-md-2 col-sm-2 col-xs-3\">\n                    <!-- <div class=\"input-group\"> -->\n                    <!-- <input name=\"txt_actStartTime\" type=\"text\" class=\"form-control\" [(ngModel)]=\"actStartTime\"> -->\n                    <input name=\"txt_actStartTime\" type=\"text\" class=\"form-control\" value=\"10:00\">\n                    <!-- <input name=\"txt_actStartTime\" type=\"text\" class=\"form-control\" value=\"{{actStartTime | date:'shortTime'}}\" readonly>\n                      <ng-template #popActStartTime>\n                        <timepicker name='txt_actStartTime' [(ngModel)]='actStartTime' [showMeridian]='ismeridian'></timepicker>\n                      </ng-template>\n                      <span class=\"input-group-btn\">\n                        <button type=\"button\" class=\"btn btn-input-support\" [popover]=\"popActStartTime\" [outsideClick]=\"true\">\n                          <i class=\"fa fa-clock-o\"></i>\n                        </button>\n                      </span> -->\n                    <!-- </div> -->\n                  </div>\n                </div>\n                <div class=\"row\">\n                  <div class=\"col-lg-2 col-md-2 col-sm-3 col-xs-3\">\n                    <label>\n                      <strong>処置終了日時：</strong>\n                    </label>\n                  </div>\n                  <div class=\"col-lg-2 col-md-2 col-sm-2 col-xs-3\">\n                    <div class=\"input-group\">\n                      <input name=\"txt_actEndDate\" type=\"text\" class=\"form-control\" #dpActEndDate=\"bsDatepicker\" bsDatepicker [bsConfig]=\"bsConfig\"\n                        [(bsValue)]=\"actEndDate\" value=\"{{actEndDate | date:'yyyy/MM/dd'}}\">\n                      <span class=\"input-group-btn\">\n                        <button type=\"button\" class=\"btn btn-input-support\" (click)=\"dpActEndDate.toggle();\">\n                          <i class=\"fa fa-calendar\"></i>\n                        </button>\n                      </span>\n                    </div>\n                  </div>\n                  <div class=\"col-lg-2 col-md-2 col-sm-2 col-xs-3\">\n                    <!-- <div class=\"input-group\"> -->\n                    <!-- <input name=\"txt_actEndTime\" type=\"text\" class=\"form-control\" [(ngModel)]=\"actEndTime\"> -->\n                    <input name=\"txt_actEndTime\" type=\"text\" class=\"form-control\" value=\"10:30\">\n                    <!-- <input name=\"txt_actEndTime\" type=\"text\" class=\"form-control\" value=\"{{actEndTime | date:'shortTime'}}\" readonly>\n                      <ng-template #popActEndTime>\n                        <timepicker name='txt_actEndTime' [(ngModel)]='actEndTime' [showMeridian]='ismeridian'></timepicker>\n                      </ng-template>\n                      <span class=\"input-group-btn\">\n                        <button type=\"button\" class=\"btn btn-input-support\" [popover]=\"popActEndTime\" [outsideClick]=\"true\">\n                          <i class=\"fa fa-clock-o\"></i>\n                        </button>\n                      </span> -->\n                    <!-- </div> -->\n                  </div>\n                </div>\n                <div class=\"row\">\n                  <div class=\"col-lg-2 col-md-2 col-sm-3 col-xs-3\">\n                    <label>\n                      <strong>処置部署：</strong>\n                    </label>\n                  </div>\n                  <div class=\"col-lg-3 col-md-3 col-sm-3 col-xs-3\">\n                    <div class=\"input-group\">\n                      <input name=\"actDeptNm\" type=\"text\" class=\"form-control\" [(ngModel)]=\"actDeptNm\">\n                      <span class=\"input-group-btn\">\n                        <button type=\"button\" class=\"btn btn-input-support\" (click)=\"actSection.openModal()\">\n                          <i class=\"fa fa-building\"></i>\n                        </button>\n                      </span>\n                    </div>\n                  </div>\n                  <div class=\"col-lg-offset-2 col-md-offset-2 col-lg-2 col-md-2 col-sm-3 col-xs-3\">\n                    <label>\n                      <strong>処置者：</strong>\n                    </label>\n                  </div>\n                  <div class=\"col-lg-3 col-md-3 col-sm-3 col-xs-3\">\n                    <div class=\"input-group\">\n                      <input name=\"actUserNm\" type=\"text\" class=\"form-control\" [(ngModel)]=\"actUserNm\">\n                      <span class=\"input-group-btn\">\n                        <button type=\"button\" class=\"btn btn-input-support\" (click)=\"actUser.openModal()\">\n                          <i class=\"fa fa-user\"></i>\n                        </button>\n                      </span>\n                    </div>\n                  </div>\n                </div>\n                <div class=\"row\">\n                  <div class=\"col-lg-2 col-md-2 col-sm-3 col-xs-3\">\n                    <label>\n                      <strong>TEL：</strong>\n                    </label>\n                  </div>\n                  <div class=\"col-lg-3 col-md-3 col-sm-3 col-xs-3\">\n                    <input name=\"actTel\" type=\"text\" class=\"form-control\" [(ngModel)]=\"actTel\">\n                  </div>\n                  <div class=\"col-lg-offset-2 col-md-offset-2 col-lg-2 col-md-2 col-sm-3 col-xs-3\">\n                    <label>\n                      <strong>E-mail：</strong>\n                    </label>\n                  </div>\n                  <div class=\"col-lg-3 col-md-3 col-sm-3 col-xs-3\">\n                    <input name=\"actMail\" type=\"text\" class=\"form-control\" [(ngModel)]=\"actMail\">\n                  </div>\n                </div>\n                <div class=\"row\">\n                  <div class=\"col-lg-2 col-md-2 col-sm-3 col-xs-3\">\n                    <label for=\"InputTextarea\">\n                      <strong>処置結果：</strong>\n                    </label>\n                  </div>\n                  <div class=\"col-lg-10 col-md-10 col-sm-9 col-xs-9\">\n                    <textarea name=\"actContent\" class=\"form-control\" id=\"InputTextarea\" rows=\"4\" [(ngModel)]=\"actContent\"></textarea>\n                  </div>\n                </div>\n              </div>\n\n              <h5 class=\"context-header\">\n                <strong>製品情報</strong>\n              </h5>\n              <div class=\"product-info-border\">\n                <div class=\"row\">\n                  <div class=\"col-lg-2 col-md-2 col-sm-3 col-xs-3\">\n                    <label>\n                      <strong>機種区分：</strong>\n                    </label>\n                  </div>\n                  <div class=\"col-lg-10 col-md-10 col-sm-9 col-xs-9\">\n                    <select name=\"sel_productTypeCd\" class=\"form-control edit-dropdown\" [(ngModel)]=\"productTypeCd\">\n                      <option value=\"\"></option>\n                      <option *ngFor=\"let item of productTypeArray\" [value]='item.value'>\n                        {{item.label}}\n                      </option>\n                    </select>\n                  </div>\n                </div>\n                <h5 class=\"context-sub-header\">\n                  <strong>障害状況</strong>\n                </h5>\n                <div class=\"row\">\n                  <div class=\"col-lg-2 col-md-2 col-sm-3 col-xs-3\">\n                    <label>\n                      <strong>　トリガー：</strong>\n                    </label>\n                  </div>\n                  <div class=\"col-lg-3 col-md-3 col-sm-3 col-xs-3\">\n                    <select name=\"sel_productTriggerCd\" class=\"form-control edit-dropdown\" [(ngModel)]=\"productTriggerCd\">\n                      <option value=\"\"></option>\n                      <option *ngFor=\"let item of productTriggerArray\" [value]='item.value'>\n                        {{item.label}}\n                      </option>\n                    </select>\n                  </div>\n                  <div class=\"col-lg-offset-2 col-md-offset-2 col-lg-2 col-md-2 col-sm-3 col-xs-3\">\n                    <label>\n                      <strong>頻度：</strong>\n                    </label>\n                  </div>\n                  <div class=\"col-lg-3 col-md-3 col-sm-3 col-xs-3\">\n                    <select name=\"sel_productHindoCd\" class=\"form-control edit-dropdown\" [(ngModel)]=\"productHindoCd\">\n                      <option value=\"\"></option>\n                      <option *ngFor=\"let item of productHindoArray\" [value]='item.value'>\n                        {{item.label}}\n                      </option>\n                    </select>\n                  </div>\n                </div>\n                <div class=\"row\">\n                  <div class=\"col-lg-2 col-md-2 col-sm-3 col-xs-3\">\n                    <label>\n                      <strong>　現象：</strong>\n                    </label>\n                  </div>\n                  <div class=\"col-lg-3 col-md-3 col-sm-3 col-xs-3\">\n                    <select name=\"sel_productGensyoCd\" class=\"form-control edit-dropdown\" [(ngModel)]=\"productGensyoCd\">\n                      <option value=\"\"></option>\n                      <option *ngFor=\"let item of productGensyoArray\" [value]='item.value'>\n                        {{item.label}}\n                      </option>\n                    </select>\n                  </div>\n                  <div class=\"col-lg-offset-2 col-md-offset-2 col-lg-2 col-md-2 col-sm-3 col-xs-3\">\n                    <label>\n                      <strong>状態：</strong>\n                    </label>\n                  </div>\n                  <div class=\"col-lg-3 col-md-3 col-sm-3 col-xs-3\">\n                    <select name=\"sel_productStatusCd\" class=\"form-control edit-dropdown\" [(ngModel)]=\"productStatusCd\">\n                      <option value=\"\"></option>\n                      <option *ngFor=\"let item of productStatusArray\" [value]='item.value'>\n                        {{item.label}}\n                      </option>\n                    </select>\n                  </div>\n                </div>\n              </div>\n\n            </form>\n          </div>\n          <!-- /.panel-body -->\n        </div>\n        <!-- /.panel -->\n\n        <h4 class=\"panel-header text-primary\">\n          <strong>▼関係者</strong>\n        </h4>\n        <div class=\"panel panel-default\">\n          <div class=\"panel-body context-margin\">\n            <h5 class=\"context-header\">\n              <strong>\n                <i class=\"fa fa-dot-circle-o\" aria-hidden=\"true\"></i> 変更を通知する／\n                <i class=\"fa fa-circle-o\" aria-hidden=\"true\"></i> 変更を通知しない\n              </strong>\n            </h5>\n            <div class=\"context-margin\">\n              <div>サービスソリューション事業本部 ＣＥ事業部 東京サービス部 第一グループ</div>\n              <div>\n                <span class=\"context-margin relate-user-nm\"> 水道　一郎 （既読日：2017/12/18）</span>\n              </div>\n              <div>\n                <span class=\"context-margin relate-user-nm\"> 水道　二郎 　　　　　　　　　　　</span>\n              </div>\n              <div>品質保証統括室 　品質管理グループ</div>\n              <div>\n                <span class=\"context-margin relate-user-nm\"> 水道　花子 （既読日：2017/12/19）</span>\n              </div>\n            </div>\n          </div>\n          <!-- /.panel-body -->\n        </div>\n        <!-- /.panel -->\n\n        <h4 class=\"panel-header text-primary\">\n          <strong>▼関連リンク</strong>\n        </h4>\n        <div class=\"panel panel-default\">\n          <div class=\"panel-body context-margin\">\n            <h5 class=\"context-header\">\n              <strong>プロジェクト情報\n                <span class=\"text-danger\">※プロジェクト情報はＡＲＣＳから行なってください。（ＡＲＣＳ登録後の翌日反映）</span>\n              </strong>\n            </h5>\n            <div class=\"context-margin\">\n              <div class=\"row\">\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>プロジェクト番号：</strong>\n                </div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                  <a (click)=\"showPj()\">\n                    <u>J1000000</u>\n                  </a>\n                </div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>PJ主管部門：</strong>\n                </div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">プロ主管</div>\n              </div>\n              <div class=\"row\">\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>プロジェクト名：</strong>\n                </div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">ｘｘｘｘｘｘｘｘｘｘｘｘｘ</div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>PM：</strong>\n                </div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">川本　健</div>\n              </div>\n              <div class=\"row\">\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>代表機場：</strong>\n                </div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">ｘｘｘｘｘｘｘｘｘｘｘｘｘ</div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>都道府県：</strong>\n                </div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">東京都</div>\n              </div>\n            </div>\n            <h5 class=\"context-header\">\n              <strong>障害対応報告書(MR2)</strong>\n            </h5>\n            <div class=\"context-margin\">\n              <div class=\"row\">\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>件名：</strong>\n                </div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                  <a (click)=\"showMr2()\">\n                    <u>XXXXXXXXXXシーケンサ異常</u>\n                  </a>\n                </div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>作成日：</strong>\n                </div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">2017/1/4</div>\n              </div>\n              <div class=\"row\">\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>依頼元：</strong>\n                </div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">依頼元</div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>作業担当者：</strong>\n                </div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">川本　健</div>\n              </div>\n            </div>\n            <h5 class=\"context-header\">\n              <strong>労災・事故・クレーム連絡</strong>\n            </h5>\n            <div class=\"context-margin\">\n              <div class=\"row\">\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>状態：</strong>\n                </div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">第1報 正式発行</div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>区分：</strong>\n                </div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">品質（ランクＡ）</div>\n              </div>\n              <div class=\"row\">\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>概要：</strong>\n                </div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                  <a (click)=\"showJiko()\">\n                    <u>XXXXXXXXXXXXXXXXXXXXXX</u>\n                  </a>\n                </div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>顧客名：</strong>\n                </div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">川本　健</div>\n              </div>\n              <div class=\"row\">\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>機場名：</strong>\n                </div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">ｘｘｘｘｘｘｘｘｘｘｘｘｘ</div>\n              </div>\n              <div class=\"row\">\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>発行日：</strong>\n                </div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">2017/1/1</div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>発行元：</strong>\n                </div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">ｘｘｘｘｘｘｘｘｘｘｘｘｘ</div>\n              </div>\n            </div>\n            <h5 class=\"context-header\">\n              <strong>費用決済申請</strong>\n            </h5>\n            <div class=\"context-margin\">\n              <div class=\"row\">\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>ID番号：</strong>\n                </div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                  <a (click)=\"showHiyo('dsp','dsp',416161,'','1282')\">\n                    <u>XXXXXXXXXX</u>\n                  </a>\n                </div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>ステータス：</strong>\n                </div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">決裁</div>\n              </div>\n              <div class=\"row\">\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>区分：</strong>\n                </div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">クレーム対応</div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>決裁番号：</strong>\n                </div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">無償 第X号</div>\n              </div>\n              <div class=\"row\">\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>件名：</strong>\n                </div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">XXXXXXXXXXXXXXXXXXXXXX</div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>概算金額：</strong>\n                </div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                  <div class=\"pull-right\">123,456</div>\n                </div>\n              </div>\n            </div>\n          </div>\n          <!-- /.panel-body -->\n        </div>\n        <!-- /.panel -->\n\n        <h4 class=\"panel-header text-primary\">\n          <strong>▼関連インシデント</strong>\n        </h4>\n        <div class=\"panel panel-default\">\n          <div class=\"panel-body context-margin\">\n            <h5 class=\"context-header\">\n              <strong>同一機場インシデント</strong>\n            </h5>\n            <div class=\"context-margin\">\n              <a (click)=\"showRelateIncident()\">\n                <u>#12390 障害 2016/12/31 ○○○浄水場 ○○○市</u>\n              </a>\n              <div class=\"context-margin\">\n                Ａ系水処理設備の終沈（１、２号）の監視操作不能なので対応頂きたい。\n              </div>\n            </div>\n            <h5 class=\"context-header\">\n              <strong>同一顧客インシデント</strong>\n            </h5>\n            <div class=\"context-margin\">\n              <a (click)=\"showRelateIncident()\">\n                <u>#12312 問い合わせ 2016/12/31 ○○○センター ○○○企業局</u>\n              </a>\n              <div class=\"context-margin\">\n                富士電機製変圧器のＰＣＢ含有問合せ。以下の型式の変圧器にＰＣＢが含まれているかを教えて下さい。\n              </div>\n            </div>\n          </div>\n          <!-- /.panel-body -->\n        </div>\n        <!-- /.panel -->\n      </div>\n    </div>\n    <!-- /.row -->\n  </div>\n</div>"
+module.exports = "<!--\n//*****************************************************************************\n//\tシステム名　　　：インシデント管理システム\n//\tサブシステム名　：\n//\t画面名　　　　　：インシデント登録画面\n//\tHTML_ID　　　　 ：IncidentEditView.php\n//\t作成日付・作成者：2017.10.05 ADF)S.Yoshida\n//\t修正履歴　　　　：\n//*****************************************************************************\n-->\n<my-header></my-header>\n<common-modal #common (commonEnter)=\"onEntry($event, iFile.files)\"></common-modal>\n<incidentSearch-modal #incident (incidentSearchSelect)=\"onIncidentSearchSelected($event)\"></incidentSearch-modal>\n<kijoSearch-modal #kijo></kijoSearch-modal>\n<userSearch-modal #salesUser (salesUserSelect)=\"onSalesUserSelected($event)\"></userSearch-modal>\n<userSearch-modal #skanUser (salesUserSelect)=\"onSalesUserSelected($event)\"></userSearch-modal>\n<userSearch-modal #callUser (salesUserSelect)=\"onSalesUserSelected($event)\"></userSearch-modal>\n<userSearch-modal #taioUser (salesUserSelect)=\"onSalesUserSelected($event)\"></userSearch-modal>\n<userSearch-modal #actUser (salesUserSelect)=\"onSalesUserSelected($event)\"></userSearch-modal>\n<sectionSearch-modal #salesSection (salesSectionSelect)=\"onSalesSectionSelected($event)\"></sectionSearch-modal>\n<sectionSearch-modal #skanSection (salesSectionSelect)=\"onSalesSectionSelected($event)\"></sectionSearch-modal>\n<sectionSearch-modal #callSection (salesSectionSelect)=\"onSalesSectionSelected($event)\"></sectionSearch-modal>\n<sectionSearch-modal #taioSection (salesSectionSelect)=\"onSalesSectionSelected($event)\"></sectionSearch-modal>\n<sectionSearch-modal #actSection (salesSectionSelect)=\"onSalesSectionSelected($event)\"></sectionSearch-modal>\n<projectSearch-modal #project (projectSearchSelect)=\"onProjectSearchSelected($event)\"></projectSearch-modal>\n<customerSearch-modal #customer></customerSearch-modal>\n<equipmentSearch-modal #equipment></equipmentSearch-modal>\n\n<div id=\"editApp\">\n  <div ng-controller=\"EditController as main\" class=\"container-fluid\">\n    <!--\n                <button onclick=\"onHrefLink('./IncidentEdit.php')\">load</button>\n                <button ng-click=\"onHrefLink('./IncidentEdit.php')\">load angular</button>\n                <button ng-click=\"main.test()\">load angular</button>\n                -->\n    <div class=\"text-right transition-button\">\n      <span>\n        <button type=\"button\" class=\"btn btn-danger\" (click)=\"common.openModal('確認','編集内容を登録します。宜しいですか？','OK','キャンセル')\">登録</button>\n      </span>\n      <span>\n        <button type=\"button\" class=\"btn btn-danger\" routerLink=\"/detail\" routerLinkActive=\"current\" [routerLinkActiveOptions]=\"{ exact: true }\">\n          閲覧へ戻る\n        </button>\n      </span>\n    </div>\n    <div class=\"row\">\n      <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\">\n        <div class=\"panel panel-danger\">\n          <div class=\"panel-heading clearfix\">\n            <span class=\"h3 incident-title-status\">{{incidentNo}}</span>\n            <span class=\"h4 incident-title-status\">　{{incidentStatusNm}}</span>\n            <div class=\"pull-right\">\n              <strong>登録日：{{insDate}} {{insUserNm}}　最終更新日：{{updDate}} {{updUserNm}}</strong>\n            </div>\n          </div>\n          <!-- /.panel-heading -->\n          <div class=\"panel-body context-margin\">\n            <form>\n              <div class=\"row\">\n                <div class=\"col-lg-2 col-md-3 col-sm-3 col-xs-3\">\n                  <label>\n                    <strong>インシデント分類：\n                      <span class=\"require\">＊</span>\n                    </strong>\n                  </label>\n                </div>\n                <div class=\"col-lg-3 col-md-3 col-sm-3 col-xs-3\">\n                  <select name=\"sel_incidentType\" class=\"form-control edit-dropdown\" [(ngModel)]=\"incidentTypeCd\">\n                    <option value=\"\"></option>\n                    <option *ngFor=\"let item of incidentTypeArray\" [value]='item.value'>\n                      {{item.label}}\n                    </option>\n                  </select>\n                </div>\n                <div class=\"col-lg-offset-2 col-lg-2 col-md-3 col-sm-3 col-xs-3\">\n                  <label>\n                    <strong>親インシデント番号：</strong>\n                  </label>\n                </div>\n                <div class=\"col-lg-3 col-md-3 col-sm-3 col-xs-3\">\n                  <div class=\"input-group\">\n                    <input name=\"txt_parentIncidentNo\" type=\"text\" class=\"form-control\" [(ngModel)]=\"parentIncidentNo\">\n                    <input name=\"hid_parentIncidentId\" type=\"hidden\" [(ngModel)]=\"parentIncidentId\">\n                    <span class=\"input-group-btn\">\n                      <button type=\"button\" class=\"btn btn-input-support\" (click)=\"incident.openModal()\">\n                        <i class=\"fa fa-search\"></i>\n                      </button>\n                    </span>\n                  </div>\n                </div>\n              </div>\n              <div class=\"row\">\n                <div class=\"col-lg-2 col-md-3 col-sm-3 col-xs-3\">\n                  <label>\n                    <strong>発生日時：</strong>\n                  </label>\n                </div>\n                <div class=\"col-lg-2 col-md-2 col-sm-2 col-xs-3\">\n                  <div class=\"input-group\">\n                    <input name=\"txt_incidentStartDate\" type=\"text\" class=\"form-control\" #dpIncidentStartDate=\"bsDatepicker\" bsDatepicker [bsConfig]=\"bsConfig\"\n                      [(bsValue)]=\"incidentStartDate\" value=\"{{incidentStartDate | date:'yyyy/MM/dd'}}\">\n                    <span class=\"input-group-btn\">\n                      <button type=\"button\" class=\"btn btn-input-support\" (click)=\"dpIncidentStartDate.toggle()\">\n                        <i class=\"fa fa-calendar\"></i>\n                      </button>\n                    </span>\n                  </div>\n                </div>\n                <div class=\"col-lg-2 col-md-2 col-sm-2 col-xs-3\">\n                  <div class=\"input-group\">\n                    <select name=\"sel_incidentStartTime\" class=\"search-dropdown\" [(ngModel)]=\"incidentStartTime\">\n                      <option *ngFor=\"let data of timeList\" [value]=\"data.val\">{{data.label}}</option>\n                    </select>\n                    :\n                    <select name=\"sel_incidentStartMinite\" class=\"search-dropdown\" [(ngModel)]=\"incidentStartMinite\">\n                      <option *ngFor=\"let data of miniteList\" [value]=\"data.val\">{{data.label}}</option>\n                    </select>\n                  </div>\n                </div>\n              </div>\n              <div class=\"row\">\n                <div class=\"col-lg-2 col-md-3 col-sm-3 col-xs-3\">\n                  <label>\n                    <strong>業種区分：</strong>\n                  </label>\n                </div>\n                <div class=\"col-lg-3 col-md-3 col-sm-3 col-xs-3\">\n                  <select name=\"sel_industryTypeCd\" class=\"form-control edit-dropdown\" [(ngModel)]=\"industryTypeCd\">\n                    <option value=\"\"></option>\n                    <option *ngFor=\"let item of industryTypeArray\" [value]='item.value'>\n                      {{item.label}}\n                    </option>\n                  </select>\n                </div>\n                <div class=\"col-lg-offset-2 col-lg-2 col-md-3 col-sm-3 col-xs-3\">\n                  <label>\n                    <strong>情報提供元：</strong>\n                  </label>\n                </div>\n                <div class=\"col-lg-3 col-md-3 col-sm-3 col-xs-3\">\n                  <select name=\"sel_infoSourceCd\" class=\"form-control edit-dropdown\" [(ngModel)]=\"infoSourceCd\">\n                    <option value=\"\"></option>\n                    <option *ngFor=\"let item of infoSourceArray\" [value]='item.value'>\n                      {{item.label}}\n                    </option>\n                  </select>\n                </div>\n              </div>\n              <div class=\"row\">\n                <div class=\"col-lg-2 col-md-3 col-sm-3 col-xs-3\">\n                  <label>\n                    <strong>情報提供者：</strong>\n                  </label>\n                </div>\n                <div class=\"col-lg-3 col-md-3 col-sm-3 col-xs-3\">\n                  <input name=\"txt_infoProvider\" type=\"text\" class=\"form-control\" [(ngModel)]=\"infoProvider\">\n                </div>\n                <div class=\"col-lg-offset-2 col-lg-2 col-md-3 col-sm-3 col-xs-3\">\n                  <label>\n                    <strong>情報提供TEL：</strong>\n                  </label>\n                </div>\n                <div class=\"col-lg-3 col-md-3 col-sm-3 col-xs-3\">\n                  <input name=\"infoProvidedTel\" type=\"text\" class=\"form-control\" [(ngModel)]=\"infoProvidedTel\">\n                </div>\n              </div>\n              <div class=\"row file-row\">\n                <div class=\"col-lg-2 col-md-3 col-sm-3 col-xs-3\">\n                  <label>\n                    <strong>添付ファイル：</strong>\n                  </label>\n                </div>\n                <div class=\"col-lg-3 col-md-3 col-sm-3 col-xs-3\">\n                  <input #iFile name=\"incidentFile\" type=\"file\" [(ngModel)]=\"incidentFile\">\n                </div>\n              </div>\n              <!-- <div class=\"row\">\n                <div class=\"col-lg-2 col-md-3 col-sm-3 col-xs-3\">\n                  <label>\n                    <strong>関係者：</strong>\n                  </label>\n                </div>\n                <div class=\"col-lg-3 col-md-3 col-sm-3 col-xs-3\">\n                  <div class=\"input-group\">\n                    <input type=\"text\" class=\"form-control\">\n                    <span class=\"input-group-btn\">\n                      <button type=\"button\" class=\"btn btn-input-support\">\n                        <i class=\"fa fa-user\"></i>\n                      </button>\n                    </span>\n                  </div>\n                </div>\n              </div>\n              <div class=\"row\">\n                <div class=\"col-lg-offset-2 col-md-offset-3 col-sm-offset-3 col-xs-offset-3 col-lg-2 col-md-3 col-sm-3 col-xs-3\">\n                  &nbsp;&nbsp;\n                  <a>\n                    <u>関係者を追加</u>\n                  </a>\n                </div>\n              </div> -->\n              <div class=\"row\">\n                <div class=\"col-lg-2 col-md-3 col-sm-3 col-xs-3\">\n                  <label for=\"InputTextarea\">\n                    <strong>注記：</strong>\n                  </label>\n                </div>\n                <div class=\"col-lg-10 col-md-9 col-sm-9 col-xs-9\">\n                  <textarea name=\"memo\" class=\"form-control\" id=\"InputTextarea\" rows=\"3\" [(ngModel)]=\"memo\"></textarea>\n                </div>\n              </div>\n              <h5 class=\"context-header\">\n                <strong>設備情報及び顧客情報</strong>\n              </h5>\n              <div class=\"setubi-and-cust-info-border\">\n                <div class=\"row\">\n                  <div class=\"col-lg-2 col-md-3 col-sm-3 col-xs-3\">\n                    <label>\n                      <strong>機場：\n                        <span class=\"require\">＊</span>\n                      </strong>\n                    </label>\n                  </div>\n                  <div class=\"col-lg-10 col-md-9 col-sm-9 col-xs-9\">\n                    <div class=\"input-group\">\n                      <input #txt_kijoNm=\"ngModel\" name=\"txt_kijoNm\" type=\"text\" class=\"form-control\" [(ngModel)]=\"kijoNm\" required>\n                      <input name=\"hid_kijoId\" type=\"hidden\" [(ngModel)]=\"kijoId\">\n                      <span class=\"input-group-btn\">\n                        <button type=\"button\" class=\"btn btn-input-support\" (click)=\"kijo.openModal()\">\n                          <i class=\"fa fa-industry\"></i>\n                        </button>\n                      </span>\n                    </div>\n                    <span class=\"text-danger\" *ngIf=\"txt_kijoNm.errors?.required&& txt_kijoNm.dirty\">\n                      機場は必須入力です。\n                    </span>\n                  </div>\n                </div>\n                <!-- <div class=\"row\">\n                  <div class=\"col-lg-2 col-md-3 col-sm-3 col-xs-3\">\n                    <label>\n                      <strong>事業主体：</strong>\n                    </label>\n                  </div>\n                  <div class=\"col-lg-3 col-md-3 col-sm-3 col-xs-3\">\n                    <div class=\"input-group\">\n                      <input name=\"jigyosyutaiNm\" type=\"text\" class=\"form-control\" [(ngModel)]=\"jigyosyutaiNm\">\n                      <input name=\"hid_jigyosyutaiId\" type=\"hidden\" [(ngModel)]=\"jigyosyutaiId\">\n                      <span class=\"input-group-btn\">\n                        <button type=\"button\" class=\"btn btn-input-support\">\n                          <i class=\"fa fa-building\"></i>\n                        </button>\n                      </span>\n                    </div>\n                  </div>\n                </div> -->\n                <div class=\"row\">\n                  <div class=\"col-lg-2 col-md-3 col-sm-3 col-xs-3\">\n                    <label>\n                      <strong>事業主体：</strong>\n                    </label>\n                  </div>\n                  <div class=\"col-lg-3 col-md-3 col-sm-3 col-xs-3\">\n                    <input name=\"jigyosyutaiNm\" type=\"text\" class=\"form-control\" [(ngModel)]=\"jigyosyutaiNm\" readonly>\n                    <input name=\"hid_jigyosyutaiId\" type=\"hidden\" [(ngModel)]=\"jigyosyutaiId\">\n                  </div>\n                  <div class=\"col-lg-7 col-md-6 col-sm-6 col-xs-6\">\n                    <button type=\"button\" (click)=\"jigyosyutaiClear()\" class=\"btn btn-xs btn-warning\">クリア</button>\n                  </div>\n                </div>\n                <div class=\"row\">\n                  <div class=\"col-lg-2 col-md-3 col-sm-3 col-xs-3\">\n                    <label>\n                      <strong>設備：\n                        <span class=\"require\">＊</span>\n                      </strong>\n                    </label>\n                  </div>\n                  <div class=\"col-lg-10 col-md-9 col-sm-9 col-xs-9\">\n                    <div class=\"input-group\">\n                      <input name=\"setubiNm\" type=\"text\" class=\"form-control\" [(ngModel)]=\"setubiNm\">\n                      <input name=\"hid_setubiId\" type=\"hidden\" [(ngModel)]=\"setubiId\">\n                      <span class=\"input-group-btn\">\n                        <!-- <button type=\"button\" class=\"btn btn-input-support\"> -->\n                        <button type=\"button\" class=\"btn btn-input-support\" (click)=\"equipment.openModal()\">\n                          <i class=\"fa fa-cog\"></i>\n                        </button>\n                      </span>\n                    </div>\n                  </div>\n                </div>\n                <div class=\"row\">\n                  <div class=\"col-lg-2 col-md-3 col-sm-3 col-xs-3\">\n                    <label>\n                      <strong>都道府県：</strong>\n                    </label>\n                  </div>\n                  <div class=\"col-lg-3 col-md-3 col-sm-3 col-xs-3\">\n                    <select name=\"sel_prefId\" class=\"form-control edit-dropdown\" [(ngModel)]=\"prefId\">\n                      <option value=\"\"></option>\n                      <option *ngFor=\"let item of prefArray\" [value]='item.value'>\n                        {{item.label}}\n                      </option>\n                    </select>\n                  </div>\n                </div>\n                <div class=\"row\">\n                  <div class=\"col-lg-2 col-md-3 col-sm-3 col-xs-3\">\n                    <label>\n                      <strong>納入プロジェクト：</strong>\n                    </label>\n                  </div>\n                  <div class=\"col-lg-3 col-md-3 col-sm-3 col-xs-3\">\n                    <div class=\"input-group\">\n                      <input name=\"deliveryPjNm\" type=\"text\" class=\"form-control\" [(ngModel)]=\"deliveryPjNm\">\n                      <input name=\"hid_deliveryPjId\" type=\"hidden\" [(ngModel)]=\"deliveryPjId\">\n                      <span class=\"input-group-btn\">\n                        <!-- <button type=\"button\" class=\"btn btn-input-support\"> -->\n                        <button type=\"button\" class=\"btn btn-input-support\" (click)=\"project.openModal()\">\n                          <i class=\"fa fa-wrench\"></i>\n                        </button>\n                      </span>\n                    </div>\n                  </div>\n                </div>\n                <div class=\"row\">\n                  <div class=\"col-lg-2 col-md-3 col-sm-3 col-xs-3\">\n                    <label>\n                      <strong>顧客：</strong>\n                    </label>\n                  </div>\n                  <div class=\"col-lg-3 col-md-3 col-sm-3 col-xs-3\">\n                    <div class=\"input-group\">\n                      <input name=\"custNm\" type=\"text\" class=\"form-control\" [(ngModel)]=\"custNm\">\n                      <input name=\"hid_cudtId\" type=\"hidden\" [(ngModel)]=\"custId\">\n                      <span class=\"input-group-btn\">\n                        <!-- <button type=\"button\" class=\"btn btn-input-support\"> -->\n                        <button type=\"button\" class=\"btn btn-input-support\" (click)=\"customer.openModal()\">\n                          <i class=\"fa fa-address-card-o\"></i>\n                        </button>\n                      </span>\n                    </div>\n                  </div>\n                  <div class=\"col-lg-offset-2 col-lg-2 col-md-3 col-sm-3 col-xs-3\">\n                    <label>\n                      <strong>顧客分類：</strong>\n                    </label>\n                  </div>\n                  <div class=\"col-lg-3 col-md-3 col-sm-3 col-xs-3\">\n                    <select name=\"sel_custTypeCd\" class=\"form-control edit-dropdown\" [(ngModel)]=\"custTypeCd\">\n                      <option value=\"\"></option>\n                      <option *ngFor=\"let item of custTypeArray\" [value]='item.value'>\n                        {{item.label}}\n                      </option>\n                    </select>\n                  </div>\n                </div>\n                <div class=\"row\">\n                  <div class=\"col-lg-2 col-md-3 col-sm-3 col-xs-3\">\n                    <label>\n                      <strong>会社名・所属部署：</strong>\n                    </label>\n                  </div>\n                  <div class=\"col-lg-3 col-md-3 col-sm-3 col-xs-3\">\n                    <input name=\"custDept\" type=\"text\" class=\"form-control\" [(ngModel)]=\"custDept\">\n                  </div>\n                  <div class=\"col-lg-offset-2 col-lg-2 col-md-3 col-sm-3 col-xs-3\">\n                    <label>\n                      <strong>依頼者：</strong>\n                    </label>\n                  </div>\n                  <div class=\"col-lg-3 col-md-3 col-sm-3 col-xs-3\">\n                    <input name=\"requester\" type=\"text\" class=\"form-control\" [(ngModel)]=\"requester\">\n                  </div>\n                </div>\n                <div class=\"row\">\n                  <div class=\"col-lg-2 col-md-3 col-sm-3 col-xs-3\">\n                    <label>\n                      <strong>連絡先(TEL)：</strong>\n                    </label>\n                  </div>\n                  <div class=\"col-lg-3 col-md-3 col-sm-3 col-xs-3\">\n                    <input name=\"contactTel\" type=\"text\" class=\"form-control\" [(ngModel)]=\"contactTel\">\n                  </div>\n                  <div class=\"col-lg-offset-2 col-lg-2 col-md-3 col-sm-3 col-xs-3\">\n                    <label>\n                      <strong>連絡先(FAX)：</strong>\n                    </label>\n                  </div>\n                  <div class=\"col-lg-3 col-md-3 col-sm-3 col-xs-3\">\n                    <input name=\"contactFax\" type=\"text\" class=\"form-control\" [(ngModel)]=\"contactFax\">\n                  </div>\n                </div>\n                <div class=\"row\">\n                  <div class=\"col-lg-2 col-md-3 col-sm-3 col-xs-3\">\n                    <label>\n                      <strong>連絡先(E-mail)：</strong>\n                    </label>\n                  </div>\n                  <div class=\"col-lg-3 col-md-3 col-sm-3 col-xs-3\">\n                    <input name=\"contactMail\" type=\"text\" class=\"form-control\" [(ngModel)]=\"contactMail\">\n                  </div>\n                </div>\n                <div class=\"row\">\n                  <div class=\"col-lg-2 col-md-3 col-sm-3 col-xs-3\">\n                    <label>\n                      <strong>営業部門：</strong>\n                    </label>\n                  </div>\n                  <div class=\"col-lg-3 col-md-3 col-sm-3 col-xs-3\">\n                    <div class=\"input-group\">\n                      <input name=\"txt_salesDeptNm\" type=\"text\" class=\"form-control\" [(ngModel)]=\"salesDeptNm\">\n                      <span class=\"input-group-btn\">\n                        <button type=\"button\" class=\"btn btn-input-support\" (click)=\"salesSection.openModal('salesSection')\">\n                          <i class=\"fa fa-building\"></i>\n                        </button>\n                      </span>\n                    </div>\n                    <input name=\"hid_salesDeptCd\" type=\"hidden\" [(ngModel)]=\"salesDeptCd\">\n                  </div>\n                  <div class=\"col-lg-offset-2 col-lg-2 col-md-3 col-sm-3 col-xs-3\">\n                    <label>\n                      <strong>営業担当者：</strong>\n                    </label>\n                  </div>\n                  <div class=\"col-lg-3 col-md-3 col-sm-3 col-xs-3\">\n                    <div class=\"input-group\">\n                      <input name=\"txt_salesUserNm\" type=\"text\" class=\"form-control\" [(ngModel)]=\"salesUserNm\">\n                      <span class=\"input-group-btn\">\n                        <button type=\"button\" class=\"btn btn-input-support\" (click)=\"salesUser.openModal('salesUser')\">\n                          <i class=\"fa fa-user\"></i>\n                        </button>\n                      </span>\n                    </div>\n                    <input name=\"hid_salesUserId\" type=\"hidden\" [(ngModel)]=\"salesUserId\">\n                  </div>\n                </div>\n                <div class=\"row\">\n                  <div class=\"col-lg-2 col-md-3 col-sm-3 col-xs-3\">\n                    <label>\n                      <strong>主管部門：</strong>\n                    </label>\n                  </div>\n                  <div class=\"col-lg-3 col-md-3 col-sm-3 col-xs-3\">\n                    <div class=\"input-group\">\n                      <input name=\"txt_skanDeptNm\" type=\"text\" class=\"form-control\" [(ngModel)]=\"skanDeptNm\">\n                      <span class=\"input-group-btn\">\n                        <button type=\"button\" class=\"btn btn-input-support\" (click)=\"skanSection.openModal('skanSection')\">\n                          <i class=\"fa fa-building\"></i>\n                        </button>\n                      </span>\n                    </div>\n                    <input name=\"hid_skanDeptCd\" type=\"hidden\" [(ngModel)]=\"skanDeptCd\">\n                  </div>\n                  <div class=\"col-lg-offset-2 col-lg-2 col-md-3 col-sm-3 col-xs-3\">\n                    <label>\n                      <strong>主管担当者：</strong>\n                    </label>\n                  </div>\n                  <div class=\"col-lg-3 col-md-3 col-sm-3 col-xs-3\">\n                    <div class=\"input-group\">\n                      <input name=\"txt_skanUserNm\" type=\"text\" class=\"form-control\" [(ngModel)]=\"skanUserNm\">\n                      <span class=\"input-group-btn\">\n                        <button type=\"button\" class=\"btn btn-input-support\" (click)=\"skanUser.openModal('skanUser')\">\n                          <i class=\"fa fa-user\"></i>\n                        </button>\n                      </span>\n                    </div>\n                    <input name=\"hid_skanUserId\" type=\"hidden\" [(ngModel)]=\"skanUserId\">\n                  </div>\n                </div>\n              </div>\n              <h5 class=\"context-header\">\n                <strong>受付情報</strong>\n              </h5>\n              <div class=\"call-info-border\">\n                <div class=\"row\">\n                  <div class=\"col-lg-2 col-md-2 col-sm-3 col-xs-3\">\n                    <label>\n                      <strong>受付日：\n                        <span class=\"require\">＊</span>\n                      </strong>\n                    </label>\n                  </div>\n                  <div class=\"col-lg-3 col-md-3 col-sm-3 col-xs-3\">\n                    <div class=\"input-group\">\n                      <input name=\"txt_callDate\" type=\"text\" class=\"form-control\" #dpCallDate=\"bsDatepicker\" bsDatepicker [bsConfig]=\"bsConfig\"\n                        [(bsValue)]=\"callDate\" value=\"{{callDate | date:'yyyy/MM/dd'}}\">\n                      <span class=\"input-group-btn\">\n                        <button type=\"button\" class=\"btn btn-input-support\" (click)=\"dpCallDate.toggle()\">\n                          <i class=\"fa fa-calendar\"></i>\n                        </button>\n                      </span>\n                    </div>\n                  </div>\n                  <div class=\"col-lg-offset-2 col-md-offset-2 col-lg-2 col-md-2 col-sm-3 col-xs-3\">\n                    <label>\n                      <strong>受付開始時刻：</strong>\n                    </label>\n                  </div>\n                  <div class=\"col-lg-3 col-md-3 col-sm-3 col-xs-3\">\n                    <div class=\"input-group\">\n                      <select name=\"sel_callStartTime\" class=\"search-dropdown\" [(ngModel)]=\"callStartTime\">\n                        <option *ngFor=\"let data of timeList\" [value]=\"data.val\">{{data.label}}</option>\n                      </select>\n                      :\n                      <select name=\"sel_callStartMinite\" class=\"search-dropdown\" [(ngModel)]=\"callStartMinite\">\n                        <option *ngFor=\"let data of miniteList\" [value]=\"data.val\">{{data.label}}</option>\n                      </select>\n                    </div>\n                  </div>\n                </div>\n                <div class=\"row\">\n                  <div class=\"col-lg-offset-7 col-md-offset-7 col-sm-offset-6 col-xs-offset-6 col-lg-2 col-md-2 col-sm-3 col-xs-3\">\n                    <label>\n                      <strong>受付終了時刻：</strong>\n                    </label>\n                  </div>\n                  <div class=\"col-lg-3 col-md-3 col-sm-3 col-xs-3\">\n                    <div class=\"input-group\">\n                      <select name=\"sel_callEndTime\" class=\"search-dropdown\" [(ngModel)]=\"callEndTime\">\n                        <option *ngFor=\"let data of timeList\" [value]=\"data.val\">{{data.label}}</option>\n                      </select>\n                      :\n                      <select name=\"sel_callEndMinite\" class=\"search-dropdown\" [(ngModel)]=\"callEndMinite\">\n                        <option *ngFor=\"let data of miniteList\" [value]=\"data.val\">{{data.label}}</option>\n                      </select>\n                    </div>\n                  </div>\n                </div>\n                <div class=\"row\">\n                  <div class=\"col-lg-2 col-md-2 col-sm-3 col-xs-3\">\n                    <label>\n                      <strong>受付部署：</strong>\n                    </label>\n                  </div>\n                  <div class=\"col-lg-3 col-md-3 col-sm-3 col-xs-3\">\n                    <div class=\"input-group\">\n                      <input name=\"callDeptNm\" type=\"text\" class=\"form-control\" [(ngModel)]=\"callDeptNm\">\n                      <span class=\"input-group-btn\">\n                        <button type=\"button\" class=\"btn btn-input-support\" (click)=\"callSection.openModal('callSection')\">\n                          <i class=\"fa fa-building\"></i>\n                        </button>\n                      </span>\n                    </div>\n                  </div>\n                  <div class=\"col-lg-offset-2 col-md-offset-2 col-lg-2 col-md-2 col-sm-3 col-xs-3\">\n                    <label>\n                      <strong>受付者：</strong>\n                    </label>\n                  </div>\n                  <div class=\"col-lg-3 col-md-3 col-sm-3 col-xs-3\">\n                    <div class=\"input-group\">\n                      <input name=\"callUserNm\" type=\"text\" class=\"form-control\" [(ngModel)]=\"callUserNm\">\n                      <span class=\"input-group-btn\">\n                        <button type=\"button\" class=\"btn btn-input-support\" (click)=\"callUser.openModal('callUser')\">\n                          <i class=\"fa fa-user\"></i>\n                        </button>\n                      </span>\n                    </div>\n                  </div>\n                </div>\n                <div class=\"row\">\n                  <div class=\"col-lg-2 col-md-2 col-sm-3 col-xs-3\">\n                    <label>\n                      <strong>TEL：</strong>\n                    </label>\n                  </div>\n                  <div class=\"col-lg-3 col-md-3 col-sm-3 col-xs-3\">\n                    <input name=\"callTel\" type=\"text\" class=\"form-control\" [(ngModel)]=\"callTel\">\n                  </div>\n                  <div class=\"col-lg-offset-2 col-md-offset-2 col-lg-2 col-md-2 col-sm-3 col-xs-3\">\n                    <label>\n                      <strong>E-mail：</strong>\n                    </label>\n                  </div>\n                  <div class=\"col-lg-3 col-md-3 col-sm-3 col-xs-3\">\n                    <input name=\"callMail\" type=\"text\" class=\"form-control\" [(ngModel)]=\"callMail\">\n                  </div>\n                </div>\n                <div class=\"row\">\n                  <div class=\"col-lg-2 col-md-2 col-sm-3 col-xs-3\">\n                    <label for=\"InputTextarea\">\n                      <strong>受付内容：\n                        <span class=\"require\">＊</span>\n                      </strong>\n                    </label>\n                  </div>\n                  <div class=\"col-lg-10 col-md-10 col-sm-9 col-xs-9\">\n                    <textarea name=\"callContent\" class=\"form-control\" id=\"InputTextarea\" rows=\"4\" [(ngModel)]=\"callContent\"></textarea>\n                  </div>\n                </div>\n              </div>\n              <h5 class=\"context-header\">\n                <strong>対応情報</strong>\n              </h5>\n              <div class=\"taio-info-border\">\n                <div class=\"row\">\n                  <div class=\"col-lg-2 col-md-2 col-sm-3 col-xs-3\">\n                    <label>\n                      <strong>対応日：</strong>\n                    </label>\n                  </div>\n                  <div class=\"col-lg-3 col-md-3 col-sm-3 col-xs-3\">\n                    <div class=\"input-group\">\n                      <input name=\"txt_taioDate\" type=\"text\" class=\"form-control\" #dpTaioDate=\"bsDatepicker\" bsDatepicker [bsConfig]=\"bsConfig\"\n                        [(bsValue)]=\"taioDate\" value=\"{{taioDate | date:'yyyy/MM/dd'}}\">\n                      <span class=\"input-group-btn\">\n                        <button type=\"button\" class=\"btn btn-input-support\" (click)=\"dpTaioDate.toggle();\">\n                          <i class=\"fa fa-calendar\"></i>\n                        </button>\n                      </span>\n                    </div>\n                  </div>\n                  <div class=\"col-lg-offset-2 col-md-offset-2 col-lg-2 col-md-2 col-sm-3 col-xs-3\">\n                    <label>\n                      <strong>対応開始時刻：</strong>\n                    </label>\n                  </div>\n                  <div class=\"col-lg-3 col-md-3 col-sm-3 col-xs-3\">\n                    <div class=\"input-group\">\n                      <select name=\"sel_taioStartTime\" class=\"search-dropdown\" [(ngModel)]=\"taioStartTime\">\n                        <option *ngFor=\"let data of timeList\" [value]=\"data.val\">{{data.label}}</option>\n                      </select>\n                      :\n                      <select name=\"sel_taioStartMinite\" class=\"search-dropdown\" [(ngModel)]=\"taioStartMinite\">\n                        <option *ngFor=\"let data of miniteList\" [value]=\"data.val\">{{data.label}}</option>\n                      </select>\n                    </div>\n                  </div>\n                </div>\n                <div class=\"row\">\n                  <div class=\"col-lg-offset-7 col-md-offset-7 col-sm-offset-6 col-xs-offset-6 col-lg-2 col-md-2 col-sm-3 col-xs-3\">\n                    <label>\n                      <strong>対応終了時刻：</strong>\n                    </label>\n                  </div>\n                  <div class=\"col-lg-3 col-md-3 col-sm-3 col-xs-3\">\n                    <div class=\"input-group\">\n                      <select name=\"sel_taioEndTime\" class=\"search-dropdown\" [(ngModel)]=\"taioEndTime\">\n                        <option *ngFor=\"let data of timeList\" [value]=\"data.val\">{{data.label}}</option>\n                      </select>\n                      :\n                      <select name=\"sel_taioEndMinite\" class=\"search-dropdown\" [(ngModel)]=\"taioEndMinite\">\n                        <option *ngFor=\"let data of miniteList\" [value]=\"data.val\">{{data.label}}</option>\n                      </select>\n                    </div>\n                  </div>\n                </div>\n                <div class=\"row\">\n                  <div class=\"col-lg-2 col-md-2 col-sm-3 col-xs-3\">\n                    <label>\n                      <strong>対応部署：</strong>\n                    </label>\n                  </div>\n                  <div class=\"col-lg-3 col-md-3 col-sm-3 col-xs-3\">\n                    <div class=\"input-group\">\n                      <input name=\"taioDeptNm\" type=\"text\" class=\"form-control\" [(ngModel)]=\"taioDeptNm\">\n                      <span class=\"input-group-btn\">\n                        <button type=\"button\" class=\"btn btn-input-support\" (click)=\"taioSection.openModal('taioSection')\">\n                          <i class=\"fa fa-building\"></i>\n                        </button>\n                      </span>\n                    </div>\n                  </div>\n                  <div class=\"col-lg-offset-2 col-md-offset-2 col-lg-2 col-md-2 col-sm-3 col-xs-3\">\n                    <label>\n                      <strong>対応者：</strong>\n                    </label>\n                  </div>\n                  <div class=\"col-lg-3 col-md-3 col-sm-3 col-xs-3\">\n                    <div class=\"input-group\">\n                      <input name=\"taioUserNm\" type=\"text\" class=\"form-control\" [(ngModel)]=\"taioUserNm\">\n                      <span class=\"input-group-btn\">\n                        <button type=\"button\" class=\"btn btn-input-support\" (click)=\"taioUser.openModal('taioUser')\">\n                          <i class=\"fa fa-user\"></i>\n                        </button>\n                      </span>\n                    </div>\n                  </div>\n                </div>\n                <div class=\"row\">\n                  <div class=\"col-lg-2 col-md-2 col-sm-3 col-xs-3\">\n                    <label>\n                      <strong>TEL：</strong>\n                    </label>\n                  </div>\n                  <div class=\"col-lg-3 col-md-3 col-sm-3 col-xs-3\">\n                    <input name=\"taioTel\" type=\"text\" class=\"form-control\" [(ngModel)]=\"taioTel\">\n                  </div>\n                  <div class=\"col-lg-offset-2 col-md-offset-2 col-lg-2 col-md-2 col-sm-3 col-xs-3\">\n                    <label>\n                      <strong>E-mail：</strong>\n                    </label>\n                  </div>\n                  <div class=\"col-lg-3 col-md-3 col-sm-3 col-xs-3\">\n                    <input name=\"taioMail\" type=\"text\" class=\"form-control\" [(ngModel)]=\"taioMail\">\n                  </div>\n                </div>\n                <div class=\"row\">\n                  <div class=\"col-lg-2 col-md-2 col-sm-3 col-xs-3\">\n                    <label for=\"InputTextarea\">\n                      <strong>対応内容：</strong>\n                    </label>\n                  </div>\n                  <div class=\"col-lg-10 col-md-10 col-sm-9 col-xs-9\">\n                    <textarea name=\"taioContent\" class=\"form-control\" id=\"InputTextarea\" rows=\"4\" [(ngModel)]=\"taioContent\"></textarea>\n                  </div>\n                </div>\n              </div>\n              <h5 class=\"context-header\">\n                <strong>処置情報</strong>\n              </h5>\n              <div class=\"action-info-border\">\n                <div class=\"row\">\n                  <div class=\"col-lg-2 col-md-2 col-sm-3 col-xs-3\">\n                    <label>\n                      <strong>処置予定日：</strong>\n                    </label>\n                  </div>\n                  <div class=\"col-lg-3 col-md-3 col-sm-3 col-xs-3\">\n                    <div class=\"input-group\">\n                      <input name=\"txt_actDate\" type=\"text\" class=\"form-control\" #dpActDate=\"bsDatepicker\" bsDatepicker [bsConfig]=\"bsConfig\" [(bsValue)]=\"actDate\"\n                        value=\"{{actDate | date:'yyyy/MM/dd'}}\">\n                      <span class=\"input-group-btn\">\n                        <button type=\"button\" class=\"btn btn-input-support\" (click)=\"dpActDate.toggle();\">\n                          <i class=\"fa fa-calendar\"></i>\n                        </button>\n                      </span>\n                    </div>\n                  </div>\n                  <div class=\"col-lg-offset-2 col-md-offset-2 col-lg-2 col-md-2 col-sm-3 col-xs-3\">\n                    <label>\n                      <strong>処置区分：</strong>\n                    </label>\n                  </div>\n                  <div class=\"col-lg-3 col-md-3 col-sm-3 col-xs-3\">\n                    <select name=\"sel_actTypeCd\" class=\"form-control edit-dropdown\" [(ngModel)]=\"actTypeCd\">\n                      <option value=\"\"></option>\n                      <option *ngFor=\"let item of actTypeArray\" [value]='item.value'>\n                        {{item.label}}\n                      </option>\n                    </select>\n                  </div>\n                </div>\n                <div class=\"row\">\n                  <div class=\"col-lg-2 col-md-2 col-sm-3 col-xs-3\">\n                    <label>\n                      <strong>処置開始日時：</strong>\n                    </label>\n                  </div>\n                  <div class=\"col-lg-2 col-md-2 col-sm-2 col-xs-3\">\n                    <div class=\"input-group\">\n                      <input name=\"txt_actStartDate\" type=\"text\" class=\"form-control\" #dpActStartDate=\"bsDatepicker\" bsDatepicker [bsConfig]=\"bsConfig\"\n                        [(bsValue)]=\"actStartDate\" value=\"{{actStartDate | date:'yyyy/MM/dd'}}\">\n                      <span class=\"input-group-btn\">\n                        <button type=\"button\" class=\"btn btn-input-support\" (click)=\"dpActStartDate.toggle();\">\n                          <i class=\"fa fa-calendar\"></i>\n                        </button>\n                      </span>\n                    </div>\n                  </div>\n                  <div class=\"col-lg-2 col-md-2 col-sm-2 col-xs-3\">\n                    <div class=\"input-group\">\n                      <select name=\"sel_actStartTime\" class=\"search-dropdown\" [(ngModel)]=\"actStartTime\">\n                        <option *ngFor=\"let data of timeList\" [value]=\"data.val\">{{data.label}}</option>\n                      </select>\n                      :\n                      <select name=\"sel_actStartMinite\" class=\"search-dropdown\" [(ngModel)]=\"actStartMinite\">\n                        <option *ngFor=\"let data of miniteList\" [value]=\"data.val\">{{data.label}}</option>\n                      </select>\n                    </div>\n                  </div>\n                </div>\n                <div class=\"row\">\n                  <div class=\"col-lg-2 col-md-2 col-sm-3 col-xs-3\">\n                    <label>\n                      <strong>処置終了日時：</strong>\n                    </label>\n                  </div>\n                  <div class=\"col-lg-2 col-md-2 col-sm-2 col-xs-3\">\n                    <div class=\"input-group\">\n                      <input name=\"txt_actEndDate\" type=\"text\" class=\"form-control\" #dpActEndDate=\"bsDatepicker\" bsDatepicker [bsConfig]=\"bsConfig\"\n                        [(bsValue)]=\"actEndDate\" value=\"{{actEndDate | date:'yyyy/MM/dd'}}\">\n                      <span class=\"input-group-btn\">\n                        <button type=\"button\" class=\"btn btn-input-support\" (click)=\"dpActEndDate.toggle();\">\n                          <i class=\"fa fa-calendar\"></i>\n                        </button>\n                      </span>\n                    </div>\n                  </div>\n                  <div class=\"col-lg-2 col-md-2 col-sm-2 col-xs-3\">\n                    <div class=\"input-group\">\n                      <select name=\"sel_actEndTime\" class=\"search-dropdown\" [(ngModel)]=\"actEndTime\">\n                        <option *ngFor=\"let data of timeList\" [value]=\"data.val\">{{data.label}}</option>\n                      </select>\n                      :\n                      <select name=\"sel_actEndMinite\" class=\"search-dropdown\" [(ngModel)]=\"actEndMinite\">\n                        <option *ngFor=\"let data of miniteList\" [value]=\"data.val\">{{data.label}}</option>\n                      </select>\n                    </div>\n                  </div>\n                </div>\n                <div class=\"row\">\n                  <div class=\"col-lg-2 col-md-2 col-sm-3 col-xs-3\">\n                    <label>\n                      <strong>処置部署：</strong>\n                    </label>\n                  </div>\n                  <div class=\"col-lg-3 col-md-3 col-sm-3 col-xs-3\">\n                    <div class=\"input-group\">\n                      <input name=\"actDeptNm\" type=\"text\" class=\"form-control\" [(ngModel)]=\"actDeptNm\">\n                      <span class=\"input-group-btn\">\n                        <button type=\"button\" class=\"btn btn-input-support\" (click)=\"actSection.openModal('actSection')\">\n                          <i class=\"fa fa-building\"></i>\n                        </button>\n                      </span>\n                    </div>\n                  </div>\n                  <div class=\"col-lg-offset-2 col-md-offset-2 col-lg-2 col-md-2 col-sm-3 col-xs-3\">\n                    <label>\n                      <strong>処置者：</strong>\n                    </label>\n                  </div>\n                  <div class=\"col-lg-3 col-md-3 col-sm-3 col-xs-3\">\n                    <div class=\"input-group\">\n                      <input name=\"actUserNm\" type=\"text\" class=\"form-control\" [(ngModel)]=\"actUserNm\">\n                      <span class=\"input-group-btn\">\n                        <button type=\"button\" class=\"btn btn-input-support\" (click)=\"actUser.openModal('actUser')\">\n                          <i class=\"fa fa-user\"></i>\n                        </button>\n                      </span>\n                    </div>\n                  </div>\n                </div>\n                <div class=\"row\">\n                  <div class=\"col-lg-2 col-md-2 col-sm-3 col-xs-3\">\n                    <label>\n                      <strong>TEL：</strong>\n                    </label>\n                  </div>\n                  <div class=\"col-lg-3 col-md-3 col-sm-3 col-xs-3\">\n                    <input name=\"actTel\" type=\"text\" class=\"form-control\" [(ngModel)]=\"actTel\">\n                  </div>\n                  <div class=\"col-lg-offset-2 col-md-offset-2 col-lg-2 col-md-2 col-sm-3 col-xs-3\">\n                    <label>\n                      <strong>E-mail：</strong>\n                    </label>\n                  </div>\n                  <div class=\"col-lg-3 col-md-3 col-sm-3 col-xs-3\">\n                    <input name=\"actMail\" type=\"text\" class=\"form-control\" [(ngModel)]=\"actMail\">\n                  </div>\n                </div>\n                <div class=\"row\">\n                  <div class=\"col-lg-2 col-md-2 col-sm-3 col-xs-3\">\n                    <label for=\"InputTextarea\">\n                      <strong>処置結果：</strong>\n                    </label>\n                  </div>\n                  <div class=\"col-lg-10 col-md-10 col-sm-9 col-xs-9\">\n                    <textarea name=\"actContent\" class=\"form-control\" id=\"InputTextarea\" rows=\"4\" [(ngModel)]=\"actContent\"></textarea>\n                  </div>\n                </div>\n              </div>\n\n              <h5 class=\"context-header\">\n                <strong>製品情報</strong>\n              </h5>\n              <div class=\"product-info-border\">\n                <div class=\"row\">\n                  <div class=\"col-lg-2 col-md-2 col-sm-3 col-xs-3\">\n                    <label>\n                      <strong>機種区分：</strong>\n                    </label>\n                  </div>\n                  <div class=\"col-lg-10 col-md-10 col-sm-9 col-xs-9\">\n                    <select name=\"sel_productTypeCd\" class=\"form-control edit-dropdown\" [(ngModel)]=\"productTypeCd\">\n                      <option value=\"\"></option>\n                      <option *ngFor=\"let item of productTypeArray\" [value]='item.value'>\n                        {{item.label}}\n                      </option>\n                    </select>\n                  </div>\n                </div>\n                <h5 class=\"context-sub-header\">\n                  <strong>障害状況</strong>\n                </h5>\n                <div class=\"row\">\n                  <div class=\"col-lg-2 col-md-2 col-sm-3 col-xs-3\">\n                    <label>\n                      <strong>　トリガー：</strong>\n                    </label>\n                  </div>\n                  <div class=\"col-lg-3 col-md-3 col-sm-3 col-xs-3\">\n                    <select name=\"sel_productTriggerCd\" class=\"form-control edit-dropdown\" [(ngModel)]=\"productTriggerCd\">\n                      <option value=\"\"></option>\n                      <option *ngFor=\"let item of productTriggerArray\" [value]='item.value'>\n                        {{item.label}}\n                      </option>\n                    </select>\n                  </div>\n                  <div class=\"col-lg-offset-2 col-md-offset-2 col-lg-2 col-md-2 col-sm-3 col-xs-3\">\n                    <label>\n                      <strong>頻度：</strong>\n                    </label>\n                  </div>\n                  <div class=\"col-lg-3 col-md-3 col-sm-3 col-xs-3\">\n                    <select name=\"sel_productHindoCd\" class=\"form-control edit-dropdown\" [(ngModel)]=\"productHindoCd\">\n                      <option value=\"\"></option>\n                      <option *ngFor=\"let item of productHindoArray\" [value]='item.value'>\n                        {{item.label}}\n                      </option>\n                    </select>\n                  </div>\n                </div>\n                <div class=\"row\">\n                  <div class=\"col-lg-2 col-md-2 col-sm-3 col-xs-3\">\n                    <label>\n                      <strong>　現象：</strong>\n                    </label>\n                  </div>\n                  <div class=\"col-lg-3 col-md-3 col-sm-3 col-xs-3\">\n                    <select name=\"sel_productGensyoCd\" class=\"form-control edit-dropdown\" [(ngModel)]=\"productGensyoCd\">\n                      <option value=\"\"></option>\n                      <option *ngFor=\"let item of productGensyoArray\" [value]='item.value'>\n                        {{item.label}}\n                      </option>\n                    </select>\n                  </div>\n                  <div class=\"col-lg-offset-2 col-md-offset-2 col-lg-2 col-md-2 col-sm-3 col-xs-3\">\n                    <label>\n                      <strong>状態：</strong>\n                    </label>\n                  </div>\n                  <div class=\"col-lg-3 col-md-3 col-sm-3 col-xs-3\">\n                    <select name=\"sel_productStatusCd\" class=\"form-control edit-dropdown\" [(ngModel)]=\"productStatusCd\">\n                      <option value=\"\"></option>\n                      <option *ngFor=\"let item of productStatusArray\" [value]='item.value'>\n                        {{item.label}}\n                      </option>\n                    </select>\n                  </div>\n                </div>\n              </div>\n\n            </form>\n          </div>\n          <!-- /.panel-body -->\n        </div>\n        <!-- /.panel -->\n\n        <h4 class=\"panel-header text-primary\">\n          <strong>▼関係者</strong>\n        </h4>\n        <div class=\"panel panel-default\">\n          <div class=\"panel-body context-margin\">\n            <h5 class=\"context-header\">\n              <strong>\n                <i class=\"fa fa-dot-circle-o\" aria-hidden=\"true\"></i> 変更を通知する／\n                <i class=\"fa fa-circle-o\" aria-hidden=\"true\"></i> 変更を通知しない\n              </strong>\n            </h5>\n            <div class=\"context-margin\">\n              <div>サービスソリューション事業本部 ＣＥ事業部 東京サービス部 第一グループ</div>\n              <div>\n                <span class=\"context-margin relate-user-nm\"> 水道　一郎 （既読日：2017/12/18）</span>\n              </div>\n              <div>\n                <span class=\"context-margin relate-user-nm\"> 水道　二郎 　　　　　　　　　　　</span>\n              </div>\n              <div>品質保証統括室 　品質管理グループ</div>\n              <div>\n                <span class=\"context-margin relate-user-nm\"> 水道　花子 （既読日：2017/12/19）</span>\n              </div>\n            </div>\n          </div>\n          <!-- /.panel-body -->\n        </div>\n        <!-- /.panel -->\n\n        <h4 class=\"panel-header text-primary\">\n          <strong>▼関連リンク</strong>\n        </h4>\n        <div class=\"panel panel-default\">\n          <div class=\"panel-body context-margin\">\n            <h5 class=\"context-header\">\n              <strong>プロジェクト情報\n                <span class=\"text-danger\">※プロジェクト情報はＡＲＣＳから行なってください。（ＡＲＣＳ登録後の翌日反映）</span>\n              </strong>\n            </h5>\n            <div class=\"context-margin\">\n              <div class=\"row\">\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>プロジェクト番号：</strong>\n                </div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                  <a (click)=\"showPj()\">\n                    <u>J1000000</u>\n                  </a>\n                </div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>PJ主管部門：</strong>\n                </div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">プロ主管</div>\n              </div>\n              <div class=\"row\">\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>プロジェクト名：</strong>\n                </div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">ｘｘｘｘｘｘｘｘｘｘｘｘｘ</div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>PM：</strong>\n                </div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">川本　健</div>\n              </div>\n              <div class=\"row\">\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>代表機場：</strong>\n                </div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">ｘｘｘｘｘｘｘｘｘｘｘｘｘ</div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>都道府県：</strong>\n                </div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">東京都</div>\n              </div>\n            </div>\n            <h5 class=\"context-header\">\n              <strong>障害対応報告書(MR2)</strong>\n            </h5>\n            <div class=\"context-margin\">\n              <div class=\"row\">\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>件名：</strong>\n                </div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                  <a (click)=\"showMr2()\">\n                    <u>XXXXXXXXXXシーケンサ異常</u>\n                  </a>\n                </div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>作成日：</strong>\n                </div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">2017/1/4</div>\n              </div>\n              <div class=\"row\">\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>依頼元：</strong>\n                </div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">依頼元</div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>作業担当者：</strong>\n                </div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">川本　健</div>\n              </div>\n            </div>\n            <h5 class=\"context-header\">\n              <strong>労災・事故・クレーム連絡</strong>\n            </h5>\n            <div class=\"context-margin\">\n              <div class=\"row\">\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>状態：</strong>\n                </div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">第1報 正式発行</div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>区分：</strong>\n                </div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">品質（ランクＡ）</div>\n              </div>\n              <div class=\"row\">\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>概要：</strong>\n                </div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                  <a (click)=\"showJiko()\">\n                    <u>XXXXXXXXXXXXXXXXXXXXXX</u>\n                  </a>\n                </div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>顧客名：</strong>\n                </div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">川本　健</div>\n              </div>\n              <div class=\"row\">\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>機場名：</strong>\n                </div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">ｘｘｘｘｘｘｘｘｘｘｘｘｘ</div>\n              </div>\n              <div class=\"row\">\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>発行日：</strong>\n                </div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">2017/1/1</div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>発行元：</strong>\n                </div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">ｘｘｘｘｘｘｘｘｘｘｘｘｘ</div>\n              </div>\n            </div>\n            <h5 class=\"context-header\">\n              <strong>費用決済申請</strong>\n            </h5>\n            <div class=\"context-margin\">\n              <div class=\"row\">\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>ID番号：</strong>\n                </div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                  <a (click)=\"showHiyo('dsp','dsp',416161,'','1282')\">\n                    <u>XXXXXXXXXX</u>\n                  </a>\n                </div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>ステータス：</strong>\n                </div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">決裁</div>\n              </div>\n              <div class=\"row\">\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>区分：</strong>\n                </div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">クレーム対応</div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>決裁番号：</strong>\n                </div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">無償 第X号</div>\n              </div>\n              <div class=\"row\">\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>件名：</strong>\n                </div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">XXXXXXXXXXXXXXXXXXXXXX</div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                  <strong>概算金額：</strong>\n                </div>\n                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-6\">\n                  <div class=\"pull-right\">123,456</div>\n                </div>\n              </div>\n            </div>\n          </div>\n          <!-- /.panel-body -->\n        </div>\n        <!-- /.panel -->\n\n        <h4 class=\"panel-header text-primary\">\n          <strong>▼関連インシデント</strong>\n        </h4>\n        <div class=\"panel panel-default\">\n          <div class=\"panel-body context-margin\">\n            <h5 class=\"context-header\">\n              <strong>同一機場インシデント</strong>\n            </h5>\n            <div class=\"context-margin\">\n              <a (click)=\"showRelateIncident()\">\n                <u>#12390 障害 2016/12/31 ○○○浄水場 ○○○市</u>\n              </a>\n              <div class=\"context-margin\">\n                Ａ系水処理設備の終沈（１、２号）の監視操作不能なので対応頂きたい。\n              </div>\n            </div>\n            <h5 class=\"context-header\">\n              <strong>同一顧客インシデント</strong>\n            </h5>\n            <div class=\"context-margin\">\n              <a (click)=\"showRelateIncident()\">\n                <u>#12312 問い合わせ 2016/12/31 ○○○センター ○○○企業局</u>\n              </a>\n              <div class=\"context-margin\">\n                富士電機製変圧器のＰＣＢ含有問合せ。以下の型式の変圧器にＰＣＢが含まれているかを教えて下さい。\n              </div>\n            </div>\n          </div>\n          <!-- /.panel-body -->\n        </div>\n        <!-- /.panel -->\n      </div>\n    </div>\n    <!-- /.row -->\n  </div>\n</div>"
 
 /***/ }),
 
@@ -693,21 +698,39 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 Object(__WEBPACK_IMPORTED_MODULE_3_ngx_bootstrap_bs_moment__["a" /* defineLocale */])('ja', __WEBPACK_IMPORTED_MODULE_4_ngx_bootstrap_locale__["a" /* ja */]);
 
 
 var EditComponent = (function () {
-    function EditComponent(route, jsonpService) {
+    function EditComponent(route, jsonpService, http) {
         this.route = route;
         this.jsonpService = jsonpService;
+        this.http = http;
         this.SUB_WIN = null;
         this.minDate = new Date(2017, 5, 10);
         this.maxDate = new Date(2018, 9, 15);
         // date pikerの設定
         this.locale = 'ja';
         this.locales = Object(__WEBPACK_IMPORTED_MODULE_3_ngx_bootstrap_bs_moment__["b" /* listLocales */])();
+        // 時間配列
+        this.timeList = [
+            { val: 0, label: "00" }, { val: 1, label: "01" }, { val: 2, label: "02" }, { val: 3, label: "03" }, { val: 4, label: "04" }, { val: 5, label: "05" }, { val: 6, label: "06" }, { val: 7, label: "07" }, { val: 8, label: "08" }, { val: 9, label: "09" }, { val: 10, label: "10" },
+            { val: 11, label: "11" }, { val: 12, label: "12" }, { val: 13, label: "13" }, { val: 14, label: "14" }, { val: 15, label: "15" }, { val: 16, label: "16" }, { val: 17, label: "17" }, { val: 18, label: "18" }, { val: 19, label: "19" }, { val: 20, label: "20" },
+            { val: 21, label: "21" }, { val: 22, label: "22" }, { val: 23, label: "23" },
+        ];
+        // 分配列
+        this.miniteList = [
+            { val: 0, label: "00" }, { val: 1, label: "01" }, { val: 2, label: "02" }, { val: 3, label: "03" }, { val: 4, label: "04" }, { val: 5, label: "05" }, { val: 6, label: "06" }, { val: 7, label: "07" }, { val: 8, label: "08" }, { val: 9, label: "09" }, { val: 10, label: "10" },
+            { val: 11, label: "11" }, { val: 12, label: "12" }, { val: 13, label: "13" }, { val: 14, label: "14" }, { val: 15, label: "15" }, { val: 16, label: "16" }, { val: 17, label: "17" }, { val: 18, label: "18" }, { val: 19, label: "19" }, { val: 20, label: "20" },
+            { val: 21, label: "21" }, { val: 22, label: "22" }, { val: 23, label: "23" }, { val: 24, label: "24" }, { val: 25, label: "25" }, { val: 26, label: "26" }, { val: 27, label: "27" }, { val: 28, label: "28" }, { val: 29, label: "29" }, { val: 30, label: "30" },
+            { val: 31, label: "31" }, { val: 32, label: "32" }, { val: 33, label: "33" }, { val: 34, label: "34" }, { val: 35, label: "35" }, { val: 36, label: "36" }, { val: 37, label: "37" }, { val: 38, label: "38" }, { val: 39, label: "39" }, { val: 40, label: "40" },
+            { val: 41, label: "41" }, { val: 42, label: "42" }, { val: 43, label: "43" }, { val: 44, label: "44" }, { val: 45, label: "45" }, { val: 46, label: "46" }, { val: 47, label: "47" }, { val: 48, label: "48" }, { val: 49, label: "49" }, { val: 50, label: "50" },
+            { val: 51, label: "51" }, { val: 52, label: "52" }, { val: 53, label: "53" }, { val: 54, label: "54" }, { val: 55, label: "55" }, { val: 56, label: "56" }, { val: 57, label: "57" }, { val: 58, label: "58" }, { val: 59, label: "59" },
+        ];
         // 画面表示パラメータの初期化
         // １－１．ヘッダー
+        this.incidentId = ""; // インシデントID
         this.incidentNo = ""; // インシデント番号
         this.incidentStatusCd = ""; // インシデントステータスCD
         this.incidentStatusNm = ""; // インシデントステータス名
@@ -753,7 +776,6 @@ var EditComponent = (function () {
         this.skanDeptNm = ""; //主管部門名
         this.skanUserId = ""; //主管担当者ID
         this.skanUserNm = ""; //主管担当者名
-        this.callEndDate = ""; //受付終了時刻
         this.callDeptCd = ""; //受付部署CD
         this.callDeptNm = ""; //受付部署名
         this.callUserId = ""; //受付者ID
@@ -878,8 +900,13 @@ var EditComponent = (function () {
     EditComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.route.data.subscribe(function (obj) { return console.log(obj['category']); });
+        var ps = new __WEBPACK_IMPORTED_MODULE_2__angular_http__["e" /* URLSearchParams */]();
+        var prmIncientId = this.route.snapshot.paramMap.get('incidentId');
+        if (prmIncientId) {
+            ps.set('incidentId', prmIncientId);
+        }
         // 画面表示パラメータの取得処理
-        this.jsonpService.requestGet('IncidentDataGet.php', new __WEBPACK_IMPORTED_MODULE_2__angular_http__["c" /* URLSearchParams */]())
+        this.jsonpService.requestGet('IncidentDataGet.php', ps)
             .subscribe(function (data) {
             // 通信成功時
             if (data[0]) {
@@ -900,9 +927,6 @@ var EditComponent = (function () {
     EditComponent.prototype.jigyosyutaiClear = function () {
         this.jigyosyutaiId = ""; //事業主体ID
         this.jigyosyutaiNm = ""; //事業主体名
-    };
-    // インシデント登録処理
-    EditComponent.prototype.entryIncident = function () {
     };
     //新しいウィンドウを開く(パターン1)
     // CMN_openNewWindow1(url,name,sizex,sizey,top,left){
@@ -974,13 +998,82 @@ var EditComponent = (function () {
     // 関連インシデント表示処理
     EditComponent.prototype.showRelateIncident = function () {
     };
-    // 営業担当者選択
+    // 親インシデント番号
+    EditComponent.prototype.onIncidentSearchSelected = function ($event) {
+        if ($event) {
+            this.parentIncidentId = $event["incidentId"]; // 親インシデントID
+            this.parentIncidentNo = $event["incidentNo"]; // 親インシデント番号
+        }
+    };
+    // プロジェクト選択
+    EditComponent.prototype.onProjectSearchSelected = function ($event) {
+        if ($event) {
+            this.deliveryPjId = $event["pjNo"]; //納入プロジェクトID
+            this.deliveryPjNm = $event["consumerNm"]; //納入プロジェクト名
+        }
+    };
+    //  ユーザ選択
     EditComponent.prototype.onSalesUserSelected = function ($event) {
         if ($event) {
-            this.salesUserId = $event["userId"];
-            this.salesUserNm = $event["userNm"];
-            this.salesDeptCd = $event["sectionCd"];
-            this.salesDeptNm = $event["sectionNm"];
+            switch ($event["userSearchType"]) {
+                case 'salesUser':
+                    this.salesUserId = $event["userId"];
+                    this.salesUserNm = $event["userNm"];
+                    this.salesDeptCd = $event["sectionCd"];
+                    this.salesDeptNm = $event["sectionNm"];
+                    break;
+                case 'skanUser':
+                    this.skanUserId = $event["userId"];
+                    this.skanUserNm = $event["userNm"];
+                    this.skanDeptCd = $event["sectionCd"];
+                    this.skanDeptNm = $event["sectionNm"];
+                    break;
+                case 'callUser':
+                    this.callUserId = $event["userId"];
+                    this.callUserNm = $event["userNm"];
+                    this.callDeptCd = $event["sectionCd"];
+                    this.callDeptNm = $event["sectionNm"];
+                    break;
+                case 'taioUser':
+                    this.taioUserId = $event["userId"];
+                    this.taioUserNm = $event["userNm"];
+                    this.taioDeptCd = $event["sectionCd"];
+                    this.taioDeptNm = $event["sectionNm"];
+                    break;
+                case 'actUser':
+                    this.actUserId = $event["userId"];
+                    this.actUserNm = $event["userNm"];
+                    this.actDeptCd = $event["sectionCd"];
+                    this.actDeptNm = $event["sectionNm"];
+                    break;
+            }
+        }
+    };
+    // 部門検索
+    EditComponent.prototype.onSalesSectionSelected = function ($event) {
+        if ($event) {
+            switch ($event["sectionSearchType"]) {
+                case 'salesSection':
+                    this.salesDeptCd = $event["postCd"];
+                    this.salesDeptNm = $event["sectionNm"];
+                    break;
+                case 'skanSection':
+                    this.skanDeptCd = $event["postCd"];
+                    this.skanDeptNm = $event["sectionNm"];
+                    break;
+                case 'callSection':
+                    this.callDeptCd = $event["postCd"];
+                    this.callDeptNm = $event["sectionNm"];
+                    break;
+                case 'taioSection':
+                    this.taioDeptCd = $event["postCd"];
+                    this.taioDeptNm = $event["sectionNm"];
+                    break;
+                case 'actSection':
+                    this.actDeptCd = $event["postCd"];
+                    this.actDeptNm = $event["sectionNm"];
+                    break;
+            }
         }
     };
     // 画面表示パラメータのセット処理
@@ -997,8 +1090,9 @@ var EditComponent = (function () {
         // １－２．メイン情報    
         this.parentIncidentId = data.parentIncidentId; // 親インシデントID
         this.parentIncidentNo = data.parentIncidentNo; // 親インシデント番号
-        this.incidentStartDate = new Date(data.incidentStartDate); // 発生日
-        this.incidentStartTime = new Date(data.incidentStartTime); // 発生時刻
+        this.incidentStartDate = this.getJsDate(data.incidentStartDateTime); // 発生日
+        this.incidentStartTime = this.getHours(this.getJsDate(data.incidentStartDateTime)); // 発生時刻(時間)
+        this.incidentStartMinite = this.getMinutes(this.getJsDate(data.incidentStartDateTime)); // 発生時刻(分)
         this.industryTypeCd = data.industryTypeCd; // 業種区分CD
         this.infoSourceCd = data.infoSourceCd; // 情報提供元CD
         this.infoSourceNm = data.infoSourceNm; // 情報提供元名
@@ -1034,9 +1128,11 @@ var EditComponent = (function () {
         this.skanUserId = data.skanUserId; //主管担当者CD
         this.skanUserNm = data.skanUserNm; //主管担当者名
         // １－３．受付情報
-        this.callDate = new Date(data.callDate); //受付日
-        this.callStartDate = new Date(data.callStartDate); //受付開始時刻
-        this.callEndDate = data.callEndDate; //受付終了時刻
+        this.callDate = this.getJsDate(data.callStartDate); // 受付日
+        this.callStartTime = this.getHours(this.getJsDate(data.callStartDate)); // 受付開始時刻(時間)
+        this.callStartMinite = this.getMinutes(this.getJsDate(data.callStartDate)); // 受付開始時刻(分)
+        this.callEndTime = this.getHours(this.getJsDate(data.callEndDate)); // 受付終了時刻(時間)
+        this.callEndMinite = this.getMinutes(this.getJsDate(data.callEndDate)); // 受付終了時刻(分)
         this.callDeptCd = data.callDeptCd; //受付部署CD
         this.callDeptNm = data.callDeptNm; //受付部署名
         this.callUserId = data.callUserId; //受付者ID
@@ -1045,9 +1141,11 @@ var EditComponent = (function () {
         this.callMail = data.callMail; //受付メール
         this.callContent = data.callContent; //受付内容
         // １－４．対応情報
-        this.taioDate = new Date(data.taioDate); //対応日
-        this.taioStartDate = new Date(data.taioStartDate); //対応開始時刻
-        this.taioEndDate = new Date(data.taioEndDate); //対応終了時刻
+        this.taioDate = this.getJsDate(data.taioStartDate); // 対応日
+        this.taioStartTime = this.getHours(this.getJsDate(data.taioStartDate)); // 対応開始時刻(時間)
+        this.taioStartMinite = this.getMinutes(this.getJsDate(data.taioStartDate)); // 対応開始時刻(分)
+        this.taioEndTime = this.getHours(this.getJsDate(data.taioEndDate)); // 対応終了時刻(時間)
+        this.taioEndMinite = this.getMinutes(this.getJsDate(data.taioEndDate)); // 対応終了時刻(分)
         this.taioDeptCd = data.taioDeptCd; //対応部署CD
         this.taioDeptNm = data.taioDeptNm; //対応部署名
         this.taioUserId = data.taioUserId; //対応者ID
@@ -1056,12 +1154,14 @@ var EditComponent = (function () {
         this.taioMail = data.taioMail; //対応メール
         this.taioContent = data.taioContent; //対応内容
         // １－５．処置情報
-        this.actDate = new Date(data.actDate); //処置予定日
+        this.actDate = this.getJsDate(data.actDate); // 処置予定日
         this.actTypeCd = data.actTypeCd; //処置区分CD
-        this.actStartDate = new Date(data.actStartDate); //処置開始日
-        this.actStartTime = new Date(data.actStartTime); //処置開始時刻
-        this.actEndDate = new Date(data.actEndDate); //処置終了日
-        this.actEndTime = new Date(data.actEndTime); //処置終了時刻
+        this.actStartDate = this.getJsDate(data.actStartDateTime); // 処置開始日
+        this.actStartTime = this.getHours(this.getJsDate(data.actStartDateTime)); // 処置開始時刻(時間)
+        this.actStartMinite = this.getMinutes(this.getJsDate(data.actStartDateTime)); // 処置開始時刻(分)
+        this.actEndDate = this.getJsDate(data.actEndDateTime); // 処置終了日
+        this.actEndTime = this.getHours(this.getJsDate(data.actEndDateTime)); // 処置終了時刻(時間)
+        this.actEndMinite = this.getMinutes(this.getJsDate(data.actEndDateTime)); // 処置終了時刻(分)
         this.actDeptCd = data.actDeptCd; //処置部署CD
         this.actDeptNm = data.actDeptNm; //処置部署名
         this.actUserId = data.actUserId; //処置者ID
@@ -1081,6 +1181,204 @@ var EditComponent = (function () {
         this.productStatusCd = data.productStatusCd; //障害状況状態CD
         this.productStatusNm = data.productStatusNm; //障害状況状態名
     };
+    // インシデント登録処理
+    EditComponent.prototype.onEntry = function (event, files) {
+        var _this = this;
+        console.log('登録処理スタート');
+        // TODO ファイルアップロード
+        // console.log(files);
+        // if(files){
+        //   let file = files[0];
+        //   let data = new FormData();
+        //   data.append('incidentFile', file, file.name);
+        //   console.log(data);
+        //   this.http.post('http://172.20.108.34/INCIDENT/upload.php', data)
+        //   .subscribe(
+        //     data => console.log(data),
+        //     error => console.log(error)
+        //   );
+        // }
+        // // 画面表示パラメータの取得処理
+        var ps = new __WEBPACK_IMPORTED_MODULE_2__angular_http__["e" /* URLSearchParams */]();
+        ps.set('incidentId', this.incidentId);
+        ps.set('incidentNo', this.incidentNo);
+        ps.set('incidentStatusCd', this.incidentStatusCd);
+        ps.set('incidentStatusNm', this.incidentStatusNm);
+        ps.set('incidentTypeCd', this.incidentTypeCd);
+        ps.set('insDate', this.insDate);
+        ps.set('insUserNm', this.insUserNm);
+        ps.set('updDate', this.updDate);
+        ps.set('updUserNm', this.updUserNm);
+        ps.set('parentIncidentId', this.parentIncidentId);
+        ps.set('parentIncidentNo', this.parentIncidentNo);
+        var incidentStartDateStr = this.getDateStringFromDateAndTime(this.incidentStartDate, this.incidentStartTime, this.incidentStartMinite);
+        ps.set('incidentStartDate', incidentStartDateStr);
+        ps.set('industryTypeCd', this.industryTypeCd);
+        ps.set('infoSourceCd', this.infoSourceCd);
+        ps.set('infoSourceNm', this.infoSourceNm);
+        ps.set('infoProvider', this.infoProvider);
+        ps.set('infoProvidedTel', this.infoProvidedTel);
+        ps.set('memo', this.memo);
+        ps.set('kijoId', this.kijoId);
+        ps.set('kijoNm', this.kijoNm);
+        ps.set('jigyosyutaiId', this.jigyosyutaiId);
+        ps.set('jigyosyutaiNm', this.jigyosyutaiNm);
+        ps.set('setubiId', this.setubiId);
+        ps.set('setubiNm', this.setubiNm);
+        ps.set('prefId', this.prefId);
+        ps.set('prefNm', this.prefNm);
+        ps.set('custId', this.custId);
+        ps.set('custNm', this.custNm);
+        ps.set('custTypeCd', this.custTypeCd);
+        ps.set('custTypeNm', this.custTypeNm);
+        ps.set('salesDeptCd', this.salesDeptCd);
+        ps.set('salesDeptNm', this.salesDeptNm);
+        ps.set('salesUserId', this.salesUserId);
+        ps.set('salesUserNm', this.salesUserNm);
+        ps.set('deliveryPjId', this.deliveryPjId);
+        ps.set('deliveryPjNm', this.deliveryPjNm);
+        ps.set('custDept', this.custDept);
+        ps.set('requester', this.requester);
+        ps.set('contactTel', this.contactTel);
+        ps.set('contactFax', this.contactFax);
+        ps.set('contactMail', this.contactMail);
+        ps.set('skanDeptCd', this.skanDeptCd);
+        ps.set('skanDeptNm', this.skanDeptNm);
+        ps.set('skanUserId', this.skanUserId);
+        ps.set('skanUserNm', this.skanUserNm);
+        ps.set('jigyosyutaiNm', this.jigyosyutaiNm);
+        ps.set('jigyosyutaiNm', this.jigyosyutaiNm);
+        ps.set('jigyosyutaiNm', this.jigyosyutaiNm);
+        var callStartDateStr = this.getDateStringFromDateAndTime(this.callDate, this.callStartTime, this.callStartMinite);
+        ps.set('callStartDate', callStartDateStr);
+        var callEndDateStr = this.getDateStringFromDateAndTime(this.callDate, this.callEndTime, this.callEndMinite);
+        ps.set('callEndDate', callEndDateStr);
+        ps.set('callDeptCd', this.callDeptCd);
+        ps.set('callDeptNm', this.callDeptNm);
+        ps.set('callUserId', this.callUserId);
+        ps.set('callUserNm', this.callUserNm);
+        ps.set('callTel', this.callTel);
+        ps.set('callMail', this.callMail);
+        ps.set('callContent', this.callContent);
+        var taioStartDateStr = this.getDateStringFromDateAndTime(this.taioDate, this.taioStartTime, this.taioStartMinite);
+        ps.set('taioStartDate', taioStartDateStr);
+        var taioEndDateStr = this.getDateStringFromDateAndTime(this.taioDate, this.taioEndTime, this.taioEndMinite);
+        ps.set('taioEndDate', taioEndDateStr);
+        ps.set('taioDeptCd', this.taioDeptCd);
+        ps.set('taioDeptNm', this.taioDeptNm);
+        ps.set('taioUserId', this.taioUserId);
+        ps.set('taioUserNm', this.taioUserNm);
+        ps.set('taioTel', this.taioTel);
+        ps.set('taioMail', this.taioMail);
+        ps.set('taioContent', this.taioContent);
+        var actDateStr = this.getDateStringFromDate(this.actDate);
+        ps.set('actDate', actDateStr);
+        ps.set('actTypeCd', this.actTypeCd);
+        var actStartDateStr = this.getDateStringFromDateAndTime(this.actStartDate, this.actStartTime, this.actStartMinite);
+        ps.set('actStartDate', actStartDateStr);
+        var actEndDateStr = this.getDateStringFromDateAndTime(this.actEndDate, this.actEndTime, this.actEndMinite);
+        ps.set('actEndDate', actEndDateStr);
+        ps.set('actDeptCd', this.actDeptCd);
+        ps.set('actDeptNm', this.actDeptNm);
+        ps.set('actUserId', this.actUserId);
+        ps.set('actUserNm', this.actUserNm);
+        ps.set('actTel', this.actTel);
+        ps.set('actMail', this.actMail);
+        ps.set('actContent', this.actContent);
+        ps.set('productTypeCd', this.productTypeCd);
+        ps.set('productTypeNm', this.productTypeNm);
+        ps.set('productTriggerCd', this.productTriggerCd);
+        ps.set('productTriggerNm', this.productTriggerNm);
+        ps.set('productHindoCd', this.productHindoCd);
+        ps.set('productHindoNm', this.productHindoNm);
+        ps.set('productGensyoCd', this.productGensyoCd);
+        ps.set('productGensyoNm', this.productGensyoNm);
+        ps.set('productStatusCd', this.productStatusCd);
+        ps.set('productStatusNm', this.productStatusNm);
+        // 登録処理通信処理
+        this.jsonpService.requestGet('IncidentEntry.php', ps)
+            .subscribe(function (data) {
+            // 通信成功時
+            console.log(data);
+            if (data[0]) {
+                var one = data[0];
+                if (one.result !== '' && one.result == true) {
+                    // 画面表示パラメータのセット処理
+                    _this.setDspParam(one);
+                }
+            }
+        }, function (error) {
+            // 通信失敗もしくは、コールバック関数内でエラー
+            console.log(error);
+            console.log('サーバとのアクセスに失敗しました。');
+            return false;
+        });
+    };
+    // サーバから取得した日付をJavascriptのDate型に変更する（失敗時は、nullを返す）
+    EditComponent.prototype.getJsDate = function (date) {
+        if (date && new Date(date)) {
+            return new Date(date);
+        }
+        return null;
+    };
+    // 日付型を日付フォーマット文字列に変更
+    EditComponent.prototype.getDateStringFromDate = function (date) {
+        if (date && date.getFullYear()) {
+            var y = date.getFullYear();
+            var m = date.getMonth();
+            m++;
+            var d = date.getDate();
+            return y + "-" + m + "-" + d + " 00:00:00";
+        }
+        else {
+            // 日付型でない値の場合
+            return null;
+        }
+    };
+    // Date型から時間を返す
+    EditComponent.prototype.getHours = function (date) {
+        if (date && date.getFullYear()) {
+            var hours = date.getHours();
+            return hours;
+        }
+        else {
+            // 日付型でない値の場合
+            return null;
+        }
+    };
+    // Date型から分を返す
+    EditComponent.prototype.getMinutes = function (date) {
+        if (date && date.getFullYear()) {
+            var minutes = date.getMinutes();
+            return minutes;
+        }
+        else {
+            // 日付型でない値の場合
+            return null;
+        }
+    };
+    // 日付と時刻から日付フォーマット文字列を作成
+    EditComponent.prototype.getDateStringFromDateAndTime = function (date, time, minite) {
+        var timeStr = "00";
+        var miniteStr = "00";
+        if (date && date.getFullYear()) {
+            var y = date.getFullYear();
+            var m = date.getMonth();
+            m++;
+            var d = date.getDate();
+            if (time) {
+                timeStr = time;
+            }
+            if (minite) {
+                miniteStr = minite;
+            }
+            return y + "-" + m + "-" + d + " " + timeStr + ":" + miniteStr + ":00";
+        }
+        else {
+            // 日付型でない値の場合
+            return null;
+        }
+    };
     return EditComponent;
 }());
 EditComponent = __decorate([
@@ -1089,10 +1387,10 @@ EditComponent = __decorate([
         template: __webpack_require__("../../../../../src/app/edit/edit.component.html"),
         styles: [__webpack_require__("../../../../../src/app/edit/edit.component.css")],
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_5__jsonp_service__["a" /* JsonpService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5__jsonp_service__["a" /* JsonpService */]) === "function" && _b || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_5__jsonp_service__["a" /* JsonpService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5__jsonp_service__["a" /* JsonpService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__angular_http__["a" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_http__["a" /* Http */]) === "function" && _c || Object])
 ], EditComponent);
 
-var _a, _b;
+var _a, _b, _c;
 //# sourceMappingURL=edit.component.js.map
 
 /***/ }),
@@ -1134,7 +1432,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "/* システムタイトル部 */\r\n.system-title {\r\n    font-weight: bold;\r\n}\r\n\r\n/* タイトル・ユーザ名表示 */\r\n.header-user-name {\r\n    margin-right:10px;\r\n}\r\n\r\n/* タイトル・メニュー選択時 */\r\n.nav .open>a, .nav .open>a:focus, .nav .open>a:hover a:focus, a:hover {\r\n    color: #23527c;\r\n}\r\n\r\n/* ヘッダー右寄せ部のレイアウト調整 */\r\n.navbar-right {\r\n    margin-right: 15px;\r\n}\r\n\r\n/* ヘッダーメニュー項目のレイアウト調整 */\r\n.navbar-nav>li>a {\r\n    padding-top: 0px;\r\n    padding-bottom: 0px;\r\n}\r\n\r\n/* ヘッダー1段目(背景赤系色) */\r\n/* colorの値・・・bootstrapに負けてる？ */\r\n.header-first {\r\n    background-color: firebrick;\r\n    color: #ffffff;\r\n}\r\n\r\n/* ヘッダー2段目(背景橙系色) */\r\n/* colorの値・・・bootstrapに負けてる？ */\r\n.header-second {\r\n    background-color: darkorange;\r\n    color: #ffffff;\r\n}\r\n\r\n/* ヘッダーのテキスト */\r\n.header-text {\r\n    margin-top: 5px;\r\n    margin-bottom: 5px;\r\n    color: #ffffff;\r\n}\r\n\r\n/* paddingを上書き、ヘッダータイトルの位置を調整*/\r\n.navbar-brand {\r\n    padding: 10px 10px 10px 10px;\r\n}\r\n\r\n/*ヘッダーのユーザー名*/\r\n.header-user-area-text {\r\n    margin-top: 0px;\r\n    margin-bottom: 0px;\r\n    color: #ffffff;\r\n}\r\n\r\n\r\n/* ヘッダーの検索欄のレイアウト調整 */\r\n.header-search {\r\n    margin-top: 5px;\r\n    margin-bottom: 5px;\r\n}\r\n\r\n/* ヘッダー部読み込み時のheight値 */\r\n.header-frame {\r\n/*    position: relative !important;\r\n    z-index: 100 !important;*/\r\n    height: 86px;\r\n}", ""]);
+exports.push([module.i, "/* システムタイトル部 */\r\n.system-title {\r\n    font-weight: bold;\r\n}\r\n\r\n/* タイトル・ユーザ名表示 */\r\n.header-user-name {\r\n    margin-right:10px;\r\n}\r\n\r\n/* タイトル・メニュー選択時 */\r\n.nav .open>a, .nav .open>a:focus, .nav .open>a:hover a:focus, a:hover {\r\n    color: #23527c;\r\n}\r\n\r\n/* ヘッダー右寄せ部のレイアウト調整 */\r\n.navbar-right {\r\n    margin-right: 15px;\r\n}\r\n\r\n/* ヘッダーメニュー項目のレイアウト調整 */\r\n.navbar-nav>li>a {\r\n    padding-top: 0px;\r\n    padding-bottom: 0px;\r\n}\r\n\r\n/* ヘッダー1段目(背景赤系色) */\r\n/* colorの値・・・bootstrapに負けてる？ */\r\n.header-first {\r\n    background-color: firebrick;\r\n    color: #ffffff;\r\n}\r\n\r\n/* ヘッダー2段目(背景橙系色) */\r\n/* colorの値・・・bootstrapに負けてる？ */\r\n.header-second {\r\n    background-color: darkorange;\r\n    color: #ffffff;\r\n}\r\n\r\n/* ヘッダーのテキスト */\r\n.header-text {\r\n    margin-top: 5px;\r\n    margin-bottom: 5px;\r\n    color: #ffffff;\r\n}\r\n\r\n/* paddingを上書き、ヘッダータイトルの位置を調整*/\r\n.navbar-brand {\r\n    padding: 10px 10px 10px 10px;\r\n}\r\n\r\n/*ヘッダーのユーザー名*/\r\n.header-user-area-text {\r\n    margin-top: 0px;\r\n    margin-bottom: 0px;\r\n    color: #ffffff;\r\n}\r\n\r\n\r\n/* ヘッダーの検索欄のレイアウト調整 */\r\n.header-search {\r\n    margin-top: 5px;\r\n    margin-bottom: 5px;\r\n}\r\n\r\n/* ヘッダー部読み込み時のheight値 */\r\n.header-frame {\r\n/*    position: relative !important;\r\n    z-index: 100 !important;*/\r\n    height: 86px;\r\n}\r\n\r\n/* ヘッダー部 プルダウンをマウスオーバーで表示 */\r\n.dropdown:hover > .dropdown-menu{\r\n    display: block;\r\n}", ""]);
 
 // exports
 
@@ -1147,7 +1445,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/header/header.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<!--\n//*****************************************************************************\n//\tシステム名　　　：インシデント管理システム\n//\tサブシステム名　：\n//\t画面名　　　　　：インシデントヘッダー画面\n//\t作成日付・作成者：2017.12.07 ADF)S.Yoshida\n//\t修正履歴　　　　：\n//*****************************************************************************\n-->\n<div id=\"entryLoad\" class=\"entryLoad\"></div>\n<div ng-app=\"headerApp\" ng-cloak>\n  <div ng-controller=\"HeaderController as header\">\n    <nav class=\"navbar navbar-static-top\">\n      <div class=\"container-fluid\">\n        <div class=\"row header-first\">\n          <div class=\"col-lg-6 col-md-6 col-sm-8 col-xs-8\">\n            <div class=\"navbar-header\">\n              <div class=\"row\">\n                <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\">\n                  <a class=\"navbar-brand\" routerLink=\"/\" routerLinkActive=\"current\" [routerLinkActiveOptions]=\"{ exact: true }\">\n                    <span class=\"h3 header-text system-title\">インシデント管理</span>\n                  </a>\n                </div>\n              </div>\n            </div>\n          </div>\n          <div class=\"col-lg-6 col-md-6 col-sm-4 col-xs-4\">\n            <div class=\"row\">\n              <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\">\n                <div class=\"navbar-text navbar-right header-user-area-text\">\n                  <span class=\"header-user-name\">川本　健</span>\n                  <u (click)=\"logout()\">ログアウト</u>\n                </div>\n              </div>\n            </div>\n            <div class=\"row\">\n              <div class=\"form-group navbar-right header-search\">\n                <input #keyword type=\"text\" class=\"form-control\" (keyup.enter)=\"onKeyWordEnter(keyword.value)\" placeholder=\"キーワードを入力\">\n              </div>\n            </div>\n          </div>\n        </div>\n\n        <div class=\"row header-second\">\n          <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\">\n            <ul class=\"nav navbar-nav\">\n              <li class=\"dropdown\" dropdown>\n                <a dropdownToggle class=\"header-text dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\">\n                  インシデント検索\n                  <span class=\"caret\"></span>\n                </a>\n                <ul *dropdownMenu class=\"dropdown-menu\">\n                  <li>\n                    <a routerLink=\"/list\" routerLinkActive=\"current\" [routerLinkActiveOptions]=\"{ exact: true }\">○○機場検索条件</a>\n                  </li>\n                  <li>\n                    <a routerLink=\"/list\" routerLinkActive=\"current\" [routerLinkActiveOptions]=\"{ exact: true }\">東京都対応中条件</a>\n                  </li>\n                  <li>\n                    <a routerLink=\"/list\" routerLinkActive=\"current\" [routerLinkActiveOptions]=\"{ exact: true }\">担当者：吉田</a>\n                  </li>\n                  <li>\n                    <a class=\"dropdown-item\">検索条件を削除する</a>\n                  </li>\n                </ul>\n              </li>\n              <li>\n                <a routerLink=\"/edit\" routerLinkActive=\"current\" [routerLinkActiveOptions]=\"{ exact: true }\" class=\"header-text\" target=\"_top\">インシデント登録</a>\n              </li>\n              <li>\n                <a class=\"header-text\">管理</a>\n              </li>\n            </ul>\n          </div>\n        </div>\n      </div>\n    </nav>\n  </div>\n</div>\n\n"
+module.exports = "<!--\n//*****************************************************************************\n//\tシステム名　　　：インシデント管理システム\n//\tサブシステム名　：\n//\t画面名　　　　　：インシデントヘッダー画面\n//\t作成日付・作成者：2017.12.07 ADF)S.Yoshida\n//\t修正履歴　　　　：\n//*****************************************************************************\n-->\n<div id=\"entryLoad\" class=\"entryLoad\"></div>\n<div ng-app=\"headerApp\" ng-cloak>\n  <div ng-controller=\"HeaderController as header\">\n    <nav class=\"navbar navbar-static-top\">\n      <div class=\"container-fluid\">\n        <div class=\"row header-first\">\n          <div class=\"col-lg-6 col-md-6 col-sm-8 col-xs-8\">\n            <div class=\"navbar-header\">\n              <div class=\"row\">\n                <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\">\n                  <a class=\"navbar-brand\" routerLink=\"/\" routerLinkActive=\"current\" [routerLinkActiveOptions]=\"{ exact: true }\">\n                    <span class=\"h3 header-text system-title\">インシデント管理</span>\n                  </a>\n                </div>\n              </div>\n            </div>\n          </div>\n          <div class=\"col-lg-6 col-md-6 col-sm-4 col-xs-4\">\n            <div class=\"row\">\n              <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\">\n                <div class=\"navbar-text navbar-right header-user-area-text\">\n                  <span class=\"header-user-name\">川本　健</span>\n                  <u (click)=\"logout()\">ログアウト</u>\n                </div>\n              </div>\n            </div>\n            <div class=\"row\">\n              <div class=\"form-group navbar-right header-search\">\n                <input #keyword type=\"text\" class=\"form-control\" (keyup.enter)=\"onKeyWordEnter(keyword.value)\" placeholder=\"キーワードを入力\">\n              </div>\n            </div>\n          </div>\n        </div>\n\n        <div class=\"row header-second\">\n          <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\">\n            <ul class=\"nav navbar-nav\">\n              <li id = \"dropListDown\" class=\"dropdown\" dropdown>\n                <a routerLink=\"/list\" (click)=\"reload()\" routerLinkActive=\"current\" [routerLinkActiveOptions]=\"{ exact: true }\"\n                class=\"header-text dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\">\n                 インシデント検索\n                 <span class=\"caret\"></span>\n                </a>\n                <ul id=\"condNmUl\" class=\"dropdown-menu\">\n                  <li *ngFor=\"let data of condList\">\n                    <a (click)=\"reload()\" routerLink=\"/list/c/{{data?.condId}}\" routerLinkActive=\"current\" [routerLinkActiveOptions]=\"{ exact: true }\">{{data?.condNm}}</a>\n                  </li>\n                </ul>\n              </li>\n              <li>\n                <a routerLink=\"/edit\" routerLinkActive=\"current\" [routerLinkActiveOptions]=\"{ exact: true }\" class=\"header-text\" target=\"_top\">インシデント登録</a>\n              </li>\n              <li>\n                <a class=\"header-text\">管理</a>\n              </li>\n            </ul>\n          </div>\n        </div>\n      </div>\n    </nav>\n  </div>\n</div>\n\n\n"
 
 /***/ }),
 
@@ -1157,16 +1455,59 @@ module.exports = "<!--\n//******************************************************
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HeaderComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__("../../../http/@angular/http.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__jsonp_service__ = __webpack_require__("../../../../../src/app/jsonp.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
 
 var HeaderComponent = (function () {
-    function HeaderComponent() {
+    function HeaderComponent(route, jsonpService) {
+        this.route = route;
+        this.jsonpService = jsonpService;
+        this.condList = [];
     }
+    HeaderComponent.prototype.ngOnInit = function () {
+        this.searchConditionName();
+    };
+    // 検索条件名の検索
+    HeaderComponent.prototype.searchConditionName = function () {
+        var _this = this;
+        // パラメータの作成
+        var ps = new __WEBPACK_IMPORTED_MODULE_2__angular_http__["e" /* URLSearchParams */]();
+        // 検索項目の検索
+        this.jsonpService.requestGet('IncidentListConditionDelete.php', ps)
+            .subscribe(function (data) {
+            // 通信成功時
+            console.log(data);
+            if (data[0]) {
+                var list = data[0];
+                if (list.result !== '' && list.result == true) {
+                    // 画面表示パラメータのセット処理
+                    _this.setDspParam(data.slice(1)); // 配列1つ目は、サーバ処理成功フラグなので除外
+                }
+            }
+        }, function (error) {
+            // 通信失敗もしくは、コールバック関数内でエラー
+            console.log(error);
+            console.log('サーバとのアクセスに失敗しました。');
+            return false;
+        });
+    };
+    // 画面表示パラメータのセット処理
+    HeaderComponent.prototype.setDspParam = function (data) {
+        this.condList = data;
+    };
     // ヘッダーのキーワードを入力してエンターを押した
     HeaderComponent.prototype.onKeyWordEnter = function (value) {
         console.log("キーワード検索処理");
@@ -1176,6 +1517,10 @@ var HeaderComponent = (function () {
     HeaderComponent.prototype.logout = function () {
         console.log("ログアウト処理");
     };
+    // リロード
+    HeaderComponent.prototype.reload = function () {
+        window.location.reload();
+    };
     return HeaderComponent;
 }());
 HeaderComponent = __decorate([
@@ -1183,9 +1528,11 @@ HeaderComponent = __decorate([
         selector: 'my-header',
         template: __webpack_require__("../../../../../src/app/header/header.component.html"),
         styles: [__webpack_require__("../../../../../src/app/header/header.component.css")]
-    })
+    }),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3__jsonp_service__["a" /* JsonpService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__jsonp_service__["a" /* JsonpService */]) === "function" && _b || Object])
 ], HeaderComponent);
 
+var _a, _b;
 //# sourceMappingURL=header.component.js.map
 
 /***/ }),
@@ -1256,11 +1603,28 @@ var JsonpService = (function () {
             return __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__["a" /* Observable */].throw(error.statusText);
         });
     };
+    /**
+   *  PSCAPI サーバ通信処理
+   *   pram: url アクションのurl
+   *   return: Observable オブジェクト
+   */
+    JsonpService.prototype.pscApiRequestGet = function (url, ps) {
+        ps.set('callback', 'JSONP_CALLBACK'); // コールバック関数名は固定
+        url = __WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment */].mr2ApiPath + url; // 環境に合わせたURLを作成する
+        return this.jsonp.get(url, { params: ps })
+            .map(function (response) {
+            return response.json() || {};
+        })
+            .catch(function (error) {
+            // 通信失敗もしくは、コールバック関数内でエラー
+            return __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__["a" /* Observable */].throw(error.statusText);
+        });
+    };
     return JsonpService;
 }());
 JsonpService = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["C" /* Injectable */])(),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Jsonp */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Jsonp */]) === "function" && _a || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* Jsonp */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* Jsonp */]) === "function" && _a || Object])
 ], JsonpService);
 
 var _a;
@@ -1289,7 +1653,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/list/list.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<!--\n//*****************************************************************************\n//\tシステム名　　　：インシデント管理システム\n//\tサブシステム名　：\n//\t画面名　　　　　：インシデント一覧画面\n//\tHTML_ID　　　　：IncidentListView.php\n//\t作成日付・作成者：2017.10.05 ADF)S.Yoshida\n//\t修正履歴　　　　：\n//*****************************************************************************\n-->\n<my-header></my-header>\n<conditionSave-modal #conditionSaveModal></conditionSave-modal>\n<conditionDelete-modal #conditionDeleteModal></conditionDelete-modal>\n\n\n<div id=\"listApp\" ng-cloak>\n  <div ng-controller=\"ListController as main\" class=\"container-fluid\">\n    <!-- <div id=\"newTable\" class=\"row\" style=\"width:100%\">\n      <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\">\n        <div class=\"panel\">\n          <table class=\"table table-striped\" id=\"dataTables-result\">\n            <thead>\n              <tr>\n                <th class=\"table-header-list\" style=\"width:15%\">インシデント番号\n                </th>\n                <th class=\"table-header-list\" style=\"width:15%\">受付内容\n                </th>\n                <th class=\"table-header-list\" style=\"width:15%\">機場\n                </th>\n                <th class=\"table-header-list\" style=\"width:15%\">設備\n                </th>\n                <th class=\"table-header-list\" style=\"width:7%\">都道府県\n                </th>\n                <th class=\"table-header-list\" style=\"width:7%\">分類\n                </th>\n                <th class=\"table-header-list\" style=\"width:8%\">ステータス\n                </th>\n                <th class=\"table-header-list\" style=\"width:9%\">発生日時\n                </th>\n                <th class=\"table-header-list\" style=\"width:9%\">受付日\n                  <i class=\"fa fa-caret-down\"></i>\n                </th>\n              </tr>\n            </thead>\n          </table>\n        </div>\n      </div>\n    </div> -->\n    <form>\n      <!-- 仕様検討中のためコメント -->\n      <!--\n                    <div class=\"row\">\n                        <div class=\"col-lg-3 col-md-3 col-sm-3 col-xs-3 label-padding\">\n                            <div class=\"row\">\n                                <div class=\"col-lg-1 col-md-1 col-sm-1 col-xs-1\">\n                                    <button class=\"btn btn-danger btn-close\">&times;</button>\n                                </div>\n                                <div class=\"\"></div>\n                                <label class=\"col-lg-9 col-md-9 col-sm-9 col-xs-9 col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-offset-1 bg-warning text-center input-label\">\n                                    キーワード\n                                </label>\n                            </div>\n                        </div>\n                        <div class=\"col-lg-3 col-md-3 col-sm-3 col-xs-3\">\n                            <input type=\"text\" class=\"form-control\" value=\"\">\n                        </div>\n                    </div>\n                    -->\n      <div class=\"row\">\n        <span [class.condition-show]=\"incidentNoShow\" [class.condition-hide]=\"!incidentNoShow\">\n          <div class=\"col-lg-3 col-md-3 col-sm-3 col-xs-3 label-padding\">\n            <div class=\"row\">\n              <div class=\"col-lg-1 col-md-1 col-sm-1 col-xs-1\">\n                <button type=\"button\" (click)=\"incidentNoShow = false;\" class=\"btn btn-danger btn-close\">&times;</button>\n              </div>\n              <div class=\"\"></div>\n              <label class=\"col-lg-9 col-md-9 col-sm-9 col-xs-9 col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-offset-1 bg-warning text-center input-label\">\n                インシデント番号\n              </label>\n            </div>\n          </div>\n          <div class=\"col-lg-3 col-md-3 col-sm-3 col-xs-3\">\n            <input name=\"txt_incidentNo\" type=\"text\" class=\"form-control\" [(ngModel)]=\"incidentNo\">\n          </div>\n        </span>\n        <span [class.condition-show]=\"callContentShow\" [class.condition-hide]=\"!callContentShow\">\n          <div class=\"col-lg-3 col-md-3 col-sm-3 col-xs-3 label-padding\">\n            <div class=\"row\">\n              <div class=\"col-lg-1 col-md-1 col-sm-1 col-xs-1\">\n                <button type=\"button\" (click)=\"callContentShow = false;\" class=\"btn btn-danger btn-close\">&times;</button>\n              </div>\n              <div class=\"\"></div>\n              <label class=\"col-lg-9 col-md-9 col-sm-9 col-xs-9 col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-offset-1 bg-warning text-center input-label\">\n                受付内容\n              </label>\n            </div>\n          </div>\n          <div class=\"col-lg-3 col-md-3 col-sm-3 col-xs-3\">\n            <input name=\"txt_callContent\" type=\"text\" class=\"form-control\" [(ngModel)]=\"callContent\">\n          </div>\n        </span>\n      </div>\n\n      <div class=\"row\">\n        <span [class.condition-show]=\"kijoNmShow\" [class.condition-hide]=\"!kijoNmShow\">\n          <div class=\"col-lg-3 col-md-3 col-sm-3 col-xs-3 label-padding\">\n            <div class=\"row\">\n              <div class=\"col-lg-1 col-md-1 col-sm-1 col-xs-1\">\n                <button type=\"button\" (click)=\"deleteCondition()\" class=\"btn btn-danger btn-close\">&times;</button>\n              </div>\n              <div class=\"\"></div>\n              <label class=\"col-lg-9 col-md-9 col-sm-9 col-xs-9 col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-offset-1 bg-warning text-center input-label\">\n                機場\n              </label>\n            </div>\n          </div>\n          <div class=\"col-lg-3 col-md-3 col-sm-3 col-xs-3\">\n            <input name=\"txt_kijoNm\" type=\"text\" class=\"form-control\" [(ngModel)]=\"kijoNm\">\n          </div>\n        </span>\n        <span [class.condition-show]=\"setubiNmShow\" [class.condition-hide]=\"!setubiNmShow\">\n          <div class=\"col-lg-3 col-md-3 col-sm-3 col-xs-3 label-padding\">\n            <div class=\"row\">\n              <div class=\"col-lg-1 col-md-1 col-sm-1 col-xs-1\">\n                <button type=\"button\" (click)=\"deleteCondition()\" class=\"btn btn-danger btn-close\">&times;</button>\n              </div>\n              <div class=\"\"></div>\n              <label class=\"col-lg-9 col-md-9 col-sm-9 col-xs-9 col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-offset-1 bg-warning text-center input-label\">\n                設備\n              </label>\n            </div>\n          </div>\n          <div class=\"col-lg-3 col-md-3 col-sm-3 col-xs-3\">\n            <input name=\"txt_setubiNm\" type=\"text\" class=\"form-control\" [(ngModel)]=\"setubiNm\">\n          </div>\n        </span>\n      </div>\n\n      <div class=\"row\">\n        <span [class.condition-show]=\"prefCdShow\" [class.condition-hide]=\"!prefCdShow\">\n          <div class=\"col-lg-3 col-md-3 col-sm-3 col-xs-3 label-padding\">\n            <div class=\"row\">\n              <div class=\"col-lg-1 col-md-1 col-sm-1 col-xs-1\">\n                <button type=\"button\" (click)=\"deleteCondition()\" class=\"btn btn-danger btn-close\">&times;</button>\n              </div>\n              <div class=\"\"></div>\n              <label class=\"col-lg-9 col-md-9 col-sm-9 col-xs-9 col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-offset-1 bg-warning text-center input-label\">\n                都道府県\n              </label>\n            </div>\n          </div>\n          <div class=\"col-lg-3 col-md-3 col-sm-3 col-xs-3\">\n            <select name=\"sel_PrefCd\" multiple=\"multiple\" size=\"2\" class=\"form-control search-dropdown\" [(ngModel)]=\"prefCd\">\n              <option value=\"1\">北海道</option>\n              <option value=\"2\">青森県</option>\n              <option value=\"3\">岩手県</option>\n              <option value=\"4\">宮城県</option>\n              <option value=\"5\">秋田県</option>\n              <option value=\"6\">山形県</option>\n              <option value=\"7\">福島県</option>\n              <option value=\"8\">茨城県</option>\n              <option value=\"9\">栃木県</option>\n              <option value=\"10\">群馬県</option>\n              <option value=\"11\">埼玉県</option>\n              <option value=\"12\">千葉県</option>\n              <option value=\"13\">東京都</option>\n              <option value=\"14\">神奈川県</option>\n              <option value=\"15\">新潟県</option>\n              <option value=\"16\">富山県</option>\n              <option value=\"17\">石川県</option>\n              <option value=\"18\">福井県</option>\n              <option value=\"19\">山梨県</option>\n              <option value=\"20\">長野県</option>\n              <option value=\"21\">岐阜県</option>\n              <option value=\"22\">静岡県</option>\n              <option value=\"23\">愛知県</option>\n              <option value=\"24\">三重県</option>\n              <option value=\"25\">滋賀県</option>\n              <option value=\"26\">京都府</option>\n              <option value=\"27\">大阪府</option>\n              <option value=\"28\">兵庫県</option>\n              <option value=\"29\">奈良県</option>\n              <option value=\"30\">和歌山県</option>\n              <option value=\"31\">鳥取県</option>\n              <option value=\"32\">島根県</option>\n              <option value=\"33\">岡山県</option>\n              <option value=\"34\">広島県</option>\n              <option value=\"35\">山口県</option>\n              <option value=\"36\">徳島県</option>\n              <option value=\"37\">香川県</option>\n              <option value=\"38\">愛媛県</option>\n              <option value=\"39\">高知県</option>\n              <option value=\"40\">福岡県</option>\n              <option value=\"41\">佐賀県</option>\n              <option value=\"42\">長崎県</option>\n              <option value=\"43\">熊本県</option>\n              <option value=\"44\">大分県</option>\n              <option value=\"45\">宮崎県</option>\n              <option value=\"46\">鹿児島県</option>\n              <option value=\"47\">沖縄県</option>\n            </select>\n          </div>\n        </span>\n        <span [class.condition-show]=\"callDateShow\" [class.condition-hide]=\"!callDateShow\">\n          <div class=\"col-lg-3 col-md-3 col-sm-3 col-xs-3 label-padding\">\n            <div class=\"row\">\n              <div class=\"col-lg-1 col-md-1 col-sm-1 col-xs-1\">\n                <button type=\"button\" (click)=\"deleteCondition()\" class=\"btn btn-danger btn-close\">&times;</button>\n              </div>\n              <div class=\"\"></div>\n              <label class=\"col-lg-9 col-md-9 col-sm-9 col-xs-9 col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-offset-1 bg-warning text-center input-label\">\n                受付日\n              </label>\n            </div>\n          </div>\n          <div class=\"col-lg-3 col-md-3 col-sm-3 col-xs-3\">\n            <div class=\"date-div\">\n              <div class=\"input-group\">\n                <!-- <input type=\"text\" class=\"form-control\"> -->\n                <input name=\"txt_callStartDateFrom\" type=\"text\" class=\"form-control\" #dpCallStartDateFrom=\"bsDatepicker\" bsDatepicker [bsConfig]=\"bsConfig\"\n                  [(bsValue)]=\"callStartDateFrom\" value=\"{{callStartDateFrom | date:'yyyy/MM/dd'}}\">\n                <span class=\"input-group-btn\">\n                  <button type=\"button\" class=\"btn btn-input-support\" (click)=\"dpCallStartDateFrom.toggle()\">\n                    <i class=\"fa fa-calendar\"></i>\n                  </button>\n                </span>\n              </div>\n            </div>\n            <span class=\"text-center inner-text\">～</span>\n            <div class=\"date-div\">\n              <div class=\"input-group\">\n                <!-- <input type=\"text\" class=\"form-control\"> -->\n                <input name=\"txt_callStartDateTo\" type=\"text\" class=\"form-control\" #dpCallStartDateTo=\"bsDatepicker\" bsDatepicker [bsConfig]=\"bsConfig\"\n                  [(bsValue)]=\"callStartDateTo\" value=\"{{callStartDateTo | date:'yyyy/MM/dd'}}\">\n                <span class=\"input-group-btn\">\n                  <button type=\"button\" class=\"btn btn-input-support\" (click)=\"dpCallStartDateTo.toggle()\">\n                    <i class=\"fa fa-calendar\"></i>\n                  </button>\n                </span>\n              </div>\n            </div>\n          </div>\n        </span>\n      </div>\n\n      <div class=\"row\">\n        <span [class.condition-show]=\"incidentTypeShow\" [class.condition-hide]=\"!incidentTypeShow\">\n          <div class=\"col-lg-3 col-md-3 col-sm-3 col-xs-3 label-padding\">\n            <div class=\"row\">\n              <div class=\"col-lg-1 col-md-1 col-sm-1 col-xs-1\">\n                <button type=\"button\" (click)=\"deleteCondition()\" class=\"btn btn-danger btn-close\">&times;</button>\n              </div>\n              <div class=\"\"></div>\n              <label class=\"col-lg-9 col-md-9 col-sm-9 col-xs-9 col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-offset-1 bg-warning text-center input-label\">\n                インシデント分類\n              </label>\n            </div>\n          </div>\n          <div class=\"col-lg-9 col-md-9 col-sm-9 col-xs-9\">\n            <div class=\"checkbox\">\n              <label class=\"input-item\">\n                <input type=\"checkbox\" name=\"incidentType\" value=\"\" [(ngModel)]=\"incidentTypeSyougai\"> 障害\n              </label>\n              <label class=\"input-item\">\n                <input type=\"checkbox\" name=\"incidentType\" value=\"\" [(ngModel)]=\"incidentTypeJiko\"> 事故\n              </label>\n              <label class=\"input-item\">\n                <input type=\"checkbox\" name=\"incidentType\" value=\"\" [(ngModel)]=\"incidentTypeClaim\"> クレーム\n              </label>\n              <label class=\"input-item\">\n                <input type=\"checkbox\" name=\"incidentType\" value=\"\" [(ngModel)]=\"incidentTypeToiawase\"> 問合せ\n              </label>\n              <label class=\"input-item\">\n                <input type=\"checkbox\" name=\"incidentType\" value=\"\" [(ngModel)]=\"incidentTypeInfo\"> 情報\n              </label>\n              <label class=\"input-item\">\n                <input type=\"checkbox\" name=\"incidentType\" value=\"\" [(ngModel)]=\"incidentTypeOther\"> その他\n              </label>\n            </div>\n          </div>\n        </span>\n      </div>\n      <div class=\"row\">\n        <span [class.condition-show]=\"incidentStsShow\" [class.condition-hide]=\"!incidentStsShow\">\n          <div class=\"col-lg-3 col-md-3 col-sm-3 col-xs-3 label-padding\">\n            <div class=\"row\">\n              <div class=\"col-lg-1 col-md-1 col-sm-1 col-xs-1\">\n                <button type=\"button\" (click)=\"deleteCondition()\" class=\"btn btn-danger btn-close\">&times;</button>\n              </div>\n              <div class=\"\"></div>\n              <label class=\"col-lg-9 col-md-9 col-sm-9 col-xs-9 col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-offset-1 bg-warning text-center input-label\">\n                ステータス\n              </label>\n            </div>\n          </div>\n          <div class=\"col-lg-9 col-md-9 col-sm-9 col-xs-9\">\n            <div class=\"checkbox\">\n              <label class=\"input-item\">\n                <input type=\"checkbox\" name=\"status\" value=\"\" [(ngModel)]=\"incidentStatusCall\"> 受付済\n              </label>\n              <label class=\"input-item\">\n                <input type=\"checkbox\" name=\"status\" value=\"\" [(ngModel)]=\"incidentStatusTaio\"> 対応入力済\n              </label>\n              <label class=\"input-item\">\n                <input type=\"checkbox\" name=\"status\" value=\"\" [(ngModel)]=\"incidentStatusAct\"> 処置入力済\n              </label>\n            </div>\n          </div>\n        </span>\n      </div>\n\n      <div class=\"row\">\n        <div class=\"col-lg-3 col-md-3 col-sm-3 col-xs-3\">\n          <div class=\"row\">\n            <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\">\n              <div class=\"form-group\">\n                <select name=\"sel_Condition\" #condition class=\"form-control search-dropdown\" [(ngModel)]=\"selCondition\">\n                  <option value=\"0\">検索項目を選択</option>\n                  <option [class.condition-hide]=\"incidentTypeShow\" value=\"incidentTypeShow\">インシデント分類</option>\n                  <option [class.condition-hide]=\"incidentStsShow\" value=\"incidentStsShow\">ステータス</option>\n                  <option [class.condition-hide]=\"incidentNoShow\" value=\"incidentNoShow\">インシデント番号</option>\n                  <option [class.condition-hide]=\"callContentShow\" value=\"callContentShow\">受付内容</option>\n                  <option [class.condition-hide]=\"parentIncidentNoShow\" value=\"parentIncidentNoShow\">親インシデント番号</option>\n                  <option [class.condition-hide]=\"incidentStartDateTimeShow\" value=\"incidentStartDateTimeShow\">発生日時</option>\n                  <option [class.condition-hide]=\"callDateShow\" value=\"callDateShow\">受付日</option>\n                  <option [class.condition-hide]=\"industryTypeCdShow\" value=\"industryTypeCdShow\">業種区分</option>\n                  <option [class.condition-hide]=\"kijoNmShow\" value=\"kijoNmShow\">機場</option>\n                  <option [class.condition-hide]=\"jigyosyutaiNmShow\" value=\"jigyosyutaiNmShow\">事業主体</option>\n                  <option [class.condition-hide]=\"setubiNmShow\" value=\"setubiNmShow\">設備</option>\n                  <option [class.condition-hide]=\"prefCdShow\" value=\"prefCdShow\">都道府県</option>\n                  <option [class.condition-hide]=\"custNmShow\" value=\"custNmShow\">顧客</option>\n                  <option [class.condition-hide]=\"custTypeCdShow\" value=\"custTypeCdShow\">顧客分類</option>\n                  <option [class.condition-hide]=\"salesDeptNmShow\" value=\"salesDeptNmShow\">営業部門</option>\n                  <option [class.condition-hide]=\"salesUserNmShow\" value=\"salesUserNmShow\">営業担当者</option>\n                  <option [class.condition-hide]=\"relateUserNmShow\" value=\"relateUserNmShow\">関係者</option>\n                </select>\n              </div>\n            </div>\n          </div>\n        </div>\n        <div class=\"col-lg-4 col-md-4 col-sm-4 col-xs-4\">\n          <button type=\"button\" (click)=\"addCondition();\" class=\"btn btn-xs btn-warning\">検索項目を追加</button>\n          <button type=\"button\" (click)=\"conditionSaveModal.openModal(getCondition());\" class=\"btn btn-xs btn-warning\">検索条件を保存</button>\n          <button type=\"button\" (click)=\"conditionDeleteModal.openModal();\" class=\"btn btn-xs btn-warning\">検索条件を削除</button>\n        </div>\n      </div>\n\n      <div class=\"row\">\n        <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\">\n          <div class=\"row\">\n            <div class=\"col-lg-3 col-md-3 col-sm-3 col-xs-3 search-result-info\">\n              検索結果：　50件\n            </div>\n            <div class=\"col-lg-9 col-md-9 col-sm-9 col-xs-9 transition-button text-right\">\n              <button type=\"button\" (click)=\"excelOutput()\" class=\"btn btn-warning\">\n                <i class=\"fa fa-download\"></i> EXCEL出力</button>\n              <button type=\"button\" (click)=\"search()\" class=\"btn btn-danger\">\n                <i class=\"fa fa-search\"></i> 検索</button>\n            </div>\n          </div>\n        </div>\n      </div>\n    </form>\n    <div class=\"row\" id=\"search-list\">\n      <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\">\n        <div class=\"panel\">\n          <table class=\"table table-striped list-table\">\n            <thead>\n              <tr>\n                <th class=\"table-header-list incident-no-th\" (click)='sort(\"incidentNo\")'>\n                  インシデント番号 \n                  <i class=\"fa\" [class.fa-caret-up]=\"orderByParamArray['incidentNoAsc']\" [class.fa-caret-down]=\"orderByParamArray['incidentNoDesc']\"></i>\n                </th>\n                <th class=\"table-header-list\" width=\"25%\" (click)='sort(\"callContent\")'> 受付内容</th>\n                <th class=\"table-header-list\" (click)='sort(\"kijoNm\")'>機場</th>\n                <th class=\"table-header-list\" (click)='sort(\"setubiNm\")'>設備</th>\n                <th class=\"table-header-list\" (click)='sort(\"prefNm\")'>都道府県</th>\n                <th class=\"table-header-list\" (click)='sort(\"incidentStartDateTime\")'>発生日時</th>\n                <th class=\"table-header-list\" (click)='sort(\"callDate\")'>受付日\n                  <i class=\"fa fa-caret-down\"></i>\n                </th>\n                <th class=\"table-header-list\" (click)='sort(\"incidentTypeNm\")'>分類</th>\n                <th class=\"table-header-list\" (click)='sort(\"incidentStatusNm\")'>ステータス</th>\n                <th class=\"table-header-list relate-th\" popover=\"関連プロジェクト\" triggers=\"mouseenter:mouseleave\" (click)='sort(\"relatePj\")'>関連PJ</th>\n                <th class=\"table-header-list relate-th\" popover=\"事故クレーム連絡\" triggers=\"mouseenter:mouseleave\" (click)='sort(\"relateJiko\")'>事ク連絡</th>\n                <th class=\"table-header-list relate-th\" popover=\"現地出動（MR2）\" triggers=\"mouseenter:mouseleave\" (click)='sort(\"relateMr2\")'>現地出動</th>\n                <th class=\"table-header-list relate-th\" (click)='sort(\"relateHiyo\")'>費用決済</th>\n              </tr>\n            </thead>\n            <tbody>\n              <tr *ngFor=\"let data of incidentList | orderBy:order\">\n                <td class=\"code-list\">\n                  <a routerLink=\"/detail/{{data?.incidentId}}\" routerLinkActive=\"current\" [routerLinkActiveOptions]=\"{ exact: true }\">\n                    <u>{{data?.incidentNo}}</u>\n                  </a>\n                </td>\n                <td class=\"char-list\" popover={{data?.callContent}} triggers=\"mouseenter:mouseleave\">\n                  {{data?.callContent | slice: 0:40 }}\n                  <span *ngIf=\"data?.callContent?.length >= 40\">…</span>\n                </td>\n                <td class=\"char-list\">{{data?.kijoNm}}</td>\n                <td class=\"char-list\">{{data?.setubiNm}}</td>\n                <td class=\"status-list\">{{data?.prefNm}}</td>\n                <td class=\"date-list\">{{data?.incidentStartDateTime}}</td>\n                <td class=\"date-list\">{{data?.callDate}}</td>\n                <td class=\"status-list\">{{data?.incidentTypeNm}}</td>\n                <td class=\"status-list\">{{data?.incidentStatusNm}}</td>\n                <td class=\"status-list\">{{data?.relatePj}}</td>\n                <td class=\"status-list\">{{data?.relateJiko}}</td>\n                <td class=\"status-list\">{{data?.relateMr2}}</td>\n                <td class=\"status-list\">{{data?.relateHiyo}}</td>\n              </tr>\n            </tbody>\n          </table>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>"
+module.exports = "<!--\n//*****************************************************************************\n//\tシステム名　　　：インシデント管理システム\n//\tサブシステム名　：\n//\t画面名　　　　　：インシデント一覧画面\n//\tHTML_ID　　　　：IncidentListView.php\n//\t作成日付・作成者：2017.10.05 ADF)S.Yoshida\n//\t修正履歴　　　　：\n//*****************************************************************************\n-->\n<my-header #header></my-header>\n<conditionSave-modal #conditionSaveModal (conDelButtonshowDelFlg)=\"setShowDelFlg($event)\" (changeCondition)=\"changeCondition($event)\"></conditionSave-modal>\n<conditionDelete-modal #conditionDeleteModal (conDelButtonshowDelFlg)=\"setShowDelFlg($event)\" (changeCondition)=\"changeCondition($event)\"></conditionDelete-modal>\n\n<div id=\"listApp\" ng-cloak>\n  <div ng-controller=\"ListController as main\" class=\"container-fluid\">\n    <!-- <div id=\"newTable\" class=\"row\" style=\"width:100%\">\n      <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\">\n        <div class=\"panel\">\n          <table class=\"table table-striped\" id=\"dataTables-result\">\n            <thead>\n              <tr>\n                <th class=\"table-header-list\" style=\"width:15%\">インシデント番号\n                </th>\n                <th class=\"table-header-list\" style=\"width:15%\">受付内容\n                </th>\n                <th class=\"table-header-list\" style=\"width:15%\">機場\n                </th>\n                <th class=\"table-header-list\" style=\"width:15%\">設備\n                </th>\n                <th class=\"table-header-list\" style=\"width:7%\">都道府県\n                </th>\n                <th class=\"table-header-list\" style=\"width:7%\">分類\n                </th>\n                <th class=\"table-header-list\" style=\"width:8%\">ステータス\n                </th>\n                <th class=\"table-header-list\" style=\"width:9%\">発生日時\n                </th>\n                <th class=\"table-header-list\" style=\"width:9%\">受付日\n                  <i class=\"fa fa-caret-down\"></i>\n                </th>\n              </tr>\n            </thead>\n          </table>\n        </div>\n      </div>\n    </div> -->\n    <form>\n      <!-- 仕様検討中のためコメント -->\n      <!--\n                    <div class=\"row\">\n                        <div class=\"col-lg-3 col-md-3 col-sm-3 col-xs-3 label-padding\">\n                            <div class=\"row\">\n                                <div class=\"col-lg-1 col-md-1 col-sm-1 col-xs-1\">\n                                    <button class=\"btn btn-danger btn-close\">&times;</button>\n                                </div>\n                                <div class=\"\"></div>\n                                <label class=\"col-lg-9 col-md-9 col-sm-9 col-xs-9 col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-offset-1 bg-warning text-center input-label\">\n                                    キーワード\n                                </label>\n                            </div>\n                        </div>\n                        <div class=\"col-lg-3 col-md-3 col-sm-3 col-xs-3\">\n                            <input type=\"text\" class=\"form-control\" value=\"\">\n                        </div>\n                    </div>\n                    -->\n\n    <div class=\"row\"  *ngIf=\"showKeywordFlg\">\n        <span>\n          <div class=\"col-lg-3 col-md-3 col-sm-3 col-xs-3 label-padding\">\n            <div class=\"row\">\n              <label class=\"col-lg-9 col-md-9 col-sm-9 col-xs-9 col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-offset-1 bg-warning text-center input-label\">\n                キーワード\n              </label>\n            </div>\n          </div>\n          <div class=\"col-lg-3 col-md-3 col-sm-3 col-xs-3\">\n            <input name=\"txt_keyword\" type=\"text\" (keyup.enter)=\"onKeyWordEnter()\" class=\"form-control\" [(ngModel)]=\"keyword\" placeholder=\"キーワードを入力\">\n          </div>\n        </span>\n      </div>\n\n      <div class=\"row\" *ngIf=\"!showKeywordFlg\">\n        <span [class.condition-show]=\"incidentNoShow\" [class.condition-hide]=\"!incidentNoShow\">\n          <div class=\"col-lg-3 col-md-3 col-sm-3 col-xs-3 label-padding\">\n            <div class=\"row\">\n              <div class=\"col-lg-1 col-md-1 col-sm-1 col-xs-1\">\n                <button type=\"button\" (click)=\"incidentNoShow = false;\" class=\"btn btn-danger btn-close\">&times;</button>\n              </div>\n              <div class=\"\"></div>\n              <label class=\"col-lg-9 col-md-9 col-sm-9 col-xs-9 col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-offset-1 bg-warning text-center input-label\">\n                インシデント番号\n              </label>\n            </div>\n          </div>\n          <div class=\"col-lg-3 col-md-3 col-sm-3 col-xs-3\">\n            <input name=\"txt_incidentNo\" type=\"text\" class=\"form-control\" [(ngModel)]=\"incidentNo\">\n          </div>\n        </span>\n        <span [class.condition-show]=\"callContentShow\" [class.condition-hide]=\"!callContentShow\">\n          <div class=\"col-lg-3 col-md-3 col-sm-3 col-xs-3 label-padding\">\n            <div class=\"row\">\n              <div class=\"col-lg-1 col-md-1 col-sm-1 col-xs-1\">\n                <button type=\"button\" (click)=\"callContentShow = false;\" class=\"btn btn-danger btn-close\">&times;</button>\n              </div>\n              <div class=\"\"></div>\n              <label class=\"col-lg-9 col-md-9 col-sm-9 col-xs-9 col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-offset-1 bg-warning text-center input-label\">\n                受付内容\n              </label>\n            </div>\n          </div>\n          <div class=\"col-lg-3 col-md-3 col-sm-3 col-xs-3\">\n            <input name=\"txt_callContent\" type=\"text\" class=\"form-control\" [(ngModel)]=\"callContent\">\n          </div>\n        </span>\n      </div>\n\n      <div class=\"row\" *ngIf=\"!showKeywordFlg\">\n        <span [class.condition-show]=\"kijoNmShow\" [class.condition-hide]=\"!kijoNmShow\">\n          <div class=\"col-lg-3 col-md-3 col-sm-3 col-xs-3 label-padding\">\n            <div class=\"row\">\n              <div class=\"col-lg-1 col-md-1 col-sm-1 col-xs-1\">\n                <button type=\"button\" (click)=\"deleteCondition()\" class=\"btn btn-danger btn-close\">&times;</button>\n              </div>\n              <div class=\"\"></div>\n              <label class=\"col-lg-9 col-md-9 col-sm-9 col-xs-9 col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-offset-1 bg-warning text-center input-label\">\n                機場\n              </label>\n            </div>\n          </div>\n          <div class=\"col-lg-3 col-md-3 col-sm-3 col-xs-3\">\n            <input name=\"txt_kijoNm\" type=\"text\" class=\"form-control\" [(ngModel)]=\"kijoNm\">\n          </div>\n        </span>\n        <span [class.condition-show]=\"setubiNmShow\" [class.condition-hide]=\"!setubiNmShow\">\n          <div class=\"col-lg-3 col-md-3 col-sm-3 col-xs-3 label-padding\">\n            <div class=\"row\">\n              <div class=\"col-lg-1 col-md-1 col-sm-1 col-xs-1\">\n                <button type=\"button\" (click)=\"deleteCondition()\" class=\"btn btn-danger btn-close\">&times;</button>\n              </div>\n              <div class=\"\"></div>\n              <label class=\"col-lg-9 col-md-9 col-sm-9 col-xs-9 col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-offset-1 bg-warning text-center input-label\">\n                設備\n              </label>\n            </div>\n          </div>\n          <div class=\"col-lg-3 col-md-3 col-sm-3 col-xs-3\">\n            <input name=\"txt_setubiNm\" type=\"text\" class=\"form-control\" [(ngModel)]=\"setubiNm\">\n          </div>\n        </span>\n      </div>\n\n      <div class=\"row\" *ngIf=\"!showKeywordFlg\">\n        <span [class.condition-show]=\"prefCdShow\" [class.condition-hide]=\"!prefCdShow\">\n          <div class=\"col-lg-3 col-md-3 col-sm-3 col-xs-3 label-padding\">\n            <div class=\"row\">\n              <div class=\"col-lg-1 col-md-1 col-sm-1 col-xs-1\">\n                <button type=\"button\" (click)=\"deleteCondition()\" class=\"btn btn-danger btn-close\">&times;</button>\n              </div>\n              <div class=\"\"></div>\n              <label class=\"col-lg-9 col-md-9 col-sm-9 col-xs-9 col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-offset-1 bg-warning text-center input-label\">\n                都道府県\n              </label>\n            </div>\n          </div>\n          <div class=\"col-lg-3 col-md-3 col-sm-3 col-xs-3\">\n            <select name=\"sel_PrefCd\" class=\"form-control search-dropdown\" [(ngModel)]=\"prefCd\">\n              <option value=\"0\">検索項目を選択</option>\n              <option value=\"1\">北海道</option>\n              <option value=\"2\">青森県</option>\n              <option value=\"3\">岩手県</option>\n              <option value=\"4\">宮城県</option>\n              <option value=\"5\">秋田県</option>\n              <option value=\"6\">山形県</option>\n              <option value=\"7\">福島県</option>\n              <option value=\"8\">茨城県</option>\n              <option value=\"9\">栃木県</option>\n              <option value=\"10\">群馬県</option>\n              <option value=\"11\">埼玉県</option>\n              <option value=\"12\">千葉県</option>\n              <option value=\"13\">東京都</option>\n              <option value=\"14\">神奈川県</option>\n              <option value=\"15\">新潟県</option>\n              <option value=\"16\">富山県</option>\n              <option value=\"17\">石川県</option>\n              <option value=\"18\">福井県</option>\n              <option value=\"19\">山梨県</option>\n              <option value=\"20\">長野県</option>\n              <option value=\"21\">岐阜県</option>\n              <option value=\"22\">静岡県</option>\n              <option value=\"23\">愛知県</option>\n              <option value=\"24\">三重県</option>\n              <option value=\"25\">滋賀県</option>\n              <option value=\"26\">京都府</option>\n              <option value=\"27\">大阪府</option>\n              <option value=\"28\">兵庫県</option>\n              <option value=\"29\">奈良県</option>\n              <option value=\"30\">和歌山県</option>\n              <option value=\"31\">鳥取県</option>\n              <option value=\"32\">島根県</option>\n              <option value=\"33\">岡山県</option>\n              <option value=\"34\">広島県</option>\n              <option value=\"35\">山口県</option>\n              <option value=\"36\">徳島県</option>\n              <option value=\"37\">香川県</option>\n              <option value=\"38\">愛媛県</option>\n              <option value=\"39\">高知県</option>\n              <option value=\"40\">福岡県</option>\n              <option value=\"41\">佐賀県</option>\n              <option value=\"42\">長崎県</option>\n              <option value=\"43\">熊本県</option>\n              <option value=\"44\">大分県</option>\n              <option value=\"45\">宮崎県</option>\n              <option value=\"46\">鹿児島県</option>\n              <option value=\"47\">沖縄県</option>\n            </select>\n          </div>\n        </span>\n        <span [class.condition-show]=\"callDateShow\" [class.condition-hide]=\"!callDateShow\">\n          <div class=\"col-lg-3 col-md-3 col-sm-3 col-xs-3 label-padding\">\n            <div class=\"row\">\n              <div class=\"col-lg-1 col-md-1 col-sm-1 col-xs-1\">\n                <button type=\"button\" (click)=\"deleteCondition()\" class=\"btn btn-danger btn-close\">&times;</button>\n              </div>\n              <div class=\"\"></div>\n              <label class=\"col-lg-9 col-md-9 col-sm-9 col-xs-9 col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-offset-1 bg-warning text-center input-label\">\n                受付日\n              </label>\n            </div>\n          </div>\n          <div class=\"col-lg-3 col-md-3 col-sm-3 col-xs-3\">\n            <div class=\"date-div\">\n              <div class=\"input-group\">\n                <!-- <input type=\"text\" class=\"form-control\"> -->\n                <input name=\"txt_callStartDateFrom\" type=\"text\" class=\"form-control\" #dpCallStartDateFrom=\"bsDatepicker\" bsDatepicker [bsConfig]=\"bsConfig\"\n                  [(bsValue)]=\"callStartDateFrom\" value=\"{{callStartDateFrom | date:'yyyy/MM/dd'}}\">\n                <span class=\"input-group-btn\">\n                  <button type=\"button\" class=\"btn btn-input-support\" (click)=\"dpCallStartDateFrom.toggle()\">\n                    <i class=\"fa fa-calendar\"></i>\n                  </button>\n                </span>\n              </div>\n            </div>\n            <span class=\"text-center inner-text\">～</span>\n            <div class=\"date-div\">\n              <div class=\"input-group\">\n                <!-- <input type=\"text\" class=\"form-control\"> -->\n                <input name=\"txt_callStartDateTo\" type=\"text\" class=\"form-control\" #dpCallStartDateTo=\"bsDatepicker\" bsDatepicker [bsConfig]=\"bsConfig\"\n                  [(bsValue)]=\"callStartDateTo\" value=\"{{callStartDateTo | date:'yyyy/MM/dd'}}\">\n                <span class=\"input-group-btn\">\n                  <button type=\"button\" class=\"btn btn-input-support\" (click)=\"dpCallStartDateTo.toggle()\">\n                    <i class=\"fa fa-calendar\"></i>\n                  </button>\n                </span>\n              </div>\n            </div>\n          </div>\n        </span>\n      </div>\n\n      <div class=\"row\" *ngIf=\"!showKeywordFlg\">\n        <span [class.condition-show]=\"incidentTypeShow\" [class.condition-hide]=\"!incidentTypeShow\">\n          <div class=\"col-lg-3 col-md-3 col-sm-3 col-xs-3 label-padding\">\n            <div class=\"row\">\n              <div class=\"col-lg-1 col-md-1 col-sm-1 col-xs-1\">\n                <button type=\"button\" (click)=\"deleteCondition()\" class=\"btn btn-danger btn-close\">&times;</button>\n              </div>\n              <div class=\"\"></div>\n              <label class=\"col-lg-9 col-md-9 col-sm-9 col-xs-9 col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-offset-1 bg-warning text-center input-label\">\n                インシデント分類\n              </label>\n            </div>\n          </div>\n          <div class=\"col-lg-9 col-md-9 col-sm-9 col-xs-9\">\n            <div class=\"checkbox\">\n              <label class=\"input-item\">\n                <input type=\"checkbox\" name=\"incidentTypeSyougai\" value=\"\" [(ngModel)]=\"incidentTypeSyougai\"> 障害\n              </label>\n              <label class=\"input-item\">\n                <input type=\"checkbox\" name=\"incidentTypeJiko\" value=\"\" [(ngModel)]=\"incidentTypeJiko\"> 事故\n              </label>\n              <label class=\"input-item\">\n                <input type=\"checkbox\" name=\"incidentTypeClaim\" value=\"\" [(ngModel)]=\"incidentTypeClaim\"> クレーム\n              </label>\n              <label class=\"input-item\">\n                <input type=\"checkbox\" name=\"incidentTypeToiawase\" value=\"\" [(ngModel)]=\"incidentTypeToiawase\"> 問合せ\n              </label>\n              <label class=\"input-item\">\n                <input type=\"checkbox\" name=\"incidentTypeInfo\" value=\"\" [(ngModel)]=\"incidentTypeInfo\"> 情報\n              </label>\n              <label class=\"input-item\">\n                <input type=\"checkbox\" name=\"incidentTypeOther\" value=\"\" [(ngModel)]=\"incidentTypeOther\"> その他\n              </label>\n            </div>\n          </div>\n        </span>\n      </div>\n      <div class=\"row\" *ngIf=\"!showKeywordFlg\">\n        <span [class.condition-show]=\"incidentStsShow\" [class.condition-hide]=\"!incidentStsShow\">\n          <div class=\"col-lg-3 col-md-3 col-sm-3 col-xs-3 label-padding\">\n            <div class=\"row\">\n              <div class=\"col-lg-1 col-md-1 col-sm-1 col-xs-1\">\n                <button type=\"button\" (click)=\"deleteCondition()\" class=\"btn btn-danger btn-close\">&times;</button>\n              </div>\n              <div class=\"\"></div>\n              <label class=\"col-lg-9 col-md-9 col-sm-9 col-xs-9 col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-offset-1 bg-warning text-center input-label\">\n                ステータス\n              </label>\n            </div>\n          </div>\n          <div class=\"col-lg-9 col-md-9 col-sm-9 col-xs-9\">\n            <div class=\"checkbox\">\n              <label class=\"input-item\">\n                <input type=\"checkbox\" name=\"incidentStatusCall\" value=\"\" [(ngModel)]=\"incidentStatusCall\"> 受付済\n              </label>\n              <label class=\"input-item\">\n                <input type=\"checkbox\" name=\"incidentStatusTaio\" value=\"\" [(ngModel)]=\"incidentStatusTaio\"> 対応入力済\n              </label>\n              <label class=\"input-item\">\n                <input type=\"checkbox\" name=\"incidentStatusAct\" value=\"\" [(ngModel)]=\"incidentStatusAct\"> 処置入力済\n              </label>\n            </div>\n          </div>\n        </span>\n      </div>\n\n      <div class=\"row\" *ngIf=\"!showKeywordFlg\">\n        <div class=\"col-lg-3 col-md-3 col-sm-3 col-xs-3\">\n          <div class=\"row\">\n            <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\">\n              <div class=\"form-group\">\n                <select name=\"sel_Condition\" #condition class=\"form-control search-dropdown\" [(ngModel)]=\"selCondition\">\n                  <option value=\"0\">検索項目を選択</option>\n                  <option [class.condition-hide]=\"incidentNoShow\" value=\"incidentNoShow\">インシデント番号</option>\n                  <option [class.condition-hide]=\"callContentShow\" value=\"callContentShow\">受付内容</option>\n                  <option [class.condition-hide]=\"parentIncidentNoShow\" value=\"parentIncidentNoShow\">親インシデント番号</option>\n                  <option [class.condition-hide]=\"incidentStartDateTimeShow\" value=\"incidentStartDateTimeShow\">発生日時</option>\n                  <option [class.condition-hide]=\"callDateShow\" value=\"callDateShow\">受付日</option>\n                  <option [class.condition-hide]=\"industryTypeCdShow\" value=\"industryTypeCdShow\">業種区分</option>\n                  <option [class.condition-hide]=\"kijoNmShow\" value=\"kijoNmShow\">機場</option>\n                  <option [class.condition-hide]=\"jigyosyutaiNmShow\" value=\"jigyosyutaiNmShow\">事業主体</option>\n                  <option [class.condition-hide]=\"setubiNmShow\" value=\"setubiNmShow\">設備</option>\n                  <option [class.condition-hide]=\"prefCdShow\" value=\"prefCdShow\">都道府県</option>\n                  <option [class.condition-hide]=\"custNmShow\" value=\"custNmShow\">顧客</option>\n                  <option [class.condition-hide]=\"custTypeCdShow\" value=\"custTypeCdShow\">顧客分類</option>\n                  <option [class.condition-hide]=\"salesDeptNmShow\" value=\"salesDeptNmShow\">営業部門</option>\n                  <option [class.condition-hide]=\"salesUserNmShow\" value=\"salesUserNmShow\">営業担当者</option>\n                  <option [class.condition-hide]=\"relateUserNmShow\" value=\"relateUserNmShow\">関係者</option>\n                </select>\n              </div>\n            </div>\n          </div>\n        </div>\n        <div class=\"col-lg-4 col-md-4 col-sm-4 col-xs-4\">\n          <button type=\"button\" (click)=\"addCondition();\" class=\"btn btn-xs btn-warning\">検索項目を追加</button>\n          <button type=\"button\" (click)=\"conditionSaveModal.openModal(getCondition());\" class=\"btn btn-xs btn-warning\">検索条件を保存</button>\n          <button type=\"button\" (click)=\"conditionDeleteModal.openModal();\" class=\"btn btn-xs btn-warning\" *ngIf=\"showDelFlg\">検索条件を削除</button>\n          <button type=\"button\" disabled=\"true\" class=\"btn btn-xs btn-warning\" *ngIf=\"!showDelFlg\">検索条件を削除</button>\n        </div>\n      </div>\n\n      <div class=\"row\">\n        <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\">\n          <div class=\"row\">\n            <div class=\"col-lg-3 col-md-3 col-sm-3 col-xs-3 search-result-info\">\n              検索結果：　{{bigTotalItems}}件\n            </div>\n            <div class=\"col-lg-9 col-md-9 col-sm-9 col-xs-9 transition-button text-right\">\n              <button type=\"button\" (click)=\"excelOutput()\" class=\"btn btn-warning\">\n                <i class=\"fa fa-download\"></i> EXCEL出力</button>\n              <button type=\"button\" (click)=\"search()\" class=\"btn btn-danger\" *ngIf=\"!showKeywordFlg\">\n                <i class=\"fa fa-search\"></i> 検索</button>\n              <button type=\"button\" (click)=\"searchByKeyword()\" class=\"btn btn-danger\" *ngIf=\"showKeywordFlg\">\n                  <i class=\"fa fa-search\"></i> 検索</button>\n            </div>\n          </div>\n        </div>\n      </div>\n\n      <div class=\"row\">\n        <div class=\"col-lg-6 col-md-6 col-sm-7 col-xs-8\">\n          <pagination name=\"paging1\" [boundaryLinks]=\"true\" [totalItems]=\"bigTotalItems\" [(ngModel)]=\"currentPage\" [maxSize]=\"maxSize\" [itemsPerPage]=\"itemsPerPage\"\n            class=\"pagination-sm\" [rotate]=\"false\" previousText=\"&lsaquo;\" nextText=\"&rsaquo;\" firstText=\"&laquo;\" lastText=\"&raquo;\" (click)=\"pageChanged($event)\"></pagination>\n        </div>\n        <div class=\"col-lg-offset-4 col-md-offset-4 col-sm-offset-2 col-lg-2 col-md-2 col-sm-3 col-xs-4 text-right\">\n          <input name=\"itemperPage\" [(ngModel)]=\"itemsPerPage\" type=\"text\" class=\"itemsPerPage\" (input)=\"pageChanged()\"> 件/頁\n        </div>\n      </div>\n\n    </form>\n    <div class=\"row\" id=\"search-list\">\n      <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\">\n        <div class=\"panel\">\n          <table class=\"table table-striped list-table\">\n            <thead>\n              <tr>\n                <th class=\"table-header-list incident-no-th\" (click)='sort(\"incidentNo\")'>\n                  インシデント番号 \n                  <i class=\"fa\" [class.fa-caret-up]=\"orderByParamArray['incidentNoAsc']\" [class.fa-caret-down]=\"orderByParamArray['incidentNoDesc']\"></i>\n                </th>\n                <th class=\"table-header-list\" width=\"25%\" (click)='sort(\"callContent\")'> 受付内容</th>\n                <th class=\"table-header-list\" (click)='sort(\"kijoNm\")'>機場</th>\n                <th class=\"table-header-list\" (click)='sort(\"setubiNm\")'>設備</th>\n                <th class=\"table-header-list\" (click)='sort(\"prefNm\")'>都道府県</th>\n                <th class=\"table-header-list\" (click)='sort(\"incidentStartDateTime\")'>発生日時</th>\n                <th class=\"table-header-list\" (click)='sort(\"callDate\")'>受付日\n                  <i class=\"fa fa-caret-down\"></i>\n                </th>\n                <th class=\"table-header-list\" (click)='sort(\"incidentTypeNm\")'>分類</th>\n                <th class=\"table-header-list\" (click)='sort(\"incidentStatusNm\")'>ステータス</th>\n                <th class=\"table-header-list relate-th\" popover=\"関連プロジェクト\" triggers=\"mouseenter:mouseleave\" (click)='sort(\"relatePj\")'>関連PJ</th>\n                <th class=\"table-header-list relate-th\" popover=\"事故クレーム連絡\" triggers=\"mouseenter:mouseleave\" (click)='sort(\"relateJiko\")'>事ク連絡</th>\n                <th class=\"table-header-list relate-th\" popover=\"現地出動（MR2）\" triggers=\"mouseenter:mouseleave\" (click)='sort(\"relateMr2\")'>現地出動</th>\n                <th class=\"table-header-list relate-th\" (click)='sort(\"relateHiyo\")'>費用決済</th>\n              </tr>\n            </thead>\n            <tbody>\n              <tr *ngFor=\"let data of incidentList | orderBy:order | slice: start: end\">\n                <td class=\"code-list\">\n                  <a routerLink=\"/detail/{{data?.incidentId}}\" routerLinkActive=\"current\" [routerLinkActiveOptions]=\"{ exact: true }\">\n                    <u>{{data?.incidentNo}}</u>\n                  </a>\n                </td>\n                <td class=\"char-list\" popover={{data?.callContent}} triggers=\"mouseenter:mouseleave\">\n                  {{data?.callContent | slice: 0:40 }}\n                  <span *ngIf=\"data?.callContent?.length >= 40\">…</span>\n                </td>\n                <td class=\"char-list\">{{data?.kijoNm}}</td>\n                <td class=\"char-list\">{{data?.setubiNm}}</td>\n                <td class=\"status-list\">{{data?.prefNm}}</td>\n                <td class=\"date-list\">{{data?.incidentStartDateTime}}</td>\n                <td class=\"date-list\">{{data?.callDate}}</td>\n                <td class=\"status-list\">{{data?.incidentTypeNm}}</td>\n                <td class=\"status-list\">{{data?.incidentStatusNm}}</td>\n                <td class=\"status-list\">{{data?.relatePj}}</td>\n                <td class=\"status-list\">{{data?.relateJiko}}</td>\n                <td class=\"status-list\">{{data?.relateMr2}}</td>\n                <td class=\"status-list\">{{data?.relateHiyo}}</td>\n              </tr>\n            </tbody>\n          </table>\n        </div>\n      </div>\n    </div>\n\n    <div class=\"row\">\n      <div class=\"col-lg-6 col-md-6 col-sm-7 col-xs-8\">\n        <pagination name=\"paging2\" [boundaryLinks]=\"true\" [totalItems]=\"bigTotalItems\" [(ngModel)]=\"currentPage\" [maxSize]=\"maxSize\" [itemsPerPage]=\"itemsPerPage\"\n          class=\"pagination-sm\" [rotate]=\"false\" previousText=\"&lsaquo;\" nextText=\"&rsaquo;\" firstText=\"&laquo;\" lastText=\"&raquo;\" (click)=\"pageChanged($event)\"></pagination>\n      </div>\n    </div>\n\n  </div>\n</div>"
 
 /***/ }),
 
@@ -1329,6 +1693,7 @@ var ListComponent = (function () {
         this.route = route;
         this.jsonpService = jsonpService;
         this.selCondition = "0";
+        this.showBackFlg = false;
         this.incidentTypeShow = false;
         this.incidentStsShow = false;
         this.incidentNoShow = false;
@@ -1373,7 +1738,7 @@ var ListComponent = (function () {
         this.industryTypeWBC = null;
         this.industryTypeOther = null;
         this.jigyosyutaiNm = null;
-        this.prefCd = null;
+        this.prefCd = '0';
         this.custNm = null;
         this.custTypeNenkan = null;
         this.custTypeTenken = null;
@@ -1391,29 +1756,31 @@ var ListComponent = (function () {
         this.prefNm = null;
         this.callStartDateFrom = null;
         this.callStartDateTo = null;
-        this.condFldShow = null;
+        this.keyword = null;
+        this.showKeywordFlg = false;
+        this.showDelFlg = true;
         this.condFld = null;
+        this.conditionShowArray = [];
         // date pikerの設定
         this.locale = 'ja';
         this.locales = Object(__WEBPACK_IMPORTED_MODULE_3_ngx_bootstrap_bs_moment__["b" /* listLocales */])();
-        // $(window).scroll(function () {
-        //   // スクロールイベント
-        //   let this_scrollTop = $(this).scrollTop();
-        //   if ($("#search-list").offset().top - this_scrollTop < 10) {
-        //       $("#newTable").show();
-        //   } else {
-        //       $("#newTable").hide();
-        //   }
-        // });
         // 並び替え処理宣言
         this.order = new __WEBPACK_IMPORTED_MODULE_6__pipe_order_by_pipe__["a" /* OrderByParam */]();
         this.orderByParamArray = {
             'incidentNoAsc': false,
             'incidentNoDesc': false // インシデント番号のソートアイコン　降順
         };
+        // ページングの設定
+        this.maxSize = 5; // ページングの表示ページ数
+        this.bigTotalItems = 0; // 総数
+        this.itemsPerPage = 10; // 1ページに表示する件数
+        this.currentPage = 0; // 現在表示しているページ
+        this.start = 0; // データ表示開始位置
+        this.end = 10; // データ表示終了位置
         this.bsConfig = Object.assign({}, { locale: this.locale });
     }
     ListComponent.prototype.ngOnInit = function () {
+        this.route.data.subscribe(function (obj) { return console.log(obj['category']); });
         // ログイン情報設定
         this.userId = "userId";
         this.userName = "userName";
@@ -1421,10 +1788,30 @@ var ListComponent = (function () {
         this.sectionName = "secName";
         // 検索条件のデフォルト設定
         this.setDefaultShow();
-        this.route.data.subscribe(function (obj) { return console.log(obj['category']); });
         var condId = this.route.snapshot.paramMap.get('condId');
-        this.searchCondCondition(58);
-        this.search();
+        var keyword = this.route.snapshot.paramMap.get('keyword');
+        if (keyword != null) {
+            this.showKeywordFlg = true;
+            this.keyword = this.transCodeToStr(keyword);
+            this.searchByKeyword(keyword);
+        }
+        else if (condId != null) {
+            this.searchCondition(condId);
+        }
+        else {
+            this.searchCondition(0);
+        }
+    };
+    // コードは16位から正常に変換する
+    ListComponent.prototype.transCodeToStr = function (data) {
+        if (data == '')
+            return '';
+        data = data.split('\\u');
+        var str = '';
+        for (var i = 0; i < data.length; i++) {
+            str += String.fromCharCode(parseInt(data[i], 16));
+        }
+        return str;
     };
     // 検索項目削除処理
     ListComponent.prototype.deleteCondition = function () {
@@ -1433,16 +1820,6 @@ var ListComponent = (function () {
     ListComponent.prototype.addCondition = function () {
         var itemNm = this.selCondition;
         switch (itemNm) {
-            case 'incidentTypeShow':
-                this.incidentTypeShow = true;
-                // 検索項目プルダウンを初期化
-                this.selCondition = "0";
-                break;
-            case 'incidentStsShow':
-                this.incidentStsShow = true;
-                // 検索項目プルダウンを初期化
-                this.selCondition = "0";
-                break;
             case 'incidentNoShow':
                 this.incidentNoShow = true;
                 // 検索項目プルダウンを初期化
@@ -1536,26 +1913,34 @@ var ListComponent = (function () {
         if (this.incidentStartDateTimeShow && !this.lengthCheck("発生日時（開始）", this.incidentStartDateTimeFrom, 20)) {
             return false;
         }
-        if (this.incidentStartDateTimeShow && this.incidentStartDateTimeFrom != null && !this.dateFormatCheck("発生日時（開始）", this.incidentStartDateTimeFrom)) {
-            return false;
+        if (this.incidentStartDateTimeFrom != null) {
+            if (this.incidentStartDateTimeShow && !this.dateFormatCheck("発生日時（開始）", this.incidentStartDateTimeFrom)) {
+                return false;
+            }
         }
         if (this.incidentStartDateTimeShow && !this.lengthCheck("発生日時（終了）", this.incidentStartDateTimeTo, 20)) {
             return false;
         }
-        if (this.incidentStartDateTimeShow && this.incidentStartDateTimeTo != null && !this.dateFormatCheck("発生日時（終了）", this.incidentStartDateTimeTo)) {
-            return false;
+        if (this.incidentStartDateTimeTo != null) {
+            if (this.incidentStartDateTimeShow && !this.dateFormatCheck("発生日時（終了）", this.incidentStartDateTimeTo)) {
+                return false;
+            }
         }
         if (this.callDateShow && !this.lengthCheck("受付日（開始）", this.callStartDateFrom, 20)) {
             return false;
         }
-        if (this.callDateShow && this.callStartDateFrom != null && !this.dateFormatCheck("受付日（開始）", this.callStartDateFrom)) {
-            return false;
+        if (this.callStartDateFrom != null) {
+            if (this.callDateShow && !this.dateFormatCheck("受付日（開始）", this.callStartDateFrom)) {
+                return false;
+            }
         }
         if (this.callDateShow && !this.lengthCheck("受付日（終了）", this.callStartDateTo, 20)) {
             return false;
         }
-        if (this.callDateShow && this.callStartDateTo != null && !this.dateFormatCheck("受付日（終了）", this.callStartDateTo)) {
-            return false;
+        if (this.callStartDateTo != null) {
+            if (this.callDateShow && !this.dateFormatCheck("受付日（終了）", this.callStartDateTo)) {
+                return false;
+            }
         }
         if (this.kijoNmShow && !this.lengthCheck("機場", this.kijoNm, 50)) {
             return false;
@@ -1652,6 +2037,11 @@ var ListComponent = (function () {
         }
         return conditionArray;
     };
+    // 登録している検索条件が変更された
+    ListComponent.prototype.changeCondition = function () {
+        // ヘッダーの検索条件名の表示を更新する
+        this.header.searchConditionName();
+    };
     // 最大文字数チェック
     ListComponent.prototype.lengthCheck = function (name, val, length) {
         if (val != null && val.length > length) {
@@ -1717,7 +2107,7 @@ var ListComponent = (function () {
     ListComponent.prototype.search = function () {
         var _this = this;
         // 検索パラメータの作成
-        var ps = new __WEBPACK_IMPORTED_MODULE_2__angular_http__["c" /* URLSearchParams */]();
+        var ps = new __WEBPACK_IMPORTED_MODULE_2__angular_http__["e" /* URLSearchParams */]();
         ps.set("incidentNo", this.incidentNo);
         ps.set("callContent", this.callContent);
         ps.set("kijoNm", this.kijoNm);
@@ -1747,28 +2137,31 @@ var ListComponent = (function () {
         });
     };
     // 検索処理
-    ListComponent.prototype.searchCondCondition = function (condId) {
+    ListComponent.prototype.searchCondition = function (condId) {
         var _this = this;
         // 検索パラメータの作成
-        var ps = new __WEBPACK_IMPORTED_MODULE_2__angular_http__["c" /* URLSearchParams */]();
-        ps.set("condId", "58");
+        var ps = new __WEBPACK_IMPORTED_MODULE_2__angular_http__["e" /* URLSearchParams */]();
+        ps.set("condId", condId);
         // 検索
-        this.jsonpService.requestGet('IncidentListSearchCondConditionGet.php', ps)
+        this.jsonpService.requestGet('IncidentListSearchConditionGet.php', ps)
             .subscribe(function (data) {
             // 通信成功時
             console.log(data);
-            for (var i = 0; i < data.length; i++) {
-                var condFld = null;
-                var condVal = null;
-                var condFldShow = null;
-                condFld = data[i]['COND_FLD'];
-                condVal = data[i]['COND_VAL'];
+            if (condId != '0') {
+                _this.conditionShowArray = data[data.length - 1];
+                for (var i = 0; i < _this.conditionShowArray.length; i++) {
+                    var condFld = null;
+                    var condVal = null;
+                    condFld = _this.conditionShowArray[i]['condFld'];
+                    condVal = _this.conditionShowArray[i]['condVal'];
+                    _this.setConditionShowAndVal(condFld, condVal);
+                }
             }
             if (data[0]) {
                 var list = data[0];
                 if (list.result !== '' && list.result == true) {
                     // 画面表示パラメータのセット処理
-                    _this.setDspParam(data.slice(1)); // 配列1つ目は、サーバ処理成功フラグなので除外
+                    _this.setDspParam(data.slice(1, -1)); // 配列1つ目は、サーバ処理成功フラグなので除外
                 }
             }
         }, function (error) {
@@ -1778,8 +2171,132 @@ var ListComponent = (function () {
             return false;
         });
     };
-    //
-    ListComponent.prototype.setShowAndVal = function (condFld, condVal) {
+    // 設置表示条件と条件値
+    ListComponent.prototype.setConditionShowAndVal = function (condFld, condVal) {
+        switch (condFld) {
+            case "incidentTypeSyougai":
+                this.incidentTypeSyougai = true;
+                break;
+            case "incidentTypeJiko":
+                this.incidentTypeJiko = true;
+                break;
+            case "incidentTypeClaim":
+                this.incidentTypeClaim = true;
+                break;
+            case "incidentTypeToiawase":
+                this.incidentTypeToiawase = true;
+                break;
+            case "incidentTypeInfo":
+                this.incidentTypeInfo = true;
+                break;
+            case "incidentTypeOther":
+                this.incidentTypeOther = true;
+                break;
+            case "incidentStatusCall":
+                this.incidentStatusCall = true;
+                break;
+            case "incidentStatusTaio":
+                this.incidentStatusTaio = true;
+                break;
+            case "incidentStatusAct":
+                this.incidentStatusAct = true;
+                break;
+            case "incidentNo":
+                this.incidentNo = condVal;
+                break;
+            case "callContent":
+                this.callContent = condVal;
+                break;
+            case "parentIncidentNo":
+                this.parentIncidentNo = condVal;
+                break;
+            case "incidentStartDateTimeFrom":
+                this.incidentStartDateTimeFrom = condVal;
+                break;
+            case "incidentStartDateTimeTo":
+                this.incidentStartDateTimeTo = condVal;
+                break;
+            case "callStartDateFrom":
+                this.callStartDateFrom = condVal;
+                break;
+            case "callStartDateTo":
+                this.callStartDateTo = condVal;
+                break;
+            case "industryTypeMachinery":
+                this.industryTypeShow = true;
+                this.industryTypeMachinery = true;
+                break;
+            case "industryTypeElectricalMachinery":
+                this.industryTypeShow = true;
+                this.industryTypeElectricalMachinery = condVal;
+                break;
+            case "industryTypeInstrumentation":
+                this.industryTypeShow = true;
+                this.industryTypeInstrumentation = condVal;
+                break;
+            case "industryTypeInfo":
+                this.industryTypeShow = true;
+                this.industryTypeInfo = condVal;
+                break;
+            case "industryTypeEnvironment":
+                this.industryTypeShow = true;
+                this.industryTypeEnvironment = condVal;
+                break;
+            case "industryTypeWBC":
+                this.industryTypeShow = true;
+                this.industryTypeWBC = condVal;
+                break;
+            case "industryTypeOther":
+                this.industryTypeShow = true;
+                this.industryTypeOther = condVal;
+                break;
+            case "kijoNm":
+                this.kijoNm = condVal;
+                break;
+            case "jigyosyutaiNm":
+                this.jigyosyutaiNm = condVal;
+                break;
+            case "setubiNm":
+                this.setubiNm = condVal;
+                break;
+            case "prefCd":
+                this.prefCd = condVal;
+                break;
+            case "custNm":
+                this.custNm = condVal;
+                break;
+            case "custTypeNenkan":
+                this.custTypeShow = true;
+                this.custTypeNenkan = true;
+                break;
+            case "custTypeTenken":
+                this.custTypeShow = true;
+                this.custTypeTenken = true;
+                break;
+            case "custTypeNasi":
+                this.custTypeShow = true;
+                this.custTypeNasi = true;
+                break;
+            case "custTypeKasi":
+                this.custTypeShow = true;
+                this.custTypeKasi = true;
+                break;
+            case "custTypeOther":
+                this.custTypeShow = true;
+                this.custTypeOther = true;
+                break;
+            case "salesDeptNm":
+                this.custNm = condVal;
+                break;
+            case "salesUserNm":
+                this.custNm = condVal;
+                break;
+            case "relateUserNm":
+                this.custNm = condVal;
+                break;
+            default:
+                break;
+        }
     };
     // 日付型を日付フォーマット文字列に変更
     ListComponent.prototype.getDateStringFromDate = function (date) {
@@ -1788,7 +2305,10 @@ var ListComponent = (function () {
             var m = date.getMonth();
             m++;
             var d = date.getDate();
-            return y + "-" + m + "-" + d + " 00:00:00";
+            // 2018.01.20 Newtouch更新 start
+            // return  y + "-" + m + "-" + d + " 00:00:00";
+            return y + "-" + m + "-" + d;
+            // 2018.01.20 Newtouch更新 end
         }
         else {
             // 日付型でない値の場合
@@ -1800,7 +2320,24 @@ var ListComponent = (function () {
     };
     // 画面表示パラメータのセット処理
     ListComponent.prototype.setDspParam = function (data) {
+        // ページングの設定
+        this.bigTotalItems = data.length;
         this.incidentList = data;
+    };
+    // this.(window).scroll(function () {
+    //   // スクロールイベント
+    //   let this_scrollTop = this.(this).scrollTop();
+    //   if (this.("#search-list").offset().top - this_scrollTop < 10) {
+    //       this.("#newTable").show();
+    //   } else {
+    //       this.("#newTable").hide();
+    //   }
+    // });
+    // 設置「検索条件を削除」Flg
+    ListComponent.prototype.setShowDelFlg = function ($event) {
+        if ($event) {
+            this.showDelFlg = $event["showDelFlg"];
+        }
     };
     // 並び替え処理(並び順指定)
     ListComponent.prototype.sort = function (column) {
@@ -1852,8 +2389,48 @@ var ListComponent = (function () {
             this.orderByParamArray[columnDesc] = false;
         }
     };
+    // ページング処理
+    ListComponent.prototype.pageChanged = function (event) {
+        this.start = this.itemsPerPage * (this.currentPage - 1);
+        var tmpStart = +this.start;
+        var tmpItemsPerPage = +this.itemsPerPage;
+        this.end = tmpStart + tmpItemsPerPage;
+    };
+    // キーワードを入力してエンターを押した
+    ListComponent.prototype.onKeyWordEnter = function () {
+        console.log("キーワード検索処理");
+        this.searchByKeyword(this.keyword);
+    };
+    ListComponent.prototype.searchByKeyword = function (keyword) {
+        var _this = this;
+        // 検索パラメータの作成
+        var ps = new __WEBPACK_IMPORTED_MODULE_2__angular_http__["e" /* URLSearchParams */]();
+        ps.set("keyword", this.keyword);
+        // 検索
+        this.jsonpService.requestGet('IncidentListDataGetByKeyword.php', ps)
+            .subscribe(function (data) {
+            // 通信成功時
+            console.log(data);
+            if (data[0]) {
+                var list = data[0];
+                if (list.result !== '' && list.result == true) {
+                    // 画面表示パラメータのセット処理
+                    _this.setDspParam(data.slice(1)); // 配列1つ目は、サーバ処理成功フラグなので除外
+                }
+            }
+        }, function (error) {
+            // 通信失敗もしくは、コールバック関数内でエラー
+            console.log(error);
+            console.log('サーバとのアクセスに失敗しました。');
+            return false;
+        });
+    };
     return ListComponent;
 }());
+__decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_16" /* ViewChild */])('header'),
+    __metadata("design:type", Object)
+], ListComponent.prototype, "header", void 0);
 ListComponent = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
         selector: 'my-app',
@@ -1868,10 +2445,105 @@ var _a, _b;
 
 /***/ }),
 
+/***/ "../../../../../src/app/modal/common.modal.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<!--\n//*****************************************************************************\n//\tシステム名　　　：インシデント管理システム\n//\tサブシステム名　：\n//\t画面名　　　　　：共通モーダル部品\n//\t作成日付・作成者：2018.01.16 ADF)S.Yoshida\n//\t修正履歴　　　　：\n//*****************************************************************************\n-->\n\n<div bsModal #template=\"bs-modal\" class=\"modal fade\" tabindex=\"-1\" role=\"dialog\" aria-hidden=\"true\">\n  <div class=\"modal-dialog modal-sm\">\n    <div class=\"modal-content\">\n      <div class=\"modal-header bg-danger\">\n        <h4 class=\"modal-title pull-left\">\n          <strong>{{headerStr}}</strong>\n        </h4>\n        <button type=\"button\" class=\"close pull-right\" aria-label=\"Close\" (click)=\"template.hide()\">\n          <span aria-hidden=\"true\">&times;</span>\n        </button>\n      </div>\n      <div class=\"modal-body\">\n\n        <div class=\"row\">\n          <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12 common-mes\">\n            {{mes}}\n          </div>\n        </div>\n\n        <div class=\"row\" [class.common-enter-btn-show]=\"enterBtnShow\" [class.common-enter-btn-hide]=\"!enterBtnShow\">\n          <div class=\"col-lg-6 col-md-6 col-sm-6 col-xs-6 transition-button common-btn-group\">\n            <button type=\"button\" class=\"btn btn-danger common-btn\" (click)=\"enter()\">\n              {{enterBtnStr}}\n            </button>\n          </div>\n          <div class=\"col-lg-6 col-md-6 col-sm-6 col-xs-6 transition-button common-btn-group\">\n            <button type=\"button\" class=\"btn btn-danger common-btn\" (click)=\"template.hide()\">\n              {{closeBtnStr}}\n            </button>\n          </div>\n        </div>\n\n        <div class=\"row\" [class.common-enter-btn-show]=\"!enterBtnShow\" [class.common-enter-btn-hide]=\"enterBtnShow\">\n          <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12 transition-button common-btn-group\">\n            <button type=\"button\" class=\"btn btn-danger common-btn\" (click)=\"template.hide()\">\n              {{closeBtnStr}}\n            </button>\n          </div>\n        </div>\n\n      </div>\n    </div>\n  </div>\n</div>"
+
+/***/ }),
+
+/***/ "../../../../../src/app/modal/common.modal.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CommonModalComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ngx_bootstrap_modal__ = __webpack_require__("../../../../ngx-bootstrap/modal/index.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var CommonModalComponent = (function () {
+    function CommonModalComponent(modalService) {
+        this.modalService = modalService;
+        // 自作イベント(親コンポーネントのメソッド呼び出し)
+        this.commonEnter = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["x" /* EventEmitter */]();
+        this.enterBtnShow = false; // 処理ボタンの表示フラグ
+    }
+    // モーダル表示
+    CommonModalComponent.prototype.openModal = function (headerStr, mes, enterBtnStr, closeBtnStr) {
+        this.setHeaderStr(headerStr);
+        this.setMes(mes);
+        this.setEnterBtnStr(enterBtnStr);
+        this.setCloseBtnStr(closeBtnStr);
+        this.template.show();
+    };
+    // モーダルヘッダー文字列の初期化
+    CommonModalComponent.prototype.setHeaderStr = function (headerStr) {
+        this.headerStr = headerStr;
+    };
+    // 表示メッセージの初期化
+    CommonModalComponent.prototype.setMes = function (mes) {
+        this.mes = mes;
+    };
+    // 処理ボタンの表示文字列の初期化
+    CommonModalComponent.prototype.setEnterBtnStr = function (btnStr) {
+        this.enterBtnStr = btnStr;
+        if (btnStr) {
+            // 処理ボタンの表示文字列がある場合のみ処理ボタンを表示する
+            this.enterBtnShow = true;
+        }
+        else {
+            // 処理ボタン非表示
+            this.enterBtnShow = false;
+        }
+    };
+    // 閉じるボタンの表示文字列の初期化
+    CommonModalComponent.prototype.setCloseBtnStr = function (btnStr) {
+        this.closeBtnStr = btnStr;
+    };
+    // 処理ボタンを押した
+    CommonModalComponent.prototype.enter = function () {
+        // モーダルを閉じる
+        this.template.hide();
+        // 親コンポーネントの処理を実行する為に、イベントを発火
+        this.commonEnter.emit({});
+    };
+    return CommonModalComponent;
+}());
+__decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_16" /* ViewChild */])('template'),
+    __metadata("design:type", Object)
+], CommonModalComponent.prototype, "template", void 0);
+__decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["T" /* Output */])(),
+    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["x" /* EventEmitter */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["x" /* EventEmitter */]) === "function" && _a || Object)
+], CommonModalComponent.prototype, "commonEnter", void 0);
+CommonModalComponent = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
+        selector: 'common-modal',
+        template: __webpack_require__("../../../../../src/app/modal/common.modal.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/modal/modal.component.css")]
+    }),
+    __metadata("design:paramtypes", [typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ngx_bootstrap_modal__["a" /* BsModalService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ngx_bootstrap_modal__["a" /* BsModalService */]) === "function" && _b || Object])
+], CommonModalComponent);
+
+var _a, _b;
+//# sourceMappingURL=common.modal.component.js.map
+
+/***/ }),
+
 /***/ "../../../../../src/app/modal/conditionDelete.modal.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<!--\r\n//*****************************************************************************\r\n//\tシステム名　　　：インシデント管理システム\r\n//\tサブシステム名　：\r\n//\t画面名　　　　　：検索条件の削除画面\r\n//\t作成日付・作成者：2018.01.04 NEWTOUCH)newtouch\r\n//\t修正履歴　　　　：\r\n//*****************************************************************************\r\n-->\r\n<div bsModal #template=\"bs-modal\" class=\"modal fade\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"myLargeModalLabel\" aria-hidden=\"true\">\r\n  <div class=\"modal-dialog\">\r\n    <div class=\"modal-content\">\r\n      <div class=\"modal-header bg-danger\">\r\n        <h4 class=\"modal-title pull-left\">\r\n          <strong>検索条件の削除</strong>\r\n        </h4>\r\n        <button type=\"button\" class=\"close pull-right\" aria-label=\"Close\" (click)=\"template.hide()\">\r\n          <span aria-hidden=\"true\">&times;</span>\r\n        </button>\r\n      </div>\r\n      <div class=\"modal-body\">\r\n        <form>\r\n\r\n          <div class=\"row\" id=\"search-list\">\r\n            <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\">\r\n              <div class=\"panel\">\r\n                <table class=\"table table-striped list-table\">\r\n                  <thead>\r\n                    <tr>\r\n                      <th class=\"table-header-list\" width=\"25%\">選択</th>\r\n                      <th class=\"table-header-list\">検索条件名</th>\r\n                      <th class=\"table-header-list\">登録日時</th>\r\n                    </tr>\r\n                  </thead>\r\n                  <tbody>\r\n                    <tr *ngFor=\"let data of condList\">\r\n                      <td class=\"char-list\"><input #rdoSel type=\"radio\" name=\"rdoCondNm\" value={{data?.COND_NM}} [(ngModel)]=\"rdoCondNm\"></td>\r\n                      <td class=\"char-list\">{{data?.COND_NM}}</td>\r\n                      <td class=\"char-list\">{{data?.INS_DATE}}</td>\r\n                    </tr>\r\n                  </tbody>\r\n                </table>\r\n              </div>\r\n            </div>\r\n          </div>\r\n          <div class=\"row\">\r\n            <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12 save-button text-right\">\r\n              <button type=\"button\" class=\"btn btn-danger\" (click)=\"conditionDelete()\">削除</button>\r\n            </div>\r\n          </div>\r\n        </form>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>"
+module.exports = "<!--\r\n//*****************************************************************************\r\n//\tシステム名　　　：インシデント管理システム\r\n//\tサブシステム名　：\r\n//\t画面名　　　　　：検索条件の削除画面\r\n//\t作成日付・作成者：2018.01.04 NEWTOUCH)newtouch\r\n//\t修正履歴　　　　：\r\n//*****************************************************************************\r\n-->\r\n<div bsModal #template=\"bs-modal\" class=\"modal fade\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"myLargeModalLabel\" aria-hidden=\"true\">\r\n  <div class=\"modal-dialog\">\r\n    <div class=\"modal-content\">\r\n      <div class=\"modal-header bg-danger\">\r\n        <h4 class=\"modal-title pull-left\">\r\n          <strong>検索条件の削除</strong>\r\n        </h4>\r\n        <button type=\"button\" class=\"close pull-right\" aria-label=\"Close\" (click)=\"template.hide()\">\r\n          <span aria-hidden=\"true\">&times;</span>\r\n        </button>\r\n      </div>\r\n      <div class=\"modal-body\">\r\n        <form>\r\n\r\n          <div class=\"row\" id=\"search-list\">\r\n            <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\">\r\n              <div class=\"panel\">\r\n                <table class=\"table table-striped list-table\">\r\n                  <thead>\r\n                    <tr>\r\n                      <th class=\"table-header-list\" width=\"25%\">選択</th>\r\n                      <th class=\"table-header-list\">検索条件名</th>\r\n                      <th class=\"table-header-list\">登録日時</th>\r\n                    </tr>\r\n                  </thead>\r\n                  <tbody>\r\n                    <tr *ngFor=\"let data of condList\">\r\n                      <td class=\"status-list\"><input #rdoSel type=\"radio\" name=\"rdoCondId\" value={{data?.condId}} [(ngModel)]=\"rdoCondId\"></td>\r\n                      <td class=\"char-list\">{{data?.condNm}}</td>\r\n                      <td class=\"status-list\">{{data?.insDate}}</td>\r\n                    </tr>\r\n                  </tbody>\r\n                </table>\r\n              </div>\r\n            </div>\r\n          </div>\r\n          <div class=\"row\">\r\n            <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12 save-button text-right\">\r\n              <button type=\"button\" class=\"btn btn-danger\" (click)=\"conditionDelete()\">削除</button>\r\n            </div>\r\n          </div>\r\n        </form>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>"
 
 /***/ }),
 
@@ -1901,29 +2573,49 @@ var ConditionDeleteModalComponent = (function () {
     function ConditionDeleteModalComponent(route, jsonpService) {
         this.route = route;
         this.jsonpService = jsonpService;
+        // listイベント(親コンポーネントのメソッド呼び出し)
+        this.conDelButtonshowDelFlg = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["x" /* EventEmitter */]();
+        this.changeCondition = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["x" /* EventEmitter */]();
         this.condList = [];
-        this.condNm = "";
-        this.rdoCondNm = "";
+        this.rdoCondId = "";
+        this.showDelFlg = false;
     }
     // モーダル表示
-    ConditionDeleteModalComponent.prototype.openModal = function (condName) {
+    ConditionDeleteModalComponent.prototype.openModal = function (condId) {
         var _this = this;
-        this.template.show();
         // パラメータの作成
-        var ps = new __WEBPACK_IMPORTED_MODULE_2__angular_http__["c" /* URLSearchParams */]();
+        var ps = new __WEBPACK_IMPORTED_MODULE_2__angular_http__["e" /* URLSearchParams */]();
         // 検索項目の検索
         this.jsonpService.requestGet('IncidentListConditionDelete.php', ps)
             .subscribe(function (data) {
-            // 通信成功時
-            console.log('成功。');
-            console.log(data);
-            // 画面表示パラメータのセット処理
-            _this.setDspParam(data);
-            if (condName == null || condName == "") {
-                _this.rdoCondNm = data[0].COND_NM;
-            }
-            else {
-                _this.rdoCondNm = condName;
+            if (data[0]) {
+                var list = data[0];
+                if (list.result !== '' && list.result == true) {
+                    data = data.slice(1); // 配列1つ目は、サーバ処理成功フラグなので除外
+                    // 通信成功時
+                    console.log('成功。');
+                    console.log(data);
+                    if (data.length == 0) {
+                        _this.showDelFlg = false;
+                        _this.conDelButtonshowDelFlg.emit({ "showDelFlg": _this.showDelFlg });
+                        _this.changeCondition.emit(""); // 検索条件が変更された
+                        _this.template.hide();
+                    }
+                    else {
+                        _this.template.show();
+                        // 画面表示パラメータのセット処理
+                        _this.setDspParam(data);
+                        if (condId == null || condId == "") {
+                            _this.rdoCondId = data[0].condId;
+                        }
+                        else {
+                            _this.rdoCondId = condId;
+                        }
+                        _this.showDelFlg = true;
+                        _this.conDelButtonshowDelFlg.emit({ "showDelFlg": _this.showDelFlg });
+                        _this.changeCondition.emit(""); // 検索条件が変更された
+                    }
+                }
             }
         }, function (error) {
             // 通信失敗もしくは、コールバック関数内でエラー
@@ -1949,18 +2641,25 @@ var ConditionDeleteModalComponent = (function () {
     ConditionDeleteModalComponent.prototype.conditionDeleteTrue = function () {
         var _this = this;
         // 検索パラメータの作成
-        var ps = new __WEBPACK_IMPORTED_MODULE_2__angular_http__["c" /* URLSearchParams */]();
-        ps.set("condNm", this.rdoCondNm);
+        var ps = new __WEBPACK_IMPORTED_MODULE_2__angular_http__["e" /* URLSearchParams */]();
+        ps.set("condId", this.rdoCondId);
         // 検索項目削除
         this.jsonpService.requestGet('IncidentListConditionDeleteRun.php', ps)
             .subscribe(function (data) {
-            // 通信成功時
-            console.log('成功。');
-            _this.openModal(null);
+            if (data[0]['resultFlg'] == '0') {
+                // 通信成功時
+                console.log('成功。');
+                alert(data[0]['resultMsg']);
+                _this.openModal(null);
+            }
+            else {
+                alert(data[0]['resultMsg']);
+            }
         }, function (error) {
             // 通信失敗もしくは、コールバック関数内でエラー
             console.log(error);
             console.log('サーバとのアクセスに失敗しました。');
+            alert("削除に失敗しました");
             return false;
         });
     };
@@ -1970,16 +2669,24 @@ __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_16" /* ViewChild */])('template'),
     __metadata("design:type", Object)
 ], ConditionDeleteModalComponent.prototype, "template", void 0);
+__decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["T" /* Output */])(),
+    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["x" /* EventEmitter */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["x" /* EventEmitter */]) === "function" && _a || Object)
+], ConditionDeleteModalComponent.prototype, "conDelButtonshowDelFlg", void 0);
+__decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["T" /* Output */])(),
+    __metadata("design:type", typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["x" /* EventEmitter */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["x" /* EventEmitter */]) === "function" && _b || Object)
+], ConditionDeleteModalComponent.prototype, "changeCondition", void 0);
 ConditionDeleteModalComponent = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
         selector: 'conditionDelete-modal',
         template: __webpack_require__("../../../../../src/app/modal/conditionDelete.modal.component.html"),
         styles: [__webpack_require__("../../../../../src/app/modal/modal.component.css")]
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3__jsonp_service__["a" /* JsonpService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__jsonp_service__["a" /* JsonpService */]) === "function" && _b || Object])
+    __metadata("design:paramtypes", [typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_3__jsonp_service__["a" /* JsonpService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__jsonp_service__["a" /* JsonpService */]) === "function" && _d || Object])
 ], ConditionDeleteModalComponent);
 
-var _a, _b;
+var _a, _b, _c, _d;
 //# sourceMappingURL=conditionDelete.modal.component.js.map
 
 /***/ }),
@@ -2017,6 +2724,9 @@ var ConditionSaveModalComponent = (function () {
     function ConditionSaveModalComponent(route, jsonpService) {
         this.route = route;
         this.jsonpService = jsonpService;
+        // listイベント(親コンポーネントのメソッド呼び出し)
+        this.conDelButtonshowDelFlg = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["x" /* EventEmitter */]();
+        this.changeCondition = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["x" /* EventEmitter */]();
         this.hidden_condition = null;
         this.condList = [];
         this.condNm = null;
@@ -2067,7 +2777,7 @@ var ConditionSaveModalComponent = (function () {
     ConditionSaveModalComponent.prototype.conditionSaveTrue = function () {
         var _this = this;
         // 検索パラメータの作成
-        var ps = new __WEBPACK_IMPORTED_MODULE_2__angular_http__["c" /* URLSearchParams */]();
+        var ps = new __WEBPACK_IMPORTED_MODULE_2__angular_http__["e" /* URLSearchParams */]();
         ps.set("condNm", this.condNm);
         // 検索条件設定
         // インシデント分類
@@ -2110,7 +2820,9 @@ var ConditionSaveModalComponent = (function () {
         // 設備
         ps.set("setubiNm", this.hidden_condition[26]);
         // 都道府県
-        ps.set("prefCd", this.hidden_condition[27]);
+        if (this.hidden_condition[27] != 0) {
+            ps.set("prefCd", this.hidden_condition[27]);
+        }
         // 顧客
         ps.set("custNm", this.hidden_condition[28]);
         // 顧客分類
@@ -2139,17 +2851,20 @@ var ConditionSaveModalComponent = (function () {
             // 通信成功時
             console.log('成功。');
             console.log(data);
-            if (data[0]['resultFlg'] == true) {
-                alert(data[1]['resultMsg']);
+            if (data[0]['resultFlg'] == '0') {
+                alert(data[0]['resultMsg']);
+                _this.conDelButtonshowDelFlg.emit({ "showDelFlg": true });
+                _this.changeCondition.emit(""); // 検索条件が変更された
                 _this.template.hide();
             }
             else {
-                alert(data[1]['resultMsg']);
+                alert(data[0]['resultMsg']);
             }
         }, function (error) {
             // 通信失敗もしくは、コールバック関数内でエラー
             console.log(error);
             console.log('サーバとのアクセスに失敗しました。');
+            alert('登録に失敗しました');
             return false;
         });
     };
@@ -2173,16 +2888,24 @@ __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_16" /* ViewChild */])('template'),
     __metadata("design:type", Object)
 ], ConditionSaveModalComponent.prototype, "template", void 0);
+__decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["T" /* Output */])(),
+    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["x" /* EventEmitter */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["x" /* EventEmitter */]) === "function" && _a || Object)
+], ConditionSaveModalComponent.prototype, "conDelButtonshowDelFlg", void 0);
+__decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["T" /* Output */])(),
+    __metadata("design:type", typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["x" /* EventEmitter */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["x" /* EventEmitter */]) === "function" && _b || Object)
+], ConditionSaveModalComponent.prototype, "changeCondition", void 0);
 ConditionSaveModalComponent = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
         selector: 'conditionSave-modal',
         template: __webpack_require__("../../../../../src/app/modal/conditionSave.modal.component.html"),
         styles: [__webpack_require__("../../../../../src/app/modal/modal.component.css")]
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3__jsonp_service__["a" /* JsonpService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__jsonp_service__["a" /* JsonpService */]) === "function" && _b || Object])
+    __metadata("design:paramtypes", [typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_3__jsonp_service__["a" /* JsonpService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__jsonp_service__["a" /* JsonpService */]) === "function" && _d || Object])
 ], ConditionSaveModalComponent);
 
-var _a, _b;
+var _a, _b, _c, _d;
 //# sourceMappingURL=conditionSave.modal.component.js.map
 
 /***/ }),
@@ -2357,7 +3080,7 @@ var _a;
 /***/ "../../../../../src/app/modal/incidentSearch.modal.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<!--\n//*****************************************************************************\n//\tシステム名　　　：インシデント管理システム\n//\tサブシステム名　：\n//\t画面名　　　　　：インシデントモーダル部品\n//\t作成日付・作成者：2017.12.06 ADF)S.Yoshida\n//\t修正履歴　　　　：\n//*****************************************************************************\n-->\n\n<div bsModal #template=\"bs-modal\" class=\"modal fade\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"myLargeModalLabel\" aria-hidden=\"true\">\n  <div class=\"modal-dialog modal-lg\">\n    <div class=\"modal-content\">\n      <div class=\"modal-header bg-danger\">\n        <h4 class=\"modal-title pull-left\">\n          <strong>インシデントの検索</strong>\n        </h4>\n        <button type=\"button\" class=\"close pull-right\" aria-label=\"Close\" (click)=\"template.hide()\">\n          <span aria-hidden=\"true\">&times;</span>\n        </button>\n      </div>\n      <div class=\"modal-body\">\n        <form>\n\n          <div class=\"row\">\n            <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12 transition-button text-right\">\n              <!--<button type=\"button\" class=\"btn btn-danger btn-mini\">-->\n              <button type=\"button\" (click)=\"clearIncidentSearch()\" class=\"btn btn-danger btn-mini\">\n                リセット\n              </button>\n              <button type=\"button\" class=\"btn btn-danger btn-mini\">\n                <i class=\"fa fa-search\"></i> 検索\n              </button>\n            </div>\n          </div>\n\n          <div class=\"row\">\n            <div class=\"col-lg-3 col-md-4 col-sm-4 col-xs-5 label-padding\">\n              <div class=\"row\">\n                <label class=\"col-lg-9 col-md-9 col-sm-9 col-xs-9 col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-offset-1 bg-warning text-center input-label\">\n                  インシデント番号\n                </label>\n              </div>\n            </div>\n            <div class=\"col-lg-5 col-md-4 col-sm-6 col-xs-5\">\n              <!--<input type=\"text\" class=\"form-control\" >-->\n              <input name=\"searchIncidentNo\" type=\"text\" class=\"form-control\" [(ngModel)]=\"searchIncidentNo\">\n            </div>\n          </div>\n          <div class=\"row\">\n            <div class=\"col-lg-3 col-md-4 col-sm-4 col-xs-5 label-padding\">\n              <div class=\"row\">\n                <label class=\"col-lg-9 col-md-9 col-sm-9 col-xs-9 col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-offset-1 bg-warning text-center input-label\">\n                  受付内容\n                </label>\n              </div>\n            </div>\n            <div class=\"col-lg-5 col-md-4 col-sm-6 col-xs-5\">\n              <!--<input type=\"text\" class=\"form-control\">-->\n              <input name=\"searchMemo\" type=\"text\" class=\"form-control\" [(ngModel)]=\"searchMemo\">\n            </div>\n          </div>\n          <div class=\"row\">\n            <div class=\"col-lg-3 col-md-4 col-sm-4 col-xs-5 label-padding\">\n              <div class=\"row\">\n                <label class=\"col-lg-9 col-md-9 col-sm-9 col-xs-9 col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-offset-1 bg-warning text-center input-label\">\n                  受付日\n                </label>\n              </div>\n            </div>\n            <div class=\"col-lg-6 col-md-6 col-sm-7 col-xs-7\">\n              <div class=\"date-div\">\n                <div class=\"input-group\">\n                  <!--<input type=\"text\" class=\"form-control\">-->\n                  <input name=\"searchIncidentStartDateTime\" type=\"text\" class=\"form-control\" [(ngModel)]=\"searchIncidentStartDateTime\">\n                  <span class=\"input-group-btn\">\n                    <button type=\"button\" class=\"btn btn-input-support\">\n                      <i class=\"fa fa-calendar\"></i>\n                    </button>\n                  </span>\n                </div>\n              </div>\n              <span class=\"text-center inner-text\">～</span>\n              <div class=\"date-div\">\n                <div class=\"input-group\">\n                  <!--<input type=\"text\" class=\"form-control\">-->\n                  <input name=\"searchIncidentEndDateTime\" type=\"text\" class=\"form-control\" [(ngModel)]=\"searchIncidentEndDateTime\">\n                  <span class=\"input-group-btn\">\n                    <button type=\"button\" class=\"btn btn-input-support\">\n                      <i class=\"fa fa-calendar\"></i>\n                    </button>\n                  </span>\n                </div>\n              </div>\n            </div>\n          </div>\n          <div class=\"row\">\n            <div class=\"col-lg-3 col-md-4 col-sm-4 col-xs-5 label-padding\">\n              <div class=\"row\">\n                <label class=\"col-lg-9 col-md-9 col-sm-9 col-xs-9 col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-offset-1 bg-warning text-center input-label\">\n                  インシデント分類\n                </label>\n              </div>\n            </div>\n            <div class=\"col-lg-9 col-md-8 col-sm-8 col-xs-7\">\n              <div class=\"checkbox\">\n                <label class=\"input-item\">\n                  <!--<input type=\"checkbox\" value=\"\" > 障害-->\n                  <input name=\"searchIncidentType1\" type=\"checkbox\" value=\"\" [(ngModel)]=\"searchIncidentType1\"> 障害\n                </label>\n                <label class=\"input-item\">\n                  <!--<input type=\"checkbox\" value=\"\"> 事故-->\n                  <input name=\"searchIncidentType2\" type=\"checkbox\" value=\"\" [(ngModel)]=\"searchIncidentType2\"> 事故\n                </label>\n                <label class=\"input-item\">\n                  <!--<input type=\"checkbox\" value=\"\"> クレーム-->\n                  <input name=\"searchIncidentType3\" type=\"checkbox\" value=\"\" [(ngModel)]=\"searchIncidentType3\"> クレーム\n                </label>\n                <label class=\"input-item\">\n                  <!--<input type=\"checkbox\" value=\"\"> 問合せ-->\n                  <input name=\"searchIncidentType4\" type=\"checkbox\" value=\"\" [(ngModel)]=\"searchIncidentType4\"> 問合せ\n                </label>\n                <label class=\"input-item\">\n                  <!--<input type=\"checkbox\" value=\"\"> 情報-->\n                  <input name=\"searchIncidentType5\" type=\"checkbox\" value=\"\" [(ngModel)]=\"searchIncidentType5\"> 情報\n                </label>\n                <label class=\"input-item\">\n                  <!--<input type=\"checkbox\" value=\"\"> その他-->\n                  <input name=\"searchIncidentType6\" type=\"checkbox\" value=\"\" [(ngModel)]=\"searchIncidentType6\"> その他\n                </label>\n              </div>\n            </div>\n          </div>\n          <div class=\"row\">\n            <div class=\"col-lg-3 col-md-4 col-sm-4 col-xs-5 label-padding\">\n              <div class=\"row\">\n                <label class=\"col-lg-9 col-md-9 col-sm-9 col-xs-9 col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-offset-1 bg-warning text-center input-label\">\n                  ステータス\n                </label>\n              </div>\n            </div>\n            <div class=\"col-lg-9 col-md-8 col-sm-8 col-xs-7\">\n              <div class=\"checkbox\">\n                <label class=\"input-item\">\n                  <!--<input type=\"checkbox\" value=\"\"> 受付済-->\n                  <input name=\"searchIncidentStatus1\" type=\"checkbox\" value=\"\" [(ngModel)]=\"searchIncidentStatus1\"> 受付済\n                </label>\n                <label class=\"input-item\">\n                  <!--<input type=\"checkbox\" value=\"\"> 対応入力済-->\n                  <input name=\"searchIncidentStatus2\" type=\"checkbox\" value=\"\" [(ngModel)]=\"searchIncidentStatus2\"> 受付済\n                </label>\n                <label class=\"input-item\">\n                  <!--<input type=\"checkbox\" value=\"\"> 処置入力済-->\n                  <input name=\"searchIncidentStatus3\" type=\"checkbox\" value=\"\" [(ngModel)]=\"searchIncidentStatus3\"> 受付済\n                </label>\n              </div>\n            </div>\n          </div>\n\n          <div class=\"row\">\n            <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12 search-result-info\">\n              検索結果：　100件\n            </div>\n          </div>\n\n          <div class=\"row\">\n            <div class=\"col-lg-6 col-md-6 col-sm-7 col-xs-8\">\n              <pagination name=\"paging1\" [boundaryLinks]=\"true\" [totalItems]=\"bigTotalItems\" [(ngModel)]=\"currentPage\" [maxSize]=\"maxSize\"\n                class=\"pagination-sm\" [rotate]=\"false\" previousText=\"&lsaquo;\" nextText=\"&rsaquo;\" firstText=\"&laquo;\" lastText=\"&raquo;\"></pagination>\n            </div>\n            <div class=\"col-lg-offset-4 col-md-offset-4 col-sm-offset-2 col-lg-2 col-md-2 col-sm-3 col-xs-4\">\n              <input name=\"itemperPage\" [(ngModel)]=\"itemsPerPage\" type=\"text\" class=\"itemsPerPage\"> 件/頁\n            </div>\n          </div>\n\n          <div class=\"row\" id=\"search-list\">\n            <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\">\n              <div class=\"panel\">\n                <table class=\"table table-striped list-table\">\n                  <thead>\n                    <tr>\n                      <th class=\"table-header-list\"></th>\n                      <th class=\"table-header-list incident-no-th\">インシデント番号 </th>\n                      <th class=\"table-header-list\" width=\"25%\"> 受付内容</th>\n                      <th class=\"table-header-list\">\n                        受付日\n                        <i class=\"fa fa-caret-down\"></i>\n                      </th>\n                      <th class=\"table-header-list\"> 分類 </th>\n                      <th class=\"table-header-list\"> ステータス </th>\n                    </tr>\n                  </thead>\n                  <tbody>\n                    <tr *ngFor=\"let data of incidentList\">\n                      <td class=\"code-list\">\n                        <button type=\"button\" class=\"btn btn-danger btn-mini\">\n                          選択\n                        </button>\n                      </td>\n                      <td class=\"code-list\">{{data.incidentNo}}</td>\n                      <td class=\"char-list\">{{data?.memo | slice: 0:20 }}\n                        <span *ngIf=\"data?.memo.length >= 20\">…</span>\n                      </td>\n                      <td class=\"date-list\">{{data.callDate}}</td>\n                      <td class=\"status-list\">{{data.incidentType}}</td>\n                      <td class=\"status-list\">{{data.incidentStatus}}</td>\n                    </tr>\n                  </tbody>\n                </table>\n              </div>\n            </div>\n          </div>\n\n          <div class=\"row\">\n            <div class=\"col-lg-6 col-md-6 col-sm-7 col-xs-8\">\n              <pagination name=\"paging2\" [boundaryLinks]=\"true\" [totalItems]=\"bigTotalItems\" [(ngModel)]=\"currentPage\" [maxSize]=\"maxSize\"\n                class=\"pagination-sm\" [rotate]=\"false\" previousText=\"&lsaquo;\" nextText=\"&rsaquo;\" firstText=\"&laquo;\" lastText=\"&raquo;\"></pagination>\n            </div>\n          </div>\n\n        </form>\n      </div>\n    </div>\n  </div>\n</div>"
+module.exports = "<!--\r\n//*****************************************************************************\r\n//\tシステム名　　　：インシデント管理システム\r\n//\tサブシステム名　：\r\n//\t画面名　　　　　：インシデントモーダル部品\r\n//\t作成日付・作成者：2018-01-18 · newtouch\r\n//\t修正履歴　　　　：\r\n//*****************************************************************************\r\n-->\r\n\r\n<div bsModal #template=\"bs-modal\" class=\"modal fade\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"myLargeModalLabel\" aria-hidden=\"true\">\r\n  <div class=\"modal-dialog modal-lg\">\r\n    <div class=\"modal-content\">\r\n      <div class=\"modal-header bg-danger\">\r\n        <h4 class=\"modal-title pull-left\">\r\n          <strong>インシデントの検索</strong>\r\n        </h4>\r\n        <button type=\"button\" class=\"close pull-right\" aria-label=\"Close\" (click)=\"template.hide()\">\r\n          <span aria-hidden=\"true\">&times;</span>\r\n        </button>\r\n      </div>\r\n      <div class=\"modal-body\">\r\n        <form>\r\n\r\n          <div class=\"row\">\r\n            <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12 transition-button text-right\">\r\n              <button type=\"button\" class=\"btn btn-danger btn-mini\" (click)=\"clearIncidentSearch()\">\r\n                リセット\r\n              </button>\r\n              <button type=\"button\" class=\"btn btn-danger btn-mini\" (click)=\"search()\">\r\n                <i class=\"fa fa-search\"></i> 検索\r\n              </button>\r\n            </div>\r\n          </div>\r\n\r\n          <div class=\"row\">\r\n            <div class=\"col-lg-3 col-md-4 col-sm-4 col-xs-5 label-padding\">\r\n              <div class=\"row\">\r\n                <label class=\"col-lg-9 col-md-9 col-sm-9 col-xs-9 col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-offset-1 bg-warning text-center input-label\">\r\n                  インシデント番号\r\n                </label>\r\n              </div>\r\n            </div>\r\n            <div class=\"col-lg-5 col-md-4 col-sm-6 col-xs-5\">\r\n              <input name=\"searchIncidentNo\" type=\"text\" class=\"form-control\" [(ngModel)]=\"searchIncidentNo\">\r\n            </div>\r\n          </div>\r\n          <div class=\"row\">\r\n            <div class=\"col-lg-3 col-md-4 col-sm-4 col-xs-5 label-padding\">\r\n              <div class=\"row\">\r\n                <label class=\"col-lg-9 col-md-9 col-sm-9 col-xs-9 col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-offset-1 bg-warning text-center input-label\">\r\n                  受付内容\r\n                </label>\r\n              </div>\r\n            </div>\r\n            <div class=\"col-lg-5 col-md-4 col-sm-6 col-xs-5\">\r\n              <input name=\"searchCallContent\" type=\"text\" class=\"form-control\" [(ngModel)]=\"searchCallContent\">\r\n            </div>\r\n          </div>\r\n          <div class=\"row\">\r\n            <div class=\"col-lg-3 col-md-4 col-sm-4 col-xs-5 label-padding\">\r\n              <div class=\"row\">\r\n                <label class=\"col-lg-9 col-md-9 col-sm-9 col-xs-9 col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-offset-1 bg-warning text-center input-label\">\r\n                  受付日\r\n                </label>\r\n              </div>\r\n            </div>\r\n            <div class=\"col-lg-6 col-md-6 col-sm-7 col-xs-7\">\r\n                <div class=\"date-div\">\r\n                  <div class=\"input-group\">\r\n                    <input name=\"txt_callStartDateFrom\" type=\"text\" class=\"form-control\" #dpCallStartDateFrom=\"bsDatepicker\" bsDatepicker [bsConfig]=\"bsConfig\"\r\n                      [(bsValue)]=\"searchCallStartDateFrom\" value=\"{{searchCallStartDateFrom | date:'yyyy/MM/dd'}}\">\r\n                    <span class=\"input-group-btn\">\r\n                      <button type=\"button\" class=\"btn btn-input-support\" (click)=\"dpCallStartDateFrom.toggle()\">\r\n                        <i class=\"fa fa-calendar\"></i>\r\n                      </button>\r\n                    </span>\r\n                  </div>\r\n                </div>\r\n                <span class=\"text-center inner-text\">～</span>\r\n                <div class=\"date-div\">\r\n                  <div class=\"input-group\">\r\n                    <input name=\"txt_callStartDateTo\" type=\"text\" class=\"form-control\" #dpCallStartDateTo=\"bsDatepicker\" bsDatepicker [bsConfig]=\"bsConfig\"\r\n                      [(bsValue)]=\"searchCallStartDateTo\" value=\"{{searchCallStartDateTo | date:'yyyy/MM/dd'}}\">\r\n                    <span class=\"input-group-btn\">\r\n                      <button type=\"button\" class=\"btn btn-input-support\" (click)=\"dpCallStartDateTo.toggle()\">\r\n                        <i class=\"fa fa-calendar\"></i>\r\n                      </button>\r\n                    </span>\r\n                  </div>\r\n                </div>\r\n              </div>\r\n          </div>\r\n          <div class=\"row\">\r\n            <div class=\"col-lg-3 col-md-4 col-sm-4 col-xs-5 label-padding\">\r\n              <div class=\"row\">\r\n                <label class=\"col-lg-9 col-md-9 col-sm-9 col-xs-9 col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-offset-1 bg-warning text-center input-label\">\r\n                  インシデント分類\r\n                </label>\r\n              </div>\r\n            </div>\r\n            <div class=\"col-lg-9 col-md-8 col-sm-8 col-xs-7\">\r\n              <div class=\"checkbox\">\r\n                <label class=\"input-item\">\r\n                  <input name=\"searchIncidentTypeSyougai\" type=\"checkbox\" value=\"1\" [(ngModel)]=\"searchIncidentTypeSyougai\"> 障害\r\n                </label>\r\n                <label class=\"input-item\">\r\n                  <input name=\"searchIncidentTypeJiko\" type=\"checkbox\" value=\"2\" [(ngModel)]=\"searchIncidentTypeJiko\"> 事故\r\n                </label>\r\n                <label class=\"input-item\">\r\n                  <input name=\"searchIncidentTypeClaim\"  type=\"checkbox\" value=\"3\" [(ngModel)]=\"searchIncidentTypeClaim\"> クレーム\r\n                </label>\r\n                <label class=\"input-item\">\r\n                  <input name=\"searchIncidentTypeToiawase\"  type=\"checkbox\" value=\"4\" [(ngModel)]=\"searchIncidentTypeToiawase\"> 問合せ\r\n                </label>\r\n                <label class=\"input-item\">\r\n                  <input name=\"searchIncidentTypeInfo\"  type=\"checkbox\" value=\"5\" [(ngModel)]=\"searchIncidentTypeInfo\"> 情報\r\n                </label>\r\n                <label class=\"input-item\">\r\n                  <input name=\"searchIncidentTypeOther\"  type=\"checkbox\" value=\"6\" [(ngModel)]=\"searchIncidentTypeOther\"> その他\r\n                </label>\r\n              </div>\r\n            </div>\r\n          </div>\r\n          <div class=\"row\">\r\n            <div class=\"col-lg-3 col-md-4 col-sm-4 col-xs-5 label-padding\">\r\n              <div class=\"row\">\r\n                <label class=\"col-lg-9 col-md-9 col-sm-9 col-xs-9 col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-offset-1 bg-warning text-center input-label\">\r\n                  ステータス\r\n                </label>\r\n              </div>\r\n            </div>\r\n            <div class=\"col-lg-9 col-md-8 col-sm-8 col-xs-7\">\r\n              <div class=\"checkbox\">\r\n                <label class=\"input-item\">\r\n                  <input name=\"searchIncidentStatusCall\" type=\"checkbox\" value=\"1\" [(ngModel)]=\"searchIncidentStatusCall\"> 受付済\r\n                </label>\r\n                <label class=\"input-item\">\r\n                  <input name=\"searchIncidentStatusTaio\" type=\"checkbox\" value=\"2\" [(ngModel)]=\"searchIncidentStatusTaio\"> 対応入力済\r\n                </label>\r\n                <label class=\"input-item\">\r\n                  <input name=\"searchIncidentStatusAct\" type=\"checkbox\" value=\"3\" [(ngModel)]=\"searchIncidentStatusAct\"> 処置入力済\r\n                </label>\r\n              </div>\r\n            </div>\r\n          </div>\r\n\r\n          <div class=\"row\">\r\n            <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12 search-result-info\">\r\n              検索結果：　{{bigTotalItems}}件\r\n            </div>\r\n          </div>\r\n\r\n          <div class=\"row\">\r\n              <div class=\"col-lg-6 col-md-6 col-sm-7 col-xs-8\">\r\n                <pagination name=\"paging1\" [boundaryLinks]=\"true\" [totalItems]=\"bigTotalItems\" [(ngModel)]=\"currentPage\" [maxSize]=\"maxSize\" [itemsPerPage]=\"itemsPerPage\"\r\n                  class=\"pagination-sm\" [rotate]=\"false\" previousText=\"&lsaquo;\" nextText=\"&rsaquo;\" firstText=\"&laquo;\" lastText=\"&raquo;\" (click)=\"pageChanged($event)\"></pagination>\r\n              </div>\r\n              <div class=\"col-lg-offset-4 col-md-offset-4 col-sm-offset-2 col-lg-2 col-md-2 col-sm-3 col-xs-4\">\r\n                <input name=\"itemperPage\" [(ngModel)]=\"itemsPerPage\" type=\"text\" class=\"itemsPerPage\" (input)=\"pageChanged()\"> 件/頁\r\n              </div>\r\n            </div>\r\n\r\n          <div class=\"row\" id=\"search-list\">\r\n            <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\">\r\n              <div class=\"panel\">\r\n                <table class=\"table table-striped list-table\">\r\n                  <thead>\r\n                    <tr>\r\n                      <th class=\"table-header-list\"></th>\r\n                      <th class=\"table-header-list incident-no-th\">インシデント番号 </th>\r\n                      <th class=\"table-header-list\" width=\"25%\"> 受付内容</th>\r\n                      <th class=\"table-header-list\">\r\n                        受付日\r\n                        <i class=\"fa fa-caret-down\"></i>\r\n                      </th>\r\n                      <th class=\"table-header-list\"> 分類 </th>\r\n                      <th class=\"table-header-list\"> ステータス </th>\r\n                    </tr>\r\n                  </thead>\r\n                  <tbody>\r\n                    <tr *ngFor=\"let data of incidentList | slice: start: end\">\r\n                      <td class=\"code-list\">\r\n                        <button type=\"button\" class=\"btn btn-danger btn-mini\" (click)=\"onSelect(data?.incidentId,data?.incidentNo)\">\r\n                          選択\r\n                        </button>\r\n                      </td>\r\n                      <td class=\"code-list\">{{data.incidentNo}}</td>\r\n                      <td class=\"char-list\">{{data?.callContent | slice: 0:20 }}\r\n                        <span *ngIf=\"data?.callContent.length >= 20\">…</span>\r\n                      </td>\r\n                      <td class=\"date-list\">{{data?.callDate | date:'yyyy/MM/dd'}}</td>\r\n                      <td class=\"status-list\">{{data.incidentTypeString}}</td>\r\n                      <td class=\"status-list\">{{data.incidentStatusString}}</td>\r\n                    </tr>\r\n                  </tbody>\r\n                </table>\r\n              </div>\r\n            </div>\r\n          </div>\r\n\r\n          <div class=\"row\">\r\n              <div class=\"col-lg-6 col-md-6 col-sm-7 col-xs-8\">\r\n                <pagination name=\"paging2\" [boundaryLinks]=\"true\" [totalItems]=\"bigTotalItems\" [(ngModel)]=\"currentPage\" [maxSize]=\"maxSize\" [itemsPerPage]=\"itemsPerPage\"\r\n                  class=\"pagination-sm\" [rotate]=\"false\" previousText=\"&lsaquo;\" nextText=\"&rsaquo;\" firstText=\"&laquo;\" lastText=\"&raquo;\" (click)=\"pageChanged($event)\"></pagination>\r\n              </div>\r\n            </div>\r\n\r\n        </form>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>"
 
 /***/ }),
 
@@ -2367,7 +3090,10 @@ module.exports = "<!--\n//******************************************************
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return IncidentSearchModalComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ngx_bootstrap_modal__ = __webpack_require__("../../../../ngx-bootstrap/modal/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__("../../../http/@angular/http.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ngx_bootstrap_modal__ = __webpack_require__("../../../../ngx-bootstrap/modal/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__jsonp_service__ = __webpack_require__("../../../../../src/app/jsonp.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_common__ = __webpack_require__("../../../common/@angular/common.es5.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2379,127 +3105,129 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
+
+
+
 var IncidentSearchModalComponent = (function () {
-    function IncidentSearchModalComponent(modalService) {
+    function IncidentSearchModalComponent(modalService, jsonpService, datePipe) {
         this.modalService = modalService;
+        this.jsonpService = jsonpService;
+        this.datePipe = datePipe;
+        // インシデント検索イベント
+        this.incidentSearchSelect = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["x" /* EventEmitter */]();
         // 検索条件
         this.searchIncidentNo = "";
-        this.searchMemo = "";
-        this.searchIncidentStartDateTime = "";
-        this.searchIncidentEndDateTime = "";
-        this.searchIncidentType1 = "";
-        this.searchIncidentType2 = "";
-        this.searchIncidentType3 = "";
-        this.searchIncidentType4 = "";
-        this.searchIncidentType5 = "";
-        this.searchIncidentType6 = "";
-        this.searchIncidentStatus1 = "";
-        this.searchIncidentStatus2 = "";
-        this.searchIncidentStatus3 = "";
+        this.searchCallContent = "";
+        this.searchCallStartDateFrom = "";
+        this.searchCallStartDateTo = "";
+        this.searchIncidentType = "";
+        this.searchIncidentTypeSyougai = "";
+        this.searchIncidentTypeJiko = "";
+        this.searchIncidentTypeClaim = "";
+        this.searchIncidentTypeToiawase = "";
+        this.searchIncidentTypeInfo = "";
+        this.searchIncidentTypeOther = "";
+        this.searchIncidentStatus = "";
+        this.searchIncidentStatusCall = "";
+        this.searchIncidentStatusTaio = "";
+        this.searchIncidentStatusAct = "";
         // ページングの設定
-        this.maxSize = 5;
-        this.bigTotalItems = 100;
-        this.bigCurrentPage = 1;
-        this.numPages = 0;
-        this.itemsPerPage = 10;
-        // TODO 一時表示用　固定インシデント情報 
-        this.incidentList = [
-            {
-                "incidentNo": "2017091000", "incidentStatus": "処置入力済", "incidentType": "障害", "incidentTypeValue": 1,
-                "memo": "中央監視装置の障害。西浄化センターにて、10時過ぎから中央監視装置全てからの操作・監視ができなくなった。なお、エラー表示、メッセージ等は出ていない。当方現場に向かっている最中なので詳細は分からない。監視装置(LCD)は4台である。連絡先は、事務所へ願いたい。特に担当者は指定しない。",
-                "kijoNm": "秋田市仁井田浄水場", "setubiNm": "XXポンプ",
-                "prefNm": "秋田県", "incidentStartDateTime": "2017/09/20", "callDate": "2017/09/20",
-                "relatePj": "有", "relateJiko": "", "relateMr2": "有", "relateHiyo": "",
-            },
-            {
-                "incidentNo": "2017091020", "incidentStatus": "処置入力済", "incidentType": "問合せ", "incidentTypeValue": 3,
-                "memo": "中央監視装置の障害。",
-                "kijoNm": "万世橋浄水場", "setubiNm": "XYポンプ",
-                "prefNm": "東京都", "incidentStartDateTime": "2017/09/20", "callDate": "2017/09/20",
-                "relatePj": "", "relateJiko": "有", "relateMr2": "有", "relateHiyo": "",
-            },
-            {
-                "incidentNo": "2017091750", "incidentStatus": "対応入力済", "incidentType": "障害", "incidentTypeValue": 1,
-                "memo": "中央監視装置の障害。",
-                "kijoNm": "秋田浄水場", "setubiNm": "ポンプ",
-                "prefNm": "秋田県", "incidentStartDateTime": "2017/09/19", "callDate": "2017/09/19",
-                "relatePj": "", "relateJiko": "", "relateMr2": "", "relateHiyo": "有",
-            },
-            {
-                "incidentNo": "2017092050", "incidentStatus": "処置入力済", "incidentType": "問合せ", "incidentTypeValue": 3,
-                "memo": "中央監視装置の障害。西浄化センターにて、10時過ぎから中央監視装置全てからの操作・監視ができなくなった。なお、エラー表示、メッセージ等は出ていない。当方現場に向かっている最中なので詳細は分からない。監視装置(LCD)は4台である。連絡先は、事務所へ願いたい。特に担当者は指定しない。",
-                "kijoNm": "愛知浄水場", "setubiNm": "ポンプ",
-                "prefNm": "愛知県", "incidentStartDateTime": "2017/09/18", "callDate": "2017/09/18",
-                "relatePj": "有", "relateJiko": "有", "relateMr2": "", "relateHiyo": "",
-            },
-            {
-                "incidentNo": "2017096020", "incidentStatus": "受付済", "incidentType": "障害", "incidentTypeValue": 1,
-                "memo": "中央監視装置の障害。西浄化センターにて、10時過ぎから中央監視装置全てからの操作・監視ができなくなった。なお、エラー表示、メッセージ等は出ていない。当方現場に向かっている最中なので詳細は分からない。監視装置(LCD)は4台である。連絡先は、事務所へ願いたい。特に担当者は指定しない。",
-                "kijoNm": "神奈川浄水場", "setubiNm": "ポンプ",
-                "prefNm": "神奈川県", "incidentStartDateTime": "2017/09/17", "callDate": "2017/09/17",
-                "relatePj": "", "relateJiko": "", "relateMr2": "有", "relateHiyo": "",
-            },
-            {
-                "incidentNo": "2017093000", "incidentStatus": "処置入力済", "incidentType": "障害", "incidentTypeValue": 1,
-                "memo": "",
-                "kijoNm": "山梨浄水場", "setubiNm": "ポンプ",
-                "prefNm": "山梨県", "incidentStartDateTime": "2017/09/16", "callDate": "2017/09/16",
-                "relatePj": "", "relateJiko": "", "relateMr2": "有", "relateHiyo": "",
-            },
-            {
-                "incidentNo": "2017091310", "incidentStatus": "受付済", "incidentType": "障害", "incidentTypeValue": 1,
-                "memo": "中央監視装置の障害。西浄化センターにて、10時過ぎから中央監視装置全てからの操作・監視ができなくなった。なお、エラー表示、メッセージ等は出ていない。当方現場に向かっている最中なので詳細は分からない。監視装置(LCD)は4台である。連絡先は、事務所へ願いたい。特に担当者は指定しない。",
-                "kijoNm": "釧路浄水場", "setubiNm": "送水ポンプ",
-                "prefNm": "北海道", "incidentStartDateTime": "2017/09/15", "callDate": "2017/09/15",
-                "relatePj": "有", "relateJiko": "有", "relateMr2": "有", "relateHiyo": "",
-            },
-            {
-                "incidentNo": "2017097562", "incidentStatus": "処置入力済", "incidentType": "障害", "incidentTypeValue": 1,
-                "memo": "中央監視装置の障害。西浄化センターにて、10時過ぎから中央監視装置全てからの操作・監視ができなくなった。なお、エラー表示、メッセージ等は出ていない。当方現場に向かっている最中なので詳細は分からない。監視装置(LCD)は4台である。連絡先は、事務所へ願いたい。特に担当者は指定しない。",
-                "kijoNm": "釧路浄水場", "setubiNm": "送水ポンプ",
-                "prefNm": "東京都", "incidentStartDateTime": "2017/09/10", "callDate": "2017/09/10",
-                "relatePj": "", "relateJiko": "", "relateMr2": "有", "relateHiyo": "",
-            },
-            {
-                "incidentNo": "2017090534", "incidentStatus": "処置入力済", "incidentType": "事故", "incidentTypeValue": 2,
-                "memo": "中央監視装置の障害。西浄化センターにて、10時過ぎから中央監視装置全てからの操作・監視ができなくなった。なお、エラー表示、メッセージ等は出ていない。当方現場に向かっている最中なので詳細は分からない。監視装置(LCD)は4台である。連絡先は、事務所へ願いたい。特に担当者は指定しない。",
-                "kijoNm": "北総浄水場", "setubiNm": "床排水ポンプ",
-                "prefNm": "千葉県", "incidentStartDateTime": "2017/09/05", "callDate": "2017/09/05",
-                "relatePj": "有", "relateJiko": "有", "relateMr2": "", "relateHiyo": "",
-            },
-            {
-                "incidentNo": "2017092234", "incidentStatus": "受付済", "incidentType": "クレーム", "incidentTypeValue": 4,
-                "memo": "中央監視装置の障害。西浄化センターにて、10時過ぎから中央監視装置全てからの操作・監視ができなくなった。なお、エラー表示、メッセージ等は出ていない。当方現場に向かっている最中なので詳細は分からない。監視装置(LCD)は4台である。連絡先は、事務所へ願いたい。特に担当者は指定しない。",
-                "kijoNm": "福井浄水場", "setubiNm": "送水ポンプ",
-                "prefNm": "福井県", "incidentStartDateTime": "2017/09/01", "callDate": "2017/09/01",
-                "relatePj": "有", "relateJiko": "", "relateMr2": "有", "relateHiyo": "有",
-            }
-        ];
+        this.maxSize = 5; // ページングの表示ページ数
+        this.bigTotalItems = 0; // 総数
+        this.itemsPerPage = 10; // 1ページに表示する件数
+        this.currentPage = 0; // 現在表示しているページ
+        this.start = 0; // データ表示開始位置
+        this.end = 10; // データ表示終了位置
+        // インシデント情報検索結果リスト
+        this.incidentList = [];
     }
     // ページング処理
     IncidentSearchModalComponent.prototype.pageChanged = function (event) {
-        console.log('Page changed to: ' + event.page);
-        console.log('Number items per page: ' + event.itemsPerPage);
+        this.start = this.itemsPerPage * (this.currentPage - 1);
+        var tmpStart = +this.start;
+        var tmpItemsPerPage = +this.itemsPerPage;
+        this.end = tmpStart + tmpItemsPerPage;
     };
     // モーダル表示
     IncidentSearchModalComponent.prototype.openModal = function () {
+        this.clearIncidentSearch();
         this.template.show();
+        this.search();
     };
     // 検索条件の初期化
     IncidentSearchModalComponent.prototype.clearIncidentSearch = function () {
         this.searchIncidentNo = "";
-        this.searchMemo = "";
-        this.searchIncidentStartDateTime = "";
-        this.searchIncidentEndDateTime = "";
-        this.searchIncidentType1 = "";
-        this.searchIncidentType2 = "";
-        this.searchIncidentType3 = "";
-        this.searchIncidentType4 = "";
-        this.searchIncidentType5 = "";
-        this.searchIncidentType6 = "";
-        this.searchIncidentStatus1 = "";
-        this.searchIncidentStatus2 = "";
-        this.searchIncidentStatus3 = "";
+        this.searchCallContent = "";
+        this.searchCallStartDateFrom = "";
+        this.searchCallStartDateTo = "";
+        this.searchIncidentType = "";
+        this.searchIncidentTypeSyougai = "";
+        this.searchIncidentTypeJiko = "";
+        this.searchIncidentTypeClaim = "";
+        this.searchIncidentTypeToiawase = "";
+        this.searchIncidentTypeInfo = "";
+        this.searchIncidentTypeOther = "";
+        this.searchIncidentStatus = "";
+        this.searchIncidentStatusCall = "";
+        this.searchIncidentStatusTaio = "";
+        this.searchIncidentStatusAct = "";
+    };
+    // 検索処理
+    IncidentSearchModalComponent.prototype.search = function () {
+        var _this = this;
+        // 検索パラメータの作成
+        var ps = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["e" /* URLSearchParams */]();
+        ps.set("incidentNo", this.searchIncidentNo);
+        ps.set("callContent", this.searchCallContent);
+        ps.set("callStartDateFrom", this.datePipe.transform(this.searchCallStartDateFrom, 'yyyy/MM/dd'));
+        ps.set("callStartDateTo", this.datePipe.transform(this.searchCallStartDateTo, 'yyyy/MM/dd'));
+        ps.set("incidentType", this.searchIncidentType);
+        ps.set("incidentTypeSyougai", this.searchIncidentTypeSyougai);
+        ps.set("incidentTypeJiko", this.searchIncidentTypeJiko);
+        ps.set("incidentTypeClaim", this.searchIncidentTypeClaim);
+        ps.set("incidentTypeToiawase", this.searchIncidentTypeToiawase);
+        ps.set("incidentTypeInfo", this.searchIncidentTypeInfo);
+        ps.set("incidentTypeOther", this.searchIncidentTypeOther);
+        ps.set("incidentStatus", this.searchIncidentStatus);
+        ps.set("incidentStatusCall", this.searchIncidentStatusCall);
+        ps.set("incidentStatusTaio", this.searchIncidentStatusTaio);
+        ps.set("incidentStatusAct", this.searchIncidentStatusAct);
+        // 検索
+        this.jsonpService.commonRequestGet('IncidentListDataGet.php', ps)
+            .subscribe(function (data) {
+            // 通信成功時
+            console.group("IncidentSearchModalComponent.search() success");
+            console.log(data);
+            console.groupEnd();
+            if (data[0]) {
+                var list = data[0];
+                if (list.result !== '' && list.result == true) {
+                    // 画面表示パラメータのセット処理
+                    _this.setDspParam(data.slice(1)); // 配列1つ目は、サーバ処理成功フラグなので除外
+                }
+            }
+        }, function (error) {
+            // 通信失敗もしくは、コールバック関数内でエラー
+            console.group("IncidentSearchModalComponent.search() fail");
+            console.log('サーバとのアクセスに失敗しました。');
+            console.log(error);
+            console.groupEnd();
+            return false;
+        });
+    };
+    // 画面表示パラメータのセット処理
+    IncidentSearchModalComponent.prototype.setDspParam = function (data) {
+        // ページングの設定
+        this.bigTotalItems = data.length;
+        // インシデント情報 リストをセット
+        this.incidentList = data;
+    };
+    // 選択ボタンクリック
+    IncidentSearchModalComponent.prototype.onSelect = function (incidentId, incidentNo) {
+        // インシデント情報 
+        this.incidentSearchSelect.emit({ "incidentId": incidentId, "incidentNo": incidentNo });
+        // モーダルの非表示
+        this.template.hide();
     };
     return IncidentSearchModalComponent;
 }());
@@ -2507,16 +3235,21 @@ __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_16" /* ViewChild */])('template'),
     __metadata("design:type", Object)
 ], IncidentSearchModalComponent.prototype, "template", void 0);
+__decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["T" /* Output */])(),
+    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["x" /* EventEmitter */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["x" /* EventEmitter */]) === "function" && _a || Object)
+], IncidentSearchModalComponent.prototype, "incidentSearchSelect", void 0);
 IncidentSearchModalComponent = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
         selector: 'incidentSearch-modal',
         template: __webpack_require__("../../../../../src/app/modal/incidentSearch.modal.component.html"),
+        providers: [__WEBPACK_IMPORTED_MODULE_4__angular_common__["d" /* DatePipe */]],
         styles: [__webpack_require__("../../../../../src/app/modal/modal.component.css")]
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ngx_bootstrap_modal__["a" /* BsModalService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ngx_bootstrap_modal__["a" /* BsModalService */]) === "function" && _a || Object])
+    __metadata("design:paramtypes", [typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2_ngx_bootstrap_modal__["a" /* BsModalService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2_ngx_bootstrap_modal__["a" /* BsModalService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__jsonp_service__["a" /* JsonpService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__jsonp_service__["a" /* JsonpService */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_4__angular_common__["d" /* DatePipe */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__angular_common__["d" /* DatePipe */]) === "function" && _d || Object])
 ], IncidentSearchModalComponent);
 
-var _a;
+var _a, _b, _c, _d;
 //# sourceMappingURL=incidentSearch.modal.component.js.map
 
 /***/ }),
@@ -2676,7 +3409,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "/* ボタン */\r\n.btn-mini {\r\n    height: 24px;\r\n    /* width: 22px; */\r\n    padding: 0px 2px;\r\n    text-align: center;\r\n    vertical-align: middle;\r\n}\r\n\r\n/* 保存ボタン */\r\n.save-button {\r\n    margin: 5px 0px;\r\n}\r\n\r\n/* モーダルタイトル幅の調整 */\r\n.modal-header{\r\n    padding: 10px;\r\n    border-radius: 6px 6px 0px 0px;\r\n}\r\n\r\n.modal-body {\r\n    background-color: #f8f8f8;\r\n    border-radius: 0px 0px 6px 6px;\r\n}\r\n\r\n/* 検索項目：項目名 */\r\n.input-label {\r\n    height: 22px;\r\n    border-radius: 4px;\r\n    border: 1px solid wheat;\r\n    margin-bottom: 10px;\r\n}\r\n\r\n/* チェックボックスのマージンを除き、ラベルの高さを合わせる */\r\n.checkbox {\r\n    margin: 0px;\r\n}\r\n\r\n/* 検索一覧画面テーブルのヘッダ */\r\n.table-header-list {\r\n    text-align: center;\r\n}\r\n\r\n/* 検索項目：チェックボックスのレイアウト調整 */\r\n.input-item {\r\n    margin-right: 10px;\r\n}\r\n\r\n/* 検索項目の余計な余白を削る */\r\n.label-padding {\r\n    padding-right: 0px;\r\n}\r\n\r\n/* 検索一覧画面　日付input */\r\n.date-div {\r\n    width: 105px;\r\n    float: left;\r\n    position: relative;\r\n}\r\n\r\n/* 検索一覧画面　要素間の文字(～) */\r\n.inner-text {\r\n    font-size: 16px; \r\n    float:left;\r\n    margin: 0px 5px;\r\n}\r\n\r\n/* テーブル 中央揃え */\r\n.list-table>thead>tr>th{\r\n    vertical-align: middle;\r\n}\r\n\r\n/* テーブル 中央揃え */\r\n.list-table>tbody>tr>td{\r\n    vertical-align: middle;\r\n}\r\n\r\n/* インシデント番号のヘッダー幅*/\r\n.incident-no-th {\r\n    width:102px;\r\n}", ""]);
+exports.push([module.i, "/* ボタン */\r\n.btn-mini {\r\n    height: 24px;\r\n    /* width: 22px; */\r\n    padding: 0px 2px;\r\n    text-align: center;\r\n    vertical-align: middle;\r\n}\r\n\r\n/* 保存ボタン */\r\n.save-button {\r\n    margin: 5px 0px;\r\n}\r\n\r\n/* モーダルタイトル幅の調整 */\r\n.modal-header{\r\n    padding: 10px;\r\n    border-radius: 6px 6px 0px 0px;\r\n}\r\n\r\n.modal-body {\r\n    background-color: #f8f8f8;\r\n    border-radius: 0px 0px 6px 6px;\r\n}\r\n\r\n/* 検索項目：項目名 */\r\n.input-label {\r\n    height: 22px;\r\n    border-radius: 4px;\r\n    border: 1px solid wheat;\r\n    margin-bottom: 10px;\r\n}\r\n\r\n/* チェックボックスのマージンを除き、ラベルの高さを合わせる */\r\n.checkbox {\r\n    margin: 0px;\r\n}\r\n\r\n/* 検索一覧画面テーブルのヘッダ */\r\n.table-header-list {\r\n    text-align: center;\r\n}\r\n\r\n/* 検索項目：チェックボックスのレイアウト調整 */\r\n.input-item {\r\n    margin-right: 10px;\r\n}\r\n\r\n/* 検索項目の余計な余白を削る */\r\n.label-padding {\r\n    padding-right: 0px;\r\n}\r\n\r\n/* 検索一覧画面　日付input */\r\n.date-div {\r\n    width: 105px;\r\n    float: left;\r\n    position: relative;\r\n}\r\n\r\n/* 検索一覧画面　要素間の文字(～) */\r\n.inner-text {\r\n    font-size: 16px; \r\n    float:left;\r\n    margin: 0px 5px;\r\n}\r\n\r\n/* テーブル 中央揃え */\r\n.list-table>thead>tr>th{\r\n    vertical-align: middle;\r\n}\r\n\r\n/* テーブル 中央揃え */\r\n.list-table>tbody>tr>td{\r\n    vertical-align: middle;\r\n}\r\n\r\n/* インシデント番号のヘッダー幅*/\r\n.incident-no-th {\r\n    width:102px;\r\n}\r\n\r\n/* 共通モーダルのボタングループ */\r\n.common-btn-group {\r\n    text-align: center;\r\n}\r\n\r\n/* 共通モーダルのボタン */\r\n.common-btn {\r\n    text-align: center;\r\n    width: 100px;\r\n}\r\n\r\n/* 共通モーダルのメッセージ */\r\n.common-mes {\r\n    margin-top: 40px;\r\n    margin-bottom: 40px;\r\n    text-align: center;\r\n}\r\n\r\n/* 共通モーダル 処理ボタン表示 */\r\n.common-enter-btn-show {\r\n    display: inline;    \r\n}\r\n\r\n/* 共通モーダル 処理ボタン非表示 */\r\n.common-enter-btn-hide {\r\n    display: none;    \r\n}", ""]);
 
 // exports
 
@@ -2978,7 +3711,7 @@ var _a;
 /***/ "../../../../../src/app/modal/userSearch.modal.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<!--\n//*****************************************************************************\n//\tシステム名　　　：インシデント管理システム\n//\tサブシステム名　：\n//\t画面名　　　　　：ユーザモーダル部品\n//\t作成日付・作成者：2017.12.08 ADF)S.Yoshida\n//\t修正履歴　　　　：\n//*****************************************************************************\n-->\n\n<div bsModal #template=\"bs-modal\" class=\"modal fade\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"myLargeModalLabel\" aria-hidden=\"true\">\n  <div class=\"modal-dialog modal-lg\">\n    <div class=\"modal-content\">\n      <div class=\"modal-header bg-danger\">\n        <h4 class=\"modal-title pull-left\">\n          <strong>社員の検索</strong>\n        </h4>\n        <button type=\"button\" class=\"close pull-right\" aria-label=\"Close\" (click)=\"template.hide()\">\n          <span aria-hidden=\"true\">&times;</span>\n        </button>\n      </div>\n      <div class=\"modal-body\">\n        <form>\n\n          <div class=\"row\">\n            <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12 transition-button text-right\">\n              <!--<button type=\"button\" class=\"btn btn-danger btn-mini\">-->\n              <button type=\"button\" (click)=\"clearUserSearch()\" class=\"btn btn-danger btn-mini\">\n                リセット\n              </button>\n              <button type=\"button\" class=\"btn btn-danger btn-mini\" (click)=\"search()\">\n                <i class=\"fa fa-search\"></i> 検索\n              </button>\n            </div>\n          </div>\n\n          <div class=\"row\">\n            <div class=\"col-lg-3 col-md-4 col-sm-4 col-xs-5 label-padding\">\n              <div class=\"row\">\n                <label class=\"col-lg-9 col-md-9 col-sm-9 col-xs-9 col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-offset-1 bg-warning text-center input-label\">\n                  氏名(姓)\n                </label>\n              </div>\n            </div>\n            <div class=\"col-lg-5 col-md-4 col-sm-6 col-xs-5\">\n              <!--<input type=\"text\" class=\"form-control\">-->\n              <input name=\"searchUserLastNm\" type=\"text\" class=\"form-control\" [(ngModel)]=\"searchUserLastNm\">\n            </div>\n          </div>\n          <div class=\"row\">\n            <div class=\"col-lg-3 col-md-4 col-sm-4 col-xs-5 label-padding\">\n              <div class=\"row\">\n                <label class=\"col-lg-9 col-md-9 col-sm-9 col-xs-9 col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-offset-1 bg-warning text-center input-label\">\n                  氏名(名)\n                </label>\n              </div>\n            </div>\n            <div class=\"col-lg-5 col-md-4 col-sm-6 col-xs-5\">\n              <!--<input type=\"text\" class=\"form-control\">-->\n              <input name=\"searchUserFirstNm\" type=\"text\" class=\"form-control\" [(ngModel)]=\"searchUserFirstNm\">\n            </div>\n          </div>\n          <div class=\"row\">\n            <div class=\"col-lg-3 col-md-4 col-sm-4 col-xs-5 label-padding\">\n              <div class=\"row\">\n                <label class=\"col-lg-9 col-md-9 col-sm-9 col-xs-9 col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-offset-1 bg-warning text-center input-label\">\n                  部署名\n                </label>\n              </div>\n            </div>\n            <div class=\"col-lg-5 col-md-4 col-sm-6 col-xs-5\">\n              <!--<input type=\"text\" class=\"form-control\">-->\n              <input name=\"searchSectionNm\" type=\"text\" class=\"form-control\" [(ngModel)]=\"searchSectionNm\">\n            </div>\n          </div>\n          <div class=\"row\">\n            <div class=\"col-lg-3 col-md-4 col-sm-4 col-xs-5 label-padding\">\n              <div class=\"row\">\n                <label class=\"col-lg-9 col-md-9 col-sm-9 col-xs-9 col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-offset-1 bg-warning text-center input-label\">\n                  職制コード\n                </label>\n              </div>\n            </div>\n            <div class=\"col-lg-5 col-md-4 col-sm-6 col-xs-5\">\n              <!--<input type=\"text\" class=\"form-control\">-->\n              <input name=\"searchSectionCd\" type=\"text\" class=\"form-control\" [(ngModel)]=\"searchSectionCd\">\n            </div>\n          </div>\n\n          <div class=\"row\">\n            <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12 search-result-info\">\n              検索結果：　{{bigTotalItems}}件\n            </div>\n          </div>\n\n          <div class=\"row\">\n            <div class=\"col-lg-6 col-md-6 col-sm-7 col-xs-8\">\n              <pagination name=\"paging1\" [boundaryLinks]=\"true\" [totalItems]=\"bigTotalItems\" [(ngModel)]=\"currentPage\" [maxSize]=\"maxSize\" [itemsPerPage]=\"itemsPerPage\"\n                class=\"pagination-sm\" [rotate]=\"false\" previousText=\"&lsaquo;\" nextText=\"&rsaquo;\" firstText=\"&laquo;\" lastText=\"&raquo;\" (click)=\"pageChanged($event)\"></pagination>\n            </div>\n            <div class=\"col-lg-offset-4 col-md-offset-4 col-sm-offset-2 col-lg-2 col-md-2 col-sm-3 col-xs-4\">\n              <input name=\"itemperPage\" [(ngModel)]=\"itemsPerPage\" type=\"text\" class=\"itemsPerPage\"> 件/頁\n            </div>\n          </div>\n\n          <div class=\"row\" id=\"search-list\">\n            <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\">\n              <div class=\"panel\">\n                <table class=\"table table-striped list-table\">\n                  <thead>\n                    <tr>\n                      <th class=\"table-header-list\"></th>\n                      <th class=\"table-header-list\">氏名</th>\n                      <th class=\"table-header-list\">メールアドレス</th>\n                      <th class=\"table-header-list\">役職</th>\n                      <th class=\"table-header-list\">部署名</th>\n                    </tr>\n                  </thead>\n                  <tbody>\n                    <tr *ngFor=\"let data of userList | slice: start: start+itemsPerPage\">\n                      <td class=\"code-list\">\n                        <button type=\"button\" class=\"btn btn-danger btn-mini\" (click)=\"onSelect(data?.userId, data?.userNm, data?.sectionCd, data?.sectionNm)\">\n                          選択\n                        </button>\n                      </td>\n                      <td class=\"char-list\">{{data.userNm}}</td>\n                      <td class=\"char-list\">{{data.mail}}</td>\n                      <td class=\"char-list\">{{data.postNm}}</td>\n                      <td class=\"char-list\">{{data.sectionNm}}</td>\n                    </tr>\n                  </tbody>\n                </table>\n              </div>\n            </div>\n          </div>\n\n          <div class=\"row\">\n            <div class=\"col-lg-6 col-md-6 col-sm-7 col-xs-8\">\n              <pagination name=\"paging2\" [boundaryLinks]=\"true\" [totalItems]=\"bigTotalItems\" [(ngModel)]=\"currentPage\" [maxSize]=\"maxSize\" [itemsPerPage]=\"itemsPerPage\"\n                class=\"pagination-sm\" [rotate]=\"false\" previousText=\"&lsaquo;\" nextText=\"&rsaquo;\" firstText=\"&laquo;\" lastText=\"&raquo;\" (click)=\"pageChanged($event)\"></pagination>\n            </div>\n          </div>\n\n        </form>\n      </div>\n    </div>\n  </div>\n</div>"
+module.exports = "<!--\r\n//*****************************************************************************\r\n//\tシステム名　　　：インシデント管理システム\r\n//\tサブシステム名　：\r\n//\t画面名　　　　　：ユーザモーダル部品\r\n//\t作成日付・作成者：2017.12.08 ADF)S.Yoshida\r\n//\t修正履歴　　　　：\r\n//*****************************************************************************\r\n-->\r\n\r\n<div bsModal #template=\"bs-modal\" class=\"modal fade\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"myLargeModalLabel\" aria-hidden=\"true\">\r\n  <div class=\"modal-dialog modal-lg\">\r\n    <div class=\"modal-content\">\r\n      <div class=\"modal-header bg-danger\">\r\n        <h4 class=\"modal-title pull-left\">\r\n          <strong>社員の検索</strong>\r\n        </h4>\r\n        <button type=\"button\" class=\"close pull-right\" aria-label=\"Close\" (click)=\"template.hide()\">\r\n          <span aria-hidden=\"true\">&times;</span>\r\n        </button>\r\n      </div>\r\n      <div class=\"modal-body\">\r\n        <form>\r\n\r\n          <div class=\"row\">\r\n            <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12 transition-button text-right\">\r\n              <!--<button type=\"button\" class=\"btn btn-danger btn-mini\">-->\r\n              <button type=\"button\" (click)=\"clearUserSearch()\" class=\"btn btn-danger btn-mini\">\r\n                リセット\r\n              </button>\r\n              <button type=\"button\" class=\"btn btn-danger btn-mini\" (click)=\"search()\">\r\n                <i class=\"fa fa-search\"></i> 検索\r\n              </button>\r\n            </div>\r\n          </div>\r\n\r\n          <div class=\"row\">\r\n            <div class=\"col-lg-3 col-md-4 col-sm-4 col-xs-5 label-padding\">\r\n              <div class=\"row\">\r\n                <label class=\"col-lg-9 col-md-9 col-sm-9 col-xs-9 col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-offset-1 bg-warning text-center input-label\">\r\n                  氏名(姓)\r\n                </label>\r\n              </div>\r\n            </div>\r\n            <div class=\"col-lg-5 col-md-4 col-sm-6 col-xs-5\">\r\n              <!--<input type=\"text\" class=\"form-control\">-->\r\n              <input name=\"searchUserLastNm\" type=\"text\" class=\"form-control\" [(ngModel)]=\"searchUserLastNm\">\r\n            </div>\r\n          </div>\r\n          <div class=\"row\">\r\n            <div class=\"col-lg-3 col-md-4 col-sm-4 col-xs-5 label-padding\">\r\n              <div class=\"row\">\r\n                <label class=\"col-lg-9 col-md-9 col-sm-9 col-xs-9 col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-offset-1 bg-warning text-center input-label\">\r\n                  氏名(名)\r\n                </label>\r\n              </div>\r\n            </div>\r\n            <div class=\"col-lg-5 col-md-4 col-sm-6 col-xs-5\">\r\n              <!--<input type=\"text\" class=\"form-control\">-->\r\n              <input name=\"searchUserFirstNm\" type=\"text\" class=\"form-control\" [(ngModel)]=\"searchUserFirstNm\">\r\n            </div>\r\n          </div>\r\n          <div class=\"row\">\r\n            <div class=\"col-lg-3 col-md-4 col-sm-4 col-xs-5 label-padding\">\r\n              <div class=\"row\">\r\n                <label class=\"col-lg-9 col-md-9 col-sm-9 col-xs-9 col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-offset-1 bg-warning text-center input-label\">\r\n                  部署名\r\n                </label>\r\n              </div>\r\n            </div>\r\n            <div class=\"col-lg-5 col-md-4 col-sm-6 col-xs-5\">\r\n              <!--<input type=\"text\" class=\"form-control\">-->\r\n              <input name=\"searchSectionNm\" type=\"text\" class=\"form-control\" [(ngModel)]=\"searchSectionNm\">\r\n            </div>\r\n          </div>\r\n          <div class=\"row\">\r\n            <div class=\"col-lg-3 col-md-4 col-sm-4 col-xs-5 label-padding\">\r\n              <div class=\"row\">\r\n                <label class=\"col-lg-9 col-md-9 col-sm-9 col-xs-9 col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-offset-1 bg-warning text-center input-label\">\r\n                  職制コード\r\n                </label>\r\n              </div>\r\n            </div>\r\n            <div class=\"col-lg-5 col-md-4 col-sm-6 col-xs-5\">\r\n              <!--<input type=\"text\" class=\"form-control\">-->\r\n              <input name=\"searchSectionCd\" type=\"text\" class=\"form-control\" [(ngModel)]=\"searchSectionCd\">\r\n            </div>\r\n          </div>\r\n\r\n          <div class=\"row\">\r\n            <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12 search-result-info\">\r\n              検索結果：　{{bigTotalItems}}件\r\n            </div>\r\n          </div>\r\n\r\n          <div class=\"row\">\r\n            <div class=\"col-lg-6 col-md-6 col-sm-7 col-xs-8\">\r\n              <pagination name=\"paging1\" [boundaryLinks]=\"true\" [totalItems]=\"bigTotalItems\" [(ngModel)]=\"currentPage\" [maxSize]=\"maxSize\" [itemsPerPage]=\"itemsPerPage\"\r\n                class=\"pagination-sm\" [rotate]=\"false\" previousText=\"&lsaquo;\" nextText=\"&rsaquo;\" firstText=\"&laquo;\" lastText=\"&raquo;\" (click)=\"pageChanged($event)\"></pagination>\r\n            </div>\r\n            <div class=\"col-lg-offset-4 col-md-offset-4 col-sm-offset-2 col-lg-2 col-md-2 col-sm-3 col-xs-4\">\r\n              <input name=\"itemperPage\" [(ngModel)]=\"itemsPerPage\" type=\"text\" class=\"itemsPerPage\" (input)=\"pageChanged()\"> 件/頁\r\n            </div>\r\n          </div>\r\n\r\n          <div class=\"row\" id=\"search-list\">\r\n            <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\">\r\n              <div class=\"panel\">\r\n                <table class=\"table table-striped list-table\">\r\n                  <thead>\r\n                    <tr>\r\n                      <th class=\"table-header-list\"></th>\r\n                      <th class=\"table-header-list\">氏名</th>\r\n                      <th class=\"table-header-list\">メールアドレス</th>\r\n                      <th class=\"table-header-list\">役職</th>\r\n                      <th class=\"table-header-list\">部署名</th>\r\n                    </tr>\r\n                  </thead>\r\n                  <tbody>\r\n                    <tr *ngFor=\"let data of userList | slice: start: end\">\r\n                      <td class=\"code-list\">\r\n                        <button type=\"button\" class=\"btn btn-danger btn-mini\" (click)=\"onSelect(data?.userId, data?.userNm, data?.sectionCd, data?.sectionNm)\">\r\n                          選択\r\n                        </button>\r\n                      </td>\r\n                      <td class=\"char-list\">{{data.userNm}}</td>\r\n                      <td class=\"char-list\">{{data.mail}}</td>\r\n                      <td class=\"char-list\">{{data.postNm}}</td>\r\n                      <td class=\"char-list\">{{data.sectionNm}}</td>\r\n                    </tr>\r\n                  </tbody>\r\n                </table>\r\n              </div>\r\n            </div>\r\n          </div>\r\n\r\n          <div class=\"row\">\r\n            <div class=\"col-lg-6 col-md-6 col-sm-7 col-xs-8\">\r\n              <pagination name=\"paging2\" [boundaryLinks]=\"true\" [totalItems]=\"bigTotalItems\" [(ngModel)]=\"currentPage\" [maxSize]=\"maxSize\" [itemsPerPage]=\"itemsPerPage\"\r\n                class=\"pagination-sm\" [rotate]=\"false\" previousText=\"&lsaquo;\" nextText=\"&rsaquo;\" firstText=\"&laquo;\" lastText=\"&raquo;\" (click)=\"pageChanged($event)\"></pagination>\r\n            </div>\r\n          </div>\r\n\r\n        </form>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>"
 
 /***/ }),
 
@@ -3010,20 +3743,28 @@ var UserSearchModalComponent = (function () {
         this.jsonpService = jsonpService;
         // 営業担当者イベント(親コンポーネントのメソッド呼び出し)
         this.salesUserSelect = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["x" /* EventEmitter */]();
+        // 検索条件
+        this.searchUserLastNm = "";
+        this.searchUserFirstNm = "";
+        this.searchSectionNm = "";
+        this.searchSectionCd = "";
         // ページングの設定
         this.maxSize = 5; // ページングの表示ページ数
         this.bigTotalItems = 0; // 総数
         this.itemsPerPage = 10; // 1ページに表示する件数
         this.currentPage = 0; // 現在表示しているページ
         this.start = 0; // データ表示開始位置
-        // 検索条件
-        this.searchUserLastNm = "";
-        this.searchUserFirstNm = "";
-        this.searchSectionNm = "";
-        this.searchSectionCd = "";
+        this.end = 10; // データ表示終了位置
         // ユーザ検索結果リスト
         this.userList = [];
     }
+    // ページング処理
+    UserSearchModalComponent.prototype.pageChanged = function (event) {
+        this.start = this.itemsPerPage * (this.currentPage - 1);
+        var tmpStart = +this.start;
+        var tmpItemsPerPage = +this.itemsPerPage;
+        this.end = tmpStart + tmpItemsPerPage;
+    };
     // モーダル表示
     UserSearchModalComponent.prototype.openModal = function (modalTypeFromParent) {
         if (modalTypeFromParent) {
@@ -3033,10 +3774,6 @@ var UserSearchModalComponent = (function () {
         this.clearUserSearch();
         this.template.show();
         this.search();
-    };
-    // ページング処理
-    UserSearchModalComponent.prototype.pageChanged = function (event) {
-        this.start = this.itemsPerPage * (this.currentPage - 1);
     };
     // 検索条件の初期化
     UserSearchModalComponent.prototype.clearUserSearch = function () {
@@ -3049,7 +3786,7 @@ var UserSearchModalComponent = (function () {
     UserSearchModalComponent.prototype.search = function () {
         var _this = this;
         // 検索パラメータの作成
-        var ps = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* URLSearchParams */]();
+        var ps = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["e" /* URLSearchParams */]();
         ps.set("userNmSei", this.searchUserLastNm);
         ps.set("userNmMei", this.searchUserFirstNm);
         ps.set("sectionNm", this.searchSectionNm);
@@ -3083,10 +3820,13 @@ var UserSearchModalComponent = (function () {
     // 選択ボタンクリック
     UserSearchModalComponent.prototype.onSelect = function (userId, userNm, sectionCd, sectionNm) {
         // 営業担当者
-        if (this.modalType == 'salesUser') {
-            // 親コンポーネントの処理呼び出し
-            this.salesUserSelect.emit({ "userId": userId, "userNm": userNm, "sectionCd": sectionCd, "sectionNm": sectionNm });
-        }
+        this.salesUserSelect.emit({
+            "userSearchType": this.modalType,
+            "userId": userId,
+            "userNm": userNm,
+            "sectionCd": sectionCd,
+            "sectionNm": sectionNm
+        });
         // モーダルの非表示
         this.template.hide();
     };
@@ -3146,8 +3886,9 @@ module.exports = "<!--\n//******************************************************
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Mr2Component; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__jsonp_service__ = __webpack_require__("../../../../../src/app/jsonp.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__windowRef_service__ = __webpack_require__("../../../../../src/app/windowRef.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__("../../../http/@angular/http.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__jsonp_service__ = __webpack_require__("../../../../../src/app/jsonp.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__windowRef_service__ = __webpack_require__("../../../../../src/app/windowRef.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -3157,6 +3898,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+
 
 
 
@@ -3171,26 +3913,52 @@ var Mr2Component = (function () {
     }
     Mr2Component.prototype.ngOnInit = function () {
         this.route.data.subscribe(function (obj) { return console.log(obj['category']); });
-        // // 画面表示パラメータの取得処理
-        // this.jsonpService.requestGet('IncidentListDataGet.php', new URLSearchParams())
-        // .subscribe(
-        // data => {
-        //   // 通信成功時
-        //   if (data[0]) {
-        //     let list = data[0];
-        //     if (list[0].result !== '' && list[0].result == true) {
-        //       // 画面表示パラメータのセット処理
-        //       this.setDspParam(list.slice(1)); // 配列1つ目は、サーバ処理成功フラグなので除外
-        //     }
-        //   }
-        // },
-        // error => {
-        //   // 通信失敗もしくは、コールバック関数内でエラー
-        //   console.log(error);
-        //   console.log('サーバとのアクセスに失敗しました。');
-        //   return false;
-        // }
-        // );
+        var ps = new __WEBPACK_IMPORTED_MODULE_2__angular_http__["e" /* URLSearchParams */]();
+        var mkbId = this.route.snapshot.paramMap.get('mkbId');
+        if (mkbId) {
+            ps.set('callNo', mkbId); // TODO API TEST用
+            ps.set('mkbId', mkbId);
+        }
+        // 画面表示パラメータの取得処理
+        this.jsonpService.pscApiRequestGet('mr2HeadData', ps)
+            .subscribe(function (data) {
+            // 通信成功時
+            console.log("受付番号成功");
+            console.log(data);
+            // if (data[0]) {
+            //   let list = data[0];
+            //   if (list[0].result !== '' && list[0].result == true) {
+            //     // 画面表示パラメータのセット処理
+            //     this.setDspParam(list.slice(1)); // 配列1つ目は、サーバ処理成功フラグなので除外
+            //   }
+            // }
+        }, function (error) {
+            // 通信失敗もしくは、コールバック関数内でエラー
+            console.log("受付番号失敗");
+            console.log(error);
+            console.log('サーバとのアクセスに失敗しました。');
+            return false;
+        });
+        // 画面表示パラメータの取得処理
+        this.jsonpService.pscApiRequestGet('mr2HeadData', ps)
+            .subscribe(function (data) {
+            // 通信成功時
+            console.log("MKBID成功");
+            console.log(data);
+            // if (data[0]) {
+            //   let list = data[0];
+            //   if (list[0].result !== '' && list[0].result == true) {
+            //     // 画面表示パラメータのセット処理
+            //     this.setDspParam(list.slice(1)); // 配列1つ目は、サーバ処理成功フラグなので除外
+            //   }
+            // }
+        }, function (error) {
+            // 通信失敗もしくは、コールバック関数内でエラー
+            console.log("MKBID失敗");
+            console.log(error);
+            console.log('サーバとのアクセスに失敗しました。');
+            return false;
+        });
     };
     // 画面表示パラメータのセット処理
     Mr2Component.prototype.setDspParam = function (data) {
@@ -3204,7 +3972,7 @@ Mr2Component = __decorate([
         template: __webpack_require__("../../../../../src/app/mr2/mr2.component.html"),
         styles: [__webpack_require__("../../../../../src/app/mr2/mr2.component.css")]
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__jsonp_service__["a" /* JsonpService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__jsonp_service__["a" /* JsonpService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__windowRef_service__["a" /* WindowRefService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__windowRef_service__["a" /* WindowRefService */]) === "function" && _c || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3__jsonp_service__["a" /* JsonpService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__jsonp_service__["a" /* JsonpService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_4__windowRef_service__["a" /* WindowRefService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__windowRef_service__["a" /* WindowRefService */]) === "function" && _c || Object])
 ], Mr2Component);
 
 var _a, _b, _c;
@@ -3504,7 +4272,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/top/top.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<!--\n//*****************************************************************************\n//\tシステム名　　　：インシデント管理システム\n//\tサブシステム名　：\n//\t画面名　　　　　：インシデントTOP画面\n//\tHTML_ID　　　　 ：IncidentTopView.php\n//\t作成日付・作成者：2017.10.05 ADF)S.Yoshida\n//\t修正履歴　　　　：\n//*****************************************************************************\n-->\n<my-header></my-header>\n\n<div>\n  <div class=\"container-fluid\">\n    <div class=\"row\">\n      <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\">\n        <div class=\"panel panel-danger\">\n          <div class=\"panel-heading\">\n            <h4 class=\"top-panel-title\">\n              <i class=\"fa fa-check\"></i> 最新のインシデント\n            </h4>\n          </div>\n          <table class=\"table table-striped list-table\">\n            <thead>\n              <tr>\n                <th class=\"table-header incident-no-th\">インシデント番号</th>\n                <th class=\"table-header\" width=\"25%\">受付内容</th>\n                <th class=\"table-header\">機場</th>\n                <th class=\"table-header\">設備</th>\n                <th class=\"table-header\">都道府県</th>\n                <th class=\"table-header\">発生日時</th>\n                <th class=\"table-header\">受付日\n                  <i class=\"fa fa-caret-down\"></i>\n                </th>\n                <th class=\"table-header\">分類</th>\n                <th class=\"table-header\">ステータス</th>\n                <th class=\"table-header relate-th\" popover=\"関連プロジェクト\" triggers=\"mouseenter:mouseleave\">関連PJ</th>\n                <th class=\"table-header relate-th\" popover=\"事故クレーム連絡\" triggers=\"mouseenter:mouseleave\">事ク連絡</th>\n                <th class=\"table-header relate-th\" popover=\"現地出動（MR2）\" triggers=\"mouseenter:mouseleave\">現地出動</th>\n                <th class=\"table-header relate-th\">費用決済</th>\n              </tr>\n            </thead>\n            <tbody>\n              <tr *ngFor=\"let data of incidentList\">\n                <td class=\"code-list\">\n                  <a routerLink=\"/detail/{{data?.incidentId}}\" routerLinkActive=\"current\" [routerLinkActiveOptions]=\"{ exact: true }\">\n                    <u>{{data?.incidentNo}}</u>\n                  </a>\n                </td>\n                <td class=\"char-list\" popover={{data?.callContent}} triggers=\"mouseenter:mouseleave\">\n                  {{data?.callContent | slice: 0:40 }}\n                  <span *ngIf=\"data?.callContent?.length >= 40\" >…</span>\n                </td>\n                <td class=\"char-list\">{{data?.kijoNm}}</td>\n                <td class=\"char-list\">{{data?.setubiNm}}</td>\n                <td class=\"status-list\">{{data?.prefNm}}</td>\n                <td class=\"date-list\">{{data?.incidentStartDateTime}}</td>\n                <td class=\"date-list\">{{data?.callDate}}</td>\n                <td class=\"status-list\">{{data?.incidentTypeNm}}</td>\n                <td class=\"status-list\">{{data?.incidentStatusNm}}</td>\n                <td class=\"status-list\">{{data?.relatePj}}</td>\n                <td class=\"status-list\">{{data?.relateJiko}}</td>\n                <td class=\"status-list\">{{data?.relateMr2}}</td>\n                <td class=\"status-list\">{{data?.relateHiyo}}</td>\n              </tr>\n            </tbody>\n          </table>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>"
+module.exports = "<!--\n//*****************************************************************************\n//\tシステム名　　　：インシデント管理システム\n//\tサブシステム名　：\n//\t画面名　　　　　：インシデントTOP画面\n//\tHTML_ID　　　　 ：IncidentTopView.php\n//\t作成日付・作成者：2017.10.05 ADF)S.Yoshida\n//\t修正履歴　　　　：\n//*****************************************************************************\n-->\n<my-header></my-header>\n\n<div>\n  <div class=\"container-fluid\">\n    <div class=\"row\">\n\n      <div class=\"col-lg-3 col-md-3 col-sm-3 col-xs-3 label-padding\">\n        <div class=\"row\">\n          <div class=\"\"></div>\n          <label class=\"col-lg-9 col-md-9 col-sm-9 col-xs-9 col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-offset-1 bg-warning text-center input-label\">\n              キーワード\n          </label>\n        </div>\n      </div>\n      <div class=\"col-lg-3 col-md-3 col-sm-3 col-xs-3\">\n        <input #keyword type=\"text\" class=\"form-control\" (keyup.enter)=\"onKeyWordEnter(keyword.value)\" placeholder=\"キーワードを入力\">\n      </div>\n      <div class=\"row\">\n        <label class=\"col-lg-9 col-md-9 col-sm-9 col-xs-9 col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-offset-1\">\n          &nbsp;\n        </label>\n      </div>\n\n      <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\">\n        <div class=\"panel panel-danger\">\n          <div class=\"panel-heading\">\n            <h4 class=\"top-panel-title\">\n              <i class=\"fa fa-check\"></i> 最新のインシデント\n            </h4>\n          </div>\n          <table class=\"table table-striped list-table\">\n            <thead>\n              <tr>\n                <th class=\"table-header incident-no-th\">インシデント番号</th>\n                <th class=\"table-header\" width=\"25%\">受付内容</th>\n                <th class=\"table-header\">機場</th>\n                <th class=\"table-header\">設備</th>\n                <th class=\"table-header\">都道府県</th>\n                <th class=\"table-header\">発生日時</th>\n                <th class=\"table-header\">受付日\n                  <i class=\"fa fa-caret-down\"></i>\n                </th>\n                <th class=\"table-header\">分類</th>\n                <th class=\"table-header\">ステータス</th>\n                <th class=\"table-header relate-th\" popover=\"関連プロジェクト\" triggers=\"mouseenter:mouseleave\">関連PJ</th>\n                <th class=\"table-header relate-th\" popover=\"事故クレーム連絡\" triggers=\"mouseenter:mouseleave\">事ク連絡</th>\n                <th class=\"table-header relate-th\" popover=\"現地出動（MR2）\" triggers=\"mouseenter:mouseleave\">現地出動</th>\n                <th class=\"table-header relate-th\">費用決済</th>\n              </tr>\n            </thead>\n            <tbody>\n              <tr *ngFor=\"let data of incidentList\">\n                <td class=\"code-list\">\n                  <a routerLink=\"/detail/{{data?.incidentId}}\" routerLinkActive=\"current\" [routerLinkActiveOptions]=\"{ exact: true }\">\n                    <u>{{data?.incidentNo}}</u>\n                  </a>\n                </td>\n                <td class=\"char-list\" popover={{data?.callContent}} triggers=\"mouseenter:mouseleave\">\n                  {{data?.callContent | slice: 0:40 }}\n                  <span *ngIf=\"data?.callContent?.length >= 40\" >…</span>\n                </td>\n                <td class=\"char-list\">{{data?.kijoNm}}</td>\n                <td class=\"char-list\">{{data?.setubiNm}}</td>\n                <td class=\"status-list\">{{data?.prefNm}}</td>\n                <td class=\"date-list\">{{data?.incidentStartDateTime}}</td>\n                <td class=\"date-list\">{{data?.callDate}}</td>\n                <td class=\"status-list\">{{data?.incidentTypeNm}}</td>\n                <td class=\"status-list\">{{data?.incidentStatusNm}}</td>\n                <td class=\"status-list\">{{data?.relatePj}}</td>\n                <td class=\"status-list\">{{data?.relateJiko}}</td>\n                <td class=\"status-list\">{{data?.relateMr2}}</td>\n                <td class=\"status-list\">{{data?.relateHiyo}}</td>\n              </tr>\n            </tbody>\n          </table>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>"
 
 /***/ }),
 
@@ -3540,7 +4308,7 @@ var TopComponent = (function () {
         var _this = this;
         this.route.data.subscribe(function (obj) { return console.log(obj['category']); });
         // 画面表示パラメータの取得処理
-        this.jsonpService.requestGet('IncidentListDataGet.php', new __WEBPACK_IMPORTED_MODULE_2__angular_http__["c" /* URLSearchParams */]())
+        this.jsonpService.requestGet('IncidentListDataGet.php', new __WEBPACK_IMPORTED_MODULE_2__angular_http__["e" /* URLSearchParams */]())
             .subscribe(function (data) {
             // 通信成功時
             if (data[0]) {
@@ -3563,6 +4331,21 @@ var TopComponent = (function () {
     // 画面表示パラメータのセット処理
     TopComponent.prototype.setDspParam = function (data) {
         this.incidentList = data;
+    };
+    // キーワードを入力してエンターを押した
+    TopComponent.prototype.onKeyWordEnter = function (value) {
+        console.log("キーワード検索処理");
+        console.log(value);
+        value = this.encodeUnicode(value);
+        window.location.href = 'http://localhost:4200/#/list/k/' + value;
+    };
+    // コードは16位に変換する
+    TopComponent.prototype.encodeUnicode = function (str) {
+        var res = [];
+        for (var i = 0; i < str.length; i++) {
+            res[i] = ("00" + str.charCodeAt(i).toString(16)).slice(-4);
+        }
+        return res.join("\\u");
     };
     return TopComponent;
 }());
@@ -3629,6 +4412,7 @@ var environment = {
     envCommonPath: 'http://172.20.108.34/COMMONAPI/',
     jikoPath: 'http://172.20.108.34/JIKO/',
     hiyoPath: 'http://172.20.108.34/WORKFLOW/',
+    mr2ApiPath: 'http://localhost:8080/wbc-psc-api/PSC/',
 };
 //# sourceMappingURL=environment.local.js.map
 
@@ -3650,6 +4434,7 @@ var environment = {
     envCommonPath: 'http://172.20.108.34/COMMONAPI/',
     jikoPath: 'http://172.20.108.34/JIKO/',
     hiyoPath: 'http://172.20.108.34/WORKFLOW/',
+    mr2ApiPath: 'http://172.20.108.156:8080/wbc-psc-api/PSC/',
 };
 //# sourceMappingURL=environment.js.map
 

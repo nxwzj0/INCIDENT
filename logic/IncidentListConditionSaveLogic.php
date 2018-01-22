@@ -14,6 +14,7 @@ require_once('./logic/CommonLogic.php');
 require_once('./common/CommonService.php');
 // dto処理読み込み
 require_once('./dto/IncidentListConditionSaveDto.php');
+require_once('./dto/IncidentListConditionSaveResultDto.php');
 // model処理読み込み
 require_once('./model/IdentTSearchCondModel.php');
 require_once('./model/IdentTSearchCondDtModel.php');
@@ -21,12 +22,28 @@ require_once('./model/IdentTSearchCondDtModel.php');
 class IncidentListConditionSaveLogic extends CommonLogic {
 
     public function execute(IncidentListConditionSaveDto $IncidentListConditionSaveDto) {
-        // 登録用の MultiExecSql　オブジェクトを作成 
-        $MultiExecSql = new MultiExecSql();
 
         // 実例化model
         $IdentTSearchCondModel = new IdentTSearchCondModel();
         $IdentTSearchCondDtModel = new IdentTSearchCondDtModel();
+
+        // 実例化model
+        $IncidentListConditionSaveResultDto = new IncidentListConditionSaveResultDto();
+
+        // 検索条件名の重複チェックFlg
+        $CondNmExisFlg = $this->checkDataExistence($IdentTSearchCondModel->findCondNm($IncidentListConditionSaveDto->getCondNm()));
+
+        if($CondNmExisFlg){// 検索条件名重複の場合
+            // LOGIC結果　検索条件名が重複の場合 '1' をセット
+            $IncidentListConditionSaveResultDto->setLogicResult(LOGIC_RESULT_SQL_ERROR);
+            // LOGIC結果メッセージ　'検索条件名が重複しています'
+            $IncidentListConditionSaveResultDto->setResultMsg(LOGIC_RESULT_CONDNM_DUPLICATE);
+            // 戻りオブジェクト($IncidentListConditionSaveResultDto)
+            return $IncidentListConditionSaveResultDto;
+        }
+
+        // 登録用の MultiExecSql　オブジェクトを作成 
+        $MultiExecSql = new MultiExecSql();
 
         // 検索条件Array作成
         $condList = array();
@@ -209,8 +226,12 @@ class IncidentListConditionSaveLogic extends CommonLogic {
         if($insertCondResultFlg == SAVE_FALSE){
             // MultiExecSql　オブジェクトのrollback()を実行
             $MultiExecSql->rollback();
-            // 戻る結果
-            return SAVE_FALSE;
+            // LOGIC結果　SQLエラー '1' をセット
+            $IncidentListConditionSaveResultDto->setLogicResult(LOGIC_RESULT_SQL_ERROR);
+            // LOGIC結果メッセージ　'登録に失敗しました'
+            $IncidentListConditionSaveResultDto->setResultMsg(LOGIC_RESULT_INSERT_FAIL);
+            // 戻りオブジェクト($IncidentListConditionSaveResultDto)
+            return $IncidentListConditionSaveResultDto;
         }
 
         $condListKey = array();// 検索条件のKEYのArray作成
@@ -225,15 +246,23 @@ class IncidentListConditionSaveLogic extends CommonLogic {
             if($insertCondDtResultFlg == SAVE_FALSE){
                 // MultiExecSql　オブジェクトのrollback()を実行
                 $MultiExecSql->rollback();
-                // 戻る結果
-                return SAVE_FALSE;
+                // LOGIC結果　SQLエラー '1' をセット
+                $IncidentListConditionSaveResultDto->setLogicResult(LOGIC_RESULT_SQL_ERROR);
+                // LOGIC結果メッセージ　'登録に失敗しました'
+                $IncidentListConditionSaveResultDto->setResultMsg(LOGIC_RESULT_INSERT_FAIL);
+                // 戻りオブジェクト($IncidentListConditionSaveResultDto)
+                return $IncidentListConditionSaveResultDto;
             }
         }
 
         // MultiExecSql　オブジェクトのcommit()を実行
         $MultiExecSql->commit();
-        // 戻る結果
-        return SAVE_TRUE;
+        // LOGIC結果　正常時 '0' をセット
+        $IncidentListConditionSaveResultDto->setLogicResult(LOGIC_RESULT_SEIJOU);
+        // LOGIC結果メッセージ　'登録完了'
+        $IncidentListConditionSaveResultDto->setResultMsg(LOGIC_RESULT_INSERT_SUCCESS);
+        // 戻りオブジェクト($IncidentListConditionSaveResultDto)
+        return $IncidentListConditionSaveResultDto;
     }
 
 }
