@@ -136,6 +136,35 @@ class IncidentListGetLogic extends CommonLogic {
         $conditions['custTypeNasi'] = $IncidentListGetDto->getCustTypeNasi();
         $conditions['custTypeKasi'] = $IncidentListGetDto->getCustTypeKasi();
         $conditions['custTypeOther'] = $IncidentListGetDto->getCustTypeOther();
+        $incidentType = "";
+        $incidentType = $this->madeCheckboxCondtion($incidentType, $conditions["incidentTypeSyougai"], "1");
+        $incidentType = $this->madeCheckboxCondtion($incidentType, $conditions["incidentTypeJiko"], "2");
+        $incidentType = $this->madeCheckboxCondtion($incidentType, $conditions["incidentTypeClaim"], "3");
+        $incidentType = $this->madeCheckboxCondtion($incidentType, $conditions["incidentTypeToiawase"], "4");
+        $incidentType = $this->madeCheckboxCondtion($incidentType, $conditions["incidentTypeInfo"], "5");
+        $incidentType = $this->madeCheckboxCondtion($incidentType, $conditions["incidentTypeOther"], "6");
+        $conditions['incidentType'] = $incidentType;
+        $incidentStatus = "";
+        $incidentStatus = $this->madeCheckboxCondtion($incidentStatus, $conditions["incidentStatusCall"], "1");
+        $incidentStatus = $this->madeCheckboxCondtion($incidentStatus, $conditions["incidentStatusTaio"], "2");
+        $incidentStatus = $this->madeCheckboxCondtion($incidentStatus, $conditions["incidentStatusAct"], "3");
+        $conditions['incidentStatus'] = $incidentStatus;
+        $industryType = "";
+        $industryType = $this->madeCheckboxCondtion($industryType, $conditions["industryTypeMachinery"], "1");
+        $industryType = $this->madeCheckboxCondtion($industryType, $conditions["industryTypeElectricalMachinery"], "2");
+        $industryType = $this->madeCheckboxCondtion($industryType, $conditions["industryTypeInstrumentation"], "3");
+        $industryType = $this->madeCheckboxCondtion($industryType, $conditions["industryTypeInfo"], "4");
+        $industryType = $this->madeCheckboxCondtion($industryType, $conditions["industryTypeEnvironment"], "5");
+        $industryType = $this->madeCheckboxCondtion($industryType, $conditions["industryTypeWBC"], "6");
+        $industryType = $this->madeCheckboxCondtion($industryType, $conditions["industryTypeOther"], "7");
+        $conditions['industryType'] = $industryType;
+        $custType = "";
+        $custType = $this->madeCheckboxCondtion($custType, $conditions["custTypeNenkan"], "1");
+        $custType = $this->madeCheckboxCondtion($custType, $conditions["custTypeTenken"], "2");
+        $custType = $this->madeCheckboxCondtion($custType, $conditions["custTypeNasi"], "3");
+        $custType = $this->madeCheckboxCondtion($custType, $conditions["custTypeKasi"], "4");
+        $custType = $this->madeCheckboxCondtion($custType, $conditions["custTypeOther"], "5");
+        $conditions['custType'] = $custType;
         // 2018.01.09 Newtouch追加　end
         try {
             // O_インシデントモデルを作成
@@ -378,4 +407,23 @@ class IncidentListGetLogic extends CommonLogic {
         return $IncidentListGetResultDto;
     }
 
+        /**
+     * チェックボックスの状態に応じて検索条件を作成する
+     * @param type $result 結果
+     * @param type $param チェックボックスの状態
+     * @param type $val 対応する値
+     * @return string
+     */
+    public function madeCheckboxCondtion($result, $param, $val) {
+        if ($param == null || $param == "" || $param == "false") {
+            return $result;
+        } elseif ($param == "true") {
+            if ($result == "") {
+                $result .= "'" . $val . "'";
+            } else {
+                $result .= "," . "'" . $val . "'";
+            }
+        }
+        return $result;
+    }
 }

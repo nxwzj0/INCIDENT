@@ -27,12 +27,13 @@ class IncidentListDataGetAction extends CommonAction {
         $prefNm = $P['prefNm'];
         $callStartDateFrom = $P['callStartDateFrom'];
         $callStartDateTo = $P['callStartDateTo'];
+        
         $incidentTypeSyougai =  $P["incidentTypeSyougai"];
         $incidentTypeJiko = $P["incidentTypeJiko"];
-        $incidentTypeSyougai = $P["incidentTypeClaim"];
-        $incidentTypeJiko = $P["incidentTypeToiawase"];
-        $incidentTypeClaim = $P["incidentTypeInfo"];
-        $incidentTypeToiawase = $P["incidentTypeOther"];
+        $incidentTypeClaim = $P["incidentTypeClaim"];
+        $incidentTypeToiawase = $P["incidentTypeToiawase"];
+        $incidentTypeInfo = $P["incidentTypeInfo"];
+        $incidentTypeOther = $P["incidentTypeOther"];
         $incidentStatusCall = $P["incidentStatusCall"];
         $incidentStatusTaio = $P["incidentStatusTaio"];
         $incidentStatusAct = $P["incidentStatusAct"];

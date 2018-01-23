@@ -384,7 +384,7 @@ SQL_INCIDENT_INFO;
         if ($conditions['callStartDateFrom'] != NULL) {
             // 2018.01.20 Newtouch更新 start
 //            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND TO_DATE('" . $conditions['callStartDateFrom'] . "','yyyy-mm-dd hh24:mi:ss') <= INCIDENT.CALL_START_DATE ";
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND TO_DATE('" . $conditions['callStartDateFrom'] . "'||' 00:00:00','yyyy-mm-dd hh24:mi:ss') <= INCIDENT.CALL_START_DATE ";
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.CALL_START_DATE >= to_date( '" . $conditions['callStartDateFrom'] . "'||' 00:00:00','yyyy-mm-dd hh24:mi:ss')";
             // 2018.01.20 Newtouch更新 end
         }
         if ($conditions['callStartDateTo'] != NULL) {
@@ -511,136 +511,25 @@ SQL_INCIDENT_INFO;
             $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.PRODUCT_STATUS = " . "'" . $conditions['productStatus'] . "' ";
         }
         // 2018.01.09 Newtouch追加 start
-        if($conditions['incidentTypeSyougai'] != NULL || $conditions['incidentTypeJiko'] != NULL
-            || $conditions['incidentTypeClaim'] != NULL || $conditions['incidentTypeToiawase'] != NULL
-            || $conditions['incidentTypeInfo'] != NULL || $conditions['incidentTypeOther'] != NULL){
-
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.INCIDENT_TYPE IN (";
-            if($conditions['incidentTypeSyougai'] != NULL){
-                $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " '1', ";
-            }else{
-                $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " '', ";
-            }
-            if($conditions['incidentTypeJiko'] != NULL){
-                $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " '2', ";
-            }else{
-                $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " '', ";
-            }
-            if($conditions['incidentTypeClaim'] != NULL){
-                $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " '4', ";
-            }else{
-                $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " '', ";
-            }
-            if($conditions['incidentTypeToiawase'] != NULL){
-                $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " '3', ";
-            }else{
-                $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " '', ";
-            }
-            if($conditions['incidentTypeInfo'] != NULL){
-                $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " '5', ";
-            }else{
-                $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " '', ";
-            }
-            if($conditions['incidentTypeOther'] != NULL){
-                $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " '6') ";
-            }else{
-                $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " '') ";
-            }
-        }
-        if($conditions['incidentStatusCall'] != NULL || $conditions['incidentStatusTaio'] != NULL || $conditions['incidentStatusAct'] != NULL){
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.INCIDENT_STS IN (";
-            if($conditions['incidentStatusCall'] != NULL){
-                $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " '1', ";
-            }else{
-                $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " '', ";
-            }
-            if($conditions['incidentStatusTaio'] != NULL){
-                $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " '2', ";
-            }else{
-                $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " '', ";
-            }
-            if($conditions['incidentStatusAct'] != NULL){
-                $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " '3') ";
-            }else{
-                $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " '') ";
-            }
-        }
-        if($conditions['industryTypeMachinery'] != NULL || $conditions['industryTypeElectricalMachinery'] != NULL
-            || $conditions['industryTypeInstrumentation'] || $conditions['industryTypeInfo']
-            || $conditions['industryTypeEnvironment'] || $conditions['industryTypeWBC']
-            || $conditions['industryTypeOther']){
-
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.INDUSTRY_TYPE IN (";
-            if($conditions['industryTypeMachinery'] != NULL){
-                $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " '1', ";
-            }else{
-                $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " '', ";
-            }
-            if($conditions['industryTypeElectricalMachinery'] != NULL){
-                $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " '2', ";
-            }else{
-                $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " '', ";
-            }
-            if($conditions['industryTypeInstrumentation'] != NULL){
-                $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " '3', ";
-            }else{
-                $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " '', ";
-            }
-            if($conditions['industryTypeInfo'] != NULL){
-                $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " '4', ";
-            }else{
-                $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " '', ";
-            }
-            if($conditions['industryTypeEnvironment'] != NULL){
-                $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " '5', ";
-            }else{
-                $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " '', ";
-            }
-            if($conditions['industryTypeWBC'] != NULL){
-                $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " '6', ";
-            }else{
-                $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " '', ";
-            }
-            if($conditions['industryTypeOther'] != NULL){
-                $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " '7') ";
-            }else{
-                $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " '') ";
-            }
-        }
         if($conditions['prefCd'] != NULL && $conditions['prefCd'] != "0"){
             $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " OR INCIDENT.PREF_ID = '" . $conditions['prefCd'] ."' ";
         }
-        if($conditions['custTypeNenkan'] != NULL || $conditions['custTypeTenken'] != NULL
-            || $conditions['custTypeNasi'] != NULL || $conditions['custTypeKasi'] != NULL
-            || $conditions['custTypeOther'] != NULL){
-
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.CUST_TYPE_CD IN (";
-            if($conditions['custTypeNenkan'] != NULL){
-                $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " '1', ";
-            }else{
-                $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " '', ";
-            }
-            if($conditions['custTypeTenken'] != NULL){
-                $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " '2', ";
-            }else{
-                $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " '', ";
-            }
-            if($conditions['custTypeNasi'] != NULL){
-                $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " '3', ";
-            }else{
-                $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " '', ";
-            }
-            if($conditions['custTypeKasi'] != NULL){
-                $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " '4', ";
-            }else{
-                $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " '', ";
-            }
-            if($conditions['custTypeOther'] != NULL){
-                $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " '5') ";
-            }else{
-                $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " '') ";
-            }
+        
+        if ($conditions['incidentType'] != NULL) {
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.INCIDENT_TYPE IN(" . $conditions['incidentType'] . ")";
         }
+
+        if ($conditions['incidentStatus'] != NULL) {
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.INCIDENT_STS IN(" . $conditions['incidentStatus'] . ")";
+        }
+        
+        if ($conditions['industryType'] != NULL) {
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.INDUSTRY_TYPE IN(" . $conditions['industryType'] . ")";
+        }
+        
+        if ($conditions['custType'] != NULL) {
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.CUST_TYPE_CD IN(" . $conditions['custType'] . ")";
+        }   
         // 2018.01.09 Newtouch追加 end
         $MultiExecSql = new MultiExecSql();
         $sqlResult = array();
@@ -997,7 +886,7 @@ SQL_INCIDENT_INFO;
         if ($conditions['callStartDateFrom'] != NULL) {
             // 2018.01.20 Newtouch更新 start
 //            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND TO_DATE('" . $conditions['callStartDateFrom'] . "','yyyy-mm-dd hh24:mi:ss') <= INCIDENT.CALL_START_DATE ";
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND TO_DATE('" . $conditions['callStartDateFrom'] . "'||' 00:00:00','yyyy-mm-dd hh24:mi:ss') <= INCIDENT.CALL_START_DATE ";
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.CALL_START_DATE >= to_date( '" . $conditions['callStartDateFrom'] . "'||' 00:00:00','yyyy-mm-dd hh24:mi:ss')";
             // 2018.01.20 Newtouch更新 end
         }
         if ($conditions['callStartDateTo'] != NULL) {
@@ -1124,136 +1013,25 @@ SQL_INCIDENT_INFO;
             $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.PRODUCT_STATUS = " . "'" . $conditions['productStatus'] . "' ";
         }
         // 2018.01.09 Newtouch追加 start
-        if($conditions['incidentTypeSyougai'] != NULL || $conditions['incidentTypeJiko'] != NULL
-            || $conditions['incidentTypeClaim'] != NULL || $conditions['incidentTypeToiawase'] != NULL
-            || $conditions['incidentTypeInfo'] != NULL || $conditions['incidentTypeOther'] != NULL){
-
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.INCIDENT_TYPE IN (";
-            if($conditions['incidentTypeSyougai'] != NULL){
-                $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " '1', ";
-            }else{
-                $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " '', ";
-            }
-            if($conditions['incidentTypeJiko'] != NULL){
-                $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " '2', ";
-            }else{
-                $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " '', ";
-            }
-            if($conditions['incidentTypeClaim'] != NULL){
-                $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " '4', ";
-            }else{
-                $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " '', ";
-            }
-            if($conditions['incidentTypeToiawase'] != NULL){
-                $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " '3', ";
-            }else{
-                $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " '', ";
-            }
-            if($conditions['incidentTypeInfo'] != NULL){
-                $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " '5', ";
-            }else{
-                $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " '', ";
-            }
-            if($conditions['incidentTypeOther'] != NULL){
-                $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " '6') ";
-            }else{
-                $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " '') ";
-            }
-        }
-        if($conditions['incidentStatusCall'] != NULL || $conditions['incidentStatusTaio'] != NULL || $conditions['incidentStatusAct'] != NULL){
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.INCIDENT_STS IN (";
-            if($conditions['incidentStatusCall'] != NULL){
-                $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " '1', ";
-            }else{
-                $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " '', ";
-            }
-            if($conditions['incidentStatusTaio'] != NULL){
-                $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " '2', ";
-            }else{
-                $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " '', ";
-            }
-            if($conditions['incidentStatusAct'] != NULL){
-                $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " '3') ";
-            }else{
-                $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " '') ";
-            }
-        }
-        if($conditions['industryTypeMachinery'] != NULL || $conditions['industryTypeElectricalMachinery'] != NULL
-            || $conditions['industryTypeInstrumentation'] || $conditions['industryTypeInfo']
-            || $conditions['industryTypeEnvironment'] || $conditions['industryTypeWBC']
-            || $conditions['industryTypeOther']){
-
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.INDUSTRY_TYPE IN (";
-            if($conditions['industryTypeMachinery'] != NULL){
-                $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " '1', ";
-            }else{
-                $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " '', ";
-            }
-            if($conditions['industryTypeElectricalMachinery'] != NULL){
-                $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " '2', ";
-            }else{
-                $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " '', ";
-            }
-            if($conditions['industryTypeInstrumentation'] != NULL){
-                $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " '3', ";
-            }else{
-                $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " '', ";
-            }
-            if($conditions['industryTypeInfo'] != NULL){
-                $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " '4', ";
-            }else{
-                $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " '', ";
-            }
-            if($conditions['industryTypeEnvironment'] != NULL){
-                $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " '5', ";
-            }else{
-                $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " '', ";
-            }
-            if($conditions['industryTypeWBC'] != NULL){
-                $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " '6', ";
-            }else{
-                $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " '', ";
-            }
-            if($conditions['industryTypeOther'] != NULL){
-                $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " '7') ";
-            }else{
-                $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " '') ";
-            }
-        }
         if($conditions['prefCd'] != NULL && $conditions['prefCd'] != "0"){
             $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " OR INCIDENT.PREF_ID = '" . $conditions['prefCd'] ."' ";
         }
-        if($conditions['custTypeNenkan'] != NULL || $conditions['custTypeTenken'] != NULL
-            || $conditions['custTypeNasi'] != NULL || $conditions['custTypeKasi'] != NULL
-            || $conditions['custTypeOther'] != NULL){
-
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.CUST_TYPE_CD IN (";
-            if($conditions['custTypeNenkan'] != NULL){
-                $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " '1', ";
-            }else{
-                $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " '', ";
-            }
-            if($conditions['custTypeTenken'] != NULL){
-                $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " '2', ";
-            }else{
-                $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " '', ";
-            }
-            if($conditions['custTypeNasi'] != NULL){
-                $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " '3', ";
-            }else{
-                $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " '', ";
-            }
-            if($conditions['custTypeKasi'] != NULL){
-                $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " '4', ";
-            }else{
-                $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " '', ";
-            }
-            if($conditions['custTypeOther'] != NULL){
-                $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " '5') ";
-            }else{
-                $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " '') ";
-            }
+        
+        if ($conditions['incidentType'] != NULL) {
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.INCIDENT_TYPE IN(" . $conditions['incidentType'] . ")";
         }
+
+        if ($conditions['incidentStatus'] != NULL) {
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.INCIDENT_STS IN(" . $conditions['incidentStatus'] . ")";
+        }
+        
+        if ($conditions['industryType'] != NULL) {
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.INDUSTRY_TYPE IN(" . $conditions['industryType'] . ")";
+        }
+        
+        if ($conditions['custType'] != NULL) {
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.CUST_TYPE_CD IN(" . $conditions['custType'] . ")";
+        }   
         // 2018.01.09 Newtouch追加 end
 
         $MultiExecSql = new MultiExecSql();

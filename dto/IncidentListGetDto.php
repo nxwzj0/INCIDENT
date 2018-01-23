@@ -99,8 +99,6 @@ require_once('./dto/CommonDto.php');
  * @property String $custTypeKasi
  * @property String $custTypeOther
  * @property String $condId
- * @property String $incidentType
- * @property String $incidentStatus
  */
 class IncidentListGetDto extends CommonDto {
 
@@ -193,44 +191,7 @@ class IncidentListGetDto extends CommonDto {
     private $custTypeOther;
     private $condId;
     //2018.01.09 Newtouch追加 end
-// ::: 2018.01.22 [#23] 入力補助モーダル　インシデント Add Start newtouch
-    private $incidentType;
-    private $incidentStatus;
-
-    /**
-     * @return String
-     */
-    public function getIncidentType() {
-        return $this->incidentType;
-    }
-
-    /**
-     * @param String $incidentType
-     * @return IncidentListGetDto
-     */
-    public function setIncidentType($incidentType) {
-        $this->incidentType = $incidentType;
-        return $this;
-    }
-
-    /**
-     * @return String
-     */
-    public function getIncidentStatus() {
-        return $this->incidentStatus;
-    }
-
-    /**
-     * @param String $incidentStatus
-     * @return IncidentListGetDto
-     */
-    public function setIncidentStatus($incidentStatus) {
-        $this->incidentStatus = $incidentStatus;
-        return $this;
-    }
-
-// ::: 2018.01.22 [#23] 入力補助モーダル　インシデント Add End   newtouch
-
+    
     /**
      * @return boolean
      * true : 関連有り、false : 関連無し    
