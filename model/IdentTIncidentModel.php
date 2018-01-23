@@ -767,7 +767,7 @@ SQL_INCIDENT_INFO;
     }
     
 // ::: 2018.01.22 [#23] 入力補助モーダル　インシデント Add Start newtouch
-    public function getIncidentListCommon($conditions) {
+    public function getIncidentListData($conditions) {
         $format = "yyyy/mm/dd hh24:mi:ss";
 
         $SQL_USER_INFO = <<< SQL_USER_INFO
