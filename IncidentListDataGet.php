@@ -31,5 +31,11 @@ $rtnAry = array();
 
 // アクション
 $ListDataAction = new IncidentListDataGetAction();
-$ListDataAction->index();
+// ::: 2018.01.23 [#23] 入力補助モーダル　インシデント Del Start newtouch
+// ::: $ListDataAction->index();
+// ::: 2018.01.23 [#23] 入力補助モーダル　インシデント Del End   newtouch
+// ::: 2018.01.23 [#23] 入力補助モーダル　インシデント Add Start newtouch
+$ListDataAction->indexCommon();
+// ::: 2018.01.23 [#23] 入力補助モーダル　インシデント Add End   newtouch
+
 exit;
