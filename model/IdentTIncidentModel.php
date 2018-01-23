@@ -1,4 +1,5 @@
 <?php
+
 //*****************************************************************************
 //	システム名　　　：インシデント管理システム
 //	サブシステム名　：
@@ -205,17 +206,17 @@ SQL_INCIDENT_INFO;
 
         // 機場ID
         if ($conditions['kijoId'] != null) {
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO." AND INCIDENT.KIJO_ID = "."'".$conditions['kijoId']."'";
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.KIJO_ID = " . "'" . $conditions['kijoId'] . "'";
         }
 
         // 顧客名
         if ($conditions['custNm'] != null) {
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO." AND INCIDENT.CUST_NM = "."'".$conditions['custNm']."'";
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.CUST_NM = " . "'" . $conditions['custNm'] . "'";
         }
 
         // 除外するインシデントID
         if ($conditions['excludeIncidentId'] != null) {
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO." AND INCIDENT.INCIDENT_ID != "."'".$conditions['excludeIncidentId']."'";
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.INCIDENT_ID != " . "'" . $conditions['excludeIncidentId'] . "'";
         }
 
         $MultiExecSql = new MultiExecSql();
@@ -316,28 +317,28 @@ SQL_INCIDENT_INFO;
 SQL_INCIDENT_INFO;
 
         //機場ID
-        if($conditions['kijoId'] !=null & count($conditions['kijoId']) > 0){
+        if ($conditions['kijoId'] != null & count($conditions['kijoId']) > 0) {
             $len = count($conditions['kijoId']);
             $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.KIJO_ID IN (";
-            $kijoId = parent::getInConditionStrByArray($conditions['kijoId'],$len);
+            $kijoId = parent::getInConditionStrByArray($conditions['kijoId'], $len);
             $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . $kijoId . " ) ";
         }
 
         //顧客名
-        if($conditions['custNm'] !=null & count($conditions['custNm']) > 0){
+        if ($conditions['custNm'] != null & count($conditions['custNm']) > 0) {
             $len = count($conditions['custNm']);
             $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.CUST_NM IN (";
-            $custNm = parent::getInConditionStrByArray($conditions['custNm'],$len);
+            $custNm = parent::getInConditionStrByArray($conditions['custNm'], $len);
             $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . $custNm . " ) ";
         }
-        
+
         $MultiExecSql = new MultiExecSql();
         $sqlResult = array();
         $MultiExecSql->getResultData($SQL_INCIDENT_INFO, $sqlResult);
         return $sqlResult;
     }
 
-    public function insert($conditions,$MultiExecSql) {
+    public function insert($conditions, $MultiExecSql) {
         $SQL_INCIDENT_INFO = <<< SQL_INCIDENT_INFO
                 INSERT INTO
                     IDENT_T_INCIDENT
@@ -501,251 +502,251 @@ SQL_INCIDENT_INFO;
                     )
 SQL_INCIDENT_INFO;
 
-        try{
-            $MultiExecSql->execute($SQL_INCIDENT_INFO,"");
-        }catch (Exception $e){
+        try {
+            $MultiExecSql->execute($SQL_INCIDENT_INFO, "");
+        } catch (Exception $e) {
             print $e->getMessage();
             return SAVE_FALSE;
         }
 
         return SAVE_TRUE;
     }
-    
-    public function update($conditions,$MultiExecSql) {
+
+    public function update($conditions, $MultiExecSql) {
         $SQL_INCIDENT_INFO = <<< SQL_INCIDENT_INFO
                 UPDATE
                     IDENT_T_INCIDENT
                 SET
 SQL_INCIDENT_INFO;
 
-        if($conditions['incidentNo'] != null){
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO." INCIDENT_NO = '{$conditions['incidentNo']}',";
+        if ($conditions['incidentNo'] != null) {
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " INCIDENT_NO = '{$conditions['incidentNo']}',";
         }
-        if($conditions['incidentStsCd'] != null){
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO." INCIDENT_STS = '{$conditions['incidentStsCd']}',";
+        if ($conditions['incidentStsCd'] != null) {
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " INCIDENT_STS = '{$conditions['incidentStsCd']}',";
         }
-        if($conditions['incidentTypeCd'] != null){
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO." INCIDENT_TYPE = '{$conditions['incidentTypeCd']}',";
+        if ($conditions['incidentTypeCd'] != null) {
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " INCIDENT_TYPE = '{$conditions['incidentTypeCd']}',";
         }
-        if($conditions['parentIncidentNo'] != null){
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO." PARENT_INCIDENT_NO = '{$conditions['parentIncidentNo']}',";
+        if ($conditions['parentIncidentNo'] != null) {
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " PARENT_INCIDENT_NO = '{$conditions['parentIncidentNo']}',";
         }
-        if($conditions['incidentStartDateTime'] != null){
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO." INCIDENT_START_DATETIME = to_date('{$conditions['incidentStartDateTime']}','yyyy-mm-dd hh24:mi:ss'),";
+        if ($conditions['incidentStartDateTime'] != null) {
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " INCIDENT_START_DATETIME = to_date('{$conditions['incidentStartDateTime']}','yyyy-mm-dd hh24:mi:ss'),";
         }
-        if($conditions['infoSource'] != null){
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO." INFO_SOURCE = '{$conditions['infoSource']}',";
+        if ($conditions['infoSource'] != null) {
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " INFO_SOURCE = '{$conditions['infoSource']}',";
         }
-        if($conditions['infoProvider'] != null){
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO." INFO_PROVIDER = '{$conditions['infoProvider']}',";
+        if ($conditions['infoProvider'] != null) {
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " INFO_PROVIDER = '{$conditions['infoProvider']}',";
         }
-        if($conditions['infoProviderTel'] != null){
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO." INFO_PROVIDER_TEL = '{$conditions['infoProviderTel']}',";
+        if ($conditions['infoProviderTel'] != null) {
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " INFO_PROVIDER_TEL = '{$conditions['infoProviderTel']}',";
         }
-        if($conditions['memo'] != null){
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO." MEMO = '{$conditions['memo']}',";
+        if ($conditions['memo'] != null) {
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " MEMO = '{$conditions['memo']}',";
         }
-        if($conditions['kijoId'] != null){
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO." KIJO_ID = '{$conditions['kijoId']}',";
+        if ($conditions['kijoId'] != null) {
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " KIJO_ID = '{$conditions['kijoId']}',";
         }
-        if($conditions['kijoNm'] != null){
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO." KIJO_NM = '{$conditions['kijoNm']}',";
+        if ($conditions['kijoNm'] != null) {
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " KIJO_NM = '{$conditions['kijoNm']}',";
         }
-        if($conditions['jigyosyutaiId'] != null){
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO." JIGYOSYUTAI_ID = '{$conditions['jigyosyutaiId']}',";
+        if ($conditions['jigyosyutaiId'] != null) {
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " JIGYOSYUTAI_ID = '{$conditions['jigyosyutaiId']}',";
         }
-        if($conditions['jigyosyutaiNm'] != null){
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO." JIGYOSYUTAI_NM = '{$conditions['jigyosyutaiNm']}',";
+        if ($conditions['jigyosyutaiNm'] != null) {
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " JIGYOSYUTAI_NM = '{$conditions['jigyosyutaiNm']}',";
         }
-        if($conditions['setubiId'] != null){
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO." SETUBI_ID = '{$conditions['setubiId']}',";
+        if ($conditions['setubiId'] != null) {
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " SETUBI_ID = '{$conditions['setubiId']}',";
         }
-        if($conditions['setubiNm'] != null){
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO." SETUBI_NM = '{$conditions['setubiNm']}',";
+        if ($conditions['setubiNm'] != null) {
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " SETUBI_NM = '{$conditions['setubiNm']}',";
         }
-        if($conditions['prefId'] != null){
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO." PREF_ID = '{$conditions['prefId']}',";
+        if ($conditions['prefId'] != null) {
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " PREF_ID = '{$conditions['prefId']}',";
         }
-        if($conditions['prefNm'] != null){
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO." PREF_NM = '{$conditions['prefNm']}',";
+        if ($conditions['prefNm'] != null) {
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " PREF_NM = '{$conditions['prefNm']}',";
         }
-        if($conditions['deliveryPjNo'] != null){
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO." DELIVERY_PJ_NO = '{$conditions['deliveryPjNo']}',";
+        if ($conditions['deliveryPjNo'] != null) {
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " DELIVERY_PJ_NO = '{$conditions['deliveryPjNo']}',";
         }
-        if($conditions['deliveryPjNm'] != null){
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO." DELIVERY_PJ_NM = '{$conditions['deliveryPjNm']}',";
+        if ($conditions['deliveryPjNm'] != null) {
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " DELIVERY_PJ_NM = '{$conditions['deliveryPjNm']}',";
         }
-        if($conditions['custId'] != null){
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO." CUST_ID = '{$conditions['custId']}',";
+        if ($conditions['custId'] != null) {
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " CUST_ID = '{$conditions['custId']}',";
         }
-        if($conditions['custNm'] != null){
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO." CUST_NM = '{$conditions['custNm']}',";
+        if ($conditions['custNm'] != null) {
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " CUST_NM = '{$conditions['custNm']}',";
         }
-        if($conditions['custTypeCd'] != null){
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO." CUST_TYPE_CD = '{$conditions['custTypeCd']}',";
+        if ($conditions['custTypeCd'] != null) {
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " CUST_TYPE_CD = '{$conditions['custTypeCd']}',";
         }
-        if($conditions['custTypeNm'] != null){
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO." CUST_TYPE_NM = '{$conditions['custTypeNm']}',";
+        if ($conditions['custTypeNm'] != null) {
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " CUST_TYPE_NM = '{$conditions['custTypeNm']}',";
         }
-        if($conditions['custDept'] != null){
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO." CUST_DEPT = '{$conditions['custDept']}',";
+        if ($conditions['custDept'] != null) {
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " CUST_DEPT = '{$conditions['custDept']}',";
         }
-        if($conditions['requester'] != null){
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO." REQUESTER = '{$conditions['requester']}',";
+        if ($conditions['requester'] != null) {
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " REQUESTER = '{$conditions['requester']}',";
         }
-        if($conditions['contactTel'] != null){
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO." CONTACT_TEL = '{$conditions['contactTel']}',";
+        if ($conditions['contactTel'] != null) {
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " CONTACT_TEL = '{$conditions['contactTel']}',";
         }
-        if($conditions['contactFax'] != null){
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO." CONTACT_FAX = '{$conditions['contactFax']}',";
+        if ($conditions['contactFax'] != null) {
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " CONTACT_FAX = '{$conditions['contactFax']}',";
         }
-        if($conditions['contactMail'] != null){
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO." CONTACT_MAIL = '{$conditions['contactMail']}',";
+        if ($conditions['contactMail'] != null) {
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " CONTACT_MAIL = '{$conditions['contactMail']}',";
         }
-        if($conditions['salesDeptCd'] != null){
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO." SALES_DEPT_CD = '{$conditions['salesDeptCd']}',";
+        if ($conditions['salesDeptCd'] != null) {
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " SALES_DEPT_CD = '{$conditions['salesDeptCd']}',";
         }
-        if($conditions['salesDeptNm'] != null){
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO." SALES_DEPT_NM = '{$conditions['salesDeptNm']}',";
+        if ($conditions['salesDeptNm'] != null) {
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " SALES_DEPT_NM = '{$conditions['salesDeptNm']}',";
         }
-        if($conditions['salesUserId'] != null){
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO." SALES_USER_ID = '{$conditions['salesUserId']}',";
+        if ($conditions['salesUserId'] != null) {
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " SALES_USER_ID = '{$conditions['salesUserId']}',";
         }
-        if($conditions['salesUserNm'] != null){
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO." SALES_USER_NM = '{$conditions['salesUserNm']}',";
+        if ($conditions['salesUserNm'] != null) {
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " SALES_USER_NM = '{$conditions['salesUserNm']}',";
         }
-        if($conditions['skanDeptCd'] != null){
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO." SKAN_DEPT_CD = '{$conditions['skanDeptCd']}',";
+        if ($conditions['skanDeptCd'] != null) {
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " SKAN_DEPT_CD = '{$conditions['skanDeptCd']}',";
         }
-        if($conditions['skanDeptNm'] != null){
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO." SKAN_DEPT_NM = '{$conditions['skanDeptNm']}',";
+        if ($conditions['skanDeptNm'] != null) {
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " SKAN_DEPT_NM = '{$conditions['skanDeptNm']}',";
         }
-        if($conditions['skanUserId'] != null){
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO." SKAN_USER_ID = '{$conditions['skanUserId']}',";
+        if ($conditions['skanUserId'] != null) {
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " SKAN_USER_ID = '{$conditions['skanUserId']}',";
         }
-        if($conditions['skanUserNm'] != null){
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO." SKAN_USER_NM = '{$conditions['skanUserNm']}',";
+        if ($conditions['skanUserNm'] != null) {
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " SKAN_USER_NM = '{$conditions['skanUserNm']}',";
         }
-        if($conditions['callStartDate'] != null){
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO." CALL_START_DATE = to_date('{$conditions['callStartDate']}','yyyy-mm-dd hh24:mi:ss'),";
+        if ($conditions['callStartDate'] != null) {
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " CALL_START_DATE = to_date('{$conditions['callStartDate']}','yyyy-mm-dd hh24:mi:ss'),";
         }
-        if($conditions['callEndDate'] != null){
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO." CALL_END_DATE = to_date('{$conditions['callEndDate']}','yyyy-mm-dd hh24:mi:ss'),";
+        if ($conditions['callEndDate'] != null) {
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " CALL_END_DATE = to_date('{$conditions['callEndDate']}','yyyy-mm-dd hh24:mi:ss'),";
         }
-        if($conditions['callDeptCd'] != null){
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO." CALL_DEPT_CD = '{$conditions['callDeptCd']}',";
+        if ($conditions['callDeptCd'] != null) {
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " CALL_DEPT_CD = '{$conditions['callDeptCd']}',";
         }
-        if($conditions['callDeptNm'] != null){
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO." CALL_DEPT_NM = '{$conditions['callDeptNm']}',";
+        if ($conditions['callDeptNm'] != null) {
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " CALL_DEPT_NM = '{$conditions['callDeptNm']}',";
         }
-        if($conditions['callUserId'] != null){
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO." CALL_USER_CD = '{$conditions['callUserId']}',";
+        if ($conditions['callUserId'] != null) {
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " CALL_USER_CD = '{$conditions['callUserId']}',";
         }
-        if($conditions['callUserNm'] != null){
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO." CALL_USER_NM = '{$conditions['callUserNm']}',";
+        if ($conditions['callUserNm'] != null) {
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " CALL_USER_NM = '{$conditions['callUserNm']}',";
         }
-        if($conditions['callTel'] != null){
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO." CALL_TEL = '{$conditions['callTel']}',";
+        if ($conditions['callTel'] != null) {
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " CALL_TEL = '{$conditions['callTel']}',";
         }
-        if($conditions['callMail'] != null){
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO." CALL_MAIL = '{$conditions['callMail']}',";
+        if ($conditions['callMail'] != null) {
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " CALL_MAIL = '{$conditions['callMail']}',";
         }
-        if($conditions['callContent'] != null){
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO." CALL_CONTENT = '{$conditions['callContent']}',";
+        if ($conditions['callContent'] != null) {
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " CALL_CONTENT = '{$conditions['callContent']}',";
         }
-        if($conditions['taioStartDate'] != null){
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO." TAIO_START_DATE = to_date('{$conditions['taioStartDate']}','yyyy-mm-dd hh24:mi:ss'),";
+        if ($conditions['taioStartDate'] != null) {
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " TAIO_START_DATE = to_date('{$conditions['taioStartDate']}','yyyy-mm-dd hh24:mi:ss'),";
         }
-        if($conditions['taioEndDate'] != null){
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO." TAIO_END_DATE = to_date('{$conditions['taioEndDate']}','yyyy-mm-dd hh24:mi:ss'),";
+        if ($conditions['taioEndDate'] != null) {
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " TAIO_END_DATE = to_date('{$conditions['taioEndDate']}','yyyy-mm-dd hh24:mi:ss'),";
         }
-        if($conditions['taioDeptCd'] != null){
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO." TAIO_DEPT_CD = '{$conditions['taioDeptCd']}',";
+        if ($conditions['taioDeptCd'] != null) {
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " TAIO_DEPT_CD = '{$conditions['taioDeptCd']}',";
         }
-        if($conditions['taioDeptNm'] != null){
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO." TAIO_DEPT_NM = '{$conditions['taioDeptNm']}',";
+        if ($conditions['taioDeptNm'] != null) {
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " TAIO_DEPT_NM = '{$conditions['taioDeptNm']}',";
         }
-        if($conditions['taioUserId'] != null){
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO." TAIO_USER_ID = '{$conditions['taioUserId']}',";
+        if ($conditions['taioUserId'] != null) {
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " TAIO_USER_ID = '{$conditions['taioUserId']}',";
         }
-        if($conditions['taioUserNm'] != null){
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO." TAIO_USER_NM = '{$conditions['taioUserNm']}',";
+        if ($conditions['taioUserNm'] != null) {
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " TAIO_USER_NM = '{$conditions['taioUserNm']}',";
         }
-        if($conditions['taioTel'] != null){
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO." TAIO_TEL = '{$conditions['taioTel']}',";
+        if ($conditions['taioTel'] != null) {
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " TAIO_TEL = '{$conditions['taioTel']}',";
         }
-        if($conditions['taioMail'] != null){
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO." TAIO_MAIL = '{$conditions['taioMail']}',";
+        if ($conditions['taioMail'] != null) {
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " TAIO_MAIL = '{$conditions['taioMail']}',";
         }
-        if($conditions['taioContent'] != null){
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO." TAIO_CONTENT = '{$conditions['taioContent']}',";
+        if ($conditions['taioContent'] != null) {
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " TAIO_CONTENT = '{$conditions['taioContent']}',";
         }
-        if($conditions['actDate'] != null){
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO." ACT_DATE = to_date('{$conditions['actDate']}','yyyy-mm-dd hh24:mi:ss'),";
+        if ($conditions['actDate'] != null) {
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " ACT_DATE = to_date('{$conditions['actDate']}','yyyy-mm-dd hh24:mi:ss'),";
         }
-        if($conditions['actType'] != null){
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO." ACT_TYPE = '{$conditions['actType']}',";
+        if ($conditions['actType'] != null) {
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " ACT_TYPE = '{$conditions['actType']}',";
         }
-        if($conditions['actStartTime'] != null){
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO." ACT_START_TIME = to_date('{$conditions['actStartTime']}','yyyy-mm-dd hh24:mi:ss'),";
+        if ($conditions['actStartTime'] != null) {
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " ACT_START_TIME = to_date('{$conditions['actStartTime']}','yyyy-mm-dd hh24:mi:ss'),";
         }
-        if($conditions['actEndTime'] != null){
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO." ACT_END_TIME = to_date('{$conditions['actEndTime']}','yyyy-mm-dd hh24:mi:ss'),";
+        if ($conditions['actEndTime'] != null) {
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " ACT_END_TIME = to_date('{$conditions['actEndTime']}','yyyy-mm-dd hh24:mi:ss'),";
         }
-        if($conditions['actDeptCd'] != null){
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO." ACT_DEPT_CD = '{$conditions['actDeptCd']}',";
+        if ($conditions['actDeptCd'] != null) {
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " ACT_DEPT_CD = '{$conditions['actDeptCd']}',";
         }
-        if($conditions['actDeptNm'] != null){
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO." ACT_DEPT_NM = '{$conditions['actDeptNm']}',";
+        if ($conditions['actDeptNm'] != null) {
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " ACT_DEPT_NM = '{$conditions['actDeptNm']}',";
         }
-        if($conditions['actUserId'] != null){
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO." ACT_USER_ID = '{$conditions['actUserId']}',";
+        if ($conditions['actUserId'] != null) {
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " ACT_USER_ID = '{$conditions['actUserId']}',";
         }
-        if($conditions['actUserNm'] != null){
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO." ACT_USER_NM = '{$conditions['actUserNm']}',";
+        if ($conditions['actUserNm'] != null) {
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " ACT_USER_NM = '{$conditions['actUserNm']}',";
         }
-        if($conditions['actTel'] != null){
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO." ACT_TEL = '{$conditions['actTel']}',";
+        if ($conditions['actTel'] != null) {
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " ACT_TEL = '{$conditions['actTel']}',";
         }
-        if($conditions['actMail'] != null){
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO." ACT_MAIL = '{$conditions['actMail']}',";
+        if ($conditions['actMail'] != null) {
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " ACT_MAIL = '{$conditions['actMail']}',";
         }
-        if($conditions['actContent'] != null){
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO." ACT_CONTENT = '{$conditions['actContent']}',";
+        if ($conditions['actContent'] != null) {
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " ACT_CONTENT = '{$conditions['actContent']}',";
         }
-        if($conditions['productType'] != null){
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO." PRODUCT_TYPE = '{$conditions['productType']}',";
+        if ($conditions['productType'] != null) {
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " PRODUCT_TYPE = '{$conditions['productType']}',";
         }
-        if($conditions['productTrigger'] != null){
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO." PRODUCT_TRIGGER = '{$conditions['productTrigger']}',";
+        if ($conditions['productTrigger'] != null) {
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " PRODUCT_TRIGGER = '{$conditions['productTrigger']}',";
         }
-        if($conditions['productHindo'] != null){
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO." PRODUCT_HINDO = '{$conditions['productHindo']}',";
+        if ($conditions['productHindo'] != null) {
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " PRODUCT_HINDO = '{$conditions['productHindo']}',";
         }
-        if($conditions['productGensyo'] != null){
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO." PRODUCT_GENSYO = '{$conditions['productGensyo']}',";
+        if ($conditions['productGensyo'] != null) {
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " PRODUCT_GENSYO = '{$conditions['productGensyo']}',";
         }
-        if($conditions['productStatus'] != null){
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO." PRODUCT_STATUS = '{$conditions['productStatus']}',";
+        if ($conditions['productStatus'] != null) {
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " PRODUCT_STATUS = '{$conditions['productStatus']}',";
         }
-        if($conditions['loginUserId'] != null){
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO." UPD_USER_ID = '{$conditions['loginUserId']}',";
+        if ($conditions['loginUserId'] != null) {
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " UPD_USER_ID = '{$conditions['loginUserId']}',";
         }
-        if($conditions['loginUserNm'] != null){
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO." UPD_USER_NAME = '{$conditions['loginUserNm']}',";
+        if ($conditions['loginUserNm'] != null) {
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " UPD_USER_NAME = '{$conditions['loginUserNm']}',";
         }
-        if($conditions['loginSectionCd'] != null){
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO." UPD_SECTION_CD = '{$conditions['loginSectionCd']}',";
+        if ($conditions['loginSectionCd'] != null) {
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " UPD_SECTION_CD = '{$conditions['loginSectionCd']}',";
         }
-        if($conditions['loginSectionNm'] != null){
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO." UPD_SECTION_NAME = '{$conditions['loginSectionNm']}',";
+        if ($conditions['loginSectionNm'] != null) {
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " UPD_SECTION_NAME = '{$conditions['loginSectionNm']}',";
         }
-        
-        $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO."UPD_DATE = SYSDATE, DEL_FLG = '0' WHERE INCIDENT_ID = {$conditions['incidentId']}";
 
-        try{
+        $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . "UPD_DATE = SYSDATE, DEL_FLG = '0' WHERE INCIDENT_ID = {$conditions['incidentId']}";
+
+        try {
             $MultiExecSql->execute($SQL_INCIDENT_INFO, '');
-        }catch (Exception $e){
+        } catch (Exception $e) {
             print $e->getMessage();
             return SAVE_FALSE;
         }
@@ -765,7 +766,7 @@ SQL_INCIDENT_INFO;
         $MultiExecSql->getResultData($SQL_INCIDENT_INFO, $sqlResult);
         return $sqlResult;
     }
-    
+
 // ::: 2018.01.22 [#23] 入力補助モーダル　インシデント Add Start newtouch
     public function getIncidentListData($conditions) {
         $format = "yyyy/mm/dd hh24:mi:ss";
@@ -858,6 +859,6 @@ SQL_USER_INFO;
         }
         return null;
     }
-// ::: 2018.01.22 [#23] 入力補助モーダル　インシデント Add End   newtouch
 
+// ::: 2018.01.22 [#23] 入力補助モーダル　インシデント Add End   newtouch
 }

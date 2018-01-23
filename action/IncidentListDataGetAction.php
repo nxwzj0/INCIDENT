@@ -209,13 +209,13 @@ class IncidentListDataGetAction extends CommonAction {
         $eventResult = $incidentListGetLogic->execute($incidentListGetDto);
 
         /* 戻り値作成処理 */
-        $rtnAry = $this->createReturnArrayCommon($eventResult);
+        $rtnAry = $this->createReturnArray($eventResult);
 
         // 値を返す(Angular)
         echo $this->returnAngularJSONP($rtnAry);
     }
 
-    public function createReturnArrayCommon(IncidentListGetResultDto $eventResult) {
+    public function createReturnArray(IncidentListGetResultDto $eventResult) {
         $incidentListAry = array();
 
         // 戻り値の作成
