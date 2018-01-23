@@ -512,7 +512,7 @@ SQL_INCIDENT_INFO;
         }
         // 2018.01.09 Newtouch追加 start
         if($conditions['prefCd'] != NULL && $conditions['prefCd'] != "0"){
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " OR INCIDENT.PREF_ID = '" . $conditions['prefCd'] ."' ";
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.PREF_ID = '" . $conditions['prefCd'] ."' ";
         }
         
         if ($conditions['incidentType'] != NULL) {
@@ -1014,7 +1014,7 @@ SQL_INCIDENT_INFO;
         }
         // 2018.01.09 Newtouch追加 start
         if($conditions['prefCd'] != NULL && $conditions['prefCd'] != "0"){
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " OR INCIDENT.PREF_ID = '" . $conditions['prefCd'] ."' ";
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.PREF_ID = '" . $conditions['prefCd'] ."' ";
         }
         
         if ($conditions['incidentType'] != NULL) {
