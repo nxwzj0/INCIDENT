@@ -20,6 +20,7 @@ require_once('./dto/CommonDto.php');
  * @property String $incidentNo
  * @property String $callContent
  * @property String $callDate
+ * @property String $callDateTime
  * @property String $incidentType
  * @property String $incidentTypeString
  * @property String $incidentStatus
@@ -44,6 +45,8 @@ class IncidentDto extends CommonDto {
 
     /** 受付日 */
     private $callDate;
+    
+    private $callDateTime;
 
     /** インシデント分類 */
     private $incidentType;
@@ -56,6 +59,21 @@ class IncidentDto extends CommonDto {
 
     /** ステータスString */
     private $incidentStatusString;
+
+    /**
+     * @return String
+     */
+    public function getCallDateTime() {
+        return $this->callDateTime;
+    }
+
+    /**
+     * @param String $callDateTime
+     * @return IncidentDto
+     */
+    public function setCallDateTime($callDateTime) {
+        $this->callDateTime = $callDateTime;
+    }
 
     /**
      * @return String
