@@ -407,7 +407,8 @@ class IncidentListGetLogic extends CommonLogic {
         return $IncidentListGetResultDto;
     }
 
-        /**
+// ::: 2018.01.23 [#23] 入力補助モーダル　インシデント Add Start newtouch
+    /**
      * チェックボックスの状態に応じて検索条件を作成する
      * @param type $result 結果
      * @param type $param チェックボックスの状態
@@ -426,4 +427,6 @@ class IncidentListGetLogic extends CommonLogic {
         }
         return $result;
     }
+// ::: 2018.01.23 [#23] 入力補助モーダル　インシデント Add End   newtouch
+
 }
