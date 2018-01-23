@@ -1,5 +1,4 @@
 <?php
-
 //*****************************************************************************
 //	システム名　　　：インシデント管理システム
 //	サブシステム名　：
@@ -15,27 +14,8 @@ require_once('./common/CommonService.php');
  * ***************************************************************************** */
 require_once('./action/IncidentListDataGetAction.php');
 
-// 共通処理
-$common = new CommonService();
-
-/* 返り値初期設定 */
-$rtnAry = array();
-
-// リクエストタイプを確認
-//if (!$common->checkRequestType("POST")) {
-//    exit;
-//}
-
-// 共通認証
-
-
 // アクション
 $ListDataAction = new IncidentListDataGetAction();
-// ::: 2018.01.23 [#23] 入力補助モーダル　インシデント Del Start newtouch
-// ::: $ListDataAction->index();
-// ::: 2018.01.23 [#23] 入力補助モーダル　インシデント Del End   newtouch
-// ::: 2018.01.23 [#23] 入力補助モーダル　インシデント Add Start newtouch
-$ListDataAction->indexCommon();
-// ::: 2018.01.23 [#23] 入力補助モーダル　インシデント Add End   newtouch
+$ListDataAction->index();
 
 exit;
