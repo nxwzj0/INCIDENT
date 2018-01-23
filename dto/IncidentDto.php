@@ -16,14 +16,22 @@ require_once('./dto/CommonDto.php');
  * @property LinkRelationDto $relateLink
  * @property IncidentRelationDto[] $relateIncidentList
  * @property RevDto[] $logList
+ * @property String $incidentId
+ * @property String $incidentNo
+ * @property String $callContent
+ * @property String $callDate
+ * @property String $incidentType
+ * @property String $incidentTypeString
+ * @property String $incidentStatus
+ * @property String $incidentStatusString
  */
-class IncidentDto extends CommonDto{
+
+class IncidentDto extends CommonDto {
 
     private $incidentMainInfo;
     private $relateLink;
     private $relateIncidentList = array();
     private $logList = array();
-
 // ::: 2018.01.22 [#23] 入力補助モーダル　インシデント Add Start newtouch
     /** インシデントID */
     private $incidentId;
@@ -49,80 +57,138 @@ class IncidentDto extends CommonDto{
     /** ステータスString */
     private $incidentStatusString;
 
+    /**
+     * @return String
+     */
+    public function getIncidentId()
+    {
+        return $this->incidentId;
+    }
+
+    /**
+     * @param String $incidentId
+     * @return IncidentDto
+     */
+    public function setIncidentId($incidentId)
+    {
+        $this->incidentId = $incidentId;
+        return $this;
+    }
+
+    /**
+     * @return String
+     */
     public function getIncidentNo() {
         return $this->incidentNo;
     }
 
+    /**
+     * @param String $incidentNo
+     * @return IncidentDto
+     */
+    public function setIncidentNo($incidentNo) {
+        $this->incidentNo = $incidentNo;
+        return $this;
+    }
+
+    /**
+     * @return String
+     */
     public function getCallContent() {
         return $this->callContent;
     }
 
+    /**
+     * @param String $callContent
+     * @return IncidentDto
+     */
+    public function setCallContent($callContent) {
+        $this->callContent = $callContent;
+        return $this;
+    }
+
+    /**
+     * @return String
+     */
     public function getCallDate() {
         return $this->callDate;
     }
 
-    public function getCallDateTime() {
-        return $this->callDateTime;
+    /**
+     * @param String $callDate
+     * @return IncidentDto
+     */
+    public function setCallDate($callDate) {
+        $this->callDate = $callDate;
+        return $this;
     }
 
+    /**
+     * @return String
+     */
     public function getIncidentType() {
         return $this->incidentType;
     }
 
+    /**
+     * @param String $incidentType
+     * @return IncidentDto
+     */
+    public function setIncidentType($incidentType) {
+        $this->incidentType = $incidentType;
+        return $this;
+    }
+
+    /**
+     * @return String
+     */
     public function getIncidentTypeString() {
         return $this->incidentTypeString;
     }
 
+    /**
+     * @param String $incidentTypeString
+     * @return IncidentDto
+     */
+    public function setIncidentTypeString($incidentTypeString) {
+        $this->incidentTypeString = $incidentTypeString;
+        return $this;
+    }
+
+    /**
+     * @return String
+     */
     public function getIncidentStatus() {
         return $this->incidentStatus;
     }
 
+    /**
+     * @param String $incidentStatus
+     * @return IncidentDto
+     */
+    public function setIncidentStatus($incidentStatus) {
+        $this->incidentStatus = $incidentStatus;
+        return $this;
+    }
+
+    /**
+     * @return String
+     */
     public function getIncidentStatusString() {
         return $this->incidentStatusString;
     }
 
-    public function setIncidentNo($incidentNo) {
-        $this->incidentNo = $incidentNo;
-    }
-
-    public function setCallContent($callContent) {
-        $this->callContent = $callContent;
-    }
-
-    public function setCallDate($callDate) {
-        $this->callDate = $callDate;
-    }
-
-    public function setCallDateTime($callDateTime) {
-        $this->callDateTime = $callDateTime;
-    }
-
-    public function setIncidentType($incidentType) {
-        $this->incidentType = $incidentType;
-    }
-
-    public function setIncidentTypeString($incidentTypeString) {
-        $this->incidentTypeString = $incidentTypeString;
-    }
-
-    public function setIncidentStatus($incidentStatus) {
-        $this->incidentStatus = $incidentStatus;
-    }
-
+    /**
+     * @param String $incidentStatusString
+     * @return IncidentDto
+     */
     public function setIncidentStatusString($incidentStatusString) {
         $this->incidentStatusString = $incidentStatusString;
+        return $this;
     }
 
-    public function getIncidentId() {
-        return $this->incidentId;
-    }
-
-    public function setIncidentId($incidentId) {
-        $this->incidentId = $incidentId;
-    }
 // ::: 2018.01.22 [#23] 入力補助モーダル　インシデント Add End   newtouch
 
-    
     /**
      * @return IncidentMainDto
      */

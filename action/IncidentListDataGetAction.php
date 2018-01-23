@@ -206,7 +206,7 @@ class IncidentListDataGetAction extends CommonAction {
 
         /* ロジック処理 */
         $incidentListGetLogic = new IncidentListGetLogic();
-        $eventResult = $incidentListGetLogic->executeCommon($incidentListGetDto);
+        $eventResult = $incidentListGetLogic->execute($incidentListGetDto);
 
         /* 戻り値作成処理 */
         $rtnAry = $this->createReturnArrayCommon($eventResult);

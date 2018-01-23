@@ -99,8 +99,11 @@ require_once('./dto/CommonDto.php');
  * @property String $custTypeKasi
  * @property String $custTypeOther
  * @property String $condId
+ * @property String $incidentType
+ * @property String $incidentStatus
  */
-class IncidentListGetDto extends CommonDto{
+class IncidentListGetDto extends CommonDto {
+
     private $RelateFlg;
     private $keywordStr;
     private $logFlg;
@@ -194,21 +197,38 @@ class IncidentListGetDto extends CommonDto{
     private $incidentType;
     private $incidentStatus;
 
+    /**
+     * @return String
+     */
     public function getIncidentType() {
         return $this->incidentType;
     }
 
+    /**
+     * @param String $incidentType
+     * @return IncidentListGetDto
+     */
+    public function setIncidentType($incidentType) {
+        $this->incidentType = $incidentType;
+        return $this;
+    }
+
+    /**
+     * @return String
+     */
     public function getIncidentStatus() {
         return $this->incidentStatus;
     }
 
-    public function setIncidentType($incidentType) {
-        $this->incidentType = $incidentType;
-    }
-
+    /**
+     * @param String $incidentStatus
+     * @return IncidentListGetDto
+     */
     public function setIncidentStatus($incidentStatus) {
         $this->incidentStatus = $incidentStatus;
+        return $this;
     }
+
 // ::: 2018.01.22 [#23] 入力補助モーダル　インシデント Add End   newtouch
 
     /**
@@ -589,7 +609,7 @@ class IncidentListGetDto extends CommonDto{
     public function setCallEndDateFrom($callEndDateFrom) {
         $this->callEndDateFrom = $callEndDateFrom;
     }
-    
+
     /**
      * @return String
      */
@@ -1429,6 +1449,5 @@ class IncidentListGetDto extends CommonDto{
     public function setCondId($condId) {
         $this->condId = $condId;
     }
-
 
 }
