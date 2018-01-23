@@ -17,84 +17,102 @@ require_once('./dto/IncidentListGetDto.php');
 
 class IncidentListDataGetAction extends CommonAction {
 
-// ::: 2018.01.23 [#23] 入力補助モーダル　インシデント Del Start newtouch
-// :::     public function index() {
-// :::         $P = $GLOBALS[P]; // 共通パラメータ配列取得
-// :::         // 画面からパラメータ取得
-// :::         $incidentNo = $P['incidentNo'];
-// :::         $callContent = $P['callContent'];
-// :::         $kijoNm = $P['kijoNm'];
-// :::         $setubiNm = $P['setubiNm'];
-// :::         $prefNm = $P['prefNm'];
-// :::         $callStartDateFrom = $P['callStartDateFrom'];
-// :::         $callStartDateTo = $P['callStartDateTo'];
-// :::         // インシデント情報検索用パラメータ
-// :::         $IncidentListGetDto = new IncidentListGetDto();
-// :::         $IncidentListGetDto->setRelateFlg(TRUE);
-// :::         $IncidentListGetDto->setLogFlg(FALSE);
-// :::         $IncidentListGetDto->setIncidentNo($incidentNo);
-// :::         $IncidentListGetDto->setCallContent($callContent);
-// :::         $IncidentListGetDto->setKijoNm($kijoNm);
-// :::         $IncidentListGetDto->setSetubiNm($setubiNm);
-// :::         $IncidentListGetDto->setPrefNm($prefNm);
-// :::         $IncidentListGetDto->setCallStartDateFrom($callStartDateFrom);
-// :::         $IncidentListGetDto->setCallStartDateTo($callStartDateTo);
-// :::         // インシデントリスト情報を取得
-// :::         $IncidentListGetLogic = new IncidentListGetLogic();
-// :::         $eventResult = $IncidentListGetLogic->execute($IncidentListGetDto);
-// :::         // 戻り値配列の作成
-// :::         $rtnAry = $this->createReturnArray($eventResult);
-// :::         // 値を返す(Angular)
-// :::         echo $this->returnAngularJSONP($rtnAry);
-// :::     }
-// :::     public function createReturnArray($eventResult) {
-// :::         $incidentListAry = array();
-// :::         // 戻り値の作成
-// :::         if ($eventResult && $eventResult->getLogicResult() == LOGIC_RESULT_SEIJOU) {
-// :::             array_push($incidentListAry, array("result" => true));
-// :::             if ($eventResult->getIncidentList() && is_array($eventResult->getIncidentList()) && count($eventResult->getIncidentList()) > 0) {
-// :::                 foreach ($eventResult->getIncidentList() as $incident) {
-// :::                     $incidentAry = array();
-// :::                     // インシデント情報
-// :::                     $incidentMainInfo = $incident->getIncidentMainInfo();
-// :::                     $incidentAry["incidentId"] = $incidentMainInfo->getIncidentId();
-// :::                     $incidentAry["incidentNo"] = $incidentMainInfo->getIncidentNo();
-// :::                     $incidentAry["incidentStatusCd"] = $incidentMainInfo->getIncidentStsCd();
-// :::                     $incidentAry["incidentStatusNm"] = $this->getConstArrayString(unserialize(INCIDENT_STS_NAME), $incidentMainInfo->getIncidentStsCd());
-// :::                     $incidentAry["incidentTypeCd"] = $incidentMainInfo->getIncidentTypeCd();
-// :::                     $incidentAry["incidentTypeNm"] = $this->getConstArrayString(unserialize(INCIDENT_TYPE_NAME), $incidentMainInfo->getIncidentTypeCd());
-// :::                     $incidentAry["callContent"] = $incidentMainInfo->getCallContent();
-// :::                     $incidentAry["kijoId"] = $incidentMainInfo->getKijoId();
-// :::                     $incidentAry["kijoNm"] = $incidentMainInfo->getKijoNm();
-// :::                     $incidentAry["setubiId"] = $incidentMainInfo->getSetubiId();
-// :::                     $incidentAry["setubiNm"] = $incidentMainInfo->getSetubiNm();
-// :::                     $incidentAry["prefId"] = $incidentMainInfo->getPrefId();
-// :::                     $incidentAry["prefNm"] = $incidentMainInfo->getPrefNm();
-// :::                     $incidentAry["incidentStartDateTime"] = $incidentMainInfo->getIncidentStartDateTime();
-// :::                     $incidentAry["callDate"] = $incidentMainInfo->getCallDate();
-// :::                     // 関連情報の有無
-// :::                     $incidentRelateLinkInfo = $incident->getRelateLink();
-// :::                     $incidentAry["relatePj"] = $this->checkDataExistence($incidentRelateLinkInfo->getPjInfo());
-// :::                     $incidentAry["relateJiko"] = $this->checkDataExistence($incidentRelateLinkInfo->getJikoInfo());
-// :::                     $incidentAry["relateMr2"] = $this->checkDataExistence($incidentRelateLinkInfo->getMr2Info());
-// :::                     $incidentAry["relateHiyo"] = $this->checkDataExistence($incidentRelateLinkInfo->getHiyoInfo());
-// :::                     // 1件分の情報をセット
-// :::                     array_push($incidentListAry, $incidentAry);
-// :::                 }
-// :::             }
-// :::         } else {
-// :::             array_push($incidentListAry, array("result" => false));
-// :::         }
-// :::         return $incidentListAry;
-// :::     }
-// :::     public function checkDataExistence($ary) {
-// :::         if (isset($ary) && is_array($ary) && count($ary) > 0) {
-// :::             return "有";
-// :::         } else {
-// :::             return null;
-// :::         }
-// :::     }
-// ::: 2018.01.23 [#23] 入力補助モーダル　インシデント Del End   newtouch
+    public function index() {
+        $P = $GLOBALS[P]; // 共通パラメータ配列取得
+        // 画面からパラメータ取得
+        $incidentNo = $P['incidentNo'];
+        $callContent = $P['callContent'];
+        $kijoNm = $P['kijoNm'];
+        $setubiNm = $P['setubiNm'];
+        $prefNm = $P['prefNm'];
+        $callStartDateFrom = $P['callStartDateFrom'];
+        $callStartDateTo = $P['callStartDateTo'];
+        $incidentTypeSyougai =  $P["incidentTypeSyougai"];
+        $incidentTypeJiko = $P["incidentTypeJiko"];
+        $incidentTypeSyougai = $P["incidentTypeClaim"];
+        $incidentTypeJiko = $P["incidentTypeToiawase"];
+        $incidentTypeClaim = $P["incidentTypeInfo"];
+        $incidentTypeToiawase = $P["incidentTypeOther"];
+        $incidentStatusCall = $P["incidentStatusCall"];
+        $incidentStatusTaio = $P["incidentStatusTaio"];
+        $incidentStatusAct = $P["incidentStatusAct"];
+        // インシデント情報検索用パラメータ
+        $IncidentListGetDto = new IncidentListGetDto();
+        $IncidentListGetDto->setRelateFlg(TRUE);
+        $IncidentListGetDto->setLogFlg(FALSE);
+        $IncidentListGetDto->setIncidentNo($incidentNo);
+        $IncidentListGetDto->setCallContent($callContent);
+        $IncidentListGetDto->setKijoNm($kijoNm);
+        $IncidentListGetDto->setSetubiNm($setubiNm);
+        $IncidentListGetDto->setPrefNm($prefNm);
+        $IncidentListGetDto->setCallStartDateFrom($callStartDateFrom);
+        $IncidentListGetDto->setCallStartDateTo($callStartDateTo);
+        $IncidentListGetDto->setIncidentTypeSyougai($incidentTypeSyougai);
+        $IncidentListGetDto->setIncidentTypeJiko($incidentTypeJiko);
+        $IncidentListGetDto->setIncidentTypeClaim($incidentTypeClaim);
+        $IncidentListGetDto->setIncidentTypeToiawase($incidentTypeToiawase);
+        $IncidentListGetDto->setIncidentTypeInfo($incidentTypeInfo);
+        $IncidentListGetDto->setIncidentTypeOther($incidentTypeOther);
+        $IncidentListGetDto->setIncidentStatusCall($incidentStatusCall);
+        $IncidentListGetDto->setIncidentStatusTaio($incidentStatusTaio);
+        $IncidentListGetDto->setIncidentStatusAct($incidentStatusAct);
+        // インシデントリスト情報を取得
+        $IncidentListGetLogic = new IncidentListGetLogic();
+        $eventResult = $IncidentListGetLogic->execute($IncidentListGetDto);
+        // 戻り値配列の作成
+        $rtnAry = $this->createReturnArray($eventResult);
+        // 値を返す(Angular)
+        echo $this->returnAngularJSONP($rtnAry);
+    }
+    public function createReturnArray($eventResult) {
+        $incidentListAry = array();
+        // 戻り値の作成
+        if ($eventResult && $eventResult->getLogicResult() == LOGIC_RESULT_SEIJOU) {
+            array_push($incidentListAry, array("result" => true));
+            if ($eventResult->getIncidentList() && is_array($eventResult->getIncidentList()) && count($eventResult->getIncidentList()) > 0) {
+                foreach ($eventResult->getIncidentList() as $incident) {
+                    $incidentAry = array();
+                    // インシデント情報
+                    $incidentMainInfo = $incident->getIncidentMainInfo();
+                    $incidentAry["incidentId"] = $incidentMainInfo->getIncidentId();
+                    $incidentAry["incidentNo"] = $incidentMainInfo->getIncidentNo();
+                    $incidentAry["incidentStatusCd"] = $incidentMainInfo->getIncidentStsCd();
+                    $incidentAry["incidentStatusNm"] = $this->getConstArrayString(unserialize(INCIDENT_STS_NAME), $incidentMainInfo->getIncidentStsCd());
+                    $incidentAry["incidentTypeCd"] = $incidentMainInfo->getIncidentTypeCd();
+                    $incidentAry["incidentTypeNm"] = $this->getConstArrayString(unserialize(INCIDENT_TYPE_NAME), $incidentMainInfo->getIncidentTypeCd());
+                    $incidentAry["callContent"] = $incidentMainInfo->getCallContent();
+                    $incidentAry["kijoId"] = $incidentMainInfo->getKijoId();
+                    $incidentAry["kijoNm"] = $incidentMainInfo->getKijoNm();
+                    $incidentAry["setubiId"] = $incidentMainInfo->getSetubiId();
+                    $incidentAry["setubiNm"] = $incidentMainInfo->getSetubiNm();
+                    $incidentAry["prefId"] = $incidentMainInfo->getPrefId();
+                    $incidentAry["prefNm"] = $incidentMainInfo->getPrefNm();
+                    $incidentAry["incidentStartDateTime"] = $incidentMainInfo->getIncidentStartDateTime();
+                    $incidentAry["callDate"] = $incidentMainInfo->getCallDate();
+                    // 関連情報の有無
+                    $incidentRelateLinkInfo = $incident->getRelateLink();
+                    $incidentAry["relatePj"] = $this->checkDataExistence($incidentRelateLinkInfo->getPjInfo());
+                    $incidentAry["relateJiko"] = $this->checkDataExistence($incidentRelateLinkInfo->getJikoInfo());
+                    $incidentAry["relateMr2"] = $this->checkDataExistence($incidentRelateLinkInfo->getMr2Info());
+                    $incidentAry["relateHiyo"] = $this->checkDataExistence($incidentRelateLinkInfo->getHiyoInfo());
+                    // 1件分の情報をセット
+                    array_push($incidentListAry, $incidentAry);
+                }
+            }
+        } else {
+            array_push($incidentListAry, array("result" => false));
+        }
+        return $incidentListAry;
+    }
+    public function checkDataExistence($ary) {
+        if (isset($ary) && is_array($ary) && count($ary) > 0) {
+            return "有";
+        } else {
+            return null;
+        }
+    }
+
+//  
 //    public function createDummyReturnArray($request) {
 //        /*
 //         * TODO:テスト用の戻り値用配列の作成
@@ -175,97 +193,4 @@ class IncidentListDataGetAction extends CommonAction {
 //
 //        return $incidentUnitAry;
 //    }
-// ::: 2018.01.22 [#23] 入力補助モーダル　インシデント Add Start newtouch
-    public function index() {
-        // 戻り値用配列
-        $rtnAry = array();
-
-        /* Dto作成処理 */
-        $incidentListGetDto = new IncidentListGetDto();
-        $P = $GLOBALS[P]; // 共通パラメータ配列取得
-        // 情報検索用パラメータ
-        $incidentType = "";
-        $incidentType = $this->madeCheckboxCondtion($incidentType, $P["incidentTypeSyougai"], "1");
-        $incidentType = $this->madeCheckboxCondtion($incidentType, $P["incidentTypeJiko"], "2");
-        $incidentType = $this->madeCheckboxCondtion($incidentType, $P["incidentTypeClaim"], "3");
-        $incidentType = $this->madeCheckboxCondtion($incidentType, $P["incidentTypeToiawase"], "4");
-        $incidentType = $this->madeCheckboxCondtion($incidentType, $P["incidentTypeInfo"], "5");
-        $incidentType = $this->madeCheckboxCondtion($incidentType, $P["incidentTypeOther"], "6");
-
-        $incidentStatus = "";
-        $incidentStatus = $this->madeCheckboxCondtion($incidentStatus, $P["incidentStatusCall"], "1");
-        $incidentStatus = $this->madeCheckboxCondtion($incidentStatus, $P["incidentStatusTaio"], "2");
-        $incidentStatus = $this->madeCheckboxCondtion($incidentStatus, $P["incidentStatusAct"], "3");
-
-        $incidentListGetDto->setIncidentNo($P['incidentNo']);
-        $incidentListGetDto->setCallContent($P['callContent']);
-        $incidentListGetDto->setCallStartDateFrom($P['callStartDateFrom']);
-        $incidentListGetDto->setCallStartDateTo($P['callStartDateTo']);
-        $incidentListGetDto->setIncidentType($incidentType);
-        $incidentListGetDto->setIncidentStatus($incidentStatus);
-
-        /* ロジック処理 */
-        $incidentListGetLogic = new IncidentListGetLogic();
-        $eventResult = $incidentListGetLogic->execute($incidentListGetDto);
-
-        /* 戻り値作成処理 */
-        $rtnAry = $this->createReturnArray($eventResult);
-
-        // 値を返す(Angular)
-        echo $this->returnAngularJSONP($rtnAry);
-    }
-
-    public function createReturnArray(IncidentListGetResultDto $eventResult) {
-        $incidentListAry = array();
-
-        // 戻り値の作成
-        if ($eventResult && $eventResult->getLogicResult() == LOGIC_RESULT_SEIJOU) {
-            array_push($incidentListAry, array("result" => true));
-
-            if ($eventResult->getIncidentList() && is_array($eventResult->getIncidentList()) && count($eventResult->getIncidentList()) > 0) {
-                foreach ($eventResult->getIncidentList() as $incident) {
-                    $incidentAry = array();
-
-                    // インシデント情報
-                    $incidentAry["incidentId"] = $incident->getIncidentId();
-                    $incidentAry["incidentNo"] = $incident->getIncidentNo();
-                    $incidentAry["callContent"] = $incident->getCallContent();
-                    $incidentAry["callDate"] = $incident->getCallDate();
-                    $incidentAry["callDateTime"] = $incident->getCallDateTime();
-                    $incidentAry["incidentType"] = $incident->getIncidentType();
-                    $incidentAry["incidentTypeString"] = $incident->getIncidentTypeString();
-                    $incidentAry["incidentStatus"] = $incident->getIncidentStatus();
-                    $incidentAry["incidentStatusString"] = $incident->getIncidentStatusString();
-                    // 1件分の情報をセット
-                    array_push($incidentListAry, $incidentAry);
-                }
-            }
-        } else {
-            array_push($incidentListAry, array("result" => false));
-        }
-
-        return $incidentListAry;
-    }
-
-    /**
-     * チェックボックスの状態に応じて検索条件を作成する
-     * @param type $result 結果
-     * @param type $param チェックボックスの状態
-     * @param type $val 対応する値
-     * @return string
-     */
-    public function madeCheckboxCondtion($result, $param, $val) {
-        if ($param == null || $param == "" || $param == "false") {
-            return $result;
-        } elseif ($param == "true") {
-            if ($result == "") {
-                $result .= "'" . $val . "'";
-            } else {
-                $result .= "," . "'" . $val . "'";
-            }
-        }
-        return $result;
-    }
-
-// ::: 2018.01.22 [#23] 入力補助モーダル　インシデント Add End   newtouch
 }
