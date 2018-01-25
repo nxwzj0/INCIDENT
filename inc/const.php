@@ -223,3 +223,42 @@ serialize(array(
     '4' => '技術',
     '5' => 'その他'
 )));
+
+// ::: 2018.01.25 [#23] 入力補助モーダル　インシデント Add Start newtouch
+// インシデント分類
+define('INCIDENT_TYPE_VALUE', serialize(array(
+    'incidentTypeSyougai'=>'1'
+    ,'incidentTypeJiko'=>'2'
+    ,'incidentTypeClaim'=>'3'
+    ,'incidentTypeToiawase'=>'4'
+    ,'incidentTypeInfo'=>'5'
+    ,'incidentTypeOther'=>'6'
+)));
+
+// インシデントステータス
+define('INCIDENT_STATUS_VALUE', serialize(array(
+    'incidentStatusCall'=>'1'
+    ,'incidentStatusTaio'=>'2'
+    ,'incidentStatusAct'=>'3'
+)));
+
+// 業種区分
+define('INDUSTRY_TYPE_VALUE', serialize(array(
+    'industryTypeMachinery'=>'1'
+    ,'industryTypeElectricalMachinery'=>'2'
+    ,'industryTypeInstrumentation'=>'3'
+    ,'industryTypeInfo'=>'4'
+    ,'industryTypeEnvironment'=>'5'
+    ,'industryTypeWBC'=>'6'
+    ,'industryTypeOther'=>'7'
+)));
+
+// 顧客分類
+define('CUST_TYPE_VALUE', serialize(array(
+    'custTypeNenkan'=>'1'
+    ,'custTypeTenken'=>'2'
+    ,'custTypeNasi'=>'3'
+    ,'custTypeKasi'=>'4'
+    ,'custTypeOther'=>'5'
+)));
+// ::: 2018.01.25 [#23] 入力補助モーダル　インシデント Add End   newtouch

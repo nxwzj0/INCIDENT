@@ -137,33 +137,33 @@ class IncidentListGetLogic extends CommonLogic {
         $conditions['custTypeKasi'] = $IncidentListGetDto->getCustTypeKasi();
         $conditions['custTypeOther'] = $IncidentListGetDto->getCustTypeOther();
         $incidentType = "";
-        $incidentType = $this->madeCheckboxCondtion($incidentType, $conditions["incidentTypeSyougai"], "1");
-        $incidentType = $this->madeCheckboxCondtion($incidentType, $conditions["incidentTypeJiko"], "2");
-        $incidentType = $this->madeCheckboxCondtion($incidentType, $conditions["incidentTypeClaim"], "3");
-        $incidentType = $this->madeCheckboxCondtion($incidentType, $conditions["incidentTypeToiawase"], "4");
-        $incidentType = $this->madeCheckboxCondtion($incidentType, $conditions["incidentTypeInfo"], "5");
-        $incidentType = $this->madeCheckboxCondtion($incidentType, $conditions["incidentTypeOther"], "6");
+        $incidentType = $this->madeCheckboxCondtion($incidentType, $conditions,INCIDENT_TYPE_VALUE, "incidentTypeSyougai");
+        $incidentType = $this->madeCheckboxCondtion($incidentType, $conditions,INCIDENT_TYPE_VALUE, "incidentTypeJiko");
+        $incidentType = $this->madeCheckboxCondtion($incidentType, $conditions,INCIDENT_TYPE_VALUE, "incidentTypeClaim");
+        $incidentType = $this->madeCheckboxCondtion($incidentType, $conditions,INCIDENT_TYPE_VALUE, "incidentTypeToiawase");
+        $incidentType = $this->madeCheckboxCondtion($incidentType, $conditions,INCIDENT_TYPE_VALUE, "incidentTypeInfo");
+        $incidentType = $this->madeCheckboxCondtion($incidentType, $conditions,INCIDENT_TYPE_VALUE, "incidentTypeOther");
         $conditions['incidentType'] = $incidentType;
         $incidentStatus = "";
-        $incidentStatus = $this->madeCheckboxCondtion($incidentStatus, $conditions["incidentStatusCall"], "1");
-        $incidentStatus = $this->madeCheckboxCondtion($incidentStatus, $conditions["incidentStatusTaio"], "2");
-        $incidentStatus = $this->madeCheckboxCondtion($incidentStatus, $conditions["incidentStatusAct"], "3");
+        $incidentStatus = $this->madeCheckboxCondtion($incidentStatus, $conditions,INCIDENT_STATUS_VALUE, "incidentStatusCall");
+        $incidentStatus = $this->madeCheckboxCondtion($incidentStatus, $conditions,INCIDENT_STATUS_VALUE, "incidentStatusTaio");
+        $incidentStatus = $this->madeCheckboxCondtion($incidentStatus, $conditions,INCIDENT_STATUS_VALUE, "incidentStatusAct");
         $conditions['incidentStatus'] = $incidentStatus;
         $industryType = "";
-        $industryType = $this->madeCheckboxCondtion($industryType, $conditions["industryTypeMachinery"], "1");
-        $industryType = $this->madeCheckboxCondtion($industryType, $conditions["industryTypeElectricalMachinery"], "2");
-        $industryType = $this->madeCheckboxCondtion($industryType, $conditions["industryTypeInstrumentation"], "3");
-        $industryType = $this->madeCheckboxCondtion($industryType, $conditions["industryTypeInfo"], "4");
-        $industryType = $this->madeCheckboxCondtion($industryType, $conditions["industryTypeEnvironment"], "5");
-        $industryType = $this->madeCheckboxCondtion($industryType, $conditions["industryTypeWBC"], "6");
-        $industryType = $this->madeCheckboxCondtion($industryType, $conditions["industryTypeOther"], "7");
+        $industryType = $this->madeCheckboxCondtion($industryType, $conditions,INDUSTRY_TYPE_VALUE, "industryTypeMachinery");
+        $industryType = $this->madeCheckboxCondtion($industryType, $conditions,INDUSTRY_TYPE_VALUE, "industryTypeElectricalMachinery");
+        $industryType = $this->madeCheckboxCondtion($industryType, $conditions,INDUSTRY_TYPE_VALUE, "industryTypeInstrumentation");
+        $industryType = $this->madeCheckboxCondtion($industryType, $conditions,INDUSTRY_TYPE_VALUE, "industryTypeInfo");
+        $industryType = $this->madeCheckboxCondtion($industryType, $conditions,INDUSTRY_TYPE_VALUE, "industryTypeEnvironment");
+        $industryType = $this->madeCheckboxCondtion($industryType, $conditions,INDUSTRY_TYPE_VALUE, "industryTypeWBC");
+        $industryType = $this->madeCheckboxCondtion($industryType, $conditions,INDUSTRY_TYPE_VALUE, "industryTypeOther");
         $conditions['industryType'] = $industryType;
         $custType = "";
-        $custType = $this->madeCheckboxCondtion($custType, $conditions["custTypeNenkan"], "1");
-        $custType = $this->madeCheckboxCondtion($custType, $conditions["custTypeTenken"], "2");
-        $custType = $this->madeCheckboxCondtion($custType, $conditions["custTypeNasi"], "3");
-        $custType = $this->madeCheckboxCondtion($custType, $conditions["custTypeKasi"], "4");
-        $custType = $this->madeCheckboxCondtion($custType, $conditions["custTypeOther"], "5");
+        $custType = $this->madeCheckboxCondtion($custType, $conditions,CUST_TYPE_VALUE, "custTypeNenkan");
+        $custType = $this->madeCheckboxCondtion($custType, $conditions,CUST_TYPE_VALUE, "custTypeTenken");
+        $custType = $this->madeCheckboxCondtion($custType, $conditions,CUST_TYPE_VALUE, "custTypeNasi");
+        $custType = $this->madeCheckboxCondtion($custType, $conditions,CUST_TYPE_VALUE, "custTypeKasi");
+        $custType = $this->madeCheckboxCondtion($custType, $conditions,CUST_TYPE_VALUE, "custTypeOther");
         $conditions['custType'] = $custType;
         // 2018.01.09 Newtouch追加　end
         try {
@@ -407,15 +407,19 @@ class IncidentListGetLogic extends CommonLogic {
         return $IncidentListGetResultDto;
     }
 
-// ::: 2018.01.23 [#23] 入力補助モーダル　インシデント Add Start newtouch
+// ::: 2018.01.25 [#23] 入力補助モーダル　インシデント Add Start newtouch
     /**
      * チェックボックスの状態に応じて検索条件を作成する
      * @param type $result 結果
-     * @param type $param チェックボックスの状態
-     * @param type $val 対応する値
+     * @param type $conditions 条件配列
+     * @param type $type カテゴリ名
+     * @param type $paramNm フィールド名
      * @return string
      */
-    public function madeCheckboxCondtion($result, $param, $val) {
+    public function madeCheckboxCondtion($result, $conditions,$type,$paramNm) {
+        $CommonService = new CommonService();
+        $param = $conditions[$paramNm];
+        $val = $CommonService->getConstArrayString(unserialize($type),$paramNm);
         if ($param == null || $param == "" || $param == "false") {
             return $result;
         } elseif ($param == "true") {
@@ -427,6 +431,6 @@ class IncidentListGetLogic extends CommonLogic {
         }
         return $result;
     }
-// ::: 2018.01.23 [#23] 入力補助モーダル　インシデント Add End   newtouch
+// ::: 2018.01.25 [#23] 入力補助モーダル　インシデント Add End   newtouch
 
 }
