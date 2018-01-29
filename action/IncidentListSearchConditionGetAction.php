@@ -29,7 +29,7 @@ class IncidentListSearchConditionGetAction extends CommonAction {
         $IncidentListGetDto->setLogFlg(FALSE);
         $IncidentListGetDto->setCondId($condId);
 
-        if($condId != ZERO){
+        if($condId != CONDITION_NONE){
             // 検索条件を取得
             $IncidentListSearchConditionGetLogic = new IncidentListSearchConditionGetLogic();
             $conditionResult = $IncidentListSearchConditionGetLogic->execute($IncidentListGetDto);

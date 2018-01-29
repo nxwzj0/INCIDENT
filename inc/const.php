@@ -45,8 +45,8 @@ define('RELATE_USER_FLG_FALSE', FALSE);
 define('Ymd', 'Y/m/d');
 define('YYYYMMDD', 'YYYY/MM/DD');
 
-// 定数0
-define('ZERO', '0');
+// 検索条件Idなし
+define('CONDITION_NONE', '0');
 
 // 新規作成
 define('SINKI_SAKUSEI', '新規作成');
@@ -202,6 +202,12 @@ serialize(array(
     '2' => '対応入力済',
     '3' => '処置入力済'
 )));
+// インシデントステータス 受付済
+define('INCIDENT_STS_CALL', '1');
+// インシデントステータス 対応入力済
+define('INCIDENT_STS_TAIO', '2');
+// インシデントステータス 処置入力済
+define('INCIDENT_STS_ACT', '3');
 
 // インシデント分類名
 define('INCIDENT_TYPE_NAME',

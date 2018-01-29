@@ -253,8 +253,9 @@ class IncidentEntryAction extends CommonAction {
         $incidentSaveAry = array();
 
         // 戻り値の作成
-        if ($eventResult && $eventResult->getReturnRst() == LOGIC_RESULT_SEIJOU) {
+        if ($eventResult && $eventResult->getReturnRst() == SAVE_TRUE) {
             array_push($incidentSaveAry, array("result" => true));
+            array_push($incidentSaveAry, array("incidentId" => $eventResult->getIncidentId()));
         } else {
             array_push($incidentSaveAry, array("result" => false));
         }
