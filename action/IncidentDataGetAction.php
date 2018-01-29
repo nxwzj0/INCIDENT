@@ -56,7 +56,7 @@ class IncidentDataGetAction extends CommonAction {
                     $tmp = array();
                     $tmp["relateId"] = $arr[$index]->getRelateId();
                     $tmp["incidentId"] = $arr[$index]->getIncidentId();
-                    $tmp["relateUserId"] = $arr[$index]->getRelateId();
+                    $tmp["relateUserId"] = $arr[$index]->getRelateUserId();
                     $tmp["relateUserNm"] = $arr[$index]->getRelateUserNm();
                     $tmp["relateUserSectionCd"] = $arr[$index]->getRelateUserSectionCd();
                     $tmp["relateUserSectionNm"] = $arr[$index]->getRelateUserSectionNm();
