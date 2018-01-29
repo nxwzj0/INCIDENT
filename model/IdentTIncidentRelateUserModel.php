@@ -21,7 +21,8 @@ class IdentTIncidentRelateUserModel extends CommonModel {
                     RELATE_USER_ID,
                     RELATE_USER_NM,
                     RELATE_USER_SECTION_CD,
-                    RELATE_USER_SECTION_NM 
+                    RELATE_USER_SECTION_NM,
+                    TO_CHAR(KIDOKU_DATE,'yyyy/mm/dd') AS KIDOKU_DATE
                 FROM
                     IDENT_T_INCIDENT_RELATE_USER
                 WHERE

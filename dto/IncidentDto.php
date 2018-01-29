@@ -15,6 +15,7 @@ require_once('./dto/CommonDto.php');
  * @property IncidentMainDto $incidentMainInfo
  * @property LinkRelationDto $relateLink
  * @property IncidentRelationDto[] $relateIncidentList
+ * @property IncidentRelateUserDto[] $relateUserList
  * @property RevDto[] $logList
  * @property String $incidentId
  * @property String $incidentNo
@@ -60,6 +61,16 @@ class IncidentDto extends CommonDto {
     /** ステータスString */
     private $incidentStatusString;
 
+    private $relateUserList = array();
+    
+    public function getRelateUserList() {
+        return $this->relateUserList;
+    }
+
+    public function setRelateUserList($relateUserList) {
+        $this->relateUserList = $relateUserList;
+    }
+    
     /**
      * @return String
      */

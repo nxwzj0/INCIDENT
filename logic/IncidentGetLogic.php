@@ -27,6 +27,7 @@ require_once('./dto/RevDto.php');
 require_once('./dto/RevDetailDto.php');
 require_once('./dto/IncidentMainDto.php');
 require_once('./dto/IncidentRelationDto.php');
+require_once('./dto/IncidentRelateUserDto.php');
 require_once('./dto/UserDto.php');
 require_once('./dto/SectionDto.php');
 require_once('./dto/LinkRelationDto.php');
@@ -66,6 +67,9 @@ class IncidentGetLogic extends CommonLogic {
                     // インシデント情報、プロジェクト情報、MR2情報、事故クレーム情報、費用決裁申請情報⇒$LinkRelationDtoにセットする処理
                     $LinkRelationDto = $DtoCreateLogic->createLinkRelationDto($incidentData);
                 }
+                
+                $IncidentRelateUserDto = new IncidentRelateUserDto();
+                
             } catch (Exception $e) {
                 // LOGIC結果　SQLエラー '1' をセット
                 $IncidentGetResultDto->setLogicResult(LOGIC_RESULT_SQL_ERROR);
@@ -145,16 +149,22 @@ class IncidentGetLogic extends CommonLogic {
                 // 戻りオブジェクト(IncidentGetResultDto)
                 return $IncidentGetResultDto;
             }
-
+            
+            $relateUserList = array();
             foreach($incidentRelateUserData as $one){
-                $UserDto = new UserDto();
+                $IncidentRelateUserDto = new IncidentRelateUserDto();
+                
+                $IncidentRelateUserDto -> setRelateId($one['RELATE_ID']);
+                $IncidentRelateUserDto -> setIncidentId($one['INCIDENT_ID']);
+                $IncidentRelateUserDto -> setRelateUserId($one['RELATE_USER_ID']);
+                $IncidentRelateUserDto -> setRelateUserNm($one['RELATE_USER_NM']);
+                $IncidentRelateUserDto -> setRelateUserSectionCd($one['RELATE_USER_SECTION_CD']);
+                $IncidentRelateUserDto -> setRelateUserSectionNm($one['RELATE_USER_SECTION_NM']);
+                $IncidentRelateUserDto -> setKidokuDate($one['KIDOKU_DATE']);
 
-                $UserDto->setUserId($one['RELATE_USER_ID']);
-                $UserDto->setUserNm($one['RELATE_USER_NM']);
-
-                // 関係者リスト(relateList)⇒インシデントメイン情報(IncidentMainDto)のセット
-                $IncidentMainDto->addRelateList($UserDto);
+                array_push($relateUserList, $IncidentRelateUserDto);
             }
+             $IncidentMainDto->setRelateUserList($relateUserList);
         }
 
         // CommonServiceを作成

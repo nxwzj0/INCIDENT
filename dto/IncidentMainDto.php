@@ -13,6 +13,7 @@ require_once('./dto/CommonDto.php');
  * Class IncidentMainDto
  *
  * @property UserDto[] $relateList
+ * @property IncidentRelateUserDto[] $relateUserList
  * @property String $kijoId
  * @property String $jigyosyutaiId
  * @property String $setubiId
@@ -147,6 +148,17 @@ class IncidentMainDto extends CommonDto{
     private $productHindo;
     private $productGensyo;
     private $productStatus;
+    
+    private $relateUserList = array();
+    
+    public function getRelateUserList() {
+        return $this->relateUserList;
+    }
+
+    public function setRelateUserList($relateUserList) {
+        $this->relateUserList = $relateUserList;
+    }
+    
     /**
      * @return String
      */

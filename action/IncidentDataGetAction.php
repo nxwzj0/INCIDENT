@@ -40,7 +40,7 @@ class IncidentDataGetAction extends CommonAction {
         echo $this->returnAngularJSONP($rtnAry);
     }
 
-    public function createReturnArray($eventResult) {
+    public function createReturnArray(IncidentGetResultDto $eventResult) {
         $incidentUnitAry = array();
 
         // 戻り値の作成
@@ -50,7 +50,21 @@ class IncidentDataGetAction extends CommonAction {
 
             // インシデント情報
             if ($incidentMainInfo) {
+                $relateUserList = array();
+                $arr=(array)$incidentMainInfo->getRelateUserList();
+                for ($index = 0; $index < count($arr); $index++) {
+                    $tmp = array();
+                    $tmp["relateId"] = $arr[$index]->getRelateId();
+                    $tmp["incidentId"] = $arr[$index]->getIncidentId();
+                    $tmp["relateUserId"] = $arr[$index]->getRelateId();
+                    $tmp["relateUserNm"] = $arr[$index]->getRelateUserNm();
+                    $tmp["relateUserSectionCd"] = $arr[$index]->getRelateUserSectionCd();
+                    $tmp["relateUserSectionNm"] = $arr[$index]->getRelateUserSectionNm();
+                    $tmp["kidokuDate"] = $arr[$index]->getKidokuDate();
+                    array_push($relateUserList, $tmp);
+                }
                 array_push($incidentUnitAry, array("result" => true,
+                    "relateUserList"=>$relateUserList,
                     "incidentId" => $incidentMainInfo->getIncidentId(),
                     "incidentNo" => $incidentMainInfo->getIncidentNo(),
                     "incidentStatusCd" => $incidentMainInfo->getIncidentStsCd(),
