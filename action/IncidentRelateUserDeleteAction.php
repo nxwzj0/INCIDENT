@@ -14,20 +14,18 @@ require_once('./action/CommonAction.php');
 require_once('./logic/IncidentRelateUserDeleteLogic.php');
 
 // dto処理読み込み
-require_once('./dto/IncidentRelateUserDeleteDto.php');
+require_once('./dto/IncidentRelateUserDto.php');
 
 class IncidentRelateUserDeleteAction extends CommonAction {
 
     public function index() {
 
         // 実例化Dto
-        $condtionDto = new IncidentRelateUserDeleteDto();
+        $condtionDto = new IncidentRelateUserDto();
         // 共通パラメータ配列取得
         $P = $GLOBALS[P];
         // 画面からパラメータ取得
-        $condtionDto->setIncidentId($P['incidentId']);
-        $condtionDto->setRelateUserSectionCd($P['relateUserSectionCd']);
-        $condtionDto->setRelateUserId($P['relateUserId']);
+        $condtionDto->setRelateId($P['relateId']);
 
         // 実例化Logic
         $logic = new IncidentRelateUserDeleteLogic();

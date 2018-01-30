@@ -14,14 +14,14 @@ require_once('./action/CommonAction.php');
 require_once('./logic/IncidentRelateUserSaveLogic.php');
 
 // dto処理読み込み
-require_once('./dto/IncidentRelateUserSaveDto.php');
+require_once('./dto/IncidentRelateUserDto.php');
 
 class IncidentRelateUserSaveAction extends CommonAction {
 
     public function index() {
 
         // 実例化Dto
-        $condtionDto = new IncidentRelateUserSaveDto();
+        $condtionDto = new IncidentRelateUserDto();
         // 共通パラメータ配列取得
         $P = $GLOBALS[P];
         // 画面からパラメータ取得

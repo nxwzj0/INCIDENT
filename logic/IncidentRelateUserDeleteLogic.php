@@ -14,12 +14,12 @@ require_once('./logic/CommonLogic.php');
 // model処理読み込み
 require_once('./model/IdentTIncidentRelateUserDeleteModel.php');
 // dto処理読み込み
-require_once('./dto/IncidentRelateUserDeleteDto.php');
+require_once('./dto/IncidentRelateUserDto.php');
 require_once('./dto/IncidentRelateUserDeleteResultDto.php');
 
 class IncidentRelateUserDeleteLogic extends CommonLogic {
 
-    public function execute(IncidentRelateUserDeleteDto $conditionDto) {
+    public function execute(IncidentRelateUserDto $conditionDto) {
         // 実例化model
         $model = new IdentTIncidentRelateUserDeleteModel();
 
@@ -30,12 +30,10 @@ class IncidentRelateUserDeleteLogic extends CommonLogic {
         $MultiExecSql = new MultiExecSql();
 
         // 検索条件
-        $incidentId = $conditionDto->getIncidentId();
-        $deptCd = $conditionDto->getRelateUserSectionCd();
-        $userId = $conditionDto->getRelateUserId();
-
+        $relateId = $conditionDto->getRelateId();
+        
         // IDENT_T_SEARCH_CONDの削除処理
-        $deleteResultFlg = $model->delete($MultiExecSql, $incidentId, $deptCd, $userId);
+        $deleteResultFlg = $model->delete($MultiExecSql, $relateId);
 
         // 削除処理成功判定フラグ FALSE
         if ($deleteResultFlg == SAVE_FALSE) {

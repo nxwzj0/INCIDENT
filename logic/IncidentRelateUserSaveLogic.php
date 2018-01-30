@@ -14,12 +14,12 @@ require_once('./logic/CommonLogic.php');
 // model処理読み込み
 require_once('./model/IdentTIncidentRelateUserModel.php');
 // dto処理読み込み
-require_once('./dto/IncidentRelateUserSaveDto.php');
+require_once('./dto/IncidentRelateUserDto.php');
 require_once('./dto/IncidentRelateUserSaveResultDto.php');
 
 class IncidentRelateUserSaveLogic extends CommonLogic {
 
-    public function execute(IncidentRelateUserSaveDto $conditionDto) {
+    public function execute(IncidentRelateUserDto $conditionDto) {
         // 実例化model
         $model = new IdentTIncidentRelateUserModel();
 
