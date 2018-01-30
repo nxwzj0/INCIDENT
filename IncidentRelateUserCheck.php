@@ -11,7 +11,7 @@ require_once("./env.inc");
 require_once('./common/CommonService.php');
 
 /* * ****************************************************************************
-  ACTION_ID：RelateUserDelete.php
+  ACTION_ID：IncidentRelateUserCheck.php
  * ***************************************************************************** */
 require_once('./action/IncidentRelateUserCheckAction.php');
 

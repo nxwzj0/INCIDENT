@@ -3,7 +3,7 @@
 //*****************************************************************************
 //	システム名　　　：インシデント管理システム
 //	サブシステム名　：
-//	処理名　　　　　：IncidentListConditionDeleteRunLogic
+//	処理名　　　　　：IncidentRelateUserDeleteLogic
 //	作成日付・作成者：2018.01.05 NEWTOUCH)newtouch
 //	修正履歴　　　　：
 //*****************************************************************************
@@ -11,8 +11,6 @@
 require_once("./env.inc");
 // 共通処理読み込み
 require_once('./logic/CommonLogic.php');
-// 共通処理読み込み
-require_once('./common/CommonService.php');
 // model処理読み込み
 require_once('./model/IdentTIncidentRelateUserDeleteModel.php');
 // dto処理読み込み

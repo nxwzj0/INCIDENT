@@ -1,4 +1,5 @@
 <?php
+
 //*****************************************************************************
 //	システム名　　　：インシデント管理システム
 //	サブシステム名　：
@@ -13,7 +14,7 @@ require_once("./model/CommonModel.php");
 
 class IdentTIncidentRelateUserDeleteModel extends CommonModel {
 
-    public function delete($MultiExecSql,$incidentId,$deptCd,$userId) {
+    public function delete($MultiExecSql, $incidentId, $deptCd, $userId) {
         $SQL_INCIDENT_INFO = <<< SQL_INCIDENT_INFO
                 UPDATE
                     IDENT_T_INCIDENT_RELATE_USER T
@@ -25,9 +26,9 @@ class IdentTIncidentRelateUserDeleteModel extends CommonModel {
                     AND T.RELATE_USER_ID = '$userId'
 SQL_INCIDENT_INFO;
 
-        try{
+        try {
             $MultiExecSql->execute($SQL_INCIDENT_INFO, '');
-        }catch (Exception $e){
+        } catch (Exception $e) {
             print $e->getMessage();
             return SAVE_FALSE;
         }

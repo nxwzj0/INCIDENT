@@ -1,4 +1,5 @@
 <?php
+
 //*****************************************************************************
 //	システム名　　　：インシデント管理システム
 //	サブシステム名　：
@@ -51,7 +52,7 @@ class IncidentDataGetAction extends CommonAction {
             // インシデント情報
             if ($incidentMainInfo) {
                 $relateUserList = array();
-                $arr=(array)$incidentMainInfo->getRelateUserList();
+                $arr = (array) $incidentMainInfo->getRelateUserList();
                 for ($index = 0; $index < count($arr); $index++) {
                     $tmp = array();
                     $tmp["relateId"] = $arr[$index]->getRelateId();

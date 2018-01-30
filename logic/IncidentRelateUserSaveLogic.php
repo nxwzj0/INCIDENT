@@ -11,8 +11,6 @@
 require_once("./env.inc");
 // 共通処理読み込み
 require_once('./logic/CommonLogic.php');
-// 共通処理読み込み
-require_once('./common/CommonService.php');
 // model処理読み込み
 require_once('./model/IdentTIncidentRelateUserModel.php');
 // dto処理読み込み
@@ -44,7 +42,7 @@ class IncidentRelateUserSaveLogic extends CommonLogic {
         $conditions['loginSectionNm'] = $conditionDto->getInsSectionNm();
 
         // IDENT_T_SEARCH_CONDの削除処理
-        $resultFlg = $model->insert($conditions,$MultiExecSql);
+        $resultFlg = $model->insert($conditions, $MultiExecSql);
 
         // 削除処理成功判定フラグ FALSE
         if ($resultFlg == SAVE_FALSE) {

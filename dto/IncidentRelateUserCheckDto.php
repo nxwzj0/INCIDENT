@@ -1,4 +1,5 @@
 <?php
+
 //*****************************************************************************
 //	システム名　　　：インシデント管理システム
 //	サブシステム名　：
@@ -16,33 +17,52 @@ require_once('./dto/CommonDto.php');
  * @property String $relateUserSectionCd
  * @property String $relateUserId
  */
-class IncidentRelateUserCheckDto extends CommonDto{
+class IncidentRelateUserCheckDto extends CommonDto {
 
     private $incidentId;
     private $relateUserSectionCd;
     private $relateUserId;
 
+    /**
+     * @return String
+     */
     public function getIncidentId() {
         return $this->incidentId;
     }
 
-    public function getRelateUserSectionCd() {
-        return $this->relateUserSectionCd;
-    }
-
-    public function getRelateUserId() {
-        return $this->relateUserId;
-    }
-
+    /**
+     * @param String $incidentId
+     */
     public function setIncidentId($incidentId) {
         $this->incidentId = $incidentId;
     }
 
+    /**
+     * @return String
+     */
+    public function getRelateUserSectionCd() {
+        return $this->relateUserSectionCd;
+    }
+
+    /**
+     * @param String $relateUserSectionCd
+     */
     public function setRelateUserSectionCd($relateUserSectionCd) {
         $this->relateUserSectionCd = $relateUserSectionCd;
     }
 
+    /**
+     * @return String
+     */
+    public function getRelateUserId() {
+        return $this->relateUserId;
+    }
+
+    /**
+     * @param String $relateUserId
+     */
     public function setRelateUserId($relateUserId) {
         $this->relateUserId = $relateUserId;
     }
+
 }

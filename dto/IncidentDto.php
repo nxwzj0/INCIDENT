@@ -1,4 +1,5 @@
 <?php
+
 //*****************************************************************************
 //	システム名　　　：インシデント管理システム
 //	サブシステム名　：
@@ -27,7 +28,6 @@ require_once('./dto/CommonDto.php');
  * @property String $incidentStatus
  * @property String $incidentStatusString
  */
-
 class IncidentDto extends CommonDto {
 
     private $incidentMainInfo;
@@ -46,7 +46,6 @@ class IncidentDto extends CommonDto {
 
     /** 受付日 */
     private $callDate;
-    
     private $callDateTime;
 
     /** インシデント分類 */
@@ -61,16 +60,23 @@ class IncidentDto extends CommonDto {
     /** ステータスString */
     private $incidentStatusString;
 
+    /** インシデント関係者List */
     private $relateUserList = array();
-    
+
+    /**
+     * @return IncidentRelateUserDto[]
+     */
     public function getRelateUserList() {
         return $this->relateUserList;
     }
 
+    /**
+     * @param IncidentRelateUserDto[] $relateUserList
+     */
     public function setRelateUserList($relateUserList) {
         $this->relateUserList = $relateUserList;
     }
-    
+
     /**
      * @return String
      */
@@ -89,8 +95,7 @@ class IncidentDto extends CommonDto {
     /**
      * @return String
      */
-    public function getIncidentId()
-    {
+    public function getIncidentId() {
         return $this->incidentId;
     }
 
@@ -98,8 +103,7 @@ class IncidentDto extends CommonDto {
      * @param String $incidentId
      * @return IncidentDto
      */
-    public function setIncidentId($incidentId)
-    {
+    public function setIncidentId($incidentId) {
         $this->incidentId = $incidentId;
         return $this;
     }

@@ -1,4 +1,5 @@
 <?php
+
 //*****************************************************************************
 //	システム名　　　：インシデント管理システム
 //	サブシステム名　：
@@ -19,7 +20,7 @@ require_once('./dto/CommonDto.php');
  * @property String $relateUserSectionNm
  * @property String $kidokuDate
  */
-class IncidentRelateUserSaveDto extends CommonDto{
+class IncidentRelateUserSaveDto extends CommonDto {
 
     private $incidentId;
     private $relateUserId;
@@ -28,51 +29,88 @@ class IncidentRelateUserSaveDto extends CommonDto{
     private $relateUserSectionNm;
     private $kidokuDate;
 
+    /**
+     * @return String
+     */
     public function getIncidentId() {
         return $this->incidentId;
     }
 
-    public function getRelateUserSectionCd() {
-        return $this->relateUserSectionCd;
-    }
-
-    public function getRelateUserId() {
-        return $this->relateUserId;
-    }
-
+    /**
+     * @param String $incidentId
+     */
     public function setIncidentId($incidentId) {
         $this->incidentId = $incidentId;
     }
 
-    public function setRelateUserSectionCd($relateUserSectionCd) {
-        $this->relateUserSectionCd = $relateUserSectionCd;
+    /**
+     * @return String
+     */
+    public function getRelateUserId() {
+        return $this->relateUserId;
     }
 
+    /**
+     * @param String $relateUserId
+     */
     public function setRelateUserId($relateUserId) {
         $this->relateUserId = $relateUserId;
     }
-    
+
+    /**
+     * @return String
+     */
     public function getRelateUserNm() {
         return $this->relateUserNm;
     }
 
-    public function getRelateUserSectionNm() {
-        return $this->relateUserSectionNm;
-    }
-
-    public function getKidokuDate() {
-        return $this->kidokuDate;
-    }
-
+    /**
+     * @param String $relateUserNm
+     */
     public function setRelateUserNm($relateUserNm) {
         $this->relateUserNm = $relateUserNm;
     }
 
+    /**
+     * @return String
+     */
+    public function getRelateUserSectionCd() {
+        return $this->relateUserSectionCd;
+    }
+
+    /**
+     * @param String $relateUserSectionCd
+     */
+    public function setRelateUserSectionCd($relateUserSectionCd) {
+        $this->relateUserSectionCd = $relateUserSectionCd;
+    }
+
+    /**
+     * @return String
+     */
+    public function getRelateUserSectionNm() {
+        return $this->relateUserSectionNm;
+    }
+
+    /**
+     * @param String $relateUserSectionNm
+     */
     public function setRelateUserSectionNm($relateUserSectionNm) {
         $this->relateUserSectionNm = $relateUserSectionNm;
     }
 
+    /**
+     * @return String
+     */
+    public function getKidokuDate() {
+        return $this->kidokuDate;
+    }
+
+    /**
+     * @param String $kidokuDate
+     */
     public function setKidokuDate($kidokuDate) {
         $this->kidokuDate = $kidokuDate;
     }
+
 }

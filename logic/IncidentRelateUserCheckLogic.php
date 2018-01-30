@@ -11,8 +11,6 @@
 require_once("./env.inc");
 // 共通処理読み込み
 require_once('./logic/CommonLogic.php');
-// 共通処理読み込み
-require_once('./common/CommonService.php');
 // model処理読み込み
 require_once('./model/IdentTIncidentRelateUserCheckModel.php');
 // dto処理読み込み

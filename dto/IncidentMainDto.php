@@ -1,4 +1,5 @@
 <?php
+
 //*****************************************************************************
 //	システム名　　　：インシデント管理システム
 //	サブシステム名　：
@@ -80,7 +81,7 @@ require_once('./dto/CommonDto.php');
  * @property String $productGensyo
  * @property String $productStatus
  */
-class IncidentMainDto extends CommonDto{
+class IncidentMainDto extends CommonDto {
 
     private $relateList = array();
     private $kijoId;
@@ -148,17 +149,22 @@ class IncidentMainDto extends CommonDto{
     private $productHindo;
     private $productGensyo;
     private $productStatus;
-    
     private $relateUserList = array();
-    
+
+    /**
+     * @return IncidentRelateUserDto[]
+     */
     public function getRelateUserList() {
         return $this->relateUserList;
     }
 
+    /**
+     * @param IncidentRelateUserDto[] $relateUserList
+     */
     public function setRelateUserList($relateUserList) {
         $this->relateUserList = $relateUserList;
     }
-    
+
     /**
      * @return String
      */
@@ -396,7 +402,7 @@ class IncidentMainDto extends CommonDto{
     public function setActUser($actUser) {
         $this->actUser = $actUser;
     }
-    
+
     /**
      * @return UserDto[]
      */
@@ -422,7 +428,7 @@ class IncidentMainDto extends CommonDto{
     public function addRelateList(UserDto $relateList) {
         $this->relateList[] = $relateList;
     }
-    
+
     /**
      * @return String
      */
@@ -689,7 +695,6 @@ class IncidentMainDto extends CommonDto{
         $this->custTypeNm = $custTypeNm;
     }
 
-    
     /**
      * @return String
      */
@@ -703,6 +708,7 @@ class IncidentMainDto extends CommonDto{
     public function setCustDept($custDept) {
         $this->custDept = $custDept;
     }
+
     /**
      * @return String
      */
@@ -780,7 +786,7 @@ class IncidentMainDto extends CommonDto{
         return $this->callStartDate;
     }
 
-     /**
+    /**
      * @param String $callStartDate
      */
     public function setCallStartDate($callStartDate) {
@@ -1094,4 +1100,5 @@ class IncidentMainDto extends CommonDto{
     public function setProductStatus($productStatus) {
         $this->productStatus = $productStatus;
     }
+
 }

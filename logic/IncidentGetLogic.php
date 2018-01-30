@@ -1,4 +1,5 @@
 <?php
+
 //*****************************************************************************
 //	システム名　　　：インシデント管理システム
 //	サブシステム名　：
@@ -52,7 +53,7 @@ class IncidentGetLogic extends CommonLogic {
 
         // 関連フラグ true : 関連有り、false : 関連無し
         // 関連フラグ　⇒ true : 関連有り
-        if($relateFlg == RELATE_FLG_ON){
+        if ($relateFlg == RELATE_FLG_ON) {
             try {
                 // インシデント情報と関係リンク情報の取得
                 // O_インシデントモデルを作成
@@ -67,9 +68,8 @@ class IncidentGetLogic extends CommonLogic {
                     // インシデント情報、プロジェクト情報、MR2情報、事故クレーム情報、費用決裁申請情報⇒$LinkRelationDtoにセットする処理
                     $LinkRelationDto = $DtoCreateLogic->createLinkRelationDto($incidentData);
                 }
-                
+
                 $IncidentRelateUserDto = new IncidentRelateUserDto();
-                
             } catch (Exception $e) {
                 // LOGIC結果　SQLエラー '1' をセット
                 $IncidentGetResultDto->setLogicResult(LOGIC_RESULT_SQL_ERROR);
@@ -77,8 +77,8 @@ class IncidentGetLogic extends CommonLogic {
                 return $IncidentGetResultDto;
             }
 
-        // 関連フラグ ⇒　false : 関連無し
-        }else{
+            // 関連フラグ ⇒　false : 関連無し
+        } else {
             try {
                 // インシデントモデルを作成
                 $IdentTIncidentModel = new IdentTIncidentModel();
@@ -120,7 +120,7 @@ class IncidentGetLogic extends CommonLogic {
                 return $IncidentGetResultDto;
             }
 
-            foreach($incidentChangeLogData as $one){
+            foreach ($incidentChangeLogData as $one) {
                 $RevDto = new RevDto();
                 $RevDetailDto = new RevDetailDto();
 
@@ -149,22 +149,22 @@ class IncidentGetLogic extends CommonLogic {
                 // 戻りオブジェクト(IncidentGetResultDto)
                 return $IncidentGetResultDto;
             }
-            
+
             $relateUserList = array();
-            foreach($incidentRelateUserData as $one){
+            foreach ($incidentRelateUserData as $one) {
                 $IncidentRelateUserDto = new IncidentRelateUserDto();
-                
-                $IncidentRelateUserDto -> setRelateId($one['RELATE_ID']);
-                $IncidentRelateUserDto -> setIncidentId($one['INCIDENT_ID']);
-                $IncidentRelateUserDto -> setRelateUserId($one['RELATE_USER_ID']);
-                $IncidentRelateUserDto -> setRelateUserNm($one['RELATE_USER_NM']);
-                $IncidentRelateUserDto -> setRelateUserSectionCd($one['RELATE_USER_SECTION_CD']);
-                $IncidentRelateUserDto -> setRelateUserSectionNm($one['RELATE_USER_SECTION_NM']);
-                $IncidentRelateUserDto -> setKidokuDate($one['KIDOKU_DATE']);
+
+                $IncidentRelateUserDto->setRelateId($one['RELATE_ID']);
+                $IncidentRelateUserDto->setIncidentId($one['INCIDENT_ID']);
+                $IncidentRelateUserDto->setRelateUserId($one['RELATE_USER_ID']);
+                $IncidentRelateUserDto->setRelateUserNm($one['RELATE_USER_NM']);
+                $IncidentRelateUserDto->setRelateUserSectionCd($one['RELATE_USER_SECTION_CD']);
+                $IncidentRelateUserDto->setRelateUserSectionNm($one['RELATE_USER_SECTION_NM']);
+                $IncidentRelateUserDto->setKidokuDate($one['KIDOKU_DATE']);
 
                 array_push($relateUserList, $IncidentRelateUserDto);
             }
-             $IncidentMainDto->setRelateUserList($relateUserList);
+            $IncidentMainDto->setRelateUserList($relateUserList);
         }
 
         // CommonServiceを作成
@@ -194,14 +194,14 @@ class IncidentGetLogic extends CommonLogic {
         }
 
         if (isset($incidentRelationDataByKijiId)) {
-            foreach($incidentRelationDataByKijiId as $one){
+            foreach ($incidentRelationDataByKijiId as $one) {
                 $IncidentRelationDto = new IncidentRelationDto();
 
                 $IncidentRelationDto->setRelateType(RELATE_INCIDENT_TYPE_KIJO);
                 $IncidentRelationDto->setRelateIncidentId($one['IN_INCIDENT_ID']);
                 $IncidentRelationDto->setRelateIncidentContent($one['IN_CALL_CONTENT']);
                 $IncidentRelationDto->setRelateIncidentNo($one['IN_INCIDENT_NO']);
-                $incidentTypeNm = $CommonService->getConstArrayString(unserialize(INCIDENT_TYPE),$one['IN_INCIDENT_TYPE']);
+                $incidentTypeNm = $CommonService->getConstArrayString(unserialize(INCIDENT_TYPE), $one['IN_INCIDENT_TYPE']);
                 $IncidentRelationDto->setRelateIncidentType($incidentTypeNm);
                 $IncidentRelationDto->setRelateIncidentStartDateTime($one['IN_INCIDENT_START_DATETIME']);
                 $IncidentRelationDto->setRelateIncidentKijoNm($one['IN_KIJO_NM']);
@@ -224,14 +224,14 @@ class IncidentGetLogic extends CommonLogic {
         }
 
         if (isset($incidentRelationDataByCustNm)) {
-            foreach($incidentRelationDataByCustNm as $one){
+            foreach ($incidentRelationDataByCustNm as $one) {
                 $IncidentRelationDto = new IncidentRelationDto();
 
                 $IncidentRelationDto->setRelateType(RELATE_INCIDENT_TYPE_CUST);
                 $IncidentRelationDto->setRelateIncidentId($one['IN_INCIDENT_ID']);
                 $IncidentRelationDto->setRelateIncidentContent($one['IN_CALL_CONTENT']);
                 $IncidentRelationDto->setRelateIncidentNo($one['IN_INCIDENT_NO']);
-                $incidentTypeNm = $CommonService->getConstArrayString(unserialize(INCIDENT_TYPE),$one['IN_INCIDENT_TYPE']);
+                $incidentTypeNm = $CommonService->getConstArrayString(unserialize(INCIDENT_TYPE), $one['IN_INCIDENT_TYPE']);
                 $IncidentRelationDto->setRelateIncidentType($incidentTypeNm);
                 $IncidentRelationDto->setRelateIncidentStartDateTime($one['IN_INCIDENT_START_DATETIME']);
                 $IncidentRelationDto->setRelateIncidentKijoNm($one['IN_KIJO_NM']);
@@ -242,14 +242,14 @@ class IncidentGetLogic extends CommonLogic {
         }
 
         // 戻り値の設定
-            // インシデントメイン情報(IncidentMainDto)⇒IncidentDtoのセット
-            if (isset($IncidentMainDto)) {
-                $IncidentDto->setIncidentMainInfo($IncidentMainDto);
-            }
-            // 関連リンク情報(LinkRelationDto)⇒IncidentDtoのセット
-            if (isset($LinkRelationDto)) {
-                $IncidentDto->setRelateLink($LinkRelationDto);
-            }
+        // インシデントメイン情報(IncidentMainDto)⇒IncidentDtoのセット
+        if (isset($IncidentMainDto)) {
+            $IncidentDto->setIncidentMainInfo($IncidentMainDto);
+        }
+        // 関連リンク情報(LinkRelationDto)⇒IncidentDtoのセット
+        if (isset($LinkRelationDto)) {
+            $IncidentDto->setRelateLink($LinkRelationDto);
+        }
 
         // IncidentDto⇒IncidentGetResultDtoのセット
         $IncidentGetResultDto->setIncidentInfo($IncidentDto);

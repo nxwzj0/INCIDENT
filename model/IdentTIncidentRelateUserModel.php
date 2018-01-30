@@ -1,4 +1,5 @@
 <?php
+
 //*****************************************************************************
 //	システム名　　　：インシデント管理システム
 //	サブシステム名　：
@@ -53,13 +54,13 @@ SQL_RELATE_USER_INFO;
 SQL_RELATE_USER_INFO;
 
         //インシデントID
-        if($conditions !=null & count($conditions) > 0){
+        if ($conditions != null & count($conditions) > 0) {
             $len = count($conditions);
             $SQL_RELATE_USER_INFO = $SQL_RELATE_USER_INFO . " AND INCIDENT_ID IN (";
-            $incidentId = parent::getInConditionStrByArray($conditions,$len);
+            $incidentId = parent::getInConditionStrByArray($conditions, $len);
             $SQL_RELATE_USER_INFO = $SQL_RELATE_USER_INFO . $incidentId . " ) ";
         }
-        $SQL_RELATE_USER_INFO = $SQL_RELATE_USER_INFO." ORDER BY INCIDENT_ID";
+        $SQL_RELATE_USER_INFO = $SQL_RELATE_USER_INFO . " ORDER BY INCIDENT_ID";
 
         $MultiExecSql = new MultiExecSql();
         $sqlResult = array();
@@ -67,46 +68,46 @@ SQL_RELATE_USER_INFO;
         return $sqlResult;
     }
 
-    public function update($conditions,$MultiExecSql) {
+    public function update($conditions, $MultiExecSql) {
         $SQL_RELATE_USER_INFO = <<< SQL_RELATE_USER_INFO
                 UPDATE
                     IDENT_T_INCIDENT_RELATE_USER
                 SET
 SQL_RELATE_USER_INFO;
 
-        if($conditions['userNm'] != null){
-            $SQL_RELATE_USER_INFO = $SQL_RELATE_USER_INFO." RELATE_USER_NM = '{$conditions['userNm']}',";
+        if ($conditions['userNm'] != null) {
+            $SQL_RELATE_USER_INFO = $SQL_RELATE_USER_INFO . " RELATE_USER_NM = '{$conditions['userNm']}',";
         }
-        if($conditions['sectionCd'] != null){
-            $SQL_RELATE_USER_INFO = $SQL_RELATE_USER_INFO." RELATE_USER_SECTION_CD = '{$conditions['sectionCd']}',";
+        if ($conditions['sectionCd'] != null) {
+            $SQL_RELATE_USER_INFO = $SQL_RELATE_USER_INFO . " RELATE_USER_SECTION_CD = '{$conditions['sectionCd']}',";
         }
-        if($conditions['sectionNm'] != null){
-            $SQL_RELATE_USER_INFO = $SQL_RELATE_USER_INFO." RELATE_USER_SECTION_NM = '{$conditions['sectionNm']}',";
+        if ($conditions['sectionNm'] != null) {
+            $SQL_RELATE_USER_INFO = $SQL_RELATE_USER_INFO . " RELATE_USER_SECTION_NM = '{$conditions['sectionNm']}',";
         }
-        if($conditions['loginUserId'] != null){
-            $SQL_RELATE_USER_INFO = $SQL_RELATE_USER_INFO." UPD_USER_ID = '{$conditions['loginUserId']}',";
+        if ($conditions['loginUserId'] != null) {
+            $SQL_RELATE_USER_INFO = $SQL_RELATE_USER_INFO . " UPD_USER_ID = '{$conditions['loginUserId']}',";
         }
-        if($conditions['loginUserNm'] != null){
-            $SQL_RELATE_USER_INFO = $SQL_RELATE_USER_INFO." UPD_USER_NAME = '{$conditions['loginUserNm']}',";
+        if ($conditions['loginUserNm'] != null) {
+            $SQL_RELATE_USER_INFO = $SQL_RELATE_USER_INFO . " UPD_USER_NAME = '{$conditions['loginUserNm']}',";
         }
-        if($conditions['loginSectionCd'] != null){
-            $SQL_RELATE_USER_INFO = $SQL_RELATE_USER_INFO." UPD_SECTION_CD = '{$conditions['loginSectionCd']}',";
+        if ($conditions['loginSectionCd'] != null) {
+            $SQL_RELATE_USER_INFO = $SQL_RELATE_USER_INFO . " UPD_SECTION_CD = '{$conditions['loginSectionCd']}',";
         }
-        if($conditions['loginSectionNm'] != null){
-            $SQL_RELATE_USER_INFO = $SQL_RELATE_USER_INFO." UPD_SECTION_NAME = '{$conditions['loginSectionNm']}',";
+        if ($conditions['loginSectionNm'] != null) {
+            $SQL_RELATE_USER_INFO = $SQL_RELATE_USER_INFO . " UPD_SECTION_NAME = '{$conditions['loginSectionNm']}',";
         }
-        $SQL_RELATE_USER_INFO = $SQL_RELATE_USER_INFO." UPD_DATE = SYSDATE, DEL_FLG = '0' WHERE RELATE_USER_ID = '{$conditions['userId']}'";  
+        $SQL_RELATE_USER_INFO = $SQL_RELATE_USER_INFO . " UPD_DATE = SYSDATE, DEL_FLG = '0' WHERE RELATE_USER_ID = '{$conditions['userId']}'";
 
-        try{
+        try {
             $MultiExecSql->execute($SQL_RELATE_USER_INFO, '');
-        }catch (Exception $e){
+        } catch (Exception $e) {
             print $e->getMessage();
             return SAVE_FALSE;
         }
         return SAVE_TRUE;
     }
 
-    public function insert($conditions,$MultiExecSql) {
+    public function insert($conditions, $MultiExecSql) {
         $SQL_RELATE_USER_INFO = <<< SQL_RELATE_USER_INFO
                 INSERT INTO
                     IDENT_T_INCIDENT_RELATE_USER
@@ -140,12 +141,13 @@ SQL_RELATE_USER_INFO;
                 )
 SQL_RELATE_USER_INFO;
 
-        try{
+        try {
             $MultiExecSql->execute($SQL_RELATE_USER_INFO, '');
-        }catch (Exception $e){
+        } catch (Exception $e) {
             print $e->getMessage();
             return SAVE_FALSE;
         }
         return SAVE_TRUE;
     }
+
 }

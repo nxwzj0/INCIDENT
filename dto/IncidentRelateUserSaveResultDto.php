@@ -1,4 +1,5 @@
 <?php
+
 //*****************************************************************************
 //	システム名　　　：インシデント管理システム
 //	サブシステム名　：
@@ -13,7 +14,6 @@ require_once('./dto/CommonDto.php');
  * Class IncidentRelateUserSaveResultDto
  *
  */
-class IncidentRelateUserSaveResultDto extends CommonDto{
-
+class IncidentRelateUserSaveResultDto extends CommonDto {
 
 }

@@ -25,10 +25,7 @@ $rtnAry = array();
 //if (!$common->checkRequestType("POST")) {
 //    exit;
 //}
-
 // 共通認証
-
-
 // アクション
 $DataAction = new IncidentDataGetAction();
 $DataAction->index();

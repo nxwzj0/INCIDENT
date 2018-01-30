@@ -12,9 +12,9 @@ require_once("./env.inc");
 require_once("./model/CommonModel.php");
 
 class IdentTIncidentRelateUserCheckModel extends CommonModel {
-    
-    public function check($incidentId,$deptCd,$userId) {
-$SQL_INCIDENT_INFO = <<< SQL_INCIDENT_INFO
+
+    public function check($incidentId, $deptCd, $userId) {
+        $SQL_INCIDENT_INFO = <<< SQL_INCIDENT_INFO
                 SELECT
                       NVL(COUNT(1),0) RESULT
                 FROM
