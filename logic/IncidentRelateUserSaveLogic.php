@@ -36,6 +36,7 @@ class IncidentRelateUserSaveLogic extends CommonLogic {
         $conditions['userNm'] = $conditionDto->getRelateUserNm();
         $conditions['sectionCd'] = $conditionDto->getRelateUserSectionCd();
         $conditions['sectionNm'] = $conditionDto->getRelateUserSectionNm();
+        // ログイン情報設定
         $conditions['loginUserId'] = $conditionDto->getInsUserId();
         $conditions['loginUserNm'] = $conditionDto->getInsUserNm();
         $conditions['loginSectionCd'] = $conditionDto->getInsSectionCd();

@@ -30,10 +30,16 @@ class IncidentRelateUserDeleteLogic extends CommonLogic {
         $MultiExecSql = new MultiExecSql();
 
         // 検索条件
-        $relateId = $conditionDto->getRelateId();
+        $conditions = array();
+        $conditions['relateId'] = $conditionDto->getRelateId();
+        // ログイン情報設定
+        $conditions['loginUserId'] = $conditionDto->getUpdUserId();
+        $conditions['loginUserNm'] = $conditionDto->getUpdUserNm();
+        $conditions['loginSectionCd'] = $conditionDto->getUpdSectionCd();
+        $conditions['loginSectionNm'] = $conditionDto->getUpdSectionNm();
         
         // IDENT_T_SEARCH_CONDの削除処理
-        $deleteResultFlg = $model->delete($MultiExecSql, $relateId);
+        $deleteResultFlg = $model->delete($MultiExecSql, $conditions);
 
         // 削除処理成功判定フラグ FALSE
         if ($deleteResultFlg == SAVE_FALSE) {

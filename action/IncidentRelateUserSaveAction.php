@@ -30,6 +30,11 @@ class IncidentRelateUserSaveAction extends CommonAction {
         $condtionDto->setRelateUserNm($P['relateUserNm']);
         $condtionDto->setRelateUserSectionCd($P['relateUserSectionCd']);
         $condtionDto->setRelateUserSectionNm($P['relateUserSectionNm']);
+        // ログイン情報設定
+        $condtionDto->setInsUserId($P['userId']);
+        $condtionDto->setInsUserNm($P['userName']);
+        $condtionDto->setInsSectionCd($P['sectionCd']);
+        $condtionDto->setInsSectionNm($P['sectionName']);
 
         // 実例化Logic
         $logic = new IncidentRelateUserSaveLogic();

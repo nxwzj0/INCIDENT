@@ -14,15 +14,19 @@ require_once("./model/CommonModel.php");
 
 class IdentTIncidentRelateUserDeleteModel extends CommonModel {
 
-    public function delete($MultiExecSql, $relateId) {
+    public function delete($MultiExecSql, $conditions) {
         $SQL_INCIDENT_INFO = <<< SQL_INCIDENT_INFO
                 UPDATE
                     IDENT_T_INCIDENT_RELATE_USER 
                 SET
                     DEL_FLG = '1'
                     ,UPD_DATE = SYSDATE
+                    ,UPD_USER_ID = '{$conditions['loginUserId']}'
+                    ,UPD_USER_NAME = '{$conditions['loginUserNm']}'
+                    ,UPD_SECTION_CD = '{$conditions['loginSectionCd']}'
+                    ,UPD_SECTION_NAME = '{$conditions['loginSectionNm']}'
                 WHERE
-                    RELATE_ID = '$relateId'
+                    RELATE_ID = '{$conditions['relateId']}'
 SQL_INCIDENT_INFO;
 
         try {

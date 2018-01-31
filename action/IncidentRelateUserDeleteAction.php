@@ -26,6 +26,11 @@ class IncidentRelateUserDeleteAction extends CommonAction {
         $P = $GLOBALS[P];
         // 画面からパラメータ取得
         $condtionDto->setRelateId($P['relateId']);
+        // ログイン情報設定
+        $condtionDto->setUpdUserId($P['userId']);
+        $condtionDto->setUpdUserNm($P['userName']);
+        $condtionDto->setUpdSectionCd($P['sectionCd']);
+        $condtionDto->setUpdSectionNm($P['sectionName']);
 
         // 実例化Logic
         $logic = new IncidentRelateUserDeleteLogic();
