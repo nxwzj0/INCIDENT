@@ -40,6 +40,7 @@ require_once('./dto/CommonDto.php');
  * @property String $incidentTypeNm
  * @property String $parentIncidentNo
  * @property String $incidentStartDateTime
+ * @property String $industryTypeCd
  * @property String $infoSource
  * @property String $infoProvider
  * @property String $infoProviderTel
@@ -109,6 +110,7 @@ class IncidentMainDto extends CommonDto {
     private $incidentTypeNm;
     private $parentIncidentNo;
     private $incidentStartDateTime;
+    private $industryTypeCd;
     private $infoSource;
     private $infoProvider;
     private $infoProviderTel;
@@ -525,6 +527,20 @@ class IncidentMainDto extends CommonDto {
      */
     public function setParentIncidentNo($parentIncidentNo) {
         $this->parentIncidentNo = $parentIncidentNo;
+    }
+
+    /**
+     * @return String
+     */
+    public function getIndustryTypeCd() {
+        return $this->industryTypeCd;
+    }
+
+    /**
+     * @param String $industryTypeCd
+     */
+    public function setIndustryTypeCd($industryTypeCd) {
+        $this->industryTypeCd = $industryTypeCd;
     }
 
     /**

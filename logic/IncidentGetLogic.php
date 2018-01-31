@@ -137,7 +137,7 @@ class IncidentGetLogic extends CommonLogic {
         }
 
         // インシデント情報が有る場合は、関係者リストを取得する
-        if (isset($incidentData)) {
+        if (isset($incidentId)) {
             try {
                 // IdentTIncidentRelateUserModelを作成
                 $IdentTIncidentRelateUserModel = new IdentTIncidentRelateUserModel();

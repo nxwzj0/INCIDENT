@@ -1,5 +1,4 @@
 <?php
-
 //*****************************************************************************
 //	システム名　　　：インシデント管理システム
 //	サブシステム名　：
@@ -78,9 +77,10 @@ class IncidentDataGetAction extends CommonAction {
                     "updUserNm" => $incidentMainInfo->getUpdUserNm(),
                     "parentIncidentNo" => $incidentMainInfo->getParentIncidentNo(),
                     "incidentStartDateTime" => $incidentMainInfo->getIncidentStartDateTime(),
-//"industryTypeNm" => $incidentMainInfo->
+                    "industryTypeCd" => $incidentMainInfo->getIndustryTypeCd(),
+                    "industryTypeNm" => $this->getConstArrayString(unserialize(INDUSTRY_TYPE_NAME), $incidentMainInfo->getIndustryTypeCd()),
                     "infoSourceCd" => $incidentMainInfo->getInfoSource(),
-                    "infoSourceNm" => $this->getConstArrayString(unserialize(INCIDENT_TYPE_NAME), $incidentMainInfo->getInfoSource()),
+                    "infoSourceNm" => $this->getConstArrayString(unserialize(INCIDENT_INFO_SOURCE), $incidentMainInfo->getInfoSource()),
                     "infoProvider" => $incidentMainInfo->getInfoProvider(),
                     "infoProvidedTel" => $incidentMainInfo->getInfoProviderTel(),
 //                "relateList" => $incidentMainInfo->
@@ -88,40 +88,42 @@ class IncidentDataGetAction extends CommonAction {
                     "kijoNm" => $incidentMainInfo->getKijoNm(),
                     "jigyosyutaiNm" => $incidentMainInfo->getJigyosyutaiNm(),
                     "setubiNm" => $incidentMainInfo->getSetubiNm(),
-                    "prefNm" => $incidentMainInfo->getPrefNm(),
+                    "prefId" => $incidentMainInfo->getPrefId(),
+                    "prefNm" => $this->getConstArrayString(unserialize(PREF_NAME), $incidentMainInfo->getPrefId()),
                     "custNm" => $incidentMainInfo->getCustNm(),
-                    "custTypeNm" => $incidentMainInfo->getCustTypeNm(),
-//                "salesDeptCd" => $incidentMainInfo->
-//                "salesDeptNm" => $incidentMainInfo->
-//                "salesUserId" => $incidentMainInfo->
-//                "salesUserNm" => $incidentMainInfo->
+                    "custTypeCd" => $incidentMainInfo->getCustTypeCd(),
+                    "custTypeNm" => $this->getConstArrayString(unserialize(CUST_TYPE_NAME), $incidentMainInfo->getCustTypeCd()),
+                    "salesDeptCd" => $incidentMainInfo->getSalesDept() ? $incidentMainInfo->getSalesDept()->getSectionCd() : null,
+                    "salesDeptNm" => $incidentMainInfo->getSalesDept() ? $incidentMainInfo->getSalesDept()->getSectionNm() : null,
+                    "salesUserId" => $incidentMainInfo->getSalesUser() ? $incidentMainInfo->getSalesUser()->getUserId() : null,
+                    "salesUserNm" => $incidentMainInfo->getSalesUser() ? $incidentMainInfo->getSalesUser()->getUserNm() : null,
                     "deliveryPjNm" => $incidentMainInfo->getDeliveryPjNm(),
                     "custDept" => $incidentMainInfo->getCustDept(),
                     "requester" => $incidentMainInfo->getRequester(),
                     "contactTel" => $incidentMainInfo->getContactTel(),
                     "contactFax" => $incidentMainInfo->getContactFax(),
                     "contactMail" => $incidentMainInfo->getContactMail(),
-//                "skanDeptCd" => $incidentMainInfo->
-//                "skanDeptNm" => $incidentMainInfo->
-//                "skanUserId" => $incidentMainInfo->
-//                "skanUserNm" => $incidentMainInfo->
+                    "skanDeptCd" => $incidentMainInfo->getSkanDept() ? $incidentMainInfo->getSkanDept()->getSectionCd() : null,
+                    "skanDeptNm" => $incidentMainInfo->getSkanDept() ? $incidentMainInfo->getSkanDept()->getSectionNm() : null,
+                    "skanUserId" => $incidentMainInfo->getSkanUser() ? $incidentMainInfo->getSkanUser()->getUserId() : null,
+                    "skanUserNm" => $incidentMainInfo->getSkanUser() ? $incidentMainInfo->getSkanUser()->getUserNm() : null,
                     "callDate" => $incidentMainInfo->getCallDate(),
                     "callStartDate" => $incidentMainInfo->getCallStartDate(),
                     "callEndDate" => $incidentMainInfo->getCallEndDate(),
-//                "callDeptCd" => $incidentMainInfo->
-//                "callDeptNm" => $incidentMainInfo->
-//                "callUserId" => $incidentMainInfo->
-//                "callUserNm" => $incidentMainInfo->
+                    "callDeptCd" => $incidentMainInfo->getCallDept() ? $incidentMainInfo->getCallDept()->getSectionCd() : null,
+                    "callDeptNm" => $incidentMainInfo->getCallDept() ? $incidentMainInfo->getCallDept()->getSectionNm() : null,
+                    "callUserId" => $incidentMainInfo->getCallUser() ? $incidentMainInfo->getCallUser()->getUserId() : null,
+                    "callUserNm" => $incidentMainInfo->getCallUser() ? $incidentMainInfo->getCallUser()->getUserNm() : null,
                     "callTel" => $incidentMainInfo->getCallTel(),
                     "callMail" => $incidentMainInfo->getCallMail(),
                     "callContent" => $incidentMainInfo->getCallContent(),
                     "taioDate" => $incidentMainInfo->getTaioDate(),
                     "taioStartDate" => $incidentMainInfo->getTaioStartDate(),
                     "taioEndDate" => $incidentMainInfo->getTaioEndDate(),
-//"taioDeptCd" => $incidentMainInfo->
-//"taioDeptNm" => $incidentMainInfo->
-//"taioUserId" => $incidentMainInfo->
-//"taioUserNm" => $incidentMainInfo->
+                    "taioDeptCd" => $incidentMainInfo->getTaioDept() ? $incidentMainInfo->getTaioDept()->getSectionCd() : null,
+                    "taioDeptNm" => $incidentMainInfo->getTaioDept() ? $incidentMainInfo->getTaioDept()->getSectionNm() : null,
+                    "taioUserId" => $incidentMainInfo->getTaioUser() ? $incidentMainInfo->getTaioUser()->getUserId() : null,
+                    "taioUserNm" => $incidentMainInfo->getTaioUser() ? $incidentMainInfo->getTaioUser()->getUserNm() : null,
                     "taioTel" => $incidentMainInfo->getTaioTel(),
                     "taioMail" => $incidentMainInfo->getTaioMail(),
                     "taioContent" => $incidentMainInfo->getTaioContent(),
@@ -129,23 +131,23 @@ class IncidentDataGetAction extends CommonAction {
 //"actTypeNm" => $incidentMainInfo->getActType(),
                     "actStartDateTime" => $incidentMainInfo->getActStartTime(),
                     "actEndDateTime" => $incidentMainInfo->getActEndTime(),
-//"actDeptCd" => $incidentMainInfo->
-//"actDeptNm" => $incidentMainInfo->
-//"actUserId" => $incidentMainInfo->
-//"actUserNm" => $incidentMainInfo->
+                    "actDeptCd" => $incidentMainInfo->getActDept() ? $incidentMainInfo->getActDept()->getSectionCd() : null,
+                    "actDeptNm" => $incidentMainInfo->getActDept() ? $incidentMainInfo->getActDept()->getSectionNm() : null,
+                    "actUserId" => $incidentMainInfo->getActUser() ? $incidentMainInfo->getActUser()->getUserId() : null,
+                    "actUserNm" => $incidentMainInfo->getActUser() ? $incidentMainInfo->getActUser()->getUserNm() : null,
                     "actTel" => $incidentMainInfo->getActTel(),
                     "actMail" => $incidentMainInfo->getActMail(),
                     "actContent" => $incidentMainInfo->getActContent(),
 //                    "productTypeCd" => $incidentMainInfo->
-//"productTypeNm" => $incidentMainInfo->
-//"productTriggerCd" => $incidentMainInfo->
-//"productTriggerNm" => $incidentMainInfo->
-//"productHindoCd" => $incidentMainInfo->
-//"productHindoNm" => $incidentMainInfo->
-//"productGensyoCd" => $incidentMainInfo->
-//"productGensyoNm" => $incidentMainInfo->
-//"productStatusCd" => $incidentMainInfo->
-//"productStatusNm" => $incidentMainInfo->
+//                    "productTypeNm" => $incidentMainInfo->get
+                    "productTriggerCd" => $incidentMainInfo->getProductTrigger(),
+                    "productTriggerNm" => $this->getConstArrayString(unserialize(PRODUCT_TRIGGER_NAME), $incidentMainInfo->getProductTrigger()),
+                    "productHindoCd" => $incidentMainInfo->getProductHindo(),
+                    "productHindoNm" => $this->getConstArrayString(unserialize(PRODUCT_HINDO_NAME), $incidentMainInfo->getProductHindo()),
+                    "productGensyoCd" => $incidentMainInfo->getProductGensyo(),
+                    "productGensyoNm" => $this->getConstArrayString(unserialize(PRODUCT_GENSYO_NAME), $incidentMainInfo->getProductGensyo()),
+                    "productStatusCd" => $incidentMainInfo->getProductStatus(),
+                    "productStatusNm" => $this->getConstArrayString(unserialize(PRODUCT_STATUS_NAME), $incidentMainInfo->getProductStatus()),
                 ));
             } else {
                 array_push($incidentUnitAry, array("result" => false));
