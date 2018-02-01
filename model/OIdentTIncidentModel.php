@@ -1,5 +1,4 @@
 <?php
-
 //*****************************************************************************
 //	システム名　　　：インシデント管理システム
 //	サブシステム名　：
@@ -14,7 +13,7 @@ require_once("./model/CommonModel.php");
 
 class OIdentTIncidentModel extends CommonModel {
 
-    public function findIncidentWithRel($incidentId) {
+    public function findIncidentWithRel($incidentId){
         $SQL_INCIDENT_INFO = <<< SQL_INCIDENT_INFO
                 SELECT
                     INCIDENT.INCIDENT_ID IN_INCIDENT_ID,
@@ -160,7 +159,7 @@ SQL_INCIDENT_INFO;
         return $sqlResult;
     }
 
-    public function getIncidentWithRel($conditions) {
+    public function getIncidentWithRel($conditions){
         $SQL_INCIDENT_INFO = <<< SQL_INCIDENT_INFO
                 SELECT DISTINCT
                     INCIDENT.INCIDENT_ID IN_INCIDENT_ID,
@@ -514,10 +513,10 @@ SQL_INCIDENT_INFO;
             $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.PRODUCT_STATUS = " . "'" . $conditions['productStatus'] . "' ";
         }
         // 2018.01.09 Newtouch追加 start
-        if ($conditions['prefCd'] != NULL && $conditions['prefCd'] != "0") {
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.PREF_ID = '" . $conditions['prefCd'] . "' ";
+        if($conditions['prefCd'] != NULL && $conditions['prefCd'] != "0"){
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.PREF_ID = '" . $conditions['prefCd'] ."' ";
         }
-
+        
         if ($conditions['incidentType'] != NULL) {
             $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.INCIDENT_TYPE IN(" . $conditions['incidentType'] . ")";
         }
@@ -525,14 +524,14 @@ SQL_INCIDENT_INFO;
         if ($conditions['incidentStatus'] != NULL) {
             $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.INCIDENT_STS IN(" . $conditions['incidentStatus'] . ")";
         }
-
+        
         if ($conditions['industryType'] != NULL) {
             $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.INDUSTRY_TYPE IN(" . $conditions['industryType'] . ")";
         }
-
+        
         if ($conditions['custType'] != NULL) {
             $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.CUST_TYPE_CD IN(" . $conditions['custType'] . ")";
-        }
+        }   
         // 2018.01.09 Newtouch追加 end
         $MultiExecSql = new MultiExecSql();
         $sqlResult = array();
@@ -541,7 +540,7 @@ SQL_INCIDENT_INFO;
     }
 
     // 2018.01.17 Newtouch追加 start
-    public function getIncidentWithRelByKeyword($conditions) {
+    public function getIncidentWithRelByKeyword($conditions){
         $SQL_INCIDENT_INFO = <<< SQL_INCIDENT_INFO
                 SELECT DISTINCT
                     INCIDENT.INCIDENT_ID IN_INCIDENT_ID,
@@ -682,7 +681,7 @@ SQL_INCIDENT_INFO;
                     INCIDENT.DEL_FLG = '0'
 SQL_INCIDENT_INFO;
         if ($conditions['keyword'] != NULL) {
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . "AND (";
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO ."AND (";
             $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " INCIDENT.INCIDENT_NO = " . "'" . $conditions['keyword'] . "' ";
             $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " OR INCIDENT.PREF_NM LIKE " . "'%" . $conditions['keyword'] . "%' ";
             $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " OR INCIDENT.KIJO_NM LIKE " . "'%" . $conditions['keyword'] . "%' ";
@@ -693,11 +692,13 @@ SQL_INCIDENT_INFO;
             $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " OR INCIDENT.CALL_TEL = " . "'" . $conditions['keyword'] . "' ";
             $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " OR INCIDENT.TAIO_TEL = " . "'" . $conditions['keyword'] . "' ";
             $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " OR INCIDENT.ACT_TEL = " . "'" . $conditions['keyword'] . "' ";
-            if (parent::valid_date(str_replace("-", "", $conditions['keyword'])) == SAVE_TRUE || parent::valid_date(str_replace("/", "", $conditions['keyword'])) == SAVE_TRUE || parent::valid_date(str_replace(".", "", $conditions['keyword'])) == SAVE_TRUE) {
-                $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " OR TO_CHAR(INCIDENT.CALL_START_DATE,'" . YYYYMMDD . "') = " . "'" . date(Ymd, strtotime($conditions['keyword'])) . "' ";
-                $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " OR TO_CHAR(INCIDENT.CALL_END_DATE,'" . YYYYMMDD . "') = " . "'" . date(Ymd, strtotime($conditions['keyword'])) . "' ";
+            if(parent::valid_date(str_replace("-", "", $conditions['keyword'])) == SAVE_TRUE
+                || parent::valid_date(str_replace("/", "", $conditions['keyword'])) == SAVE_TRUE
+                || parent::valid_date(str_replace(".", "", $conditions['keyword'])) == SAVE_TRUE){
+                $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " OR TO_CHAR(INCIDENT.CALL_START_DATE,'" . YYYYMMDD . "') = " . "'" . date(Ymd,strtotime($conditions['keyword'])) . "' ";
+                $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " OR TO_CHAR(INCIDENT.CALL_END_DATE,'" . YYYYMMDD . "') = " . "'" . date(Ymd,strtotime($conditions['keyword'])) . "' ";
             }
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . ")";
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO .")";
         }
 
         $MultiExecSql = new MultiExecSql();
@@ -705,7 +706,6 @@ SQL_INCIDENT_INFO;
         $MultiExecSql->getResultData($SQL_INCIDENT_INFO, $sqlResult);
         return $sqlResult;
     }
-
     // 2018.01.17 Newtouch追加 end
 
     public function getIncident($conditions) {
@@ -1017,10 +1017,10 @@ SQL_INCIDENT_INFO;
             $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.PRODUCT_STATUS = " . "'" . $conditions['productStatus'] . "' ";
         }
         // 2018.01.09 Newtouch追加 start
-        if ($conditions['prefCd'] != NULL && $conditions['prefCd'] != "0") {
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.PREF_ID = '" . $conditions['prefCd'] . "' ";
+        if($conditions['prefCd'] != NULL && $conditions['prefCd'] != "0"){
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.PREF_ID = '" . $conditions['prefCd'] ."' ";
         }
-
+        
         if ($conditions['incidentType'] != NULL) {
             $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.INCIDENT_TYPE IN(" . $conditions['incidentType'] . ")";
         }
@@ -1028,14 +1028,14 @@ SQL_INCIDENT_INFO;
         if ($conditions['incidentStatus'] != NULL) {
             $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.INCIDENT_STS IN(" . $conditions['incidentStatus'] . ")";
         }
-
+        
         if ($conditions['industryType'] != NULL) {
             $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.INDUSTRY_TYPE IN(" . $conditions['industryType'] . ")";
         }
-
+        
         if ($conditions['custType'] != NULL) {
             $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.CUST_TYPE_CD IN(" . $conditions['custType'] . ")";
-        }
+        }   
         // 2018.01.09 Newtouch追加 end
 
         $MultiExecSql = new MultiExecSql();
@@ -1141,7 +1141,7 @@ SQL_INCIDENT_INFO;
                     INCIDENT.DEL_FLG = '0'
 SQL_INCIDENT_INFO;
         if ($conditions['keyword'] != NULL) {
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . "AND (";
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO ."AND (";
             $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " OR INCIDENT.INCIDENT_NO = " . "'" . $conditions['keyword'] . "' ";
             $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " OR INCIDENT.PREF_NM LIKE " . "'%" . $conditions['keyword'] . "%' ";
             $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " OR INCIDENT.KIJO_NM LIKE " . "'%" . $conditions['keyword'] . "%' ";
@@ -1152,12 +1152,14 @@ SQL_INCIDENT_INFO;
             $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " OR INCIDENT.CALL_TEL = " . "'" . $conditions['keyword'] . "' ";
             $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " OR INCIDENT.TAIO_TEL = " . "'" . $conditions['keyword'] . "' ";
             $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " OR INCIDENT.ACT_TEL = " . "'" . $conditions['keyword'] . "' ";
-            if (parent::valid_date(str_replace("-", "", $conditions['keyword'])) == SAVE_TRUE || parent::valid_date(str_replace("/", "", $conditions['keyword'])) == SAVE_TRUE || parent::valid_date(str_replace(".", "", $conditions['keyword'])) == SAVE_TRUE) {
-                $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " OR TO_CHAR(INCIDENT.CALL_START_DATE,'" . YYYYMMDD . "') = " . "'" . date(Ymd, strtotime($conditions['keyword'])) . "' ";
-                $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " OR TO_CHAR(INCIDENT.CALL_END_DATE,'" . YYYYMMDD . "') = " . "'" . date(Ymd, strtotime($conditions['keyword'])) . "' ";
+            if(parent::valid_date(str_replace("-", "", $conditions['keyword'])) == SAVE_TRUE
+                || parent::valid_date(str_replace("/", "", $conditions['keyword'])) == SAVE_TRUE
+                || parent::valid_date(str_replace(".", "", $conditions['keyword'])) == SAVE_TRUE){
+                $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " OR TO_CHAR(INCIDENT.CALL_START_DATE,'" . YYYYMMDD . "') = " . "'" . date(Ymd,strtotime($conditions['keyword'])) . "' ";
+                $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " OR TO_CHAR(INCIDENT.CALL_END_DATE,'" . YYYYMMDD . "') = " . "'" . date(Ymd,strtotime($conditions['keyword'])) . "' ";
             }
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . ")";
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . ")";
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO .")";
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO .")";
         }
 
         $MultiExecSql = new MultiExecSql();
@@ -1165,6 +1167,6 @@ SQL_INCIDENT_INFO;
         $MultiExecSql->getResultData($SQL_INCIDENT_INFO, $sqlResult);
         return $sqlResult;
     }
-
     // 2018.01.17 Newtouch追加 end
+
 }
