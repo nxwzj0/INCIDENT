@@ -62,6 +62,7 @@ class IncidentSaveLogic extends CommonLogic {
         $incidentDataArrayNew['incidentTypeCd'] = $incidentDataDtoNew->getIncidentTypeCd();
         $incidentDataArrayNew['parentIncidentNo'] = $incidentDataDtoNew->getParentIncidentNo();
         $incidentDataArrayNew['incidentStartDateTime'] = $incidentDataDtoNew->getIncidentStartDateTime();
+        $incidentDataArrayNew['industryTypeCd'] = $incidentDataDtoNew->getIndustryTypeCd();
         $incidentDataArrayNew['infoSource'] = $incidentDataDtoNew->getInfoSource();
         $incidentDataArrayNew['infoProvider'] = $incidentDataDtoNew->getInfoProvider();
         $incidentDataArrayNew['infoProviderTel'] = $incidentDataDtoNew->getInfoProviderTel();

@@ -106,14 +106,16 @@ AppComponent = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__modal_customerSearch_modal_component__ = __webpack_require__("../../../../../src/app/modal/customerSearch.modal.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__modal_equipmentSearch_modal_component__ = __webpack_require__("../../../../../src/app/modal/equipmentSearch.modal.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__jsonp_service__ = __webpack_require__("../../../../../src/app/jsonp.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__windowRef_service__ = __webpack_require__("../../../../../src/app/windowRef.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__pipe_order_by_pipe__ = __webpack_require__("../../../../../src/app/pipe/order.by.pipe.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__post_service__ = __webpack_require__("../../../../../src/app/post.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__windowRef_service__ = __webpack_require__("../../../../../src/app/windowRef.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__pipe_order_by_pipe__ = __webpack_require__("../../../../../src/app/pipe/order.by.pipe.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -177,7 +179,7 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_25__modal_customerSearch_modal_component__["a" /* CustomerSearchModalComponent */],
             __WEBPACK_IMPORTED_MODULE_26__modal_equipmentSearch_modal_component__["a" /* EquipmentSearchModalComponent */],
             __WEBPACK_IMPORTED_MODULE_15__common_common_component__["a" /* CommonComponent */],
-            __WEBPACK_IMPORTED_MODULE_29__pipe_order_by_pipe__["b" /* OrderByPipe */]
+            __WEBPACK_IMPORTED_MODULE_30__pipe_order_by_pipe__["b" /* OrderByPipe */]
         ],
         imports: [
             __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
@@ -191,7 +193,7 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_3__angular_forms__["a" /* FormsModule */],
             __WEBPACK_IMPORTED_MODULE_2__angular_http__["b" /* HttpModule */],
         ],
-        providers: [__WEBPACK_IMPORTED_MODULE_27__jsonp_service__["a" /* JsonpService */], __WEBPACK_IMPORTED_MODULE_28__windowRef_service__["a" /* WindowRefService */]],
+        providers: [__WEBPACK_IMPORTED_MODULE_27__jsonp_service__["a" /* JsonpService */], __WEBPACK_IMPORTED_MODULE_29__windowRef_service__["a" /* WindowRefService */], __WEBPACK_IMPORTED_MODULE_28__post_service__["a" /* PostService */]],
         bootstrap: [__WEBPACK_IMPORTED_MODULE_6__app_component__["a" /* AppComponent */]],
     })
 ], AppModule);
@@ -795,7 +797,8 @@ module.exports = "<!--\n//******************************************************
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ngx_bootstrap_bs_moment__ = __webpack_require__("../../../../ngx-bootstrap/bs-moment/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ngx_bootstrap_locale__ = __webpack_require__("../../../../ngx-bootstrap/locale.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__jsonp_service__ = __webpack_require__("../../../../../src/app/jsonp.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__environments_environment_local__ = __webpack_require__("../../../../../src/environments/environment.local.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__post_service__ = __webpack_require__("../../../../../src/app/post.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__environments_environment_local__ = __webpack_require__("../../../../../src/environments/environment.local.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -811,15 +814,15 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-
 Object(__WEBPACK_IMPORTED_MODULE_3_ngx_bootstrap_bs_moment__["a" /* defineLocale */])('ja', __WEBPACK_IMPORTED_MODULE_4_ngx_bootstrap_locale__["a" /* ja */]);
 
 
+
 var EditComponent = (function () {
-    function EditComponent(route, jsonpService, http, router) {
+    function EditComponent(route, jsonpService, postService, router) {
         this.route = route;
         this.jsonpService = jsonpService;
-        this.http = http;
+        this.postService = postService;
         this.router = router;
         this.SUB_WIN = null;
         this.minDate = new Date(2017, 5, 10);
@@ -946,8 +949,51 @@ var EditComponent = (function () {
         this.prefArray = [
             { label: '北海道', value: 1 },
             { label: '青森県', value: 2 },
-            { label: '秋田県', value: 3 },
-            { label: '岩手県', value: 4 }
+            { label: '岩手県', value: 3 },
+            { label: '宮城県', value: 4 },
+            { label: '秋田県', value: 5 },
+            { label: '山形県', value: 6 },
+            { label: '福島県', value: 7 },
+            { label: '茨城県', value: 8 },
+            { label: '栃木県', value: 9 },
+            { label: '群馬県', value: 10 },
+            { label: '埼玉県', value: 11 },
+            { label: '千葉県', value: 12 },
+            { label: '東京都', value: 13 },
+            { label: '神奈川県', value: 14 },
+            { label: '新潟県', value: 15 },
+            { label: '富山県', value: 16 },
+            { label: '石川県', value: 17 },
+            { label: '福井県', value: 18 },
+            { label: '山梨県', value: 19 },
+            { label: '長野県', value: 20 },
+            { label: '岐阜県', value: 21 },
+            { label: '静岡県', value: 22 },
+            { label: '愛知県', value: 23 },
+            { label: '三重県', value: 24 },
+            { label: '滋賀県', value: 25 },
+            { label: '京都府', value: 26 },
+            { label: '大阪府', value: 27 },
+            { label: '兵庫県', value: 28 },
+            { label: '奈良県', value: 29 },
+            { label: '和歌山県', value: 30 },
+            { label: '鳥取県', value: 31 },
+            { label: '島根県', value: 32 },
+            { label: '岡山県', value: 33 },
+            { label: '広島県', value: 34 },
+            { label: '山口県', value: 35 },
+            { label: '徳島県', value: 36 },
+            { label: '香川県', value: 37 },
+            { label: '愛媛県', value: 38 },
+            { label: '高知県', value: 39 },
+            { label: '福岡県', value: 40 },
+            { label: '佐賀県', value: 41 },
+            { label: '長崎県', value: 42 },
+            { label: '熊本県', value: 43 },
+            { label: '大分県', value: 44 },
+            { label: '宮崎県', value: 45 },
+            { label: '鹿児島県', value: 46 },
+            { label: '沖縄県', value: 47 },
         ];
         // 顧客分類セレクト情報
         this.custTypeArray = [
@@ -1076,7 +1122,7 @@ var EditComponent = (function () {
     EditComponent.prototype.showJiko = function () {
         if (this.SUB_WIN)
             this.SUB_WIN.close();
-        var url = __WEBPACK_IMPORTED_MODULE_6__environments_environment_local__["a" /* environment */].jikoPath + "jiko171211.html"; // 環境に合わせたURLを作成する TODO:固定値
+        var url = __WEBPACK_IMPORTED_MODULE_7__environments_environment_local__["a" /* environment */].jikoPath + "jiko171211.html"; // 環境に合わせたURLを作成する TODO:固定値
         this.SUB_WIN = this.CMN_openNewWindow1(url, "sub_jiko", 1200, 800);
     };
     // 関連費用決済申請表示処理 TODO:固定値表示
@@ -1086,7 +1132,7 @@ var EditComponent = (function () {
         }
         // var frm = window.document.fm1;
         var strurl;
-        strurl = __WEBPACK_IMPORTED_MODULE_6__environments_environment_local__["a" /* environment */].hiyoPath + "wf_main_input.php";
+        strurl = __WEBPACK_IMPORTED_MODULE_7__environments_environment_local__["a" /* environment */].hiyoPath + "wf_main_input.php";
         strurl += "?user_id=ADF";
         strurl += "&authority=9";
         //	strurl += "&system_id=1282";
@@ -1300,19 +1346,6 @@ var EditComponent = (function () {
     EditComponent.prototype.onEntry = function (event, files) {
         var _this = this;
         console.log('登録処理スタート');
-        // TODO ファイルアップロード
-        // console.log(files);
-        // if(files){
-        //   let file = files[0];
-        //   let data = new FormData();
-        //   data.append('incidentFile', file, file.name);
-        //   console.log(data);
-        //   this.http.post('http://172.20.108.34/INCIDENT/upload.php', data)
-        //   .subscribe(
-        //     data => console.log(data),
-        //     error => console.log(error)
-        //   );
-        // }
         // // 画面表示パラメータの取得処理
         var ps = new __WEBPACK_IMPORTED_MODULE_2__angular_http__["e" /* URLSearchParams */]();
         ps.set('incidentId', this.incidentId);
@@ -1422,6 +1455,18 @@ var EditComponent = (function () {
                         // 新規登録の場合は、取得したIDを使う
                         _this.incidentId = data.slice(1)[0].incidentId;
                     }
+                    // ファイルアップロード
+                    if (files) {
+                        var file = files[0]; // TODO 1件のみ対応
+                        if (file) {
+                            var data_1 = new FormData();
+                            data_1.append('incidentFile', file, file.name);
+                            data_1.append('incidentId', _this.incidentId);
+                            var result = _this.postService.requestPost('FileUpload.php', data_1);
+                            console.log(result);
+                        }
+                    }
+                    // 画面遷移
                     _this.router.navigate(['/common', 'インシデント情報を登録しました', '/detail/' + _this.incidentId]);
                 }
             }
@@ -1505,7 +1550,7 @@ EditComponent = __decorate([
         template: __webpack_require__("../../../../../src/app/edit/edit.component.html"),
         styles: [__webpack_require__("../../../../../src/app/edit/edit.component.css")],
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_5__jsonp_service__["a" /* JsonpService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5__jsonp_service__["a" /* JsonpService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__angular_http__["a" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_http__["a" /* Http */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */]) === "function" && _d || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_5__jsonp_service__["a" /* JsonpService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5__jsonp_service__["a" /* JsonpService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_6__post_service__["a" /* PostService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_6__post_service__["a" /* PostService */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */]) === "function" && _d || Object])
 ], EditComponent);
 
 var _a, _b, _c, _d;
@@ -1746,23 +1791,6 @@ var JsonpService = (function () {
     JsonpService.prototype.commonRequestGet = function (url, ps) {
         ps.set('callback', 'JSONP_CALLBACK'); // コールバック関数名は固定
         url = __WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment */].envCommonPath + url; // 環境に合わせたURLを作成する
-        return this.jsonp.get(url, { params: ps })
-            .map(function (response) {
-            return response.json() || {};
-        })
-            .catch(function (error) {
-            // 通信失敗もしくは、コールバック関数内でエラー
-            return __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__["a" /* Observable */].throw(error.statusText);
-        });
-    };
-    /**
-   *  PSCAPI サーバ通信処理
-   *   pram: url アクションのurl
-   *   return: Observable オブジェクト
-   */
-    JsonpService.prototype.pscApiRequestGet = function (url, ps) {
-        ps.set('callback', 'JSONP_CALLBACK'); // コールバック関数名は固定
-        url = __WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment */].mr2ApiPath + url; // 環境に合わせたURLを作成する
         return this.jsonp.get(url, { params: ps })
             .map(function (response) {
             return response.json() || {};
@@ -4829,6 +4857,58 @@ var OrderByParam = (function () {
 }());
 
 //# sourceMappingURL=order.by.pipe.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/post.service.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PostService; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__("../../../http/@angular/http.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__environments_environment__ = __webpack_require__("../../../../../src/environments/environment.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_observable_throw__ = __webpack_require__("../../../../rxjs/_esm5/add/observable/throw.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map__ = __webpack_require__("../../../../rxjs/_esm5/add/operator/map.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_catch__ = __webpack_require__("../../../../rxjs/_esm5/add/operator/catch.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+
+var PostService = (function () {
+    function PostService(http) {
+        this.http = http;
+    }
+    /**
+     *  サーバ通信共通処理
+     *   pram: url アクションのurl
+     *   return: オブジェクト
+     */
+    PostService.prototype.requestPost = function (url, data) {
+        url = __WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].envPath + url; // 環境に合わせたURLを作成する
+        return this.http.post(url, data)
+            .subscribe(function (data) { return data; }, function (error) { return error; });
+    };
+    return PostService;
+}());
+PostService = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["C" /* Injectable */])(),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Http */]) === "function" && _a || Object])
+], PostService);
+
+var _a;
+//# sourceMappingURL=post.service.js.map
 
 /***/ }),
 

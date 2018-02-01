@@ -26,56 +26,85 @@ class Mr2DataGetAction extends CommonAction {
 			// MR2 APIを呼び出す（KEY：MKBID）
 			$apiUrl = $GLOBALS[COMMON_MR2API_URL];
 			$url = $apiUrl."mr2DetailData/?mkbId=" . $mkbId;
-			// MR2情報取得APIを実行
+			// API実行
 			$mr2ResultStr = file_get_contents ( $url );
 		}
 
-        // MR2取得結果 判断
+        // 取得データ変換(JSON文字列⇒連想配列)
         $mr2ResultJSON = json_decode($mr2ResultStr, TRUE);
+
         if (is_array($mr2ResultJSON) && !is_null($mr2ResultJSON)) {
-          $resultAry = $mr2ResultJSON[0];
-          if ($resultAry['result']) {
-            // 取得成功
-            $rtnAry = $this->createReturnArray($mr2ResultJSON);
-          } else {
-            // PSC側でエラー
-            // array_push($rtnAry, array("result" => false));
-            $rtnAry[] = array("result" => false);
-          }
+          // 変換成功
+          $rtnAry = $this->createReturnArray($mr2ResultJSON);
         } else {
-          // 取得失敗
-          //array_push($rtnAry, array("result" => false));
-          $rtnAry[] = array("result" => false);
+          // 変換失敗
+          $rtnAry = array("result" => false);
         }
 
         // 値を返す(Angular)
         echo $this->returnAngularJSONP($rtnAry);
     }
 
-    //public function createReturnArray() {
     public function createReturnArray($ary) {
 
-        $loopAry = $ary;
+        $resultAry = $ary[0];
 
-        foreach($loopAry as $key => $valueAry){
-          if ($key == 0) {
-            continue;
+        // APIデータ 取得チェック
+        if ($resultAry['result']) {
+
+          // ループ用配列
+          $loopAry = $ary;
+          foreach($loopAry as $key => $valueAry){
+            if ($key == 0) {
+              continue;
+            }
+            // トリガー
+            $valueAry['triggerDsp'] = $this->joinStr($valueAry['trigger'], $valueAry['triggerStr']);
+            // 頻度
+            $valueAry['hindoDsp'] = $this->joinStr($valueAry['hindo'], $valueAry['hindoStr']);
+            // 現象
+            $valueAry['gensyoDsp'] = $this->joinStr($valueAry['gensyo'], $valueAry['gensyoStr']);
+            // 状態
+            $valueAry['jyotaiDsp'] = $this->joinStr($valueAry['jyotai'], $valueAry['jyotaiStr']);
+            // 顧客要望
+            $valueAry['actSyotiYoboDsp'] = $this->joinStr($valueAry['actSyotiYobo'], $valueAry['actSyotiDetail']);
+            // 原因分類
+            $valueAry['geninSortDsp'] = $this->joinStr($valueAry['geninSortNm'], $valueAry['geninSortStr']);
+
+            // 最終更新日
+            $valueAry['updDateDsp'] = $this->checkUpdIns($valueAry['updDate'], $valueAry['insDate']);
+            // 最終更新者
+            $valueAry['updUserNmDsp'] = $this->checkUpdIns($valueAry['updUserNm'], $valueAry['insUserNm']);
+
+            // 作成した文字列のセット
+            $ary[$key] = $valueAry;
           }
-          // トリガー 直接入力の内容を連結
-          $triggerDsp = $valueAry['trigger'] . "（" . $valueAry['triggerStr'] . "）";
-
-          $valueAry['triggerDsp'] = $triggerDsp;
-
-          $ary[$key] = $valueAry;
-
-          //array_push($ary[$key], array("triggerDsp" => $valueAry['trigger'] . "（" . $valueAry['triggerStr'] . "）"));
-          //$ary[$key] = array("triggerDsp", $valueAry['trigger'] . "（" . $valueAry['triggerStr'] . "）");
-          //array_push($valueAry['triggerDsp'], $valueAry['trigger'] . "（" . $valueAry['triggerStr'] . "）");
+        } else {
+          // APIデータ 取得失敗
+          $ary = array("result" => false);
         }
 
-        // 戻り値配列の作成(MR2APIを実行できなかった)
-        //array_push($mr2ResultAry, array("result" => false));
-
         return $ary;
+    }
+
+    public function joinStr($targetStr, $otherStr) {
+      if (!isset($otherStr)) {
+        return $targetStr;
+      }
+      if (strlen($otherStr) > 0) {
+        $targetStr .= "（" . $otherStr . "）";
+      }
+      return $targetStr;
+    }
+
+    public function checkUpdIns($updStr, $insStr) {
+      if (!isset($updStr)) {
+        return $insStr;
+      }
+      if (strlen($updStr) > 0) {
+        return $updStr;
+      } else {
+        return $insStr;
+      }
     }
 }

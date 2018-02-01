@@ -63,7 +63,7 @@ class IncidentDataGetAction extends CommonAction {
                     $tmp["kidokuDate"] = $arr[$index]->getKidokuDate();
                     array_push($relateUserList, $tmp);
                 }
-                array_push($incidentUnitAry, array("result" => true,
+                $incidentUnitAry[]= array("result" => true,
                     "relateUserList" => $relateUserList,
                     "incidentId" => $incidentMainInfo->getIncidentId(),
                     "incidentNo" => $incidentMainInfo->getIncidentNo(),
@@ -148,14 +148,14 @@ class IncidentDataGetAction extends CommonAction {
                     "productGensyoNm" => $this->getConstArrayString(unserialize(PRODUCT_GENSYO_NAME), $incidentMainInfo->getProductGensyo()),
                     "productStatusCd" => $incidentMainInfo->getProductStatus(),
                     "productStatusNm" => $this->getConstArrayString(unserialize(PRODUCT_STATUS_NAME), $incidentMainInfo->getProductStatus()),
-                ));
+                );
             } else {
-                array_push($incidentUnitAry, array("result" => false));
+                $incidentUnitAry[]= array("result" => false);
             }
 
             // 変更履歴情報
             $logListAry = array();
-            if ($eventResult->getIncidentInfo()->getLogList() && is_array($eventResult->getIncidentInfo()->getLogList()) && count($eventResult->getIncidentInfo()->getLogList()) > 0) {
+            if (is_array($eventResult->getIncidentInfo()->getLogList()) && count($eventResult->getIncidentInfo()->getLogList()) > 0) {
                 // 変更履歴
                 $logList = $eventResult->getIncidentInfo()->getLogList();
 
@@ -174,7 +174,7 @@ class IncidentDataGetAction extends CommonAction {
                         foreach ($logList as $log) { // $log = RevDto
                             if ($logUpdDate == $log->getUpdDate()) {
                                 // 同じ日付でまとめる（日付は降順で取得している）
-                                array_push($logDetailAry, array($log->getRev(0)->getRevItem() => $log->getRev(0)->getRevDetail()));
+                                $logDetailAry[]= array( 'key' => $log->getRev(0)->getRevItem(), 'value' => $log->getRev(0)->getRevDetail());
                                 $detailFlg = true;
                             } else if ($detailFlg) {
                                 $logAry["DetailList"] = $logDetailAry;
@@ -187,7 +187,7 @@ class IncidentDataGetAction extends CommonAction {
                             }
                         }
                         // 1件分のログ情報をセット
-                        array_push($logListAry, $logAry);
+                        $logListAry[]= $logAry;
                         if (is_null($tmpLogUpdDate)) {
                             $tmpLogUpdDate = $logUpdDate;
                         }
@@ -195,10 +195,10 @@ class IncidentDataGetAction extends CommonAction {
                 }
             }
             // ログListをセット
-            array_push($incidentUnitAry, $logListAry);
+            $incidentUnitAry[]= $logListAry;
         } else {
             // ロジック処理が異常終了した場合
-            array_push($incidentUnitAry, array("result" => false));
+            $incidentUnitAry[]= array("result" => false);
         }
 
         return $incidentUnitAry;

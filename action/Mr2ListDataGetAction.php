@@ -16,31 +16,44 @@ class Mr2ListDataGetAction extends CommonAction {
 		$P = $GLOBALS[P]; // 共通パラメータ配列取得
 		$callNo = $P['callNo'];
 		$callback = $P['callback'];
-		
+
+		$mr2ResultStr = ""; // APIから取得したMR2情報
+		$mr2ResultJSON = array(); // JSONをデコードした配列
+		$rtnAry = array(); // 戻り値配列
+
 		if( $callNo && $callback ){
 			// 画面からパラメータを取得している場合
 			// MR2 APIを呼び出す（KEY：受付番号）
 			$apiUrl = $GLOBALS[COMMON_MR2API_URL];
-			$url = $apiUrl."mr2HeadData/?callNo=" . $callNo . "&callback=" . $callback;
-			// MR2情報取得APIを実行
-			header ( "Location: $url" );
-			exit;
+			$url = $apiUrl."mr2HeadData/?callNo=" . $callNo;
+			// API実行
+			$mr2ResultStr = file_get_contents ( $url );
 		}
 
-        // 戻り値配列の作成(MR2APIを実行できなかった)
-        $rtnAry = $this->createReturnArray();
+        // 取得データ変換(JSON文字列⇒連想配列)
+        $mr2ResultJSON = json_decode($mr2ResultStr, TRUE);
+
+        if (is_array($mr2ResultJSON) && !is_null($mr2ResultJSON)) {
+          // 変換成功
+          $rtnAry = $this->createReturnArray($mr2ResultJSON);
+        } else {
+          // 変換失敗
+          $rtnAry = array("result" => false);
+        }
 
         // 値を返す(Angular)
         echo $this->returnAngularJSONP($rtnAry);
     }
 
-    public function createReturnArray() {
-        $mr2ResultAry = array();
+    public function createReturnArray($ary) {
+        $resultAry = $ary[0];
 
-        // 戻り値配列の作成(MR2APIを実行できなかった)
-        array_push($mr2ResultAry, array("result" => false));
+        // APIデータ 取得チェック
+        if (!$resultAry['result']) {
+          // APIデータ 取得失敗
+          $ary = array("result" => false);
+        }
 
-        return $mr2ResultAry;
+        return $ary;
     }
-
 }

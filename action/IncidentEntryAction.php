@@ -28,7 +28,6 @@ class IncidentEntryAction extends CommonAction {
 
         $P = $GLOBALS[P]; // 共通パラメータ配列取得
         /* 画面からパラメータ取得 */
-        // TODO ログインユーザパラメータ
         // インシデント情報パラメータ
         $incidentId = $P['incidentId'];
         $incidentNo = $P['incidentNo'];
@@ -134,10 +133,9 @@ class IncidentEntryAction extends CommonAction {
         $IncidentMainDto->setIncidentNo($incidentNo);
         $IncidentMainDto->setIncidentStsCd($incidentStatusCd);
         $IncidentMainDto->setIncidentTypeCd($incidentTypeCd);
-//        $IncidentMainDto->setParentIncidentId($parentIncidentId); // TODO
         $IncidentMainDto->setParentIncidentNo($parentIncidentNo);
         $IncidentMainDto->setIncidentStartDateTime($incidentStartDate);
-//        $IncidentMainDto->setIndustryTypeCd($industryTypeCd); // TODO
+        $IncidentMainDto->setIndustryTypeCd($industryTypeCd);
         $IncidentMainDto->setInfoSource($infoSourceCd);
         $IncidentMainDto->setInfoProvider($infoProvider);
         $IncidentMainDto->setInfoProviderTel($infoProvidedTel);
@@ -150,14 +148,13 @@ class IncidentEntryAction extends CommonAction {
         $IncidentMainDto->setSetubiNm($setubiNm);
         $IncidentMainDto->setPrefId($prefId);
         $IncidentMainDto->setPrefNm($prefNm);
-//        $IncidentMainDto->setDeliveryPjNo('DPNO01'); // TODO
-//        $IncidentMainDto->setDeliveryPjNm('納入プロジェクト名01'); // TODO
+        $IncidentMainDto->setDeliveryPjNo($deliveryPjId);
+        $IncidentMainDto->setDeliveryPjNm($deliveryPjNm);
         $IncidentMainDto->setCustId($custId);
         $IncidentMainDto->setCustNm($custNm);
         $IncidentMainDto->setCustTypeCd($custTypeCd);
         $IncidentMainDto->setCustTypeNm($custTypeNm);
-        $IncidentMainDto->setCustDept($salesDeptCd);
-//        $IncidentMainDto->setCustDept($salesDeptNm); // TODO 確認
+        $IncidentMainDto->setCustDept($custDept);
         $IncidentMainDto->setRequester($requester);
         $IncidentMainDto->setContactTel($contactTel);
         $IncidentMainDto->setContactFax($contactFax);
@@ -228,12 +225,6 @@ class IncidentEntryAction extends CommonAction {
         $IncidentMainDto->setProductHindo($productHindoCd);
         $IncidentMainDto->setProductGensyo($productGensyoCd);
         $IncidentMainDto->setProductStatus($productStatusCd);
-//        // 登録情報 TODO
-//        $IncidentMainDto->setInsDate();
-//        $IncidentMainDto->setInsUserId();
-//        $IncidentMainDto->setInsUserNm();
-//        $IncidentMainDto->setInsSectionCd();
-//        $IncidentMainDto->setInsSectionNm();
 
         $IncidentDto->setIncidentMainInfo($IncidentMainDto);
         $IncidentSaveDto->setIncidentInfo($IncidentDto);

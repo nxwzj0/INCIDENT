@@ -106,6 +106,7 @@ class DtoCreateLogic extends CommonLogic{
         $IncidentMainDto->setIncidentTypeNm($incidentTypeNm);// インシデント分類名
         $IncidentMainDto->setParentIncidentNo($incidentData['IN_PARENT_INCIDENT_NO']);//親インシデント番号
         $IncidentMainDto->setIncidentStartDateTime($incidentData['IN_INCIDENT_START_DATETIME']);//発生日時
+        $IncidentMainDto->setIndustryTypeCd($incidentData['IN_INDUSTRY_TYPE']);//業種区分
         $IncidentMainDto->setInfoSource($incidentData['IN_INFO_SOURCE']);//情報提供元
         $IncidentMainDto->setInfoProvider($incidentData['IN_INFO_PROVIDER']);//情報提供者名
         $IncidentMainDto->setInfoProviderTel($incidentData['IN_INFO_PROVIDER_TEL']);//情報提供TEL
