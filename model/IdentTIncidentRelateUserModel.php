@@ -150,4 +150,46 @@ SQL_RELATE_USER_INFO;
         return SAVE_TRUE;
     }
 
+        public function delete($MultiExecSql, $conditions) {
+        $SQL_INCIDENT_INFO = <<< SQL_INCIDENT_INFO
+                UPDATE
+                    IDENT_T_INCIDENT_RELATE_USER 
+                SET
+                    DEL_FLG = '1'
+                    ,UPD_DATE = SYSDATE
+                    ,UPD_USER_ID = '{$conditions['loginUserId']}'
+                    ,UPD_USER_NAME = '{$conditions['loginUserNm']}'
+                    ,UPD_SECTION_CD = '{$conditions['loginSectionCd']}'
+                    ,UPD_SECTION_NAME = '{$conditions['loginSectionNm']}'
+                WHERE
+                    RELATE_ID = '{$conditions['relateId']}'
+SQL_INCIDENT_INFO;
+
+        try {
+            $MultiExecSql->execute($SQL_INCIDENT_INFO, '');
+        } catch (Exception $e) {
+            print $e->getMessage();
+            return SAVE_FALSE;
+        }
+        return SAVE_TRUE;
+    }
+    
+    public function check($incidentId, $deptCd, $userId) {
+        $SQL_INCIDENT_INFO = <<< SQL_INCIDENT_INFO
+                SELECT
+                      NVL(COUNT(1),0) RESULT
+                FROM
+                    IDENT_T_INCIDENT_RELATE_USER
+                WHERE
+                    DEL_FLG = '0'
+                    AND INCIDENT_ID = '$incidentId'
+                    AND RELATE_USER_SECTION_CD = '$deptCd'
+                    AND RELATE_USER_ID = '$userId'
+SQL_INCIDENT_INFO;
+
+        $MultiExecSql = new MultiExecSql();
+        $sqlResult = array();
+        $MultiExecSql->getResultData($SQL_INCIDENT_INFO, $sqlResult);
+        return $sqlResult[0]["RESULT"];
+    }
 }

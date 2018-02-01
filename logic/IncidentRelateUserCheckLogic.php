@@ -12,7 +12,7 @@ require_once("./env.inc");
 // 共通処理読み込み
 require_once('./logic/CommonLogic.php');
 // model処理読み込み
-require_once('./model/IdentTIncidentRelateUserCheckModel.php');
+require_once('./model/IdentTIncidentRelateUserModel.php');
 // dto処理読み込み
 require_once('./dto/IncidentRelateUserDto.php');
 require_once('./dto/IncidentRelateUserCheckResultDto.php');
@@ -21,7 +21,7 @@ class IncidentRelateUserCheckLogic extends CommonLogic {
 
     public function execute(IncidentRelateUserDto $conditionDto) {
         // 実例化model
-        $model = new IdentTIncidentRelateUserCheckModel();
+        $model = new IdentTIncidentRelateUserModel();
 
         // 実例化dto
         $resultDto = new IncidentRelateUserCheckResultDto();
