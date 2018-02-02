@@ -68,9 +68,10 @@ class IncidentDataGetAction extends CommonAction {
                     $tmp["relateUserSectionCd"] = $arr[$index]->getRelateUserSectionCd();
                     $tmp["relateUserSectionNm"] = $arr[$index]->getRelateUserSectionNm();
                     $tmp["kidokuDate"] = $arr[$index]->getKidokuDate();
-                    array_push($relateUserList, $tmp);
+                    $relateUserList[]= $tmp;
                 }
-                $incidentUnitAry[]= array("result" => true,
+                $incidentUnitAry[]= array("result" => true);
+                $incidentUnitAry[]= array(
                     "relateUserList" => $relateUserList,
                     "incidentId" => $incidentMainInfo->getIncidentId(),
                     "incidentNo" => $incidentMainInfo->getIncidentNo(),
@@ -90,7 +91,6 @@ class IncidentDataGetAction extends CommonAction {
                     "infoSourceNm" => $this->getConstArrayString(unserialize(INCIDENT_INFO_SOURCE), $incidentMainInfo->getInfoSource()),
                     "infoProvider" => $incidentMainInfo->getInfoProvider(),
                     "infoProvidedTel" => $incidentMainInfo->getInfoProviderTel(),
-//                "relateList" => $incidentMainInfo->
                     "memo" => $incidentMainInfo->getMemo(),
                     "kijoNm" => $incidentMainInfo->getKijoNm(),
                     "jigyosyutaiNm" => $incidentMainInfo->getJigyosyutaiNm(),
