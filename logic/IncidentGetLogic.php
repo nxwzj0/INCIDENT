@@ -51,6 +51,52 @@ class IncidentGetLogic extends CommonLogic {
         // 変更履歴フラグを取得する
         $logFlg = $IncidentGetDto->getLogFlg();
 
+// ::: 2018.02.02 [#34] 関係者の既読処理 Add Start newtouch
+        $loginUserId = $IncidentGetDto->getUpdUserId();
+        $loginUserNm = $IncidentGetDto->getUpdUserNm();
+        $loginSectionCd = $IncidentGetDto->getUpdSectionCd();
+        $loginSectionNm = $IncidentGetDto->getUpdSectionNm();
+        $conditions = array();
+        $conditions['incidentId'] = $incidentId;
+        // ログイン情報設定
+        $conditions['loginUserId'] = $loginUserId;
+        $conditions['loginUserNm'] = $loginUserNm;
+        $conditions['loginSectionCd'] = $loginSectionCd;
+        $conditions['loginSectionNm'] = $loginSectionNm;
+
+        // 〇関係者に設定されているユーザで、インシデント詳細画面を開いた時に、既読日を登録する
+        $IdentTIncidentRelateUserModel = new IdentTIncidentRelateUserModel();
+        // 登録用の MultiExecSql　オブジェクトを作成
+        $MultiExecSql = new MultiExecSql();
+
+        $dataExistFlg = $IdentTIncidentRelateUserModel->getCountByIncidentIdAndUserId($incidentId,$loginUserId);
+
+        // 1 検索結果が有り、既読日が登録されていない場合は、既読日を登録する
+        if($dataExistFlg == '1'){
+            // 検索結果が有り
+            $kidokuDate = $IdentTIncidentRelateUserModel->getKidokuDateByIncidentIdAndUserId($incidentId,$loginUserId);
+            // 既読日が登録されていない場合は、既読日を登録する
+            if(empty($kidokuDate)){
+                // 既読日を登録の処理
+                $updateResultFlg = $IdentTIncidentRelateUserModel->updteKidokuDate($MultiExecSql, $conditions);
+
+                // 登録処理成功判定フラグ FALSE
+                if ($updateResultFlg == SAVE_FALSE) {
+                    // MultiExecSql　オブジェクトのrollback()を実行
+                    $MultiExecSql->rollback();
+                    // LOGIC結果　SQLエラー '1' をセット
+                    $IncidentGetResultDto->setLogicResult(LOGIC_RESULT_SQL_ERROR);
+                    // LOGIC結果メッセージ　'登録に失敗しました'
+                    $IncidentGetResultDto->setResultMsg(LOGIC_RESULT_INSERT_FAIL);
+                    // 戻りオブジェクト(IncidentGetResultDto)
+                    return $IncidentGetResultDto;
+                }
+                // MultiExecSql　オブジェクトのcommit()を実行
+                $MultiExecSql->commit();
+            }
+        }
+// ::: 2018.02.02 [#34] 関係者の既読処理 Add End   newtouch
+
         // 関連フラグ true : 関連有り、false : 関連無し
         // 関連フラグ　⇒ true : 関連有り
         if ($relateFlg == RELATE_FLG_ON) {

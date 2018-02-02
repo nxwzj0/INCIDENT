@@ -28,6 +28,13 @@ class IncidentDataGetAction extends CommonAction {
         $IncidentGetDto->setIncidentId($incidentId);
         $IncidentGetDto->setRelateFlg(TRUE);
         $IncidentGetDto->setLogFlg(TRUE);
+// ::: 2018.02.02 [#34] 関係者の既読処理 Add Start newtouch
+        // ログイン情報設定
+        $IncidentGetDto->setUpdUserId($P['userId']);
+        $IncidentGetDto->setUpdUserNm($P['userName']);
+        $IncidentGetDto->setUpdSectionCd($P['sectionCd']);
+        $IncidentGetDto->setUpdSectionNm($P['sectionName']);
+// ::: 2018.02.02 [#34] 関係者の既読処理 Add End   newtouch
 
         // インシデント情報を取得
         $IncidentGetLogic = new IncidentGetLogic();

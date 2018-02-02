@@ -192,4 +192,70 @@ SQL_INCIDENT_INFO;
         $MultiExecSql->getResultData($SQL_INCIDENT_INFO, $sqlResult);
         return $sqlResult[0]["RESULT"];
     }
+
+// ::: 2018.02.02 [#34] 関係者の既読処理 Add Start newtouch
+
+    public function getCountByIncidentIdAndUserId($incidentId, $userId) {
+        $SQL_INCIDENT_INFO = <<< SQL_INCIDENT_INFO
+                SELECT
+                      NVL(COUNT(1),0) RESULT
+                FROM
+                    IDENT_T_INCIDENT_RELATE_USER
+                WHERE
+                    DEL_FLG = '0'
+                    AND INCIDENT_ID = '$incidentId'
+                    AND RELATE_USER_ID = '$userId'
+SQL_INCIDENT_INFO;
+
+        $MultiExecSql = new MultiExecSql();
+        $sqlResult = array();
+        $MultiExecSql->getResultData($SQL_INCIDENT_INFO, $sqlResult);
+        return $sqlResult[0]["RESULT"];
+    }
+
+    public function getKidokuDateByIncidentIdAndUserId($incidentId, $userId) {
+        $SQL_INCIDENT_INFO = <<< SQL_INCIDENT_INFO
+                SELECT
+                    TO_CHAR(KIDOKU_DATE,'yyyy/mm/dd') AS RESULT
+                FROM
+                    IDENT_T_INCIDENT_RELATE_USER
+                WHERE
+                    DEL_FLG = '0'
+                    AND INCIDENT_ID = '$incidentId'
+                    AND RELATE_USER_ID = '$userId'
+SQL_INCIDENT_INFO;
+
+        $MultiExecSql = new MultiExecSql();
+        $sqlResult = array();
+        $MultiExecSql->getResultData($SQL_INCIDENT_INFO, $sqlResult);
+        return $sqlResult[0]["RESULT"];
+    }
+
+    public function updteKidokuDate($MultiExecSql, $conditions) {
+        $SQL_INCIDENT_INFO = <<< SQL_INCIDENT_INFO
+                UPDATE
+                    IDENT_T_INCIDENT_RELATE_USER 
+                SET
+                    KIDOKU_DATE = SYSDATE
+                    ,UPD_DATE = SYSDATE
+                    ,UPD_USER_ID = '{$conditions['loginUserId']}'
+                    ,UPD_USER_NAME = '{$conditions['loginUserNm']}'
+                    ,UPD_SECTION_CD = '{$conditions['loginSectionCd']}'
+                    ,UPD_SECTION_NAME = '{$conditions['loginSectionNm']}'
+                WHERE
+                    DEL_FLG = '0'
+                    AND INCIDENT_ID = '{$conditions['incidentId']}'
+                    AND RELATE_USER_ID = '{$conditions['loginUserId']}'
+SQL_INCIDENT_INFO;
+
+        try {
+            $MultiExecSql->execute($SQL_INCIDENT_INFO, '');
+        } catch (Exception $e) {
+            print $e->getMessage();
+            return SAVE_FALSE;
+        }
+        return SAVE_TRUE;
+    }
+// ::: 2018.02.02 [#34] 関係者の既読処理 Add End   newtouch
+
 }
