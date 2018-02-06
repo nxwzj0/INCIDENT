@@ -220,15 +220,15 @@ class IncidentGetLogic extends CommonLogic {
         $kijiIdArray = array();
         $kijiIdArray['kijoId'] = $incidentData['IN_KIJO_ID'];
         $kijiIdArray['excludeIncidentId'] = $incidentId;
-        // 顧客名のarray変数
-        $custNmArray = array();
-        $custNmArray['custNm'] = $incidentData['IN_CUST_NM'];
-        $custNmArray['excludeIncidentId'] = $incidentId;
+        // 顧客IDのarray変数
+        $custIdArray = array();
+        $custIdArray['custId'] = $incidentData['IN_CUST_ID'];
+        $custIdArray['excludeIncidentId'] = $incidentId;
         // IdentTIncidentModelを作成
         $IdentTIncidentModel = new IdentTIncidentModel();
 
         try {
-            if (isset($kijiIdArray['kijoId'])) {
+            if ($kijiIdArray['kijoId'] != NULL) {
                 // 機場IDでインシデントメイン情報の取得
                 $incidentRelationDataByKijiId = $IdentTIncidentModel->getIncident($kijiIdArray);
             }
@@ -247,7 +247,7 @@ class IncidentGetLogic extends CommonLogic {
                 $IncidentRelationDto->setRelateIncidentId($one['IN_INCIDENT_ID']);
                 $IncidentRelationDto->setRelateIncidentContent($one['IN_CALL_CONTENT']);
                 $IncidentRelationDto->setRelateIncidentNo($one['IN_INCIDENT_NO']);
-                $incidentTypeNm = $CommonService->getConstArrayString(unserialize(INCIDENT_TYPE), $one['IN_INCIDENT_TYPE']);
+                $incidentTypeNm = $CommonService->getConstArrayString(unserialize(INCIDENT_TYPE_NAME), $one['IN_INCIDENT_TYPE']);
                 $IncidentRelationDto->setRelateIncidentType($incidentTypeNm);
                 $IncidentRelationDto->setRelateIncidentStartDateTime($one['IN_INCIDENT_START_DATETIME']);
                 $IncidentRelationDto->setRelateIncidentKijoNm($one['IN_KIJO_NM']);
@@ -258,9 +258,9 @@ class IncidentGetLogic extends CommonLogic {
         }
 
         try {
-            if (isset($custNmArray['custNm'])) {
-                // 顧客名でインシデントメイン情報の取得
-                $incidentRelationDataByCustNm = $IdentTIncidentModel->getIncident($custNmArray);
+            if ($custIdArray['custId'] != NULL) {
+                // 顧客IDでインシデントメイン情報の取得
+                $incidentRelationDataByCustId = $IdentTIncidentModel->getIncident($custIdArray);
             }
         } catch (Exception $e) {
             // LOGIC結果　SQLエラー '1' をセット
@@ -269,15 +269,15 @@ class IncidentGetLogic extends CommonLogic {
             return $IncidentGetResultDto;
         }
 
-        if (isset($incidentRelationDataByCustNm)) {
-            foreach ($incidentRelationDataByCustNm as $one) {
+        if (isset($incidentRelationDataByCustId)) {
+            foreach ($incidentRelationDataByCustId as $one) {
                 $IncidentRelationDto = new IncidentRelationDto();
 
                 $IncidentRelationDto->setRelateType(RELATE_INCIDENT_TYPE_CUST);
                 $IncidentRelationDto->setRelateIncidentId($one['IN_INCIDENT_ID']);
                 $IncidentRelationDto->setRelateIncidentContent($one['IN_CALL_CONTENT']);
                 $IncidentRelationDto->setRelateIncidentNo($one['IN_INCIDENT_NO']);
-                $incidentTypeNm = $CommonService->getConstArrayString(unserialize(INCIDENT_TYPE), $one['IN_INCIDENT_TYPE']);
+                $incidentTypeNm = $CommonService->getConstArrayString(unserialize(INCIDENT_TYPE_NAME), $one['IN_INCIDENT_TYPE']);
                 $IncidentRelationDto->setRelateIncidentType($incidentTypeNm);
                 $IncidentRelationDto->setRelateIncidentStartDateTime($one['IN_INCIDENT_START_DATETIME']);
                 $IncidentRelationDto->setRelateIncidentKijoNm($one['IN_KIJO_NM']);

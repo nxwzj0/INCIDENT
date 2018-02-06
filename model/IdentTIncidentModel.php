@@ -22,7 +22,7 @@ class IdentTIncidentModel extends CommonModel {
                     INCIDENT.INCIDENT_STS IN_INCIDENT_STS,
                     INCIDENT.INCIDENT_TYPE IN_INCIDENT_TYPE,
                     INCIDENT.PARENT_INCIDENT_NO IN_PARENT_INCIDENT_NO,
-                    TO_CHAR(INCIDENT.INCIDENT_START_DATETIME,'yyyy-mm-dd hh24:mi:ss') IN_INCIDENT_START_DATETIME,
+                    TO_CHAR(INCIDENT.INCIDENT_START_DATETIME,'yyyy/mm/dd hh24:mi:ss') IN_INCIDENT_START_DATETIME,
                     INCIDENT.INDUSTRY_TYPE IN_INDUSTRY_TYPE,
                     INCIDENT.INFO_SOURCE IN_INFO_SOURCE,
                     INCIDENT.INFO_PROVIDER IN_INFO_PROVIDER,
@@ -55,8 +55,8 @@ class IdentTIncidentModel extends CommonModel {
                     INCIDENT.SKAN_DEPT_NM IN_SKAN_DEPT_NM,
                     INCIDENT.SKAN_USER_ID IN_SKAN_USER_ID,
                     INCIDENT.SKAN_USER_NM IN_SKAN_USER_NM,
-                    TO_CHAR(INCIDENT.CALL_START_DATE,'yyyy-mm-dd hh24:mi:ss') IN_CALL_START_DATE,
-                    TO_CHAR(INCIDENT.CALL_END_DATE,'yyyy-mm-dd hh24:mi:ss') IN_CALL_END_DATE,
+                    TO_CHAR(INCIDENT.CALL_START_DATE,'yyyy/mm/dd hh24:mi:ss') IN_CALL_START_DATE,
+                    TO_CHAR(INCIDENT.CALL_END_DATE,'yyyy/mm/dd hh24:mi:ss') IN_CALL_END_DATE,
                     INCIDENT.CALL_DEPT_CD IN_CALL_DEPT_CD,
                     INCIDENT.CALL_DEPT_NM IN_CALL_DEPT_NM,
                     INCIDENT.CALL_USER_CD IN_CALL_USER_CD,
@@ -64,8 +64,8 @@ class IdentTIncidentModel extends CommonModel {
                     INCIDENT.CALL_TEL IN_CALL_TEL,
                     INCIDENT.CALL_MAIL IN_CALL_MAIL,
                     INCIDENT.CALL_CONTENT IN_CALL_CONTENT,
-                    TO_CHAR(INCIDENT.TAIO_START_DATE,'yyyy-mm-dd hh24:mi:ss') IN_TAIO_START_DATE,
-                    TO_CHAR(INCIDENT.TAIO_END_DATE,'yyyy-mm-dd hh24:mi:ss') IN_TAIO_END_DATE,
+                    TO_CHAR(INCIDENT.TAIO_START_DATE,'yyyy/mm/dd hh24:mi:ss') IN_TAIO_START_DATE,
+                    TO_CHAR(INCIDENT.TAIO_END_DATE,'yyyy/mm/dd hh24:mi:ss') IN_TAIO_END_DATE,
                     INCIDENT.TAIO_DEPT_CD IN_TAIO_DEPT_CD,
                     INCIDENT.TAIO_DEPT_NM IN_TAIO_DEPT_NM,
                     INCIDENT.TAIO_USER_ID IN_TAIO_USER_ID,
@@ -73,10 +73,10 @@ class IdentTIncidentModel extends CommonModel {
                     INCIDENT.TAIO_TEL IN_TAIO_TEL,
                     INCIDENT.TAIO_MAIL IN_TAIO_MAIL,
                     INCIDENT.TAIO_CONTENT IN_TAIO_CONTENT,
-                    TO_CHAR(INCIDENT.ACT_DATE,'yyyy-mm-dd hh24:mi:ss') IN_ACT_DATE,
+                    TO_CHAR(INCIDENT.ACT_DATE,'yyyy/mm/dd hh24:mi:ss') IN_ACT_DATE,
                     INCIDENT.ACT_TYPE IN_ACT_TYPE,
-                    TO_CHAR(INCIDENT.ACT_START_TIME,'yyyy-mm-dd hh24:mi:ss') IN_ACT_START_TIME,
-                    TO_CHAR(INCIDENT.ACT_END_TIME,'yyyy-mm-dd hh24:mi:ss') IN_ACT_END_TIME,
+                    TO_CHAR(INCIDENT.ACT_START_TIME,'yyyy/mm/dd hh24:mi:ss') IN_ACT_START_TIME,
+                    TO_CHAR(INCIDENT.ACT_END_TIME,'yyyy/mm/dd hh24:mi:ss') IN_ACT_END_TIME,
                     INCIDENT.ACT_DEPT_CD IN_ACT_DEPT_CD,
                     INCIDENT.ACT_DEPT_NM IN_ACT_DEPT_NM,
                     INCIDENT.ACT_USER_ID IN_ACT_USER_ID,
@@ -89,7 +89,7 @@ class IdentTIncidentModel extends CommonModel {
                     INCIDENT.PRODUCT_HINDO IN_PRODUCT_HINDO,
                     INCIDENT.PRODUCT_GENSYO IN_PRODUCT_GENSYO,
                     INCIDENT.PRODUCT_STATUS IN_PRODUCT_STATUS,
-                    TO_CHAR(INCIDENT.INS_DATE,'yyyy-mm-dd hh24:mi:ss') IN_INS_DATE,
+                    TO_CHAR(INCIDENT.INS_DATE,'yyyy/mm/dd hh24:mi:ss') IN_INS_DATE,
                     INCIDENT.INS_USER_ID IN_INS_USER_ID,
                     INCIDENT.INS_USER_NAME IN_INS_USER_NAME,
                     INCIDENT.INS_SECTION_CD IN_INS_SECTION_CD,
@@ -98,7 +98,7 @@ class IdentTIncidentModel extends CommonModel {
                     INCIDENT.UPD_USER_NAME IN_UPD_USER_NAME,
                     INCIDENT.UPD_SECTION_CD IN_UPD_SECTION_CD,
                     INCIDENT.UPD_SECTION_NAME IN_UPD_SECTION_NAME,
-                    TO_CHAR(INCIDENT.UPD_DATE,'yyyy-mm-dd hh24:mi:ss') IN_UPD_DATE,
+                    TO_CHAR(INCIDENT.UPD_DATE,'yyyy/mm/dd hh24:mi:ss') IN_UPD_DATE,
                     INCIDENT.DEL_FLG
                 FROM
                     IDENT_T_INCIDENT INCIDENT
@@ -122,7 +122,7 @@ SQL_INCIDENT_INFO;
                 INCIDENT.INCIDENT_STS IN_INCIDENT_STS,
                 INCIDENT.INCIDENT_TYPE IN_INCIDENT_TYPE,
                 INCIDENT.PARENT_INCIDENT_NO IN_PARENT_INCIDENT_NO,
-                TO_CHAR(INCIDENT.INCIDENT_START_DATETIME,'yyyy-mm-dd hh24:mi:ss') IN_INCIDENT_START_DATETIME,
+                TO_CHAR(INCIDENT.INCIDENT_START_DATETIME,'yyyy/mm/dd hh24:mi:ss') IN_INCIDENT_START_DATETIME,
                 INCIDENT.INDUSTRY_TYPE IN_INDUSTRY_TYPE,
                 INCIDENT.INFO_SOURCE IN_INFO_SOURCE,
                 INCIDENT.INFO_PROVIDER IN_INFO_PROVIDER,
@@ -155,8 +155,8 @@ SQL_INCIDENT_INFO;
                 INCIDENT.SKAN_DEPT_NM IN_SKAN_DEPT_NM,
                 INCIDENT.SKAN_USER_ID IN_SKAN_USER_ID,
                 INCIDENT.SKAN_USER_NM IN_SKAN_USER_NM,
-                TO_CHAR(INCIDENT.CALL_START_DATE,'yyyy-mm-dd hh24:mi:ss') IN_CALL_START_DATE,
-                TO_CHAR(INCIDENT.CALL_END_DATE,'yyyy-mm-dd hh24:mi:ss') IN_CALL_END_DATE,
+                TO_CHAR(INCIDENT.CALL_START_DATE,'yyyy/mm/dd hh24:mi:ss') IN_CALL_START_DATE,
+                TO_CHAR(INCIDENT.CALL_END_DATE,'yyyy/mm/dd hh24:mi:ss') IN_CALL_END_DATE,
                 INCIDENT.CALL_DEPT_CD IN_CALL_DEPT_CD,
                 INCIDENT.CALL_DEPT_NM IN_CALL_DEPT_NM,
                 INCIDENT.CALL_USER_CD IN_CALL_USER_CD,
@@ -164,8 +164,8 @@ SQL_INCIDENT_INFO;
                 INCIDENT.CALL_TEL IN_CALL_TEL,
                 INCIDENT.CALL_MAIL IN_CALL_MAIL,
                 INCIDENT.CALL_CONTENT IN_CALL_CONTENT,
-                TO_CHAR(INCIDENT.TAIO_START_DATE,'yyyy-mm-dd hh24:mi:ss') IN_TAIO_START_DATE,
-                TO_CHAR(INCIDENT.TAIO_END_DATE,'yyyy-mm-dd hh24:mi:ss') IN_TAIO_END_DATE,
+                TO_CHAR(INCIDENT.TAIO_START_DATE,'yyyy/mm/dd hh24:mi:ss') IN_TAIO_START_DATE,
+                TO_CHAR(INCIDENT.TAIO_END_DATE,'yyyy/mm/dd hh24:mi:ss') IN_TAIO_END_DATE,
                 INCIDENT.TAIO_DEPT_CD IN_TAIO_DEPT_CD,
                 INCIDENT.TAIO_DEPT_NM IN_TAIO_DEPT_NM,
                 INCIDENT.TAIO_USER_ID IN_TAIO_USER_ID,
@@ -173,10 +173,10 @@ SQL_INCIDENT_INFO;
                 INCIDENT.TAIO_TEL IN_TAIO_TEL,
                 INCIDENT.TAIO_MAIL IN_TAIO_MAIL,
                 INCIDENT.TAIO_CONTENT IN_TAIO_CONTENT,
-                TO_CHAR(INCIDENT.ACT_DATE,'yyyy-mm-dd hh24:mi:ss') IN_ACT_DATE,
+                TO_CHAR(INCIDENT.ACT_DATE,'yyyy/mm/dd hh24:mi:ss') IN_ACT_DATE,
                 INCIDENT.ACT_TYPE IN_ACT_TYPE,
-                TO_CHAR(INCIDENT.ACT_START_TIME,'yyyy-mm-dd hh24:mi:ss') IN_ACT_START_TIME,
-                TO_CHAR(INCIDENT.ACT_END_TIME,'yyyy-mm-dd hh24:mi:ss') IN_ACT_END_TIME,
+                TO_CHAR(INCIDENT.ACT_START_TIME,'yyyy/mm/dd hh24:mi:ss') IN_ACT_START_TIME,
+                TO_CHAR(INCIDENT.ACT_END_TIME,'yyyy/mm/dd hh24:mi:ss') IN_ACT_END_TIME,
                 INCIDENT.ACT_DEPT_CD IN_ACT_DEPT_CD,
                 INCIDENT.ACT_DEPT_NM IN_ACT_DEPT_NM,
                 INCIDENT.ACT_USER_ID IN_ACT_USER_ID,
@@ -189,7 +189,7 @@ SQL_INCIDENT_INFO;
                 INCIDENT.PRODUCT_HINDO IN_PRODUCT_HINDO,
                 INCIDENT.PRODUCT_GENSYO IN_PRODUCT_GENSYO,
                 INCIDENT.PRODUCT_STATUS IN_PRODUCT_STATUS,
-                TO_CHAR(INCIDENT.INS_DATE,'yyyy-mm-dd hh24:mi:ss') IN_INS_DATE,
+                TO_CHAR(INCIDENT.INS_DATE,'yyyy/mm/dd hh24:mi:ss') IN_INS_DATE,
                 INCIDENT.INS_USER_ID IN_INS_USER_ID,
                 INCIDENT.INS_USER_NAME IN_INS_USER_NAME,
                 INCIDENT.INS_SECTION_CD IN_INS_SECTION_CD,
@@ -198,7 +198,7 @@ SQL_INCIDENT_INFO;
                 INCIDENT.UPD_USER_NAME IN_UPD_USER_NAME,
                 INCIDENT.UPD_SECTION_CD IN_UPD_SECTION_CD,
                 INCIDENT.UPD_SECTION_NAME IN_UPD_SECTION_NAME,
-                TO_CHAR(INCIDENT.UPD_DATE,'yyyy-mm-dd hh24:mi:ss') IN_UPD_DATE,
+                TO_CHAR(INCIDENT.UPD_DATE,'yyyy/mm/dd hh24:mi:ss') IN_UPD_DATE,
                 INCIDENT.DEL_FLG
             FROM
                 IDENT_T_INCIDENT INCIDENT
@@ -227,6 +227,43 @@ SQL_INCIDENT_INFO;
         return $sqlResult;
     }
 
+    public function getRelateIncident($conditions) {
+        $SQL_INCIDENT_INFO = <<< SQL_INCIDENT_INFO
+            SELECT
+                INCIDENT.INCIDENT_ID IN_INCIDENT_ID,
+                INCIDENT.INCIDENT_NO IN_INCIDENT_NO,
+                INCIDENT.INCIDENT_TYPE IN_INCIDENT_TYPE,
+                TO_CHAR(INCIDENT.INCIDENT_START_DATETIME,'yyyy/mm/dd') IN_INCIDENT_START_DATETIME,
+                INCIDENT.KIJO_NM IN_KIJO_NM,
+                INCIDENT.CUST_NM IN_CUST_NM,
+                INCIDENT.CALL_CONTENT IN_CALL_CONTENT
+            FROM
+                IDENT_T_INCIDENT INCIDENT
+            WHERE
+                INCIDENT.DEL_FLG = '0'
+SQL_INCIDENT_INFO;
+
+        // 機場ID
+        if ($conditions['kijoId'] != null) {
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.KIJO_ID = " . "'" . $conditions['kijoId'] . "'";
+        }
+
+        // 顧客名
+        if ($conditions['custId'] != null) {
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.CUST_ID = " . "'" . $conditions['custId'] . "'";
+        }
+
+        // 除外するインシデントID
+        if ($conditions['excludeIncidentId'] != null) {
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.INCIDENT_ID != " . "'" . $conditions['excludeIncidentId'] . "'";
+        }
+
+        $MultiExecSql = new MultiExecSql();
+        $sqlResult = array();
+        $MultiExecSql->getResultData($SQL_INCIDENT_INFO, $sqlResult);
+        return $sqlResult;
+    }
+
     public function getIncidentList($conditions) {
         $SQL_INCIDENT_INFO = <<< SQL_INCIDENT_INFO
                 SELECT
@@ -235,7 +272,7 @@ SQL_INCIDENT_INFO;
                     INCIDENT.INCIDENT_STS IN_INCIDENT_STS,
                     INCIDENT.INCIDENT_TYPE IN_INCIDENT_TYPE,
                     INCIDENT.PARENT_INCIDENT_NO IN_PARENT_INCIDENT_NO,
-                    TO_CHAR(INCIDENT.INCIDENT_START_DATETIME,'yyyy-mm-dd hh24:mi:ss') IN_INCIDENT_START_DATETIME,
+                    TO_CHAR(INCIDENT.INCIDENT_START_DATETIME,'yyyy/mm/dd hh24:mi:ss') IN_INCIDENT_START_DATETIME,
                     INCIDENT.INDUSTRY_TYPE IN_INDUSTRY_TYPE,
                     INCIDENT.INFO_SOURCE IN_INFO_SOURCE,
                     INCIDENT.INFO_PROVIDER IN_INFO_PROVIDER,
@@ -268,8 +305,8 @@ SQL_INCIDENT_INFO;
                     INCIDENT.SKAN_DEPT_NM IN_SKAN_DEPT_NM,
                     INCIDENT.SKAN_USER_ID IN_SKAN_USER_ID,
                     INCIDENT.SKAN_USER_NM IN_SKAN_USER_NM,
-                    TO_CHAR(INCIDENT.CALL_START_DATE,'yyyy-mm-dd hh24:mi:ss') IN_CALL_START_DATE,
-                    TO_CHAR(INCIDENT.CALL_END_DATE,'yyyy-mm-dd hh24:mi:ss') IN_CALL_END_DATE,
+                    TO_CHAR(INCIDENT.CALL_START_DATE,'yyyy/mm/dd hh24:mi:ss') IN_CALL_START_DATE,
+                    TO_CHAR(INCIDENT.CALL_END_DATE,'yyyy/mm/dd hh24:mi:ss') IN_CALL_END_DATE,
                     INCIDENT.CALL_DEPT_CD IN_CALL_DEPT_CD,
                     INCIDENT.CALL_DEPT_NM IN_CALL_DEPT_NM,
                     INCIDENT.CALL_USER_CD IN_CALL_USER_CD,
@@ -277,8 +314,8 @@ SQL_INCIDENT_INFO;
                     INCIDENT.CALL_TEL IN_CALL_TEL,
                     INCIDENT.CALL_MAIL IN_CALL_MAIL,
                     INCIDENT.CALL_CONTENT IN_CALL_CONTENT,
-                    TO_CHAR(INCIDENT.TAIO_START_DATE,'yyyy-mm-dd hh24:mi:ss') IN_TAIO_START_DATE,
-                    TO_CHAR(INCIDENT.TAIO_END_DATE,'yyyy-mm-dd hh24:mi:ss') IN_TAIO_END_DATE,
+                    TO_CHAR(INCIDENT.TAIO_START_DATE,'yyyy/mm/dd hh24:mi:ss') IN_TAIO_START_DATE,
+                    TO_CHAR(INCIDENT.TAIO_END_DATE,'yyyy/mm/dd hh24:mi:ss') IN_TAIO_END_DATE,
                     INCIDENT.TAIO_DEPT_CD IN_TAIO_DEPT_CD,
                     INCIDENT.TAIO_DEPT_NM IN_TAIO_DEPT_NM,
                     INCIDENT.TAIO_USER_ID IN_TAIO_USER_ID,
@@ -286,10 +323,10 @@ SQL_INCIDENT_INFO;
                     INCIDENT.TAIO_TEL IN_TAIO_TEL,
                     INCIDENT.TAIO_MAIL IN_TAIO_MAIL,
                     INCIDENT.TAIO_CONTENT IN_TAIO_CONTENT,
-                    TO_CHAR(INCIDENT.ACT_DATE,'yyyy-mm-dd hh24:mi:ss') IN_ACT_DATE,
+                    TO_CHAR(INCIDENT.ACT_DATE,'yyyy/mm/dd hh24:mi:ss') IN_ACT_DATE,
                     INCIDENT.ACT_TYPE IN_ACT_TYPE,
-                    TO_CHAR(INCIDENT.ACT_START_TIME,'yyyy-mm-dd hh24:mi:ss') IN_ACT_START_TIME,
-                    TO_CHAR(INCIDENT.ACT_END_TIME,'yyyy-mm-dd hh24:mi:ss') IN_ACT_END_TIME,
+                    TO_CHAR(INCIDENT.ACT_START_TIME,'yyyy/mm/dd hh24:mi:ss') IN_ACT_START_TIME,
+                    TO_CHAR(INCIDENT.ACT_END_TIME,'yyyy/mm/dd hh24:mi:ss') IN_ACT_END_TIME,
                     INCIDENT.ACT_DEPT_CD IN_ACT_DEPT_CD,
                     INCIDENT.ACT_DEPT_NM IN_ACT_DEPT_NM,
                     INCIDENT.ACT_USER_ID IN_ACT_USER_ID,
@@ -302,7 +339,7 @@ SQL_INCIDENT_INFO;
                     INCIDENT.PRODUCT_HINDO IN_PRODUCT_HINDO,
                     INCIDENT.PRODUCT_GENSYO IN_PRODUCT_GENSYO,
                     INCIDENT.PRODUCT_STATUS IN_PRODUCT_STATUS,
-                    TO_CHAR(INCIDENT.INS_DATE,'yyyy-mm-dd hh24:mi:ss') IN_INS_DATE,
+                    TO_CHAR(INCIDENT.INS_DATE,'yyyy/mm/dd hh24:mi:ss') IN_INS_DATE,
                     INCIDENT.INS_USER_ID IN_INS_USER_ID,
                     INCIDENT.INS_USER_NAME IN_INS_USER_NAME,
                     INCIDENT.INS_SECTION_CD IN_INS_SECTION_CD,
@@ -311,7 +348,7 @@ SQL_INCIDENT_INFO;
                     INCIDENT.UPD_USER_NAME IN_UPD_USER_NAME,
                     INCIDENT.UPD_SECTION_CD IN_UPD_SECTION_CD,
                     INCIDENT.UPD_SECTION_NAME IN_UPD_SECTION_NAME,
-                    TO_CHAR(INCIDENT.UPD_DATE,'yyyy-mm-dd hh24:mi:ss') IN_UPD_DATE,
+                    TO_CHAR(INCIDENT.UPD_DATE,'yyyy/mm/dd hh24:mi:ss') IN_UPD_DATE,
                     INCIDENT.DEL_FLG
                 FROM
                     IDENT_T_INCIDENT INCIDENT

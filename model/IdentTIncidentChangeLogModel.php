@@ -19,7 +19,7 @@ class IdentTIncidentChangeLogModel extends CommonModel{
                         INCIDENT_ID,
                         SORT_NO,
                         CHANGE_USER_NM,
-                        TO_CHAR(CHANGE_DATE,'yyyy-mm-dd hh24:mi:ss') CHANGE_DATE,
+                        TO_CHAR(CHANGE_DATE,'yyyy/mm/dd hh24:mi:ss') CHANGE_DATE,
                         CHANGE_ITEM,
                         CHANGE_CONTENT
                 FROM
@@ -29,7 +29,7 @@ class IdentTIncidentChangeLogModel extends CommonModel{
                 AND
                         DEL_FLG = '0'
                 ORDER BY
-                        CHANGE_DATE DESC
+                        SORT_NO DESC, CHANGE_DATE DESC
 SQL_CHANGE_LOG_INFO;
         $MultiExecSql = new MultiExecSql();
         $sqlResult = array();
@@ -44,7 +44,7 @@ SQL_CHANGE_LOG_INFO;
                         INCIDENT_ID,
                         SORT_NO,
                         CHANGE_USER_NM,
-                        TO_CHAR(CHANGE_DATE,'yyyy-mm-dd hh24:mi:ss') CHANGE_DATE,
+                        TO_CHAR(CHANGE_DATE,'yyyy/mm/dd hh24:mi:ss') CHANGE_DATE,
                         CHANGE_ITEM,
                         CHANGE_CONTENT
                 FROM
@@ -59,7 +59,24 @@ SQL_CHANGE_LOG_INFO;
             $incidentId = parent::getInConditionStrByArray($conditions,$len);
             $SQL_CHANGE_LOG_INFO = $SQL_CHANGE_LOG_INFO . $incidentId . " ) ";
         }
-        $SQL_CHANGE_LOG_INFO = $SQL_CHANGE_LOG_INFO." ORDER BY CHANGE_DATE DESC";
+        $SQL_CHANGE_LOG_INFO = $SQL_CHANGE_LOG_INFO." ORDER BY SORT_NO DESC, CHANGE_DATE DESC";
+        $MultiExecSql = new MultiExecSql();
+        $sqlResult = array();
+        $MultiExecSql->getResultData($SQL_CHANGE_LOG_INFO, $sqlResult);
+        return $sqlResult;
+    }
+
+    public function getMaxSortNoByIncidentId($incidentId) {
+        $SQL_CHANGE_LOG_INFO = <<< SQL_CHANGE_LOG_INFO
+                SELECT
+                        MAX(SORT_NO) AS MAX_SORT_NO
+                FROM
+                        IDENT_T_INCIDENT_CHANGE_LOG
+                WHERE
+                        INCIDENT_ID = '$incidentId'
+                AND
+                        DEL_FLG = '0'
+SQL_CHANGE_LOG_INFO;
         $MultiExecSql = new MultiExecSql();
         $sqlResult = array();
         $MultiExecSql->getResultData($SQL_CHANGE_LOG_INFO, $sqlResult);

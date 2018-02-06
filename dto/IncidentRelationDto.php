@@ -19,6 +19,7 @@ require_once('./dto/CommonDto.php');
  * @property String $relateIncidentType
  * @property String $relateIncidentStartDateTime
  * @property String $relateIncidentKijoNm
+ * @property String $relateIncidentCustNm
  */
 class IncidentRelationDto extends CommonDto{
 
@@ -29,6 +30,7 @@ class IncidentRelationDto extends CommonDto{
     private $relateIncidentType;
     private $relateIncidentStartDateTime;
     private $relateIncidentKijoNm;
+    private $relateIncidentCustNm;
 
     /**
      * @return String
@@ -126,6 +128,20 @@ class IncidentRelationDto extends CommonDto{
      */
     public function setRelateIncidentKijoNm($relateIncidentKijoNm) {
         $this->relateIncidentKijoNm = $relateIncidentKijoNm;
+    }
+
+    /**
+     * @return String
+     */
+    public function getRelateIncidentCustNm() {
+        return $this->relateIncidentCustNm;
+    }
+
+    /**
+     * @param String $relateIncidentCustNm
+     */
+    public function setRelateIncidentCustNm($relateIncidentCustNm) {
+        $this->relateIncidentCustNm = $relateIncidentCustNm;
     }
 
 }

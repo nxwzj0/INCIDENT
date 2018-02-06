@@ -162,6 +162,10 @@ class IncidentSaveLogic extends CommonLogic {
 
         // 既存レコードがある（更新処理）
         if ($incidentDataOld != NULL) {
+            // 変更履歴の順序の最大値を取得
+            $maxSortNoArray = $IdentTIncidentChangeLogModel->getMaxSortNoByIncidentId($incidentId);
+            $sortNo = $maxSortNoArray[0]['MAX_SORT_NO'];
+            $sortNo = $sortNo + 1;
             // ChangeLogCreateLogicを作成
             $ChangeLogCreateLogic = new ChangeLogCreateLogic();
             // ChangeLogCreateLogicを実行 変更履歴配列($changeLogArray)を作成
@@ -180,6 +184,7 @@ class IncidentSaveLogic extends CommonLogic {
 
             // 変更履歴配列($changeLogArray)を作成
             $changeLogArray[0]['changeItem'] = SINKI_SAKUSEI;
+            $changeLogArray[0]['sortNo'] = SORT_NO_FIRST;
         }
 
         // 登録処理成功判定フラグ FALSE
@@ -312,7 +317,7 @@ class IncidentSaveLogic extends CommonLogic {
             $one['incidentId'] = $incidentDataArrayNew['incidentId'];
             $one['loginUserId'] = $incidentDataArrayNew['loginUserId'];
             $one['loginUserNm'] = $incidentDataArrayNew['loginUserNm'];
-            $one['sortNo'] = NULL;
+            $one['sortNo'] = $sortNo;
             $one['loginSectionCd'] = $incidentDataArrayNew['loginSectionCd'];
             $one['loginSectionNm'] = $incidentDataArrayNew['loginSectionNm'];
 

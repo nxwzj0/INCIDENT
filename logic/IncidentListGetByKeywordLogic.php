@@ -108,7 +108,7 @@ class IncidentListGetByKeywordLogic extends CommonLogic {
             }
         }
 
-        // 取得したインシデント情報から、機場IDと顧客名を取得する
+        // 取得したインシデント情報から、機場IDと顧客IDを取得する
         // 機場IDのarray変数
         $kijiId = array();
         $kijiIdArray = array();
@@ -124,31 +124,31 @@ class IncidentListGetByKeywordLogic extends CommonLogic {
             $kijiIdArray['kijoId'] = $kijiId;
         }
 
-        // 顧客名のarray変数
-        $custNm = array();
-        $custNmArray = array();
-        // 顧客名のセット処理
+        // 顧客IDのarray変数
+        $custId = array();
+        $custIdArray = array();
+        // 顧客IDのセット処理
         foreach($incidentDataAll as $one){
-            if($one['IN_CUST_NM'] != null){
-                array_push($custNm, $one['IN_CUST_NM']);
+            if($one['IN_CUST_ID'] != null){
+                array_push($custId, $one['IN_CUST_ID']);
             }
         }
-        // 顧客名が有る場合
-        if(count($custNm) > 0){
-            $custNm  = array_unique($custNm);
-            $custNmArray['custNm'] = $custNm;
+        // 顧客IDが有る場合
+        if(count($custId) > 0){
+            $custId  = array_unique($custId);
+            $custIdArray['custId'] = $custId;
         }
 
         try {
             // IdentTIncidentModelを作成
             $IdentTIncidentModel = new IdentTIncidentModel();
-            if(isset($kijiIdArray['kijoId'])){
+            if($kijiIdArray['kijoId'] != NULL){
                 // 機場IDでインシデントメイン情報の取得
                 $incidentRelationDataByKijiIdAll = $IdentTIncidentModel->getIncidentList($kijiIdArray);
             }
-            if(isset($custNmArray['custNm'])){
-                // 顧客名でインシデントメイン情報の取得
-                $incidentRelationDataByCustNmAll = $IdentTIncidentModel->getIncidentList($custNmArray);
+            if($custIdArray['custId'] != NULL){
+                // 顧客IDでインシデントメイン情報の取得
+                $incidentRelationDataByCustIdAll = $IdentTIncidentModel->getIncidentList($custIdArray);
             }
         } catch (Exception $e) {
             // LOGIC結果　SQLエラー '1' をセット
@@ -239,17 +239,17 @@ class IncidentListGetByKeywordLogic extends CommonLogic {
                 }
             }
 
-            if(parent::checkDataExistence($incidentRelationDataByCustNmAll) == SAVE_TRUE){
-                // 顧客名でインシデントメイン情報の取得(相関インシデントIDで取得)
-                $incidentRelationDataByCustNm = array();
-                foreach($incidentRelationDataByCustNmAll as $incidentRelationDataByCustNmOne){
-                    if($incidentRelationDataByCustNmOne['IN_CUST_NM'] == $incidentData['IN_CUST_NM'] &&
-                        $incidentRelationDataByCustNmOne['IN_INCIDENT_ID'] != $incidentData['IN_INCIDENT_ID'] ){ // 自身のインシデント情報は除外する
-                        array_push($incidentRelationDataByCustNm,$incidentRelationDataByCustNmOne);
+            if(parent::checkDataExistence($incidentRelationDataByCustIdAll) == SAVE_TRUE){
+                // 顧客IDでインシデントメイン情報の取得(相関インシデントIDで取得)
+                $incidentRelationDataByCustId = array();
+                foreach($incidentRelationDataByCustIdAll as $incidentRelationDataByCustIdOne){
+                    if($incidentRelationDataByCustIdOne['IN_CUST_NM'] == $incidentData['IN_CUST_NM'] &&
+                        $incidentRelationDataByCustIdOne['IN_INCIDENT_ID'] != $incidentData['IN_INCIDENT_ID'] ){ // 自身のインシデント情報は除外する
+                        array_push($incidentRelationDataByCustId,$incidentRelationDataByCustIdOne);
                     }
                 }
 
-                foreach($incidentRelationDataByCustNm as $one){
+                foreach($incidentRelationDataByCustId as $one){
                     $IncidentRelationDto = new IncidentRelationDto();
 
                     $IncidentRelationDto->setRelateType(RELATE_INCIDENT_TYPE_CUST);

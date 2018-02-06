@@ -24,9 +24,11 @@ class IncidentListDataGetAction extends CommonAction {
         $callContent = $P['callContent'];
         $kijoNm = $P['kijoNm'];
         $setubiNm = $P['setubiNm'];
-        $prefNm = $P['prefNm'];
+        $prefCd = $P['prefCd'];
         $callStartDateFrom = $P['callStartDateFrom'];
         $callStartDateTo = $P['callStartDateTo'];
+        $incidentStartDateTimeFrom = $P['incidentStartDateTimeFrom'];
+        $incidentStartDateTimeTo = $P['incidentStartDateTimeTo'];
         
         $incidentTypeSyougai =  $P["incidentTypeSyougai"];
         $incidentTypeJiko = $P["incidentTypeJiko"];
@@ -37,6 +39,26 @@ class IncidentListDataGetAction extends CommonAction {
         $incidentStatusCall = $P["incidentStatusCall"];
         $incidentStatusTaio = $P["incidentStatusTaio"];
         $incidentStatusAct = $P["incidentStatusAct"];
+        
+        $parentIncidentNo = $P["parentIncidentNo"];
+        $industryTypeMachinery = $P["industryTypeMachinery"];
+        $industryTypeElectricalMachinery = $P["industryTypeElectricalMachinery"];
+        $industryTypeInstrumentation = $P["industryTypeInstrumentation"];
+        $industryTypeInfo = $P["industryTypeInfo"];
+        $industryTypeEnvironment = $P["industryTypeEnvironment"];
+        $industryTypeWBC = $P["industryTypeWBC"];
+        $industryTypeOther = $P["industryTypeOther"];
+        $jigyosyutaiNm = $P["jigyosyutaiNm"];
+        $custNm = $P["custNm"];
+        $custTypeNenkan = $P["custTypeNenkan"];
+        $custTypeTenken = $P["custTypeTenken"];
+        $custTypeNasi = $P["custTypeNasi"];
+        $custTypeKasi = $P["custTypeKasi"];
+        $custTypeOther = $P["custTypeOther"];
+        $salesDeptNm = $P["salesDeptNm"];
+        $salesUserNm = $P["salesUserNm"];
+        $relateUserNm = $P["relateUserNm"];
+        
         // インシデント情報検索用パラメータ
         $IncidentListGetDto = new IncidentListGetDto();
         $IncidentListGetDto->setRelateFlg(TRUE);
@@ -45,9 +67,11 @@ class IncidentListDataGetAction extends CommonAction {
         $IncidentListGetDto->setCallContent($callContent);
         $IncidentListGetDto->setKijoNm($kijoNm);
         $IncidentListGetDto->setSetubiNm($setubiNm);
-        $IncidentListGetDto->setPrefNm($prefNm);
+        $IncidentListGetDto->setPrefCd($prefCd);
         $IncidentListGetDto->setCallStartDateFrom($callStartDateFrom);
         $IncidentListGetDto->setCallStartDateTo($callStartDateTo);
+        $IncidentListGetDto->setIncidentStartDateTimeFrom($incidentStartDateTimeFrom);
+        $IncidentListGetDto->setIncidentStartDateTimeTo($incidentStartDateTimeTo);
         $IncidentListGetDto->setIncidentTypeSyougai($incidentTypeSyougai);
         $IncidentListGetDto->setIncidentTypeJiko($incidentTypeJiko);
         $IncidentListGetDto->setIncidentTypeClaim($incidentTypeClaim);
@@ -57,6 +81,26 @@ class IncidentListDataGetAction extends CommonAction {
         $IncidentListGetDto->setIncidentStatusCall($incidentStatusCall);
         $IncidentListGetDto->setIncidentStatusTaio($incidentStatusTaio);
         $IncidentListGetDto->setIncidentStatusAct($incidentStatusAct);
+        
+        $IncidentListGetDto->setParentIncidentNo($parentIncidentNo);
+        $IncidentListGetDto->setIndustryTypeMachinery($industryTypeMachinery);
+        $IncidentListGetDto->setIndustryTypeElectricalMachinery($industryTypeElectricalMachinery);
+        $IncidentListGetDto->setIndustryTypeInstrumentation($industryTypeInstrumentation);
+        $IncidentListGetDto->setIndustryTypeInfo($industryTypeInfo);
+        $IncidentListGetDto->setIndustryTypeEnvironment($industryTypeEnvironment);
+        $IncidentListGetDto->setIndustryTypeWBC($industryTypeWBC);
+        $IncidentListGetDto->setIndustryTypeOther($industryTypeOther);
+        $IncidentListGetDto->setJigyosyutaiNm($jigyosyutaiNm);
+        $IncidentListGetDto->setCustNm($custNm);
+        $IncidentListGetDto->setCustTypeNenkan($custTypeNenkan);
+        $IncidentListGetDto->setCustTypeTenken($custTypeTenken);
+        $IncidentListGetDto->setCustTypeNasi($custTypeNasi);
+        $IncidentListGetDto->setCustTypeKasi($custTypeKasi);
+        $IncidentListGetDto->setCustTypeOther($custTypeOther);
+        $IncidentListGetDto->setSalesDeptNm($salesDeptNm);
+        $IncidentListGetDto->setSalesUserNm($salesUserNm);
+        $IncidentListGetDto->setRelateNm($relateUserNm);
+        
         // インシデントリスト情報を取得
         $IncidentListGetLogic = new IncidentListGetLogic();
         $eventResult = $IncidentListGetLogic->execute($IncidentListGetDto);

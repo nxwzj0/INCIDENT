@@ -21,7 +21,7 @@ class IdentTFileModel extends CommonModel {
 	                FT.FILE_NAME,
 	                FT.FILE_PATH,
 	                FT.FSVR_NAME,
-	                TO_CHAR(FT.INS_DATE,'yyyy-mm-dd hh24:mi:ss') FILE_INS_DATE,
+	                TO_CHAR(FT.INS_DATE,'yyyy/mm/dd hh24:mi:ss') FILE_INS_DATE,
 	                FT.INS_USER_ID FILE_INS_USER_ID,
 	                FT.INS_USER_NAME FILE_INS_USER_NAME,
 	                FT.INS_SECTION_CD FILE_INS_SECTION_CD,
@@ -30,7 +30,7 @@ class IdentTFileModel extends CommonModel {
 	                FT.UPD_USER_NAME FILE_UPD_USER_NAME,
 	                FT.UPD_SECTION_CD FILE_UPD_SECTION_CD,
 	                FT.UPD_SECTION_NAME FILE_UPD_SECTION_NAME,
-	                TO_CHAR(FT.UPD_DATE,'yyyy-mm-dd hh24:mi:ss') FILE_UPD_DATE,
+	                TO_CHAR(FT.UPD_DATE,'yyyy/mm/dd hh24:mi:ss') FILE_UPD_DATE,
 	                FT.DEL_FLG
 	            FROM
 	                IDENT_T_FILE FT
@@ -54,7 +54,7 @@ SQL_INCIDENT_INFO;
 	                FT.FILE_NAME,
 	                FT.FILE_PATH,
 	                FT.FSVR_NAME,
-	                TO_CHAR(FT.INS_DATE,'yyyy-mm-dd hh24:mi:ss') FILE_INS_DATE,
+	                TO_CHAR(FT.INS_DATE,'yyyy/mm/dd hh24:mi:ss') FILE_INS_DATE,
 	                FT.INS_USER_ID FILE_INS_USER_ID,
 	                FT.INS_USER_NAME FILE_INS_USER_NAME,
 	                FT.INS_SECTION_CD FILE_INS_SECTION_CD,
@@ -63,7 +63,7 @@ SQL_INCIDENT_INFO;
 	                FT.UPD_USER_NAME FILE_UPD_USER_NAME,
 	                FT.UPD_SECTION_CD FILE_UPD_SECTION_CD,
 	                FT.UPD_SECTION_NAME FILE_UPD_SECTION_NAME,
-	                TO_CHAR(FT.UPD_DATE,'yyyy-mm-dd hh24:mi:ss') FILE_UPD_DATE,
+	                TO_CHAR(FT.UPD_DATE,'yyyy/mm/dd hh24:mi:ss') FILE_UPD_DATE,
 	                FT.DEL_FLG
 	            FROM
 	                IDENT_T_FILE FT

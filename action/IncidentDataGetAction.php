@@ -68,10 +68,10 @@ class IncidentDataGetAction extends CommonAction {
                     $tmp["relateUserSectionCd"] = $arr[$index]->getRelateUserSectionCd();
                     $tmp["relateUserSectionNm"] = $arr[$index]->getRelateUserSectionNm();
                     $tmp["kidokuDate"] = $arr[$index]->getKidokuDate();
-                    $relateUserList[]= $tmp;
+                    $relateUserList[] = $tmp;
                 }
-                $incidentUnitAry[]= array("result" => true);
-                $incidentUnitAry[]= array(
+                $incidentUnitAry[] = array("result" => true);
+                $incidentUnitAry[] = array(
                     "relateUserList" => $relateUserList,
                     "incidentId" => $incidentMainInfo->getIncidentId(),
                     "incidentNo" => $incidentMainInfo->getIncidentNo(),
@@ -157,7 +157,7 @@ class IncidentDataGetAction extends CommonAction {
                     "productStatusNm" => $this->getConstArrayString(unserialize(PRODUCT_STATUS_NAME), $incidentMainInfo->getProductStatus()),
                 );
             } else {
-                $incidentUnitAry[]= array("result" => false);
+                $incidentUnitAry[] = array("result" => false);
             }
 
             // 変更履歴情報
@@ -166,46 +166,46 @@ class IncidentDataGetAction extends CommonAction {
                 // 変更履歴
                 $logList = $eventResult->getIncidentInfo()->getLogList();
 
-                $tmpLogUpdDate = null;
+                $tmpSortNo = null;
+                $logAry = array();
+                $logDetailAry = array();
                 foreach ($logList as $log) { // $log = RevDto
-                    $logAry = array();
-                    $logUpdDate = $log->getUpdDate();
+                    $logSortNo = $log->getSortNo();
 
-                    if (is_null($tmpLogUpdDate) || $tmpLogUpdDate != $logUpdDate) {
-                        // 変更履歴情報 1件分のログ情報をセット 日付ごとにまとめる
-                        $logAry["sortNo"] = $log->getSortNo();
+                    if (is_null($tmpSortNo) || $tmpSortNo != $logSortNo) {
+                        if (!is_null($tmpSortNo)) {
+                            $logAry["DetailList"] = $logDetailAry;
+                            $logDetailAry = array();
+                            // 1件分のログ情報をセット
+                            $logListAry[] = $logAry;
+                        }
+
+                        // 変更履歴情報 1件分のログ情報をセット 変更履歴順序ごとにまとめる
+                        $tmpSortNo = $logSortNo;
+                        $logAry = array();
+                        $logAry["sortNo"] = $logSortNo;
                         $logAry["updUserNm"] = $log->getUpdUserNm();
                         $logAry["updDate"] = $log->getUpdDate();
-                        $logDetailAry = array();
-                        $detailFlg = false;
-                        foreach ($logList as $log) { // $log = RevDto
-                            if ($logUpdDate == $log->getUpdDate()) {
-                                // 同じ日付でまとめる（日付は降順で取得している）
-                                $logDetailAry[]= array( 'key' => $log->getRev(0)->getRevItem(), 'value' => $log->getRev(0)->getRevDetail());
-                                $detailFlg = true;
-                            } else if ($detailFlg) {
-                                $logAry["DetailList"] = $logDetailAry;
-                                $detailFlg = false;
-                            }
-                            if ($log === end($logList) && $logUpdDate == $log->getUpdDate()) {
-                                // 最後かつ同じ日付の場合
-                                $logAry["DetailList"] = $logDetailAry;
-                                $detailFlg = false;
-                            }
-                        }
+                    }
+
+                    if ($tmpSortNo == $logSortNo) {
+                        // 同じ変更履歴順序でまとめる（変更履歴順序は降順で取得している）
+                        $logDetailAry[] = array('key' => $log->getRev(0)->getRevItem(), 'value' => $log->getRev(0)->getRevDetail());
+                    }
+
+                    if ($log === end($logList) && $tmpSortNo == $logSortNo) {
+                        // 最後かつ同じ変更履歴順序の場合
+                        $logAry["DetailList"] = $logDetailAry;
                         // 1件分のログ情報をセット
-                        $logListAry[]= $logAry;
-                        if (is_null($tmpLogUpdDate)) {
-                            $tmpLogUpdDate = $logUpdDate;
-                        }
+                        $logListAry[] = $logAry;
                     }
                 }
             }
             // ログListをセット
-            $incidentUnitAry[]= $logListAry;
+            $incidentUnitAry[] = $logListAry;
         } else {
             // ロジック処理が異常終了した場合
-            $incidentUnitAry[]= array("result" => false);
+            $incidentUnitAry[] = array("result" => false);
         }
 
         return $incidentUnitAry;
