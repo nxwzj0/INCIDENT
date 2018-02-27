@@ -66,7 +66,7 @@ class IncidentListGetLogic extends CommonLogic {
         $conditions['jigyosyutaiNm'] = $IncidentListGetDto->getJigyosyutaiNm();
         $conditions['setubiNm'] = $IncidentListGetDto->getSetubiNm();
         $conditions['prefNm'] = $IncidentListGetDto->getPrefNm();
-        $conditions['deliveryPjNm'] = $IncidentListGetDto->getDeliveryPjNm();
+        $conditions['deliveryPjNo'] = $IncidentListGetDto->getDeliveryPjNo();
         $conditions['custNm'] = $IncidentListGetDto->getCustNm();
         $conditions['custTypeNm'] = $IncidentListGetDto->getCustTypeNm();
         $conditions['custDept'] = $IncidentListGetDto->getCustDept();
@@ -345,7 +345,7 @@ class IncidentListGetLogic extends CommonLogic {
                     $IncidentRelationDto->setRelateIncidentId($one['IN_INCIDENT_ID']);
                     $IncidentRelationDto->setRelateIncidentContent($one['IN_CALL_CONTENT']);
                     $IncidentRelationDto->setRelateIncidentNo($one['IN_INCIDENT_NO']);
-                    $incidentTypeNm = $CommonService->getConstArrayString(unserialize(INCIDENT_TYPE),$one['IN_INCIDENT_TYPE']);
+                    $incidentTypeNm = $CommonService->getConstArrayString(unserialize(INCIDENT_TYPE),$one['IN_INCIDENT_TYPE_CD']);
                     $IncidentRelationDto->setRelateIncidentType($incidentTypeNm);
                     $IncidentRelationDto->setRelateIncidentStartDateTime($one['IN_INCIDENT_START_DATETIME']);
                     $IncidentRelationDto->setRelateIncidentKijoNm($one['IN_KIJO_NM']);
@@ -376,7 +376,7 @@ class IncidentListGetLogic extends CommonLogic {
                     $IncidentRelationDto->setRelateIncidentId($one['IN_INCIDENT_ID']);
                     $IncidentRelationDto->setRelateIncidentContent($one['IN_CALL_CONTENT']);
                     $IncidentRelationDto->setRelateIncidentNo($one['IN_INCIDENT_NO']);
-                    $incidentTypeNm = $CommonService->getConstArrayString(unserialize(INCIDENT_TYPE),$one['IN_INCIDENT_TYPE']);
+                    $incidentTypeNm = $CommonService->getConstArrayString(unserialize(INCIDENT_TYPE),$one['IN_INCIDENT_TYPE_CD']);
                     $IncidentRelationDto->setRelateIncidentType($incidentTypeNm);
                     $IncidentRelationDto->setRelateIncidentStartDateTime($one['IN_INCIDENT_START_DATETIME']);
                     $IncidentRelationDto->setRelateIncidentKijoNm($one['IN_KIJO_NM']);

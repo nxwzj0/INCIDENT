@@ -79,7 +79,7 @@ class IncidentListConditionSaveDto extends CommonDto{
     private $kijoNm;
     private $jigyosyutaiNm;
     private $setubiNm;
-    private $prefCd;
+    private $prefNm;
     private $custNm;
     private $custTypeNenkan;
     private $custTypeTenken;
@@ -471,15 +471,15 @@ class IncidentListConditionSaveDto extends CommonDto{
     /**
      * @return String
      */
-    public function getPrefCd() {
-        return $this->prefCd;
+    public function getPrefNm() {
+        return $this->prefNm;
     }
 
     /**
-     * @param String $prefCd
+     * @param String $prefNm
      */
-    public function setPrefCd($prefCd) {
-        $this->prefCd = $prefCd;
+    public function setPrefNm($prefNm) {
+        $this->prefNm = $prefNm;
     }
 
     public function getCustNm() {

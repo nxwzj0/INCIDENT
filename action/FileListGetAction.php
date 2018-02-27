@@ -55,16 +55,16 @@ class FileListGetAction extends CommonAction {
                     $fileAry["fileNm"] = $fileData->getFileNm();
                     $fileAry["filePath"] = $fileData->getFilePath();
                     $fileAry["fsvrNm"] = $fileData->getFsvrNm();
-                    $fileAry["insUserId"] = $fileData->setInsUserId();
-                    $fileAry["insUserNm"] = $fileData->setInsUserNm();
-                    $fileAry["insSectionCd"] = $fileData->setInsSectionCd();
-                    $fileAry["insSectionNm"] = $fileData->setInsSectionNm();
-                    $fileAry["insDate"] = $fileData->setInsDate();
-                    $fileAry["updUserId"] = $fileData->setUpdUserId();
-                    $fileAry["updUserNm"] = $fileData->setUpdUserNm();
-                    $fileAry["updSectionCd"] = $fileData->setUpdSectionCd();
-                    $fileAry["updSectionNm"] = $fileData->setUpdSectionNm();
-                    $fileAry["updDate"] = $fileData->setUpdDate();
+                    $fileAry["insUserId"] = $fileData->getInsUserId();
+                    $fileAry["insUserNm"] = $fileData->getInsUserNm();
+                    $fileAry["insSectionCd"] = $fileData->getInsSectionCd();
+                    $fileAry["insSectionNm"] = $fileData->getInsSectionNm();
+                    $fileAry["insDate"] = $fileData->getInsDate();
+                    $fileAry["updUserId"] = $fileData->getUpdUserId();
+                    $fileAry["updUserNm"] = $fileData->getUpdUserNm();
+                    $fileAry["updSectionCd"] = $fileData->getUpdSectionCd();
+                    $fileAry["updSectionNm"] = $fileData->getUpdSectionNm();
+                    $fileAry["updDate"] = $fileData->getUpdDate();
 
                     // 1件分の情報をセット
                     array_push($fileListAry, $fileAry);

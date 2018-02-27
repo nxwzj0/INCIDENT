@@ -87,7 +87,7 @@ class IncidentListConditionSaveAction extends CommonAction {
         // 設備
         $IncidentListConditionSaveDto->setSetubiNm($P['setubiNm']);
         // 都道府県
-        $IncidentListConditionSaveDto->setPrefCd($P['prefCd']);
+        $IncidentListConditionSaveDto->setPrefNm($P['prefNm']);
         // 顧客
         $IncidentListConditionSaveDto->setCustNm($P['custNm']);
         // 顧客分類（年間契約）

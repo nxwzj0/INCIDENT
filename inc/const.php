@@ -48,6 +48,9 @@ define('YYYYMMDD', 'YYYY/MM/DD');
 // 検索条件Idなし
 define('CONDITION_NONE', '0');
 
+// 更新ログ　初期値
+define('SORT_NO_FIRST', '0');
+
 // 新規作成
 define('SINKI_SAKUSEI', '新規作成');
 // 更新
@@ -71,27 +74,23 @@ define('INFO_PROVIDER_TEL', '情報提供TEL');
 // 注記
 define('MEMO', '注記');
 // 機場ID
-define('KIJO_ID', '機場ID');
+define('KIJO_ID', '機場');
 // 事業主体ID
-define('JIGYOSYUTAI_ID', '事業主体ID');
+define('JIGYOSYUTAI_ID', '事業主体');
 // 設備ID
-define('SETUBI_ID', '設備ID');
-// 都道府県ID
-define('PREF_ID', '都道府県ID');
+define('SETUBI_ID', '設備');
 // 都道府県名
 define('PREF_NM', '都道府県名');
 // 納入プロジェクト番号
 define('DELIVERY_PJ_NO', '納入プロジェクト番号');
-// 納入プロジェクト名
-define('DELIVERY_PJ_NM', '納入プロジェクト名');
 // 顧客ID
-define('CUST_ID', '顧客ID');
+define('CUST_ID', '顧客');
 // 顧客名
-define('CUST_NM', '顧客名');
+define('CUST_NM', '顧客');
 // 顧客分類CD
-define('CUST_TYPE_CD', '顧客分類CD');
+define('CUST_TYPE_CD', '顧客分類');
 // 顧客分類名
-define('CUST_TYPE_NM', '顧客分類名');
+define('CUST_TYPE_NM', '顧客分類');
 // 会社名・所属部署
 define('CUST_DEPT', '会社名・所属部署');
 // 依頼者名
@@ -107,29 +106,29 @@ define('SALES_DEPT_CD', '営業部門コード');
 // 営業部門名
 define('SALES_DEPT_NM', '営業部門名');
 // 営業担当者ID
-define('SALES_USER_ID', '営業担当者ID');
+define('SALES_USER_ID', '営業担当者');
 // 営業担当者名
-define('SALES_USER_NM', '営業担当者名');
+define('SALES_USER_NM', '営業担当者');
 // 主管部門コード
-define('SKAN_DEPT_CD', '主管部門コード');
+define('SKAN_DEPT_CD', '主管部門');
 // 主管部門名
-define('SKAN_DEPT_NM', '主管部門名');
+define('SKAN_DEPT_NM', '主管部門');
 // 主管担当者ID
-define('SKAN_USER_ID', '主管担当者ID');
+define('SKAN_USER_ID', '主管担当者');
 // 主管担当者名
-define('SKAN_USER_NM', '主管担当者名');
+define('SKAN_USER_NM', '主管担当者');
 // 受付開始時刻
 define('CALL_START_DATE', '受付開始時刻');
 // 受付終了時刻
 define('CALL_END_DATE', '受付終了時刻');
 // 受付部署コード
-define('CALL_DEPT_CD', '受付部署コード');
+define('CALL_DEPT_CD', '受付部署');
 // 受付部署名
-define('CALL_DEPT_NM', '受付部署名');
+define('CALL_DEPT_NM', '受付部署');
 // 受付者ID
-define('CALL_USER_CD', '受付者ID');
+define('CALL_USER_CD', '受付者');
 // 受付者名
-define('CALL_USER_NM', '受付者名');
+define('CALL_USER_NM', '受付者');
 // 受付電話番号
 define('CALL_TEL', '受付電話番号');
 // 受付メール
@@ -141,13 +140,13 @@ define('TAIO_START_DATE', '対応開始時刻');
 // 対応終了時刻
 define('TAIO_END_DATE', '対応終了時刻');
 // 対応部署コード
-define('TAIO_DEPT_CD', '対応部署コード');
+define('TAIO_DEPT_CD', '対応部署');
 // 対応部署名
-define('TAIO_DEPT_NM', '対応部署名');
+define('TAIO_DEPT_NM', '対応部署');
 // 対応者ID
-define('TAIO_USER_ID', '対応者ID');
+define('TAIO_USER_ID', '対応者');
 // 対応者名
-define('TAIO_USER_NM', '対応者名');
+define('TAIO_USER_NM', '対応者');
 // 対応電話番号
 define('TAIO_TEL', '対応電話番号');
 // 対応メール
@@ -163,21 +162,25 @@ define('ACT_START_TIME', '処置開始日時');
 // 処置終了日時
 define('ACT_END_TIME', '処置終了日時');
 // 処置部署コード
-define('ACT_DEPT_CD', '処置部署コード');
+define('ACT_DEPT_CD', '処置部署');
 // 処置部署名
-define('ACT_DEPT_NM', '処置部署名');
+define('ACT_DEPT_NM', '処置部署');
 // 処置者ID
-define('ACT_USER_ID', '処置者ID');
+define('ACT_USER_ID', '処置者');
 // 処置者名
-define('ACT_USER_NM', '処置者名');
+define('ACT_USER_NM', '処置者');
 // 処置電話番号
 define('ACT_TEL', '処置電話番号');
 // 処置メール
 define('ACT_MAIL', '処置メール');
 // 処置内容
 define('ACT_CONTENT', '処置内容');
+// 装置区分
+define('SOTI_KBN', '装置区分');
 // 機種区分
-define('PRODUCT_TYPE', '機種区分');
+define('KISYU_KBN', '機種区分');
+// 機種名
+define('KISYU_NM', '機種名');
 // 障害状況トリガー
 define('PRODUCT_TRIGGER', '障害状況トリガー');
 // 障害状況頻度
@@ -190,9 +193,9 @@ define('PRODUCT_STATUS', '障害状況状態');
 // 変更履歴に値を表示する項目
 define('CHANGE_LOG_VALUE_DSP_ITEM',
 serialize(array(
-    'KIJO_NM' => '機場名', // 機場名
-    'JIGYOSYUTAI_NM' => '事業主体名', // 事業主体名
-    'SETUBI_NM' => '設備名'  // 設備名
+//    'KIJO_NM' => '機場名', // 機場名
+//    'JIGYOSYUTAI_NM' => '事業主体名', // 事業主体名
+//    'SETUBI_NM' => '設備名'  // 設備名
 )));
 
 // インシデントステータス名
@@ -208,6 +211,17 @@ define('INCIDENT_STS_CALL', '1');
 define('INCIDENT_STS_TAIO', '2');
 // インシデントステータス 処置入力済
 define('INCIDENT_STS_ACT', '3');
+
+// 業種区分
+define('INDUSTRY_TYPE_NAME', serialize(array(
+    '1'=>'機械'
+    ,'2'=>'電機（E）'
+    ,'3'=>'計装（I）'
+    ,'4'=>'情報（C）'
+    ,'5'=>'環境'
+    ,'6'=>'WBC'
+    ,'7'=>'その他'
+)));
 
 // インシデント分類名
 define('INCIDENT_TYPE_NAME',
@@ -228,6 +242,116 @@ serialize(array(
     '3' => '営業',
     '4' => '技術',
     '5' => 'その他'
+)));
+
+// 顧客分類名
+define('CUST_TYPE_NAME',
+serialize(array(
+    '1' => '年間契約',
+    '2' => '点検契約',
+    '3' => '契約なし',
+    '4' => '瑕疵期間中',
+    '5' => 'その他'
+)));
+
+// 都道府県
+define('PREF_NAME', serialize(array(
+    '1'=>'北海道'
+    ,'2' =>'青森県'
+    ,'3' =>'岩手県'
+    ,'4' =>'宮城県'
+    ,'5' =>'秋田県'
+    ,'6' =>'山形県'
+    ,'7' =>'福島県'
+    ,'8' =>'茨城県'
+    ,'9' =>'栃木県'
+    ,'10'=>'群馬県'
+    ,'11'=>'埼玉県'
+    ,'12'=>'千葉県'
+    ,'13'=>'東京都'
+    ,'14'=>'神奈川県'
+    ,'15'=>'新潟県'
+    ,'16'=>'富山県'
+    ,'17'=>'石川県'
+    ,'18'=>'福井県'
+    ,'19'=>'山梨県'
+    ,'20'=>'長野県'
+    ,'21'=>'岐阜県'
+    ,'22'=>'静岡県'
+    ,'23'=>'愛知県'
+    ,'24'=>'三重県'
+    ,'25'=>'滋賀県'
+    ,'26'=>'京都府'
+    ,'27'=>'大阪府'
+    ,'28'=>'兵庫県'
+    ,'29'=>'奈良県'
+    ,'30'=>'和歌山県'
+    ,'31'=>'鳥取県'
+    ,'32'=>'島根県'
+    ,'33'=>'岡山県'
+    ,'34'=>'広島県'
+    ,'35'=>'山口県'
+    ,'36'=>'徳島県'
+    ,'37'=>'香川県'
+    ,'38'=>'愛媛県'
+    ,'39'=>'高知県'
+    ,'40'=>'福岡県'
+    ,'41'=>'佐賀県'
+    ,'42'=>'長崎県'
+    ,'43'=>'熊本県'
+    ,'44'=>'大分県'
+    ,'45'=>'宮崎県'
+    ,'46'=>'鹿児島県'
+    ,'47'=>'沖縄県'
+)));
+
+// 情報提供元名
+define('ACT_TYPE_NAME',
+serialize(array(
+    '1' => '出動',
+    '2' => '電話対応',
+    '3' => 'その他'
+)));
+
+// 障害状況トリガー名
+define('PRODUCT_TRIGGER_NAME',
+serialize(array(
+    '1' => '通常運用',
+    '2' => '立上時',
+    '3' => '立下時',
+    '4' => '停電',
+    '5' => '復電',
+    '6' => 'etc'
+)));
+
+// 障害状況頻度名
+define('PRODUCT_HINDO_NAME',
+serialize(array(
+    '1' => '常時',
+    '2' => '不定期',
+    '3' => '間欠的',
+    '4' => 'その他',
+    '5' => 'etc'
+)));
+
+// 障害状況現象名
+define('PRODUCT_GENSYO_NAME',
+serialize(array(
+    '1' => '運転不能',
+    '2' => '停止不能',
+    '3' => '動作異常',
+    '4' => '操作不能',
+    '5' => 'etc'
+)));
+
+// 障害状況状態名
+define('PRODUCT_STATUS_NAME',
+serialize(array(
+    '1' => 'システムダウン',
+    '2' => '電源断',
+    '3' => '機器・装置故障',
+    '4' => '部品故障',
+    '5' => 'etc'
 )));
 
 // ::: 2018.01.25 [#23] 入力補助モーダル　インシデント Add Start newtouch

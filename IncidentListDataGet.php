@@ -14,6 +14,11 @@ require_once('./common/CommonService.php');
  * ***************************************************************************** */
 require_once('./action/IncidentListDataGetAction.php');
 
+// 共通処理
+$common = new CommonService();
+
+// 共通認証
+
 // アクション
 $ListDataAction = new IncidentListDataGetAction();
 $ListDataAction->index();

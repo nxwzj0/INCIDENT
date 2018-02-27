@@ -56,7 +56,7 @@ class ChangeLogCreateLogic extends CommonLogic {
             $changeLog['changeItem'] =  INCIDENT_STS;
             $changeLogArray['IN_INCIDENT_STS'] = $changeLog;
         }
-        if($incidentDataArrayNew['incidentTypeCd']!= null && $incidentDataArrayNew['incidentTypeCd'] != $conditions['IN_INCIDENT_TYPE']){
+        if($incidentDataArrayNew['incidentTypeCd']!= null && $incidentDataArrayNew['incidentTypeCd'] != $conditions['IN_INCIDENT_TYPE_CD']){
             $changeLog = array();
             $changeLog['changeContent'] = KOUSINN;
             $changeLog['changeItem'] =  INCIDENT_TYPE;
@@ -70,7 +70,6 @@ class ChangeLogCreateLogic extends CommonLogic {
         }
         if($incidentDataArrayNew['incidentStartDateTime']!= null){
             $incidentStartDateTime = $incidentDataArrayNew['incidentStartDateTime'];
-            $incidentStartDateTime = str_replace("/","-",$incidentStartDateTime);    
             if($incidentStartDateTime != $conditions['IN_INCIDENT_START_DATETIME']){
                 $changeLog = array();
                 $changeLog['changeContent'] = KOUSINN;
@@ -120,12 +119,6 @@ class ChangeLogCreateLogic extends CommonLogic {
             $changeLog['changeItem'] =  SETUBI_ID;
             $changeLogArray['IN_SETUBI_ID'] = $changeLog;
         }
-        if($incidentDataArrayNew['prefId']!= null && $incidentDataArrayNew['prefId'] != $conditions['IN_PREF_ID']){
-            $changeLog = array();
-            $changeLog['changeContent'] = KOUSINN;
-            $changeLog['changeItem'] =  PREF_ID;
-            $changeLogArray['IN_PREF_ID'] = $changeLog;
-        }
         if($incidentDataArrayNew['prefNm']!= null && $incidentDataArrayNew['prefNm'] != $conditions['IN_PREF_NM']){
             $changeLog = array();
             $changeLog['changeContent'] = KOUSINN;
@@ -137,12 +130,6 @@ class ChangeLogCreateLogic extends CommonLogic {
             $changeLog['changeContent'] = KOUSINN;
             $changeLog['changeItem'] =  DELIVERY_PJ_NO;
             $changeLogArray['IN_DELIVERY_PJ_NO'] = $changeLog;
-        }
-        if($incidentDataArrayNew['deliveryPjNm']!= null && $incidentDataArrayNew['deliveryPjNm'] != $conditions['IN_DELIVERY_PJ_NM']){
-            $changeLog = array();
-            $changeLog['changeContent'] = KOUSINN;
-            $changeLog['changeItem'] =  DELIVERY_PJ_NM;
-            $changeLogArray['IN_DELIVERY_PJ_NM'] = $changeLog;
         }
         if($incidentDataArrayNew['custId']!= null && $incidentDataArrayNew['custId'] != $conditions['IN_CUST_ID']){
             $changeLog = array();
@@ -248,7 +235,6 @@ class ChangeLogCreateLogic extends CommonLogic {
         }
         if($incidentDataArrayNew['callStartDate']!= null){
             $callStartDate = $incidentDataArrayNew['callStartDate'];
-            $callStartDate = str_replace("/","-",$callStartDate);
             if($callStartDate != $conditions['IN_CALL_START_DATE']){
                 $changeLog = array();
                 $changeLog['changeContent'] = KOUSINN;
@@ -258,7 +244,6 @@ class ChangeLogCreateLogic extends CommonLogic {
         }
         if($incidentDataArrayNew['callEndDate']!= null){
             $callEndDate = $incidentDataArrayNew['callEndDate'];
-            $callEndDate = str_replace("/","-",$callEndDate);
             if($callEndDate != $conditions['IN_CALL_END_DATE']){
                 $changeLog = array();
                 $changeLog['changeContent'] = KOUSINN;
@@ -310,7 +295,6 @@ class ChangeLogCreateLogic extends CommonLogic {
         }
         if($incidentDataArrayNew['taioStartDate']!= null){
             $taioStartDate = $incidentDataArrayNew['taioStartDate'];
-            $taioStartDate = str_replace("/","-",$taioStartDate);
             if($taioStartDate != $conditions['IN_TAIO_START_DATE']){
                 $changeLog = array();
                 $changeLog['changeContent'] = KOUSINN;
@@ -320,7 +304,6 @@ class ChangeLogCreateLogic extends CommonLogic {
         }
         if($incidentDataArrayNew['taioEndDate']!= null){
             $taioEndDate = $incidentDataArrayNew['taioEndDate'];
-            $taioEndDate = str_replace("/","-",$taioEndDate);
             if($taioEndDate != $conditions['IN_TAIO_END_DATE']){
                 $changeLog = array();
                 $changeLog['changeContent'] = KOUSINN;
@@ -372,7 +355,6 @@ class ChangeLogCreateLogic extends CommonLogic {
         }
         if($incidentDataArrayNew['actDate']!= null){
             $actDate = $incidentDataArrayNew['actDate'];
-            $actDate = str_replace("/","-",$actDate);
             if($actDate != $conditions['IN_ACT_DATE']){
                 $changeLog = array();
                 $changeLog['changeContent'] = KOUSINN;
@@ -380,7 +362,7 @@ class ChangeLogCreateLogic extends CommonLogic {
                 $changeLogArray['IN_ACT_DATE'] = $changeLog;
             }
         }
-        if($incidentDataArrayNew['actType']!= null && $incidentDataArrayNew['actType'] != $conditions['IN_ACT_TYPE']){
+        if($incidentDataArrayNew['actType']!= null && $incidentDataArrayNew['actType'] != $conditions['IN_ACT_TYPE_CD']){
             $changeLog = array();
             $changeLog['changeContent'] = KOUSINN;
             $changeLog['changeItem'] =  ACT_TYPE;
@@ -388,7 +370,6 @@ class ChangeLogCreateLogic extends CommonLogic {
         }
         if($incidentDataArrayNew['actStartTime']!= null){
             $actStartTime = $incidentDataArrayNew['actStartTime'];
-            $actStartTime = str_replace("/","-",$actStartTime);
             if($actStartTime != $conditions['IN_ACT_START_TIME']){
                 $changeLog = array();
                 $changeLog['changeContent'] = KOUSINN;
@@ -398,7 +379,6 @@ class ChangeLogCreateLogic extends CommonLogic {
         }
         if($incidentDataArrayNew['actEndTime']!= null){
             $actEndTime = $incidentDataArrayNew['actEndTime'];
-            $actEndTime = str_replace("/","-",$actEndTime);
             if($actEndTime != $conditions['IN_ACT_END_TIME']){
                 $changeLog = array();
                 $changeLog['changeContent'] = KOUSINN;
@@ -448,11 +428,23 @@ class ChangeLogCreateLogic extends CommonLogic {
             $changeLog['changeItem'] =  ACT_CONTENT;
             $changeLogArray['IN_ACT_CONTENT'] = $changeLog;
         }
-        if($incidentDataArrayNew['productType']!= null && $incidentDataArrayNew['productType'] != $conditions['IN_PRODUCT_TYPE']){
+        if($incidentDataArrayNew['sotiKbnCd']!= null && $incidentDataArrayNew['sotiKbnCd'] != $conditions['IN_SOTI_KBN_CD']){
             $changeLog = array();
             $changeLog['changeContent'] = KOUSINN;
-            $changeLog['changeItem'] =  PRODUCT_TYPE;
-            $changeLogArray['IN_PRODUCT_TYPE'] = $changeLog;
+            $changeLog['changeItem'] =  SOTI_KBN;
+            $changeLogArray['IN_SOTI_KBN_CD'] = $changeLog;
+        }
+        if($incidentDataArrayNew['kisyuKbnCd']!= null && $incidentDataArrayNew['kisyuKbnCd'] != $conditions['IN_KISYU_KBN_CD']){
+            $changeLog = array();
+            $changeLog['changeContent'] = KOUSINN;
+            $changeLog['changeItem'] =  KISYU_KBN;
+            $changeLogArray['IN_KISYU_KBN_CD'] = $changeLog;
+        }
+        if($incidentDataArrayNew['kisyuNm']!= null && $incidentDataArrayNew['kisyuNm'] != $conditions['IN_KISYU_NM']){
+            $changeLog = array();
+            $changeLog['changeContent'] = KOUSINN;
+            $changeLog['changeItem'] =  KISYU_NM;
+            $changeLogArray['IN_KISYU_NM'] = $changeLog;
         }
         if($incidentDataArrayNew['productTrigger']!= null && $incidentDataArrayNew['productTrigger'] != $conditions['IN_PRODUCT_TRIGGER']){
             $changeLog = array();

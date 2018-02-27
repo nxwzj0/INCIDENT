@@ -1,20 +1,20 @@
-<?php // autotool_migration Ver3 20130111195550 ¤³¤Î¥Õ¥¡¥¤¥ë¤Ï¼«Æ°²½¥Ä¡¼¥ë¤Ë¤è¤êÊÔ½¸¤µ¤ì¤Ş¤·¤¿ ?>
+<?php // autotool_migration Ver3 20130111195550 ã“ã®ãƒ•ã‚¡ã‚¤ãƒ«ã¯è‡ªå‹•åŒ–ãƒ„ãƒ¼ãƒ«ã«ã‚ˆã‚Šç·¨é›†ã•ã‚Œã¾ã—ãŸ ?>
 <?php require_once('ADFlib/global_reg_emu.inc.php'); ?>
 <?php
 //*****************************************************************************
-//	¥·¥¹¥Æ¥àÌ¾¡¡¡¡¡¡¡§Bnavis
-//	¥µ¥Ö¥·¥¹¥Æ¥àÌ¾¡¡¡§
-//	½èÍıÌ¾¡¡¡¡¡¡¡¡¡¡¡§Bnavis¶¦ÄÌ½èÍı
-//	HTMLID¡¡¡¡¡¡¡¡¡¡¡§cls_file_download.inc
-//	ºîÀ®ÆüÉÕ¡¦ºîÀ®¼Ô¡§2005-03-17 ADF.kama
-//	½¤ÀµÍúÎò¡¡¡¡¡¡¡¡¡§
+//	ã‚·ã‚¹ãƒ†ãƒ åã€€ã€€ã€€ï¼šBnavis
+//	ã‚µãƒ–ã‚·ã‚¹ãƒ†ãƒ åã€€ï¼š
+//	å‡¦ç†åã€€ã€€ã€€ã€€ã€€ï¼šBnaviså…±é€šå‡¦ç†
+//	HTMLIDã€€ã€€ã€€ã€€ã€€ï¼šcls_file_download.inc
+//	ä½œæˆæ—¥ä»˜ãƒ»ä½œæˆè€…ï¼š2005-03-17 ADF.kama
+//	ä¿®æ­£å±¥æ­´ã€€ã€€ã€€ã€€ï¼š
 //*****************************************************************************
 ?>
 <?php
-//ÅºÉÕ¥Õ¥¡¥¤¥ë¤¬¤¢¤ë¾ì¹ç¤Ï¡¢¥À¥¦¥ó¥í¡¼¥É¤¹¤ë
-//	$saved_filepath:¥Õ¥¡¥¤¥ëÊİÂ¸Àè
-//	$saved_filename:ÊİÂ¸¥Õ¥¡¥¤¥ëÌ¾
-//	$download_filename:¥À¥¦¥ó¥í¡¼¥É¥Õ¥¡¥¤¥ëÌ¾
+//æ·»ä»˜ãƒ•ã‚¡ã‚¤ãƒ«ãŒã‚ã‚‹å ´åˆã¯ã€ãƒ€ã‚¦ãƒ³ãƒ­ãƒ¼ãƒ‰ã™ã‚‹
+//	$saved_filepath:ãƒ•ã‚¡ã‚¤ãƒ«ä¿å­˜å…ˆ
+//	$saved_filename:ä¿å­˜ãƒ•ã‚¡ã‚¤ãƒ«å
+//	$download_filename:ãƒ€ã‚¦ãƒ³ãƒ­ãƒ¼ãƒ‰ãƒ•ã‚¡ã‚¤ãƒ«å
 
 if( mb_detect_encoding($download_filename) != "SJIS" ){
 	$download_filename = mb_convert_encoding($download_filename,"SJIS");
@@ -32,24 +32,24 @@ mb_http_output("pass");
 //}
 //fclose($fp);
 
-//¥¨¥é¡¼¥Ï¥ó¥É¥é
+//ã‚¨ãƒ©ãƒ¼ãƒãƒ³ãƒ‰ãƒ©
 function TestFunc($a,$b,$c,$d){
-	print "<html><body><center><b>¥Õ¥¡¥¤¥ë¤¬¥À¥¦¥ó¥í¡¼¥É¤Ç¤­¤Ş¤»¤ó¡£($a:$b:$c:$d)</b></center></body></html>";
+	print "<html><body><center><b>ãƒ•ã‚¡ã‚¤ãƒ«ãŒãƒ€ã‚¦ãƒ³ãƒ­ãƒ¼ãƒ‰ã§ãã¾ã›ã‚“ã€‚($a:$b:$c:$d)</b></center></body></html>";
 	exit;
 	return;
 }
 
-// ¥À¥¦¥ó¥í¡¼¥É
+// ãƒ€ã‚¦ãƒ³ãƒ­ãƒ¼ãƒ‰
 $REPLACE_PATTERN = "";
 $REPLACE_WORD = "";
 
-//FTP¶¦ÄÌ½èÍı
-// ftpÅı¹çÈÇ¤ËÂĞ±ş autotool_migration 20130111195550 
+//FTPå…±é€šå‡¦ç†
+// ftpçµ±åˆç‰ˆã«å¯¾å¿œ autotool_migration 20130111195550 
 //require("cls_ftp_filesystem.inc");
 require_once("ADFlib/cls_ftp_filesystem.inc.php");
 
 $ftp = new BNV_ftp_filesystem();
-$ftp->open($FTP_SERVER,$FTP_USER_NAME,$FTP_USER_PASS);
+$ftp->open($GLOBALS["FTP_SERVER"], $GLOBALS["FTP_USER_NAME"], $GLOBALS["FTP_USER_PASS"]);
 $fp = $ftp->fopen($saved_filepathname,"rb");
 if( strlen($REPLACE_PATTERN) ){
 	for( $i=0; $i<strlen($REPLACE_PATTERN); $i++ ){

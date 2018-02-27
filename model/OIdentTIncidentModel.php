@@ -19,10 +19,10 @@ class OIdentTIncidentModel extends CommonModel {
                     INCIDENT.INCIDENT_ID IN_INCIDENT_ID,
                     INCIDENT.INCIDENT_NO IN_INCIDENT_NO,
                     INCIDENT.INCIDENT_STS IN_INCIDENT_STS,
-                    INCIDENT.INCIDENT_TYPE IN_INCIDENT_TYPE,
+                    INCIDENT.INCIDENT_TYPE_CD IN_INCIDENT_TYPE_CD,
                     INCIDENT.PARENT_INCIDENT_NO IN_PARENT_INCIDENT_NO,
                     TO_CHAR(INCIDENT.INCIDENT_START_DATETIME,'yyyy/mm/dd hh24:mi:ss') IN_INCIDENT_START_DATETIME,
-                    INCIDENT.INDUSTRY_TYPE IN_INDUSTRY_TYPE,
+                    INCIDENT.INDUSTRY_TYPE_CD IN_INDUSTRY_TYPE_CD,
                     INCIDENT.INFO_SOURCE IN_INFO_SOURCE,
                     INCIDENT.INFO_PROVIDER IN_INFO_PROVIDER,
                     INCIDENT.INFO_PROVIDER_TEL IN_INFO_PROVIDER_TEL,
@@ -33,10 +33,8 @@ class OIdentTIncidentModel extends CommonModel {
                     INCIDENT.JIGYOSYUTAI_NM IN_JIGYOSYUTAI_NM,
                     INCIDENT.SETUBI_ID IN_SETUBI_ID,
                     INCIDENT.SETUBI_NM IN_SETUBI_NM,
-                    INCIDENT.PREF_ID IN_PREF_ID,
                     INCIDENT.PREF_NM IN_PREF_NM,
                     INCIDENT.DELIVERY_PJ_NO IN_DELIVERY_PJ_NO,
-                    INCIDENT.DELIVERY_PJ_NM IN_DELIVERY_PJ_NM,
                     INCIDENT.CUST_ID IN_CUST_ID,
                     INCIDENT.CUST_NM IN_CUST_NM,
                     INCIDENT.CUST_TYPE_CD IN_CUST_TYPE_CD,
@@ -73,7 +71,7 @@ class OIdentTIncidentModel extends CommonModel {
                     INCIDENT.TAIO_MAIL IN_TAIO_MAIL,
                     INCIDENT.TAIO_CONTENT IN_TAIO_CONTENT,
                     TO_CHAR(INCIDENT.ACT_DATE,'yyyy/mm/dd hh24:mi:ss') IN_ACT_DATE,
-                    INCIDENT.ACT_TYPE IN_ACT_TYPE,
+                    INCIDENT.ACT_TYPE_CD IN_ACT_TYPE_CD,
                     TO_CHAR(INCIDENT.ACT_START_TIME,'yyyy/mm/dd hh24:mi:ss') IN_ACT_START_TIME,
                     TO_CHAR(INCIDENT.ACT_END_TIME,'yyyy/mm/dd hh24:mi:ss') IN_ACT_END_TIME,
                     INCIDENT.ACT_DEPT_CD IN_ACT_DEPT_CD,
@@ -83,7 +81,11 @@ class OIdentTIncidentModel extends CommonModel {
                     INCIDENT.ACT_TEL IN_ACT_TEL,
                     INCIDENT.ACT_MAIL IN_ACT_MAIL,
                     INCIDENT.ACT_CONTENT IN_ACT_CONTENT,
-                    INCIDENT.PRODUCT_TYPE IN_PRODUCT_TYPE,
+                    INCIDENT.SOTI_KBN_CD IN_SOTI_KBN_CD,
+                    INCIDENT.SOTI_KBN_NM IN_SOTI_KBN_NM,
+                    INCIDENT.KISYU_KBN_CD IN_KISYU_KBN_CD,
+                    INCIDENT.KISYU_KBN_NM IN_KISYU_KBN_NM,
+                    INCIDENT.KISYU_NM IN_KISYU_NM,
                     INCIDENT.PRODUCT_TRIGGER IN_PRODUCT_TRIGGER,
                     INCIDENT.PRODUCT_HINDO IN_PRODUCT_HINDO,
                     INCIDENT.PRODUCT_GENSYO IN_PRODUCT_GENSYO,
@@ -108,7 +110,6 @@ class OIdentTIncidentModel extends CommonModel {
                     PJ.PJ_SKAN_USER_NM PJ_PJ_SKAN_USER_NM,
                     PJ.PM_ID PJ_PM_ID,
                     PJ.PM_NM PJ_PM_NM,
-                    PJ.PREF_ID PJ_PREF_ID,
                     PJ.PREF_NM PJ_PREF_NM,
                     MR2.MKB_ID MR2_MKB_ID,
                     MR2.INCIDENT_ID MR2_INCIDENT_ID,
@@ -165,10 +166,10 @@ SQL_INCIDENT_INFO;
                     INCIDENT.INCIDENT_ID IN_INCIDENT_ID,
                     INCIDENT.INCIDENT_NO IN_INCIDENT_NO,
                     INCIDENT.INCIDENT_STS IN_INCIDENT_STS,
-                    INCIDENT.INCIDENT_TYPE IN_INCIDENT_TYPE,
+                    INCIDENT.INCIDENT_TYPE_CD IN_INCIDENT_TYPE_CD,
                     INCIDENT.PARENT_INCIDENT_NO IN_PARENT_INCIDENT_NO,
                     TO_CHAR(INCIDENT.INCIDENT_START_DATETIME,'yyyy/mm/dd hh24:mi:ss') IN_INCIDENT_START_DATETIME,
-                    INCIDENT.INDUSTRY_TYPE IN_INDUSTRY_TYPE,
+                    INCIDENT.INDUSTRY_TYPE_CD IN_INDUSTRY_TYPE_CD,
                     INCIDENT.INFO_SOURCE IN_INFO_SOURCE,
                     INCIDENT.INFO_PROVIDER IN_INFO_PROVIDER,
                     INCIDENT.INFO_PROVIDER_TEL IN_INFO_PROVIDER_TEL,
@@ -179,10 +180,8 @@ SQL_INCIDENT_INFO;
                     INCIDENT.JIGYOSYUTAI_NM IN_JIGYOSYUTAI_NM,
                     INCIDENT.SETUBI_ID IN_SETUBI_ID,
                     INCIDENT.SETUBI_NM IN_SETUBI_NM,
-                    INCIDENT.PREF_ID IN_PREF_ID,
                     INCIDENT.PREF_NM IN_PREF_NM,
                     INCIDENT.DELIVERY_PJ_NO IN_DELIVERY_PJ_NO,
-                    INCIDENT.DELIVERY_PJ_NM IN_DELIVERY_PJ_NM,
                     INCIDENT.CUST_ID IN_CUST_ID,
                     INCIDENT.CUST_NM IN_CUST_NM,
                     INCIDENT.CUST_TYPE_CD IN_CUST_TYPE_CD,
@@ -219,7 +218,7 @@ SQL_INCIDENT_INFO;
                     INCIDENT.TAIO_MAIL IN_TAIO_MAIL,
                     INCIDENT.TAIO_CONTENT IN_TAIO_CONTENT,
                     TO_CHAR(INCIDENT.ACT_DATE,'yyyy/mm/dd hh24:mi:ss') IN_ACT_DATE,
-                    INCIDENT.ACT_TYPE IN_ACT_TYPE,
+                    INCIDENT.ACT_TYPE_CD IN_ACT_TYPE_CD,
                     TO_CHAR(INCIDENT.ACT_START_TIME,'yyyy/mm/dd hh24:mi:ss') IN_ACT_START_TIME,
                     TO_CHAR(INCIDENT.ACT_END_TIME,'yyyy/mm/dd hh24:mi:ss') IN_ACT_END_TIME,
                     INCIDENT.ACT_DEPT_CD IN_ACT_DEPT_CD,
@@ -229,7 +228,11 @@ SQL_INCIDENT_INFO;
                     INCIDENT.ACT_TEL IN_ACT_TEL,
                     INCIDENT.ACT_MAIL IN_ACT_MAIL,
                     INCIDENT.ACT_CONTENT IN_ACT_CONTENT,
-                    INCIDENT.PRODUCT_TYPE IN_PRODUCT_TYPE,
+                    INCIDENT.SOTI_KBN_CD IN_SOTI_KBN_CD,
+                    INCIDENT.SOTI_KBN_NM IN_SOTI_KBN_NM,
+                    INCIDENT.KISYU_KBN_CD IN_KISYU_KBN_CD,
+                    INCIDENT.KISYU_KBN_NM IN_KISYU_KBN_NM,
+                    INCIDENT.KISYU_NM IN_KISYU_NM,
                     INCIDENT.PRODUCT_TRIGGER IN_PRODUCT_TRIGGER,
                     INCIDENT.PRODUCT_HINDO IN_PRODUCT_HINDO,
                     INCIDENT.PRODUCT_GENSYO IN_PRODUCT_GENSYO,
@@ -254,7 +257,6 @@ SQL_INCIDENT_INFO;
                     PJ.PJ_SKAN_USER_NM PJ_PJ_SKAN_USER_NM,
                     PJ.PM_ID PJ_PM_ID,
                     PJ.PM_NM PJ_PM_NM,
-                    PJ.PREF_ID PJ_PREF_ID,
                     PJ.PREF_NM PJ_PREF_NM,
                     MR2.MKB_ID MR2_MKB_ID,
                     MR2.INCIDENT_ID MR2_INCIDENT_ID,
@@ -303,155 +305,121 @@ SQL_INCIDENT_INFO;
             $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.INCIDENT_ID = " . "'" . $conditions['incidentId'] . "' ";
         }
         if ($conditions['incidentNo'] != NULL) {
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.INCIDENT_NO LIKE " . "'%" . $conditions['incidentNo'] . "%' ";
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND ".CMN_MakeLikeCond(" "."INCIDENT.INCIDENT_NO",$conditions['incidentNo'],"%","%")." ";
         }
         if ($conditions['parentIncidentNo'] != NULL) {
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.PARENT_INCIDENT_NO LIKE " . "'%" . $conditions['parentIncidentNo'] . "%' ";
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND ".CMN_MakeLikeCond(" "."INCIDENT.PARENT_INCIDENT_NO",$conditions['parentIncidentNo'],"%","%")." ";
         }
         if ($conditions['incidentStartDateTimeFrom'] != NULL) {
-            // 2018.01.20 Newtouch更新 start
-//            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND TO_DATE('" . $conditions['incidentStartDateTimeFrom'] . "','yyyy-mm-dd hh24:mi:ss') <= INCIDENT.INCIDENT_START_DATETIME ";
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND TO_DATE('" . $conditions['incidentStartDateTimeFrom'] . "'||' 00:00:00','yyyy-mm-dd hh24:mi:ss') <= INCIDENT.INCIDENT_START_DATETIME ";
-            // 2018.01.20 Newtouch更新 end
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND TO_DATE('" . $conditions['incidentStartDateTimeFrom'] . "','yyyy-mm-dd hh24:mi:ss') <= INCIDENT.INCIDENT_START_DATETIME ";
         }
         if ($conditions['incidentStartDateTimeTo'] != NULL) {
-            // 2018.01.20 Newtouch更新 start
-//            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.INCIDENT_START_DATETIME <= " . " TO_DATE('" . $conditions['incidentStartDateTimeTo'] . "','yyyy-mm-dd hh24:mi:ss') ";
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.INCIDENT_START_DATETIME <= " . " TO_DATE('" . $conditions['incidentStartDateTimeTo'] . "'||' 23:59:59','yyyy-mm-dd hh24:mi:ss') ";
-            // 2018.01.20 Newtouch更新 end
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.INCIDENT_START_DATETIME <= " . " TO_DATE('" . $conditions['incidentStartDateTimeTo'] . "','yyyy-mm-dd hh24:mi:ss') ";
         }
         if ($conditions['infoSource'] != NULL) {
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.INFO_SOURCE LIKE " . "'%" . $conditions['infoSource'] . "%' ";
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND ".CMN_MakeLikeCond(" "."INCIDENT.INFO_SOURCE",$conditions['infoSource'],"%","%")." ";
         }
         if ($conditions['infoProvider'] != NULL) {
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.INFO_PROVIDER LIKE " . "'%" . $conditions['infoProvider'] . "%' ";
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND ".CMN_MakeLikeCond(" "."INCIDENT.INFO_PROVIDER",$conditions['infoProvider'],"%","%")." ";
         }
         if ($conditions['infoProviderTel'] != NULL) {
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.INFO_PROVIDER_TEL LIKE " . "'%" . $conditions['infoProviderTel'] . "%' ";
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND ".CMN_MakeLikeCond(" "."INCIDENT.INFO_PROVIDER_TEL",$conditions['infoProviderTel'],"%","%")." ";
         }
         if ($conditions['relateNm'] != NULL) {
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND RUSER.RELATE_USER_NM LIKE " . "'%" . $conditions['relateNm'] . "%' ";
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND ".CMN_MakeLikeCond(" "."RUSER.RELATE_USER_NM",$conditions['relateNm'],"%","%")." ";
         }
         if ($conditions['memo'] != NULL) {
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.MEMO LIKE " . "'%" . $conditions['memo'] . "%' ";
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND ".CMN_MakeLikeCond(" "."INCIDENT.MEMO",$conditions['memo'],"%","%")." ";
         }
         if ($conditions['kijoNm'] != NULL) {
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.KIJO_NM LIKE " . "'%" . $conditions['kijoNm'] . "%' ";
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND ".CMN_MakeLikeCond(" "."INCIDENT.KIJO_NM",$conditions['kijoNm'],"%","%")." ";
         }
         if ($conditions['jigyosyutaiNm'] != NULL) {
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.JIGYOSYUTAI_NM LIKE " . "'%" . $conditions['jigyosyutaiNm'] . "%' ";
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND ".CMN_MakeLikeCond(" "."INCIDENT.JIGYOSYUTAI_NM",$conditions['jigyosyutaiNm'],"%","%")." ";
         }
         if ($conditions['setubiNm'] != NULL) {
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.SETUBI_NM LIKE " . "'%" . $conditions['setubiNm'] . "%' ";
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND ".CMN_MakeLikeCond(" "."INCIDENT.SETUBI_NM",$conditions['setubiNm'],"%","%")." ";
         }
         if ($conditions['prefNm'] != NULL) {
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.PREF_NM LIKE " . "'%" . $conditions['prefNm'] . "%' ";
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND ".CMN_MakeLikeCond(" "."INCIDENT.PREF_NM",$conditions['prefNm'],"%","%")." ";
         }
-        if ($conditions['deliveryPjNm'] != NULL) {
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.DELIVERY_PJ_NM LIKE " . "'%" . $conditions['deliveryPjNm'] . "%' ";
+        if ($conditions['deliveryPjNo'] != NULL) {
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND ".CMN_MakeLikeCond(" "."INCIDENT.DELIVERY_PJ_No",$conditions['deliveryPjNo'],"%","%")." ";
         }
         if ($conditions['custNm'] != NULL) {
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.CUST_NM LIKE " . "'%" . $conditions['custNm'] . "%' ";
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND ".CMN_MakeLikeCond(" "."INCIDENT.CUST_NM",$conditions['custNm'],"%","%")." ";
         }
         if ($conditions['custTypeNm'] != NULL) {
             $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.CUST_TYPE_NM = " . "'" . $conditions['custTypeNm'] . "' ";
         }
         if ($conditions['custDept'] != NULL) {
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.CUST_DEPT LIKE " . "'%" . $conditions['custDept'] . "%' ";
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND ".CMN_MakeLikeCond(" "."INCIDENT.CUST_DEPT",$conditions['custDept'],"%","%")." ";
         }
         if ($conditions['requester'] != NULL) {
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.REQUESTER LIKE " . "'%" . $conditions['requester'] . "%' ";
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND ".CMN_MakeLikeCond(" "."INCIDENT.REQUESTER",$conditions['requester'],"%","%")." ";
         }
         if ($conditions['contactTel'] != NULL) {
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.CONTACT_TEL LIKE " . "'%" . $conditions['contactTel'] . "%' ";
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND ".CMN_MakeLikeCond(" "."INCIDENT.CONTACT_TEL",$conditions['contactTel'],"%","%")." ";
         }
         if ($conditions['contactFax'] != NULL) {
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.CONTACT_FAX LIKE " . "'%" . $conditions['contactFax'] . "%' ";
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND ".CMN_MakeLikeCond(" "."INCIDENT.CONTACT_FAX",$conditions['contactFax'],"%","%")." ";
         }
         if ($conditions['contactMail'] != NULL) {
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.CONTACT_MAIL LIKE " . "'%" . $conditions['contactMail'] . "%' ";
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND ".CMN_MakeLikeCond(" "."INCIDENT.CONTACT_MAIL",$conditions['contactMail'],"%","%")." ";
         }
         if ($conditions['salesDeptNm'] != NULL) {
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.SALES_DEPT_NM LIKE " . "'%" . $conditions['salesDeptNm'] . "%' ";
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND ".CMN_MakeLikeCond(" "."INCIDENT.SALES_DEPT_NM",$conditions['salesDeptNm'],"%","%")." ";
         }
         if ($conditions['salesUserNm'] != NULL) {
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.SALES_USER_NM LIKE " . "'%" . $conditions['salesUserNm'] . "%' ";
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND ".CMN_MakeLikeCond(" "."INCIDENT.SALES_USER_NM",$conditions['salesUserNm'],"%","%")." ";
         }
         if ($conditions['skanDeptNm'] != NULL) {
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.SKAN_DEPT_NM LIKE " . "'%" . $conditions['skanDeptNm'] . "%' ";
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND ".CMN_MakeLikeCond(" "."INCIDENT.SKAN_DEPT_NM",$conditions['skanDeptNm'],"%","%")." ";
         }
         if ($conditions['skanUserNm'] != NULL) {
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.SKAN_USER_NM LIKE " . "'%" . $conditions['skanUserNm'] . "%' ";
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND ".CMN_MakeLikeCond(" "."INCIDENT.SKAN_USER_NM",$conditions['skanUserNm'],"%","%")." ";
         }
         if ($conditions['callStartDateFrom'] != NULL) {
-            // 2018.01.20 Newtouch更新 start
-//            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND TO_DATE('" . $conditions['callStartDateFrom'] . "','yyyy-mm-dd hh24:mi:ss') <= INCIDENT.CALL_START_DATE ";
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.CALL_START_DATE >= to_date( '" . $conditions['callStartDateFrom'] . "'||' 00:00:00','yyyy-mm-dd hh24:mi:ss')";
-            // 2018.01.20 Newtouch更新 end
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.CALL_START_DATE >= TO_DATE( '" . $conditions['callStartDateFrom'] . "','yyyy-mm-dd hh24:mi:ss')";
         }
         if ($conditions['callStartDateTo'] != NULL) {
-            // 2018.01.20 Newtouch更新 start
-//            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.CALL_START_DATE <= " . " TO_DATE('" . $conditions['callStartDateTo'] . "','yyyy-mm-dd hh24:mi:ss') ";
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.CALL_START_DATE <= " . " TO_DATE('" . $conditions['callStartDateTo'] . "'||' 23:59:59','yyyy-mm-dd hh24:mi:ss') ";
-            // 2018.01.20 Newtouch更新 end
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.CALL_START_DATE <= " . " TO_DATE('" . $conditions['callStartDateTo'] . "','yyyy-mm-dd hh24:mi:ss') ";
         }
-        // 2018.01.20 Newtouch削除 start
-//        if ($conditions['callEndDateFrom'] != NULL) {
-//            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND TO_DATE('" . $conditions['callEndDateFrom'] . "','yyyy-mm-dd hh24:mi:ss') <= INCIDENT.CALL_END_DATE ";
-//        }
-//        if ($conditions['callEndDateTo'] != NULL) {
-//            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.CALL_END_DATE <= " . " TO_DATE('" . $conditions['callEndDateTo'] . "','yyyy-mm-dd hh24:mi:ss') ";
-//        }
-        // 2018.01.20 Newtouch削除 end
         if ($conditions['callDeptNm'] != NULL) {
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.CALL_DEPT_NM LIKE " . "'%" . $conditions['callDeptNm'] . "%' ";
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND ".CMN_MakeLikeCond(" "."INCIDENT.CALL_DEPT_NM",$conditions['callDeptNm'],"%","%")." ";
         }
         if ($conditions['callUserNm'] != NULL) {
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.CALL_USER_NM LIKE " . "'%" . $conditions['callUserNm'] . "%' ";
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND ".CMN_MakeLikeCond(" "."INCIDENT.CALL_USER_NM",$conditions['callUserNm'],"%","%")." ";
         }
         if ($conditions['callTel'] != NULL) {
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.CALL_TEL LIKE " . "'%" . $conditions['callTel'] . "%' ";
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND ".CMN_MakeLikeCond(" "."INCIDENT.CALL_TEL",$conditions['callTel'],"%","%")." ";
         }
         if ($conditions['callMail'] != NULL) {
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.CALL_MAIL LIKE " . "'%" . $conditions['callMail'] . "%' ";
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND ".CMN_MakeLikeCond(" "."INCIDENT.CALL_MAIL",$conditions['callMail'],"%","%")." ";
         }
         if ($conditions['callContent'] != NULL) {
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.CALL_CONTENT LIKE " . "'%" . $conditions['callContent'] . "%' ";
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND ".CMN_MakeLikeCond(" "."INCIDENT.CALL_CONTENT",$conditions['callContent'],"%","%")." ";
         }
         if ($conditions['taioStartDateFrom'] != NULL) {
-            // 2018.01.20 Newtouch更新 start
-//            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND TO_DATE('" . $conditions['taioStartDateFrom'] . "','yyyy-mm-dd hh24:mi:ss') <= INCIDENT.TAIO_START_DATE ";
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND TO_DATE('" . $conditions['taioStartDateFrom'] . "'||' 00:00:00','yyyy-mm-dd hh24:mi:ss') <= INCIDENT.TAIO_START_DATE ";
-            // 2018.01.20 Newtouch更新 end
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND TO_DATE('" . $conditions['taioStartDateFrom'] . "','yyyy-mm-dd hh24:mi:ss') <= INCIDENT.TAIO_START_DATE ";
         }
         if ($conditions['taioStartDateTo'] != NULL) {
-            // 2018.01.20 Newtouch更新 start
-//            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.TAIO_START_DATE <= " . " TO_DATE('" . $conditions['taioStartDateTo'] . "','yyyy-mm-dd hh24:mi:ss') ";
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.TAIO_START_DATE <= " . " TO_DATE('" . $conditions['taioStartDateTo'] . "'||' 23:59:59','yyyy-mm-dd hh24:mi:ss') ";
-            // 2018.01.20 Newtouch更新 end
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.TAIO_START_DATE <= " . " TO_DATE('" . $conditions['taioStartDateTo'] . "','yyyy-mm-dd hh24:mi:ss') ";
         }
-        // 2018.01.20 Newtouch削除 start
-//        if ($conditions['taioEndDateFrom'] != NULL) {
-//            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND TO_DATE('" . $conditions['taioEndDateFrom'] . "','yyyy-mm-dd hh24:mi:ss') <= INCIDENT.TAIO_END_DATE ";
-//        }
-//        if ($conditions['taioEndDateTo'] != NULL) {
-//            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.TAIO_END_DATE <= " . " TO_DATE('" . $conditions['taioEndDateTo'] . "','yyyy-mm-dd hh24:mi:ss') ";
-//        }
-        // 2018.01.20 Newtouch削除 end
         if ($conditions['taioDeptNm'] != NULL) {
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.TAIO_DEPT_NM LIKE " . "'%" . $conditions['taioDeptNm'] . "%' ";
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND ".CMN_MakeLikeCond(" "."INCIDENT.TAIO_DEPT_NM",$conditions['taioDeptNm'],"%","%")." ";
         }
         if ($conditions['taioUserNm'] != NULL) {
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.TAIO_USER_NM LIKE " . "'%" . $conditions['taioUserNm'] . "%' ";
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND ".CMN_MakeLikeCond(" "."INCIDENT.TAIO_USER_NM",$conditions['taioUserNm'],"%","%")." ";
         }
         if ($conditions['taioTel'] != NULL) {
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.TAIO_TEL LIKE " . "'%" . $conditions['taioTel'] . "%' ";
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND ".CMN_MakeLikeCond(" "."INCIDENT.TAIO_TEL",$conditions['taioTel'],"%","%")." ";
         }
         if ($conditions['taioMail'] != NULL) {
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.TAIO_MAIL LIKE " . "'%" . $conditions['taioMail'] . "%' ";
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND ".CMN_MakeLikeCond(" "."INCIDENT.TAIO_MAIL",$conditions['taioMail'],"%","%")." ";
         }
         if ($conditions['taioContent'] != NULL) {
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.TAIO_CONTENT LIKE " . "'%" . $conditions['taioContent'] . "%' ";
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND ".CMN_MakeLikeCond(" "."INCIDENT.TAIO_CONTENT",$conditions['taioContent'],"%","%")." ";
         }
         if ($conditions['actDateFrom'] != NULL) {
             $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND TO_DATE('" . $conditions['actDateFrom'] . "','yyyy-mm-dd hh24:mi:ss') <= INCIDENT.ACT_DATE ";
@@ -460,45 +428,28 @@ SQL_INCIDENT_INFO;
             $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.ACT_DATE <= " . " TO_DATE('" . $conditions['actDateTo'] . "','yyyy-mm-dd hh24:mi:ss') ";
         }
         if ($conditions['actStartTimeFrom'] != NULL) {
-            // 2018.01.20 Newtouch更新 start
-//            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND TO_DATE('" . $conditions['actStartTimeFrom'] . "','yyyy-mm-dd hh24:mi:ss') <= INCIDENT.ACT_START_TIME ";
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND TO_DATE('" . $conditions['actStartTimeFrom'] . "'||' 00:00:00','yyyy-mm-dd hh24:mi:ss') <= INCIDENT.ACT_START_TIME ";
-            // 2018.01.20 Newtouch更新 end
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND TO_DATE('" . $conditions['actStartTimeFrom'] . "','yyyy-mm-dd hh24:mi:ss') <= INCIDENT.ACT_START_TIME ";
         }
         if ($conditions['actStartTimeTo'] != NULL) {
-            // 2018.01.20 Newtouch更新 start
-//            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.ACT_START_TIME <= " . " TO_DATE('" . $conditions['actStartTimeTo'] . "','yyyy-mm-dd hh24:mi:ss') ";
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.ACT_START_TIME <= " . " TO_DATE('" . $conditions['actStartTimeTo'] . "'||' 23:59:59','yyyy-mm-dd hh24:mi:ss') ";
-            // 2018.01.20 Newtouch更新 end
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.ACT_START_TIME <= " . " TO_DATE('" . $conditions['actStartTimeTo'] . "','yyyy-mm-dd hh24:mi:ss') ";
         }
-        // 2018.01.20 Newtouch削除 start
-//        if ($conditions['actEndTimeFrom'] != NULL) {
-//            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND TO_DATE('" . $conditions['actEndTimeFrom'] . "','yyyy-mm-dd hh24:mi:ss') <= INCIDENT.ACT_END_TIME ";
-//        }
-//        if ($conditions['actEndTimeTo'] != NULL) {
-//            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.ACT_END_TIME <= " . " TO_DATE('" . $conditions['actEndTimeTo'] . "','yyyy-mm-dd hh24:mi:ss') ";
-//        }
-        // 2018.01.20 Newtouch削除 end
         if ($conditions['actType'] != NULL) {
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.ACT_TYPE = " . "'" . $conditions['actType'] . "' ";
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.ACT_TYPE_CD = " . "'" . $conditions['actType'] . "' ";
         }
         if ($conditions['actDeptNm'] != NULL) {
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.ACT_DEPT_NM LIKE " . "'%" . $conditions['actDeptNm'] . "%' ";
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND ".CMN_MakeLikeCond(" "."INCIDENT.ACT_DEPT_NM",$conditions['actDeptNm'],"%","%")." ";
         }
         if ($conditions['actUserNm'] != NULL) {
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.ACT_USER_NM LIKE " . "'%" . $conditions['actUserNm'] . "%' ";
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND ".CMN_MakeLikeCond(" "."INCIDENT.ACT_USER_NM",$conditions['actUserNm'],"%","%")." ";
         }
         if ($conditions['actTel'] != NULL) {
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.ACT_TEL LIKE " . "'%" . $conditions['actTel'] . "%' ";
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND ".CMN_MakeLikeCond(" "."INCIDENT.ACT_TEL",$conditions['actTel'],"%","%")." ";
         }
         if ($conditions['actMail'] != NULL) {
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.ACT_MAIL LIKE " . "'%" . $conditions['actMail'] . "%' ";
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND ".CMN_MakeLikeCond(" "."INCIDENT.ACT_MAIL",$conditions['actMail'],"%","%")." ";
         }
         if ($conditions['actContent'] != NULL) {
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.ACT_CONTENT LIKE " . "'%" . $conditions['actContent'] . "%' ";
-        }
-        if ($conditions['productType'] != NULL) {
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.PRODUCT_TYPE = " . "'" . $conditions['productType'] . "' ";
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND ".CMN_MakeLikeCond(" "."INCIDENT.ACT_CONTENT",$conditions['actContent'],"%","%")." ";
         }
         if ($conditions['productTrigger'] != NULL) {
             $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.PRODUCT_TRIGGER = " . "'" . $conditions['productTrigger'] . "' ";
@@ -512,13 +463,9 @@ SQL_INCIDENT_INFO;
         if ($conditions['productStatus'] != NULL) {
             $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.PRODUCT_STATUS = " . "'" . $conditions['productStatus'] . "' ";
         }
-        // 2018.01.09 Newtouch追加 start
-        if($conditions['prefCd'] != NULL && $conditions['prefCd'] != "0"){
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.PREF_ID = '" . $conditions['prefCd'] ."' ";
-        }
         
         if ($conditions['incidentType'] != NULL) {
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.INCIDENT_TYPE IN(" . $conditions['incidentType'] . ")";
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.INCIDENT_TYPE_CD IN(" . $conditions['incidentType'] . ")";
         }
 
         if ($conditions['incidentStatus'] != NULL) {
@@ -526,13 +473,15 @@ SQL_INCIDENT_INFO;
         }
         
         if ($conditions['industryType'] != NULL) {
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.INDUSTRY_TYPE IN(" . $conditions['industryType'] . ")";
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.INDUSTRY_TYPE_CD IN(" . $conditions['industryType'] . ")";
         }
         
         if ($conditions['custType'] != NULL) {
             $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.CUST_TYPE_CD IN(" . $conditions['custType'] . ")";
         }   
-        // 2018.01.09 Newtouch追加 end
+        
+        $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " ORDER BY TO_CHAR(INCIDENT.CALL_START_DATE,'yyyy/mm/dd hh24:mi:ss') DESC NULLS LAST ";
+               
         $MultiExecSql = new MultiExecSql();
         $sqlResult = array();
         $MultiExecSql->getResultData($SQL_INCIDENT_INFO, $sqlResult);
@@ -546,10 +495,10 @@ SQL_INCIDENT_INFO;
                     INCIDENT.INCIDENT_ID IN_INCIDENT_ID,
                     INCIDENT.INCIDENT_NO IN_INCIDENT_NO,
                     INCIDENT.INCIDENT_STS IN_INCIDENT_STS,
-                    INCIDENT.INCIDENT_TYPE IN_INCIDENT_TYPE,
+                    INCIDENT.INCIDENT_TYPE_CD IN_INCIDENT_TYPE_CD,
                     INCIDENT.PARENT_INCIDENT_NO IN_PARENT_INCIDENT_NO,
                     TO_CHAR(INCIDENT.INCIDENT_START_DATETIME,'yyyy/mm/dd hh24:mi:ss') IN_INCIDENT_START_DATETIME,
-                    INCIDENT.INDUSTRY_TYPE IN_INDUSTRY_TYPE,
+                    INCIDENT.INDUSTRY_TYPE_CD IN_INDUSTRY_TYPE_CD,
                     INCIDENT.INFO_SOURCE IN_INFO_SOURCE,
                     INCIDENT.INFO_PROVIDER IN_INFO_PROVIDER,
                     INCIDENT.INFO_PROVIDER_TEL IN_INFO_PROVIDER_TEL,
@@ -560,10 +509,8 @@ SQL_INCIDENT_INFO;
                     INCIDENT.JIGYOSYUTAI_NM IN_JIGYOSYUTAI_NM,
                     INCIDENT.SETUBI_ID IN_SETUBI_ID,
                     INCIDENT.SETUBI_NM IN_SETUBI_NM,
-                    INCIDENT.PREF_ID IN_PREF_ID,
                     INCIDENT.PREF_NM IN_PREF_NM,
                     INCIDENT.DELIVERY_PJ_NO IN_DELIVERY_PJ_NO,
-                    INCIDENT.DELIVERY_PJ_NM IN_DELIVERY_PJ_NM,
                     INCIDENT.CUST_ID IN_CUST_ID,
                     INCIDENT.CUST_NM IN_CUST_NM,
                     INCIDENT.CUST_TYPE_CD IN_CUST_TYPE_CD,
@@ -600,7 +547,7 @@ SQL_INCIDENT_INFO;
                     INCIDENT.TAIO_MAIL IN_TAIO_MAIL,
                     INCIDENT.TAIO_CONTENT IN_TAIO_CONTENT,
                     TO_CHAR(INCIDENT.ACT_DATE,'yyyy/mm/dd hh24:mi:ss') IN_ACT_DATE,
-                    INCIDENT.ACT_TYPE IN_ACT_TYPE,
+                    INCIDENT.ACT_TYPE_CD IN_ACT_TYPE_CD,
                     TO_CHAR(INCIDENT.ACT_START_TIME,'yyyy/mm/dd hh24:mi:ss') IN_ACT_START_TIME,
                     TO_CHAR(INCIDENT.ACT_END_TIME,'yyyy/mm/dd hh24:mi:ss') IN_ACT_END_TIME,
                     INCIDENT.ACT_DEPT_CD IN_ACT_DEPT_CD,
@@ -610,7 +557,11 @@ SQL_INCIDENT_INFO;
                     INCIDENT.ACT_TEL IN_ACT_TEL,
                     INCIDENT.ACT_MAIL IN_ACT_MAIL,
                     INCIDENT.ACT_CONTENT IN_ACT_CONTENT,
-                    INCIDENT.PRODUCT_TYPE IN_PRODUCT_TYPE,
+                    INCIDENT.SOTI_KBN_CD IN_SOTI_KBN_CD,
+                    INCIDENT.SOTI_KBN_NM IN_SOTI_KBN_NM,
+                    INCIDENT.KISYU_KBN_CD IN_KISYU_KBN_CD,
+                    INCIDENT.KISYU_KBN_NM IN_KISYU_KBN_NM,
+                    INCIDENT.KISYU_NM IN_KISYU_NM,
                     INCIDENT.PRODUCT_TRIGGER IN_PRODUCT_TRIGGER,
                     INCIDENT.PRODUCT_HINDO IN_PRODUCT_HINDO,
                     INCIDENT.PRODUCT_GENSYO IN_PRODUCT_GENSYO,
@@ -635,7 +586,6 @@ SQL_INCIDENT_INFO;
                     PJ.PJ_SKAN_USER_NM PJ_PJ_SKAN_USER_NM,
                     PJ.PM_ID PJ_PM_ID,
                     PJ.PM_NM PJ_PM_NM,
-                    PJ.PREF_ID PJ_PREF_ID,
                     PJ.PREF_NM PJ_PREF_NM,
                     MR2.MKB_ID MR2_MKB_ID,
                     MR2.INCIDENT_ID MR2_INCIDENT_ID,
@@ -683,10 +633,10 @@ SQL_INCIDENT_INFO;
         if ($conditions['keyword'] != NULL) {
             $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO ."AND (";
             $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " INCIDENT.INCIDENT_NO = " . "'" . $conditions['keyword'] . "' ";
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " OR INCIDENT.PREF_NM LIKE " . "'%" . $conditions['keyword'] . "%' ";
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " OR INCIDENT.KIJO_NM LIKE " . "'%" . $conditions['keyword'] . "%' ";
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " OR INCIDENT.SETUBI_NM LIKE " . "'%" . $conditions['keyword'] . "%' ";
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " OR INCIDENT.CALL_CONTENT LIKE " . "'%" . $conditions['keyword'] . "%' ";
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " OR ".CMN_MakeLikeCond(" "."INCIDENT.PREF_NM",$conditions['keyword'],"%","%")." ";
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " OR ".CMN_MakeLikeCond(" "."INCIDENT.KIJO_NM",$conditions['keyword'],"%","%")." ";
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " OR ".CMN_MakeLikeCond(" "."INCIDENT.SETUBI_NM",$conditions['keyword'],"%","%")." ";
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " OR ".CMN_MakeLikeCond(" "."INCIDENT.CALL_CONTENT",$conditions['keyword'],"%","%")." ";
             $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " OR INCIDENT.INFO_PROVIDER_TEL = " . "'" . $conditions['keyword'] . "' ";
             $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " OR INCIDENT.CONTACT_TEL = " . "'" . $conditions['keyword'] . "' ";
             $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " OR INCIDENT.CALL_TEL = " . "'" . $conditions['keyword'] . "' ";
@@ -701,6 +651,8 @@ SQL_INCIDENT_INFO;
             $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO .")";
         }
 
+        $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " ORDER BY TO_CHAR(INCIDENT.CALL_START_DATE,'yyyy/mm/dd hh24:mi:ss') DESC NULLS LAST ";
+
         $MultiExecSql = new MultiExecSql();
         $sqlResult = array();
         $MultiExecSql->getResultData($SQL_INCIDENT_INFO, $sqlResult);
@@ -714,10 +666,10 @@ SQL_INCIDENT_INFO;
                     INCIDENT.INCIDENT_ID IN_INCIDENT_ID,
                     INCIDENT.INCIDENT_NO IN_INCIDENT_NO,
                     INCIDENT.INCIDENT_STS IN_INCIDENT_STS,
-                    INCIDENT.INCIDENT_TYPE IN_INCIDENT_TYPE,
+                    INCIDENT.INCIDENT_TYPE_CD IN_INCIDENT_TYPE_CD,
                     INCIDENT.PARENT_INCIDENT_NO IN_PARENT_INCIDENT_NO,
                     TO_CHAR(INCIDENT.INCIDENT_START_DATETIME,'yyyy/mm/dd hh24:mi:ss') IN_INCIDENT_START_DATETIME,
-                    INCIDENT.INDUSTRY_TYPE IN_INDUSTRY_TYPE,
+                    INCIDENT.INDUSTRY_TYPE_CD IN_INDUSTRY_TYPE_CD,
                     INCIDENT.INFO_SOURCE IN_INFO_SOURCE,
                     INCIDENT.INFO_PROVIDER IN_INFO_PROVIDER,
                     INCIDENT.INFO_PROVIDER_TEL IN_INFO_PROVIDER_TEL,
@@ -728,10 +680,8 @@ SQL_INCIDENT_INFO;
                     INCIDENT.JIGYOSYUTAI_NM IN_JIGYOSYUTAI_NM,
                     INCIDENT.SETUBI_ID IN_SETUBI_ID,
                     INCIDENT.SETUBI_NM IN_SETUBI_NM,
-                    INCIDENT.PREF_ID IN_PREF_ID,
                     INCIDENT.PREF_NM IN_PREF_NM,
                     INCIDENT.DELIVERY_PJ_NO IN_DELIVERY_PJ_NO,
-                    INCIDENT.DELIVERY_PJ_NM IN_DELIVERY_PJ_NM,
                     INCIDENT.CUST_ID IN_CUST_ID,
                     INCIDENT.CUST_NM IN_CUST_NM,
                     INCIDENT.CUST_TYPE_CD IN_CUST_TYPE_CD,
@@ -768,7 +718,7 @@ SQL_INCIDENT_INFO;
                     INCIDENT.TAIO_MAIL IN_TAIO_MAIL,
                     INCIDENT.TAIO_CONTENT IN_TAIO_CONTENT,
                     TO_CHAR(INCIDENT.ACT_DATE,'yyyy/mm/dd hh24:mi:ss') IN_ACT_DATE,
-                    INCIDENT.ACT_TYPE IN_ACT_TYPE,
+                    INCIDENT.ACT_TYPE_CD IN_ACT_TYPE_CD,
                     TO_CHAR(INCIDENT.ACT_START_TIME,'yyyy/mm/dd hh24:mi:ss') IN_ACT_START_TIME,
                     TO_CHAR(INCIDENT.ACT_END_TIME,'yyyy/mm/dd hh24:mi:ss') IN_ACT_END_TIME,
                     INCIDENT.ACT_DEPT_CD IN_ACT_DEPT_CD,
@@ -778,7 +728,11 @@ SQL_INCIDENT_INFO;
                     INCIDENT.ACT_TEL IN_ACT_TEL,
                     INCIDENT.ACT_MAIL IN_ACT_MAIL,
                     INCIDENT.ACT_CONTENT IN_ACT_CONTENT,
-                    INCIDENT.PRODUCT_TYPE IN_PRODUCT_TYPE,
+                    INCIDENT.SOTI_KBN_CD IN_SOTI_KBN_CD,
+                    INCIDENT.SOTI_KBN_NM IN_SOTI_KBN_NM,
+                    INCIDENT.KISYU_KBN_CD IN_KISYU_KBN_CD,
+                    INCIDENT.KISYU_KBN_NM IN_KISYU_KBN_NM,
+                    INCIDENT.KISYU_NM IN_KISYU_NM,
                     INCIDENT.PRODUCT_TRIGGER IN_PRODUCT_TRIGGER,
                     INCIDENT.PRODUCT_HINDO IN_PRODUCT_HINDO,
                     INCIDENT.PRODUCT_GENSYO IN_PRODUCT_GENSYO,
@@ -807,155 +761,121 @@ SQL_INCIDENT_INFO;
             $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.INCIDENT_ID = " . "'" . $conditions['incidentId'] . "' ";
         }
         if ($conditions['incidentNo'] != NULL) {
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.INCIDENT_NO LIKE " . "'%" . $conditions['incidentNo'] . "%' ";
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND ".CMN_MakeLikeCond(" "."INCIDENT.INCIDENT_NO",$conditions['incidentNo'],"%","%")." ";
         }
         if ($conditions['parentIncidentNo'] != NULL) {
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.PARENT_INCIDENT_NO LIKE " . "'%" . $conditions['parentIncidentNo'] . "%' ";
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND ".CMN_MakeLikeCond(" "."INCIDENT.PARENT_INCIDENT_NO",$conditions['parentIncidentNo'],"%","%")." ";
         }
         if ($conditions['incidentStartDateTimeFrom'] != NULL) {
-            // 2018.01.20 Newtouch更新 start
-//            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND TO_DATE('" . $conditions['incidentStartDateTimeFrom'] . "','yyyy-mm-dd hh24:mi:ss') <= INCIDENT.INCIDENT_START_DATETIME ";
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND TO_DATE('" . $conditions['incidentStartDateTimeFrom'] . "'||' 00:00:00','yyyy-mm-dd hh24:mi:ss') <= INCIDENT.INCIDENT_START_DATETIME ";
-            // 2018.01.20 Newtouch更新 end
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND TO_DATE('" . $conditions['incidentStartDateTimeFrom'] . "','yyyy-mm-dd hh24:mi:ss') <= INCIDENT.INCIDENT_START_DATETIME ";
         }
         if ($conditions['incidentStartDateTimeTo'] != NULL) {
-            // 2018.01.20 Newtouch更新 start
-//            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.INCIDENT_START_DATETIME <= " . " TO_DATE('" . $conditions['incidentStartDateTimeTo'] . "','yyyy-mm-dd hh24:mi:ss') ";
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.INCIDENT_START_DATETIME <= " . " TO_DATE('" . $conditions['incidentStartDateTimeTo'] . "'||' 23:59:59','yyyy-mm-dd hh24:mi:ss') ";
-            // 2018.01.20 Newtouch更新 end
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.INCIDENT_START_DATETIME <= " . " TO_DATE('" . $conditions['incidentStartDateTimeTo'] . "','yyyy-mm-dd hh24:mi:ss') ";
         }
         if ($conditions['infoSource'] != NULL) {
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.INFO_SOURCE LIKE " . "'%" . $conditions['infoSource'] . "%' ";
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND ".CMN_MakeLikeCond(" "."INCIDENT.INFO_SOURCE",$conditions['infoSource'],"%","%")." ";
         }
         if ($conditions['infoProvider'] != NULL) {
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.INFO_PROVIDER LIKE " . "'%" . $conditions['infoProvider'] . "%' ";
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND ".CMN_MakeLikeCond(" "."INCIDENT.INFO_PROVIDER",$conditions['infoProvider'],"%","%")." ";
         }
         if ($conditions['infoProviderTel'] != NULL) {
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.INFO_PROVIDER_TEL LIKE " . "'%" . $conditions['infoProviderTel'] . "%' ";
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND ".CMN_MakeLikeCond(" "."INCIDENT.INFO_PROVIDER_TEL",$conditions['infoProviderTel'],"%","%")." ";
         }
         if ($conditions['relateNm'] != NULL) {
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND RUSER.RELATE_USER_NM LIKE " . "'%" . $conditions['relateNm'] . "%' ";
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND ".CMN_MakeLikeCond(" "."RUSER.RELATE_USER_NM",$conditions['relateNm'],"%","%")." ";
         }
         if ($conditions['memo'] != NULL) {
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.MEMO LIKE " . "'%" . $conditions['memo'] . "%' ";
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND ".CMN_MakeLikeCond(" "."INCIDENT.MEMO",$conditions['memo'],"%","%")." ";
         }
         if ($conditions['kijoNm'] != NULL) {
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.KIJO_NM LIKE " . "'%" . $conditions['kijoNm'] . "%' ";
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND ".CMN_MakeLikeCond(" "."INCIDENT.KIJO_NM",$conditions['kijoNm'],"%","%")." ";
         }
         if ($conditions['jigyosyutaiNm'] != NULL) {
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.JIGYOSYUTAI_NM LIKE " . "'%" . $conditions['jigyosyutaiNm'] . "%' ";
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND ".CMN_MakeLikeCond(" "."INCIDENT.JIGYOSYUTAI_NM",$conditions['jigyosyutaiNm'],"%","%")." ";
         }
         if ($conditions['setubiNm'] != NULL) {
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.SETUBI_NM LIKE " . "'%" . $conditions['setubiNm'] . "%' ";
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND ".CMN_MakeLikeCond(" "."INCIDENT.SETUBI_NM",$conditions['setubiNm'],"%","%")." ";
         }
         if ($conditions['prefNm'] != NULL) {
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.PREF_NM LIKE " . "'%" . $conditions['prefNm'] . "%' ";
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND ".CMN_MakeLikeCond(" "."INCIDENT.PREF_NM",$conditions['prefNm'],"%","%")." ";
         }
-        if ($conditions['deliveryPjNm'] != NULL) {
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.DELIVERY_PJ_NM LIKE " . "'%" . $conditions['deliveryPjNm'] . "%' ";
+        if ($conditions['deliveryPjNo'] != NULL) {
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND ".CMN_MakeLikeCond(" "."INCIDENT.DELIVERY_PJ_NO",$conditions['deliveryPjNo'],"%","%")." ";
         }
         if ($conditions['custNm'] != NULL) {
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.CUST_NM LIKE " . "'%" . $conditions['custNm'] . "%' ";
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND ".CMN_MakeLikeCond(" "."INCIDENT.CUST_NM",$conditions['custNm'],"%","%")." ";
         }
         if ($conditions['custTypeNm'] != NULL) {
             $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.CUST_TYPE_NM = " . "'" . $conditions['custTypeNm'] . "' ";
         }
         if ($conditions['custDept'] != NULL) {
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.CUST_DEPT LIKE " . "'%" . $conditions['custDept'] . "%' ";
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND ".CMN_MakeLikeCond(" "."INCIDENT.CUST_DEPT",$conditions['custDept'],"%","%")." ";
         }
         if ($conditions['requester'] != NULL) {
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.REQUESTER LIKE " . "'%" . $conditions['requester'] . "%' ";
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND ".CMN_MakeLikeCond(" "."INCIDENT.REQUESTER",$conditions['requester'],"%","%")." ";
         }
         if ($conditions['contactTel'] != NULL) {
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.CONTACT_TEL LIKE " . "'%" . $conditions['contactTel'] . "%' ";
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND ".CMN_MakeLikeCond(" "."INCIDENT.CONTACT_TEL",$conditions['contactTel'],"%","%")." ";
         }
         if ($conditions['contactFax'] != NULL) {
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.CONTACT_FAX LIKE " . "'%" . $conditions['contactFax'] . "%' ";
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND ".CMN_MakeLikeCond(" "."INCIDENT.CONTACT_FAX",$conditions['contactFax'],"%","%")." ";
         }
         if ($conditions['contactMail'] != NULL) {
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.CONTACT_MAIL LIKE " . "'%" . $conditions['contactMail'] . "%' ";
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND ".CMN_MakeLikeCond(" "."INCIDENT.CONTACT_MAIL",$conditions['contactMail'],"%","%")." ";
         }
         if ($conditions['salesDeptNm'] != NULL) {
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.SALES_DEPT_NM LIKE " . "'%" . $conditions['salesDeptNm'] . "%' ";
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND ".CMN_MakeLikeCond(" "."INCIDENT.SALES_DEPT_NM",$conditions['salesDeptNm'],"%","%")." ";
         }
         if ($conditions['salesUserNm'] != NULL) {
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.SALES_USER_NM LIKE " . "'%" . $conditions['salesUserNm'] . "%' ";
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND ".CMN_MakeLikeCond(" "."INCIDENT.SALES_USER_NM",$conditions['salesUserNm'],"%","%")." ";
         }
         if ($conditions['skanDeptNm'] != NULL) {
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.SKAN_DEPT_NM LIKE " . "'%" . $conditions['skanDeptNm'] . "%' ";
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND ".CMN_MakeLikeCond(" "."INCIDENT.SKAN_DEPT_NM",$conditions['skanDeptNm'],"%","%")." ";
         }
         if ($conditions['skanUserNm'] != NULL) {
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.SKAN_USER_NM LIKE " . "'%" . $conditions['skanUserNm'] . "%' ";
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND ".CMN_MakeLikeCond(" "."INCIDENT.SKAN_USER_NM",$conditions['skanUserNm'],"%","%")." ";
         }
         if ($conditions['callStartDateFrom'] != NULL) {
-            // 2018.01.20 Newtouch更新 start
-//            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND TO_DATE('" . $conditions['callStartDateFrom'] . "','yyyy-mm-dd hh24:mi:ss') <= INCIDENT.CALL_START_DATE ";
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.CALL_START_DATE >= to_date( '" . $conditions['callStartDateFrom'] . "'||' 00:00:00','yyyy-mm-dd hh24:mi:ss')";
-            // 2018.01.20 Newtouch更新 end
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.CALL_START_DATE >= TO_DATE( '" . $conditions['callStartDateFrom'] . "','yyyy-mm-dd hh24:mi:ss')";
         }
         if ($conditions['callStartDateTo'] != NULL) {
-            // 2018.01.20 Newtouch更新 start
-//            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.CALL_START_DATE <= " . " TO_DATE('" . $conditions['callStartDateTo'] . "','yyyy-mm-dd hh24:mi:ss') ";
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.CALL_START_DATE <= " . " TO_DATE('" . $conditions['callStartDateTo'] . "'||' 23:59:59','yyyy-mm-dd hh24:mi:ss') ";
-            // 2018.01.20 Newtouch更新 end
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.CALL_START_DATE <= " . " TO_DATE('" . $conditions['callStartDateTo'] . "','yyyy-mm-dd hh24:mi:ss') ";
         }
-        // 2018.01.20 Newtouch削除 start
-//        if ($conditions['callEndDateFrom'] != NULL) {
-//            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND TO_DATE('" . $conditions['callEndDateFrom'] . "','yyyy-mm-dd hh24:mi:ss') <= INCIDENT.CALL_END_DATE ";
-//        }
-//        if ($conditions['callEndDateTo'] != NULL) {
-//            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.CALL_END_DATE <= " . " TO_DATE('" . $conditions['callEndDateTo'] . "','yyyy-mm-dd hh24:mi:ss') ";
-//        }
-        // 2018.01.20 Newtouch削除 end
         if ($conditions['callDeptNm'] != NULL) {
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.CALL_DEPT_NM LIKE " . "'%" . $conditions['callDeptNm'] . "%' ";
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND ".CMN_MakeLikeCond(" "."INCIDENT.CALL_DEPT_NM",$conditions['callDeptNm'],"%","%")." ";
         }
         if ($conditions['callUserNm'] != NULL) {
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.CALL_USER_NM LIKE " . "'%" . $conditions['callUserNm'] . "%' ";
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND ".CMN_MakeLikeCond(" "."INCIDENT.CALL_USER_NM",$conditions['callUserNm'],"%","%")." ";
         }
         if ($conditions['callTel'] != NULL) {
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.CALL_TEL LIKE " . "'%" . $conditions['callTel'] . "%' ";
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND ".CMN_MakeLikeCond(" "."INCIDENT.CALL_TEL",$conditions['callTel'],"%","%")." ";
         }
         if ($conditions['callMail'] != NULL) {
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.CALL_MAIL LIKE " . "'%" . $conditions['callMail'] . "%' ";
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND ".CMN_MakeLikeCond(" "."INCIDENT.CALL_MAIL",$conditions['callMail'],"%","%")." ";
         }
         if ($conditions['callContent'] != NULL) {
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.CALL_CONTENT LIKE " . "'%" . $conditions['callContent'] . "%' ";
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND ".CMN_MakeLikeCond(" "."INCIDENT.CALL_CONTENT",$conditions['callContent'],"%","%")." ";
         }
         if ($conditions['taioStartDateFrom'] != NULL) {
-            // 2018.01.20 Newtouch更新 start
-//            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND TO_DATE('" . $conditions['taioStartDateFrom'] . "','yyyy-mm-dd hh24:mi:ss') <= INCIDENT.TAIO_START_DATE ";
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND TO_DATE('" . $conditions['taioStartDateFrom'] . "'||' 00:00:00','yyyy-mm-dd hh24:mi:ss') <= INCIDENT.TAIO_START_DATE ";
-            // 2018.01.20 Newtouch更新 start
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND TO_DATE('" . $conditions['taioStartDateFrom'] . "','yyyy-mm-dd hh24:mi:ss') <= INCIDENT.TAIO_START_DATE ";
         }
         if ($conditions['taioStartDateTo'] != NULL) {
-            // 2018.01.20 Newtouch更新 start
-//            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.TAIO_START_DATE <= " . " TO_DATE('" . $conditions['taioStartDateTo'] . "','yyyy-mm-dd hh24:mi:ss') ";
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.TAIO_START_DATE <= " . " TO_DATE('" . $conditions['taioStartDateTo'] . "'||' 23:59:59','yyyy-mm-dd hh24:mi:ss') ";
-            // 2018.01.20 Newtouch更新 start
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.TAIO_START_DATE <= " . " TO_DATE('" . $conditions['taioStartDateTo'] . "','yyyy-mm-dd hh24:mi:ss') ";
         }
-        // 2018.01.20 Newtouch削除 start
-//        if ($conditions['taioEndDateFrom'] != NULL) {
-//            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND TO_DATE('" . $conditions['taioEndDateFrom'] . "','yyyy-mm-dd hh24:mi:ss') <= INCIDENT.TAIO_END_DATE ";
-//        }
-//        if ($conditions['taioEndDateTo'] != NULL) {
-//            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.TAIO_END_DATE <= " . " TO_DATE('" . $conditions['taioEndDateTo'] . "','yyyy-mm-dd hh24:mi:ss') ";
-//        }
-        // 2018.01.20 Newtouch削除 end
         if ($conditions['taioDeptNm'] != NULL) {
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.TAIO_DEPT_NM LIKE " . "'%" . $conditions['taioDeptNm'] . "%' ";
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND ".CMN_MakeLikeCond(" "."INCIDENT.TAIO_DEPT_NM",$conditions['taioDeptNm'],"%","%")." ";
         }
         if ($conditions['taioUserNm'] != NULL) {
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.TAIO_USER_NM LIKE " . "'%" . $conditions['taioUserNm'] . "%' ";
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND ".CMN_MakeLikeCond(" "."INCIDENT.TAIO_USER_NM",$conditions['taioUserNm'],"%","%")." ";
         }
         if ($conditions['taioTel'] != NULL) {
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.TAIO_TEL LIKE " . "'%" . $conditions['taioTel'] . "%' ";
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND ".CMN_MakeLikeCond(" "."INCIDENT.TAIO_TEL",$conditions['taioTel'],"%","%")." ";
         }
         if ($conditions['taioMail'] != NULL) {
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.TAIO_MAIL LIKE " . "'%" . $conditions['taioMail'] . "%' ";
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND ".CMN_MakeLikeCond(" "."INCIDENT.TAIO_MAIL",$conditions['taioMail'],"%","%")." ";
         }
         if ($conditions['taioContent'] != NULL) {
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.TAIO_CONTENT LIKE " . "'%" . $conditions['taioContent'] . "%' ";
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND ".CMN_MakeLikeCond(" "."INCIDENT.TAIO_CONTENT",$conditions['taioContent'],"%","%")." ";
         }
         if ($conditions['actDateFrom'] != NULL) {
             $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND TO_DATE('" . $conditions['actDateFrom'] . "','yyyy-mm-dd hh24:mi:ss') <= INCIDENT.ACT_DATE ";
@@ -964,45 +884,28 @@ SQL_INCIDENT_INFO;
             $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.ACT_DATE <= " . " TO_DATE('" . $conditions['actDateTo'] . "','yyyy-mm-dd hh24:mi:ss') ";
         }
         if ($conditions['actStartTimeFrom'] != NULL) {
-            // 2018.01.20 Newtouch更新 start
-//            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND TO_DATE('" . $conditions['actStartTimeFrom'] . "','yyyy-mm-dd hh24:mi:ss') <= INCIDENT.ACT_START_TIME ";
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND TO_DATE('" . $conditions['actStartTimeFrom'] . "'||' 00:00:00','yyyy-mm-dd hh24:mi:ss') <= INCIDENT.ACT_START_TIME ";
-            // 2018.01.20 Newtouch更新 end
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND TO_DATE('" . $conditions['actStartTimeFrom'] . "','yyyy-mm-dd hh24:mi:ss') <= INCIDENT.ACT_START_TIME ";
         }
         if ($conditions['actStartTimeTo'] != NULL) {
-            // 2018.01.20 Newtouch更新 start
-//            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.ACT_START_TIME <= " . " TO_DATE('" . $conditions['actStartTimeTo'] . "','yyyy-mm-dd hh24:mi:ss') ";
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.ACT_START_TIME <= " . " TO_DATE('" . $conditions['actStartTimeTo'] . "'||' 23:59:59','yyyy-mm-dd hh24:mi:ss') ";
-            // 2018.01.20 Newtouch更新 end
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.ACT_START_TIME <= " . " TO_DATE('" . $conditions['actStartTimeTo'] . "','yyyy-mm-dd hh24:mi:ss') ";
         }
-        // 2018.01.20 Newtouch削除 start
-//        if ($conditions['actEndTimeFrom'] != NULL) {
-//            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND TO_DATE('" . $conditions['actEndTimeFrom'] . "','yyyy-mm-dd hh24:mi:ss') <= INCIDENT.ACT_END_TIME ";
-//        }
-//        if ($conditions['actEndTimeTo'] != NULL) {
-//            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.ACT_END_TIME <= " . " TO_DATE('" . $conditions['actEndTimeTo'] . "','yyyy-mm-dd hh24:mi:ss') ";
-//        }
-        // 2018.01.20 Newtouch削除 end
         if ($conditions['actType'] != NULL) {
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.ACT_TYPE = " . "'" . $conditions['actType'] . "' ";
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.ACT_TYPE_CD = " . "'" . $conditions['actType'] . "' ";
         }
         if ($conditions['actDeptNm'] != NULL) {
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.ACT_DEPT_NM LIKE " . "'%" . $conditions['actDeptNm'] . "%' ";
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND ".CMN_MakeLikeCond(" "."INCIDENT.ACT_DEPT_NM",$conditions['actDeptNm'],"%","%")." ";
         }
         if ($conditions['actUserNm'] != NULL) {
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.ACT_USER_NM LIKE " . "'%" . $conditions['actUserNm'] . "%' ";
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND ".CMN_MakeLikeCond(" "."INCIDENT.ACT_USER_NM",$conditions['actUserNm'],"%","%")." ";
         }
         if ($conditions['actTel'] != NULL) {
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.ACT_TEL LIKE " . "'%" . $conditions['actTel'] . "%' ";
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND ".CMN_MakeLikeCond(" "."INCIDENT.ACT_TEL",$conditions['actTel'],"%","%")." ";
         }
         if ($conditions['actMail'] != NULL) {
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.ACT_MAIL LIKE " . "'%" . $conditions['actMail'] . "%' ";
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND ".CMN_MakeLikeCond(" "."INCIDENT.ACT_MAIL",$conditions['actMail'],"%","%")." ";
         }
         if ($conditions['actContent'] != NULL) {
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.ACT_CONTENT LIKE " . "'%" . $conditions['actContent'] . "%' ";
-        }
-        if ($conditions['productType'] != NULL) {
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.PRODUCT_TYPE = " . "'" . $conditions['productType'] . "' ";
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND ".CMN_MakeLikeCond(" "."INCIDENT.ACT_CONTENT",$conditions['actContent'],"%","%")." ";
         }
         if ($conditions['productTrigger'] != NULL) {
             $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.PRODUCT_TRIGGER = " . "'" . $conditions['productTrigger'] . "' ";
@@ -1016,13 +919,9 @@ SQL_INCIDENT_INFO;
         if ($conditions['productStatus'] != NULL) {
             $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.PRODUCT_STATUS = " . "'" . $conditions['productStatus'] . "' ";
         }
-        // 2018.01.09 Newtouch追加 start
-        if($conditions['prefCd'] != NULL && $conditions['prefCd'] != "0"){
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.PREF_ID = '" . $conditions['prefCd'] ."' ";
-        }
         
         if ($conditions['incidentType'] != NULL) {
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.INCIDENT_TYPE IN(" . $conditions['incidentType'] . ")";
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.INCIDENT_TYPE_CD IN(" . $conditions['incidentType'] . ")";
         }
 
         if ($conditions['incidentStatus'] != NULL) {
@@ -1030,13 +929,14 @@ SQL_INCIDENT_INFO;
         }
         
         if ($conditions['industryType'] != NULL) {
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.INDUSTRY_TYPE IN(" . $conditions['industryType'] . ")";
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.INDUSTRY_TYPE_CD IN(" . $conditions['industryType'] . ")";
         }
         
         if ($conditions['custType'] != NULL) {
             $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.CUST_TYPE_CD IN(" . $conditions['custType'] . ")";
         }   
-        // 2018.01.09 Newtouch追加 end
+
+        $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " ORDER BY TO_CHAR(INCIDENT.CALL_START_DATE,'yyyy/mm/dd hh24:mi:ss') DESC NULLS LAST ";
 
         $MultiExecSql = new MultiExecSql();
         $sqlResult = array();
@@ -1051,10 +951,10 @@ SQL_INCIDENT_INFO;
                     INCIDENT.INCIDENT_ID IN_INCIDENT_ID,
                     INCIDENT.INCIDENT_NO IN_INCIDENT_NO,
                     INCIDENT.INCIDENT_STS IN_INCIDENT_STS,
-                    INCIDENT.INCIDENT_TYPE IN_INCIDENT_TYPE,
+                    INCIDENT.INCIDENT_TYPE_CD IN_INCIDENT_TYPE_CD,
                     INCIDENT.PARENT_INCIDENT_NO IN_PARENT_INCIDENT_NO,
                     TO_CHAR(INCIDENT.INCIDENT_START_DATETIME,'yyyy/mm/dd hh24:mi:ss') IN_INCIDENT_START_DATETIME,
-                    INCIDENT.INDUSTRY_TYPE IN_INDUSTRY_TYPE,
+                    INCIDENT.INDUSTRY_TYPE_CD IN_INDUSTRY_TYPE_CD,
                     INCIDENT.INFO_SOURCE IN_INFO_SOURCE,
                     INCIDENT.INFO_PROVIDER IN_INFO_PROVIDER,
                     INCIDENT.INFO_PROVIDER_TEL IN_INFO_PROVIDER_TEL,
@@ -1065,10 +965,8 @@ SQL_INCIDENT_INFO;
                     INCIDENT.JIGYOSYUTAI_NM IN_JIGYOSYUTAI_NM,
                     INCIDENT.SETUBI_ID IN_SETUBI_ID,
                     INCIDENT.SETUBI_NM IN_SETUBI_NM,
-                    INCIDENT.PREF_ID IN_PREF_ID,
                     INCIDENT.PREF_NM IN_PREF_NM,
                     INCIDENT.DELIVERY_PJ_NO IN_DELIVERY_PJ_NO,
-                    INCIDENT.DELIVERY_PJ_NM IN_DELIVERY_PJ_NM,
                     INCIDENT.CUST_ID IN_CUST_ID,
                     INCIDENT.CUST_NM IN_CUST_NM,
                     INCIDENT.CUST_TYPE_CD IN_CUST_TYPE_CD,
@@ -1105,7 +1003,7 @@ SQL_INCIDENT_INFO;
                     INCIDENT.TAIO_MAIL IN_TAIO_MAIL,
                     INCIDENT.TAIO_CONTENT IN_TAIO_CONTENT,
                     TO_CHAR(INCIDENT.ACT_DATE,'yyyy/mm/dd hh24:mi:ss') IN_ACT_DATE,
-                    INCIDENT.ACT_TYPE IN_ACT_TYPE,
+                    INCIDENT.ACT_TYPE_CD IN_ACT_TYPE_CD,
                     TO_CHAR(INCIDENT.ACT_START_TIME,'yyyy/mm/dd hh24:mi:ss') IN_ACT_START_TIME,
                     TO_CHAR(INCIDENT.ACT_END_TIME,'yyyy/mm/dd hh24:mi:ss') IN_ACT_END_TIME,
                     INCIDENT.ACT_DEPT_CD IN_ACT_DEPT_CD,
@@ -1115,7 +1013,11 @@ SQL_INCIDENT_INFO;
                     INCIDENT.ACT_TEL IN_ACT_TEL,
                     INCIDENT.ACT_MAIL IN_ACT_MAIL,
                     INCIDENT.ACT_CONTENT IN_ACT_CONTENT,
-                    INCIDENT.PRODUCT_TYPE IN_PRODUCT_TYPE,
+                    INCIDENT.SOTI_KBN_CD IN_SOTI_KBN_CD,
+                    INCIDENT.SOTI_KBN_NM IN_SOTI_KBN_NM,
+                    INCIDENT.KISYU_KBN_CD IN_KISYU_KBN_CD,
+                    INCIDENT.KISYU_KBN_NM IN_KISYU_KBN_NM,
+                    INCIDENT.KISYU_NM IN_KISYU_NM,
                     INCIDENT.PRODUCT_TRIGGER IN_PRODUCT_TRIGGER,
                     INCIDENT.PRODUCT_HINDO IN_PRODUCT_HINDO,
                     INCIDENT.PRODUCT_GENSYO IN_PRODUCT_GENSYO,
@@ -1143,10 +1045,10 @@ SQL_INCIDENT_INFO;
         if ($conditions['keyword'] != NULL) {
             $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO ."AND (";
             $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " OR INCIDENT.INCIDENT_NO = " . "'" . $conditions['keyword'] . "' ";
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " OR INCIDENT.PREF_NM LIKE " . "'%" . $conditions['keyword'] . "%' ";
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " OR INCIDENT.KIJO_NM LIKE " . "'%" . $conditions['keyword'] . "%' ";
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " OR INCIDENT.SETUBI_NM LIKE " . "'%" . $conditions['keyword'] . "%' ";
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " OR INCIDENT.CALL_CONTENT LIKE " . "'%" . $conditions['keyword'] . "%' ";
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " OR ".CMN_MakeLikeCond(" "."INCIDENT.PREF_NM",$conditions['keyword'],"%","%")." ";
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " OR ".CMN_MakeLikeCond(" "."INCIDENT.KIJO_NM",$conditions['keyword'],"%","%")." ";
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " OR ".CMN_MakeLikeCond(" "."INCIDENT.SETUBI_NM",$conditions['keyword'],"%","%")." ";
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " OR ".CMN_MakeLikeCond(" "."INCIDENT.CALL_CONTENT",$conditions['keyword'],"%","%")." ";
             $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " OR INCIDENT.INFO_PROVIDER_TEL = " . "'" . $conditions['keyword'] . "' ";
             $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " OR INCIDENT.CONTACT_TEL = " . "'" . $conditions['keyword'] . "' ";
             $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " OR INCIDENT.CALL_TEL = " . "'" . $conditions['keyword'] . "' ";
@@ -1161,6 +1063,8 @@ SQL_INCIDENT_INFO;
             $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO .")";
             $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO .")";
         }
+
+        $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " ORDER BY TO_CHAR(INCIDENT.CALL_START_DATE,'yyyy/mm/dd hh24:mi:ss') DESC NULLS LAST ";
 
         $MultiExecSql = new MultiExecSql();
         $sqlResult = array();

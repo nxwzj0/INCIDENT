@@ -17,6 +17,7 @@ require_once('./dto/CommonDto.php');
  * @property String $fileNm
  * @property String $filePath
  * @property String $fsvrNm
+ * @property String $fileSize
  */
 class FileDto extends CommonDto{
 
@@ -25,6 +26,7 @@ class FileDto extends CommonDto{
     private $fileNm;
     private $filePath;
     private $fsvrNm;
+    private $fileSize;
 
     /**
      * @return String
@@ -96,4 +98,17 @@ class FileDto extends CommonDto{
         $this->fsvrNm = $fsvrNm;
     }
 
+    /**
+     * @return String
+     */
+    public function getFileSize() {
+        return $this->fileSize;
+    }
+
+    /**
+     * @param String $fileSize
+     */
+    public function setFileSize($fileSize) {
+        $this->fileSize = $fileSize;
+    }
 }

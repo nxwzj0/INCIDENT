@@ -24,7 +24,7 @@ class IncidentListDataGetAction extends CommonAction {
         $callContent = $P['callContent'];
         $kijoNm = $P['kijoNm'];
         $setubiNm = $P['setubiNm'];
-        $prefCd = $P['prefCd'];
+        $prefNm = $P['prefNm'];
         $callStartDateFrom = $P['callStartDateFrom'];
         $callStartDateTo = $P['callStartDateTo'];
         $incidentStartDateTimeFrom = $P['incidentStartDateTimeFrom'];
@@ -67,7 +67,7 @@ class IncidentListDataGetAction extends CommonAction {
         $IncidentListGetDto->setCallContent($callContent);
         $IncidentListGetDto->setKijoNm($kijoNm);
         $IncidentListGetDto->setSetubiNm($setubiNm);
-        $IncidentListGetDto->setPrefCd($prefCd);
+        $IncidentListGetDto->setPrefNm($prefNm);
         $IncidentListGetDto->setCallStartDateFrom($callStartDateFrom);
         $IncidentListGetDto->setCallStartDateTo($callStartDateTo);
         $IncidentListGetDto->setIncidentStartDateTimeFrom($incidentStartDateTimeFrom);

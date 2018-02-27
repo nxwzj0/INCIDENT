@@ -86,6 +86,7 @@ SQL_INCIDENT_INFO;
                 ( 
                     FILE_ID,
                     INCIDENT_ID,
+                    FILESIZ,
                     FILE_NAME,
                     FILE_PATH,
                     FSVR_NAME,
@@ -99,6 +100,7 @@ SQL_INCIDENT_INFO;
                  VALUES(
                     '{$conditions['fileId']}',
                     '{$conditions['incidentId']}',
+                    '{$conditions['fileSize']}',
                     '{$conditions['fileNm']}',
                     '{$conditions['filePath']}',
                     '{$conditions['fsvrNm']}',
@@ -127,25 +129,53 @@ SQL_INCIDENT_INFO;
                 SET
 SQL_INCIDENT_INFO;
 
-        $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " INCIDENT_ID = '{$conditions['incidentId']}',";
-        $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " FILE_NAME = '{$conditions['FileNm']}',";
-        $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " FILE_PATH = '{$conditions['filePath']}',";
-        $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " FSVR_NAME = '{$conditions['fsvrNm']}',";
-        $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " UPD_USER_ID = '{$conditions['loginUserId']}',";
-        $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " UPD_USER_NAME = '{$conditions['loginUserNm']}',";
-        $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " UPD_SECTION_CD = '{$conditions['loginSectionCd']}',";
-        $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " UPD_SECTION_NAME = '{$conditions['loginSectionNm']}',";
+        if ($conditions['incidentId'] != null) {
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " INCIDENT_ID = '{$conditions['incidentId']}',";
+        }
+        if ($conditions['fileNm'] != null) {
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " FILE_NAME = '{$conditions['fileNm']}',";
+        }
+        if ($conditions['filePath'] != null) {
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " FILE_PATH = '{$conditions['filePath']}',";
+        }
+        if ($conditions['fsvrNm'] != null) {
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " FSVR_NAME = '{$conditions['fsvrNm']}',";
+        }
+        if ($conditions['fileSize'] != null) {
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " FILESIZ = '{$conditions['fileSize']}',";
+        }
+        if ($conditions['loginUserId'] != null) {
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " UPD_USER_ID = '{$conditions['loginUserId']}',";
+        }
+        if ($conditions['loginUserNm'] != null) {
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " UPD_USER_NAME = '{$conditions['loginUserNm']}',";
+        }
+        if ($conditions['loginSectionCd'] != null) {
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " UPD_SECTION_CD = '{$conditions['loginSectionCd']}',";
+        }
+        if ($conditions['loginSectionNm'] != null) {
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " UPD_SECTION_NAME = '{$conditions['loginSectionNm']}',";
+        }
         $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " UPD_SECTION_NAME = SYSDATE, ";
         if ($conditions['delFlg'] != null) {
             $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " DEL_FLG = '{$conditions['delFlg']}' ";
         }
         $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " WHERE FILE_ID = {$conditions['fileId']}";
+
+        try {
+            $MultiExecSql->execute($SQL_INCIDENT_INFO, "");
+        } catch (Exception $e) {
+            print $e->getMessage();
+            return SAVE_FALSE;
+        }
+
+        return SAVE_TRUE;
     }
 
     public function selcetInsertFileId() {
         $SQL_INCIDENT_INFO = <<< SQL_INCIDENT_INFO
                 SELECT
-                    SEQ_INCIDENT_NO.NEXTVAL
+                    T_FILE_SEQ.NEXTVAL
                 FROM
                     DUAL
 SQL_INCIDENT_INFO;

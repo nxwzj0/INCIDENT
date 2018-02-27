@@ -71,7 +71,7 @@ class RelateIncidentGetAction extends CommonAction {
             if ($relateIncidentCustIdList) {
                 foreach ($relateIncidentCustIdList as $custIdOne) {
                     $tmp = array();
-                    $tmp["relateIncidentId"] = $kijiIdOne->getRelateIncidentId();
+                    $tmp["relateIncidentId"] = $custIdOne->getRelateIncidentId();
                     $tmp["relateIncidentNo"] = $custIdOne->getRelateIncidentNo();
                     $tmp["relateIncidentType"] = $custIdOne->getRelateIncidentType();
                     $tmp["relateIncidentStartDateTime"] = $custIdOne->getRelateIncidentStartDateTime();

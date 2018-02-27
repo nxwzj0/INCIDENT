@@ -35,7 +35,6 @@ class DtoCreateLogic extends CommonLogic{
         $pjInfo['PJ_PJ_SKAN_USER_NM'] = $incidentData['PJ_PJ_SKAN_USER_NM'];
         $pjInfo['PJ_PM_ID'] = $incidentData['PJ_PM_ID'];
         $pjInfo['PJ_PM_NM'] = $incidentData['PJ_PM_NM'];
-        $pjInfo['PJ_PREF_ID'] = $incidentData['PJ_PREF_ID'];
         $pjInfo['PJ_PREF_NM'] = $incidentData['PJ_PREF_NM'];
 
         // MR2情報をセット値
@@ -101,12 +100,12 @@ class DtoCreateLogic extends CommonLogic{
         $CommonService = new CommonService();
         $incidentStsNm = $CommonService->getConstArrayString(unserialize(INCIDENT_STS),$IncidentMainDto->getIncidentStsCd());// インシデントステータス名を取得
         $IncidentMainDto->setIncidentStsNm($incidentStsNm);// インシデントステータス名
-        $IncidentMainDto->setIncidentTypeCd($incidentData['IN_INCIDENT_TYPE']);//インシデント分類コード
+        $IncidentMainDto->setIncidentTypeCd($incidentData['IN_INCIDENT_TYPE_CD']);//インシデント分類コード
         $incidentTypeNm = $CommonService->getConstArrayString(unserialize(INCIDENT_TYPE),$IncidentMainDto->getIncidentTypeCd());// インシデント分類名を取得
         $IncidentMainDto->setIncidentTypeNm($incidentTypeNm);// インシデント分類名
         $IncidentMainDto->setParentIncidentNo($incidentData['IN_PARENT_INCIDENT_NO']);//親インシデント番号
         $IncidentMainDto->setIncidentStartDateTime($incidentData['IN_INCIDENT_START_DATETIME']);//発生日時
-        $IncidentMainDto->setIndustryTypeCd($incidentData['IN_INDUSTRY_TYPE']);//業種区分
+        $IncidentMainDto->setIndustryTypeCd($incidentData['IN_INDUSTRY_TYPE_CD']);//業種区分
         $IncidentMainDto->setInfoSource($incidentData['IN_INFO_SOURCE']);//情報提供元
         $IncidentMainDto->setInfoProvider($incidentData['IN_INFO_PROVIDER']);//情報提供者名
         $IncidentMainDto->setInfoProviderTel($incidentData['IN_INFO_PROVIDER_TEL']);//情報提供TEL
@@ -117,10 +116,8 @@ class DtoCreateLogic extends CommonLogic{
         $IncidentMainDto->setJigyosyutaiNm($incidentData['IN_JIGYOSYUTAI_NM']);//事業主体名
         $IncidentMainDto->setSetubiId($incidentData['IN_SETUBI_ID']);//設備ID
         $IncidentMainDto->setSetubiNm($incidentData['IN_SETUBI_NM']);//設備名
-        $IncidentMainDto->setPrefId($incidentData['IN_PREF_ID']);//都道府県ID
         $IncidentMainDto->setPrefNm($incidentData['IN_PREF_NM']);//都道府県名
         $IncidentMainDto->setDeliveryPjNo($incidentData['IN_DELIVERY_PJ_NO']);//納入プロジェクト番号
-        $IncidentMainDto->setDeliveryPjNm($incidentData['IN_DELIVERY_PJ_NM']);//納入プロジェクト名
         $IncidentMainDto->setCustId($incidentData['IN_CUST_ID']);//顧客ID
         $IncidentMainDto->setCustNm($incidentData['IN_CUST_NM']);//顧客名
         $IncidentMainDto->setCustTypeCd($incidentData['IN_CUST_TYPE_CD']);//顧客分類CD
@@ -175,7 +172,9 @@ class DtoCreateLogic extends CommonLogic{
         $IncidentMainDto->setTaioMail($incidentData['IN_TAIO_MAIL']);//対応メール
         $IncidentMainDto->setTaioContent($incidentData['IN_TAIO_CONTENT']);//対応内容
         $IncidentMainDto->setActDate($incidentData['IN_ACT_DATE']);//処置予定日
-        $IncidentMainDto->setActType($incidentData['IN_ACT_TYPE']);//処置区分
+        $IncidentMainDto->setActTypeCd($incidentData['IN_ACT_TYPE_CD']);//処置区分CD
+        $actTypeNm = $CommonService->getConstArrayString(unserialize(ACT_TYPE_NAME),$incidentData['IN_ACT_TYPE_CD']);// 処置区分名を取得
+        $IncidentMainDto->setActTypeNm($actTypeNm);//処置区分名
         $IncidentMainDto->setActStartTime($incidentData['IN_ACT_START_TIME']);//処置開始日時
         $IncidentMainDto->setActEndTime($incidentData['IN_ACT_END_TIME']);//処置終了日時
         $SectionDto = new SectionDto();
@@ -189,7 +188,11 @@ class DtoCreateLogic extends CommonLogic{
         $IncidentMainDto->setActTel($incidentData['IN_ACT_TEL']);//処置電話番号
         $IncidentMainDto->setActMail($incidentData['IN_ACT_MAIL']);//処置メール
         $IncidentMainDto->setActContent($incidentData['IN_ACT_CONTENT']);//処置内容 
-        $IncidentMainDto->setProductType($incidentData['IN_PRODUCT_TYPE']);//機種区分
+        $IncidentMainDto->setSotiKbnCd($incidentData['IN_SOTI_KBN_CD']);//装置区分CD
+        $IncidentMainDto->setSotiKbnNm($incidentData['IN_SOTI_KBN_NM']);//装置区分名
+        $IncidentMainDto->setKisyuKbnCd($incidentData['IN_KISYU_KBN_CD']);//機種区分CD
+        $IncidentMainDto->setKisyuKbnNm($incidentData['IN_KISYU_KBN_NM']);//機種区分名
+        $IncidentMainDto->setKisyuNm($incidentData['IN_KISYU_NM']);//機種名
         $IncidentMainDto->setProductTrigger($incidentData['IN_PRODUCT_TRIGGER']);//障害状況トリガー
         $IncidentMainDto->setProductHindo($incidentData['IN_PRODUCT_HINDO']);//障害状況頻度
         $IncidentMainDto->setProductGensyo($incidentData['IN_PRODUCT_GENSYO']);//障害状況現象

@@ -20,10 +20,10 @@ class IdentTIncidentModel extends CommonModel {
                     INCIDENT.INCIDENT_ID IN_INCIDENT_ID,
                     INCIDENT.INCIDENT_NO IN_INCIDENT_NO,
                     INCIDENT.INCIDENT_STS IN_INCIDENT_STS,
-                    INCIDENT.INCIDENT_TYPE IN_INCIDENT_TYPE,
+                    INCIDENT.INCIDENT_TYPE_CD IN_INCIDENT_TYPE_CD,
+                    INCIDENT.INDUSTRY_TYPE_CD IN_INDUSTRY_TYPE_CD,
                     INCIDENT.PARENT_INCIDENT_NO IN_PARENT_INCIDENT_NO,
                     TO_CHAR(INCIDENT.INCIDENT_START_DATETIME,'yyyy/mm/dd hh24:mi:ss') IN_INCIDENT_START_DATETIME,
-                    INCIDENT.INDUSTRY_TYPE IN_INDUSTRY_TYPE,
                     INCIDENT.INFO_SOURCE IN_INFO_SOURCE,
                     INCIDENT.INFO_PROVIDER IN_INFO_PROVIDER,
                     INCIDENT.INFO_PROVIDER_TEL IN_INFO_PROVIDER_TEL,
@@ -34,10 +34,8 @@ class IdentTIncidentModel extends CommonModel {
                     INCIDENT.JIGYOSYUTAI_NM IN_JIGYOSYUTAI_NM,
                     INCIDENT.SETUBI_ID IN_SETUBI_ID,
                     INCIDENT.SETUBI_NM IN_SETUBI_NM,
-                    INCIDENT.PREF_ID IN_PREF_ID,
                     INCIDENT.PREF_NM IN_PREF_NM,
                     INCIDENT.DELIVERY_PJ_NO IN_DELIVERY_PJ_NO,
-                    INCIDENT.DELIVERY_PJ_NM IN_DELIVERY_PJ_NM,
                     INCIDENT.CUST_ID IN_CUST_ID,
                     INCIDENT.CUST_NM IN_CUST_NM,
                     INCIDENT.CUST_TYPE_CD IN_CUST_TYPE_CD,
@@ -74,7 +72,7 @@ class IdentTIncidentModel extends CommonModel {
                     INCIDENT.TAIO_MAIL IN_TAIO_MAIL,
                     INCIDENT.TAIO_CONTENT IN_TAIO_CONTENT,
                     TO_CHAR(INCIDENT.ACT_DATE,'yyyy/mm/dd hh24:mi:ss') IN_ACT_DATE,
-                    INCIDENT.ACT_TYPE IN_ACT_TYPE,
+                    INCIDENT.ACT_TYPE_CD IN_ACT_TYPE_CD,
                     TO_CHAR(INCIDENT.ACT_START_TIME,'yyyy/mm/dd hh24:mi:ss') IN_ACT_START_TIME,
                     TO_CHAR(INCIDENT.ACT_END_TIME,'yyyy/mm/dd hh24:mi:ss') IN_ACT_END_TIME,
                     INCIDENT.ACT_DEPT_CD IN_ACT_DEPT_CD,
@@ -84,7 +82,11 @@ class IdentTIncidentModel extends CommonModel {
                     INCIDENT.ACT_TEL IN_ACT_TEL,
                     INCIDENT.ACT_MAIL IN_ACT_MAIL,
                     INCIDENT.ACT_CONTENT IN_ACT_CONTENT,
-                    INCIDENT.PRODUCT_TYPE IN_PRODUCT_TYPE,
+                    INCIDENT.SOTI_KBN_CD IN_SOTI_KBN_CD,
+                    INCIDENT.SOTI_KBN_NM IN_SOTI_KBN_NM,
+                    INCIDENT.KISYU_KBN_CD IN_KISYU_KBN_CD,
+                    INCIDENT.KISYU_KBN_NM IN_KISYU_KBN_NM,
+                    INCIDENT.KISYU_NM IN_KISYU_NM,
                     INCIDENT.PRODUCT_TRIGGER IN_PRODUCT_TRIGGER,
                     INCIDENT.PRODUCT_HINDO IN_PRODUCT_HINDO,
                     INCIDENT.PRODUCT_GENSYO IN_PRODUCT_GENSYO,
@@ -120,10 +122,10 @@ SQL_INCIDENT_INFO;
                 INCIDENT.INCIDENT_ID IN_INCIDENT_ID,
                 INCIDENT.INCIDENT_NO IN_INCIDENT_NO,
                 INCIDENT.INCIDENT_STS IN_INCIDENT_STS,
-                INCIDENT.INCIDENT_TYPE IN_INCIDENT_TYPE,
+                INCIDENT.INCIDENT_TYPE_CD IN_INCIDENT_TYPE_CD,
                 INCIDENT.PARENT_INCIDENT_NO IN_PARENT_INCIDENT_NO,
                 TO_CHAR(INCIDENT.INCIDENT_START_DATETIME,'yyyy/mm/dd hh24:mi:ss') IN_INCIDENT_START_DATETIME,
-                INCIDENT.INDUSTRY_TYPE IN_INDUSTRY_TYPE,
+                INCIDENT.INDUSTRY_TYPE_CD IN_INDUSTRY_TYPE_CD,
                 INCIDENT.INFO_SOURCE IN_INFO_SOURCE,
                 INCIDENT.INFO_PROVIDER IN_INFO_PROVIDER,
                 INCIDENT.INFO_PROVIDER_TEL IN_INFO_PROVIDER_TEL,
@@ -134,10 +136,8 @@ SQL_INCIDENT_INFO;
                 INCIDENT.JIGYOSYUTAI_NM IN_JIGYOSYUTAI_NM,
                 INCIDENT.SETUBI_ID IN_SETUBI_ID,
                 INCIDENT.SETUBI_NM IN_SETUBI_NM,
-                INCIDENT.PREF_ID IN_PREF_ID,
                 INCIDENT.PREF_NM IN_PREF_NM,
                 INCIDENT.DELIVERY_PJ_NO IN_DELIVERY_PJ_NO,
-                INCIDENT.DELIVERY_PJ_NM IN_DELIVERY_PJ_NM,
                 INCIDENT.CUST_ID IN_CUST_ID,
                 INCIDENT.CUST_NM IN_CUST_NM,
                 INCIDENT.CUST_TYPE_CD IN_CUST_TYPE_CD,
@@ -174,7 +174,7 @@ SQL_INCIDENT_INFO;
                 INCIDENT.TAIO_MAIL IN_TAIO_MAIL,
                 INCIDENT.TAIO_CONTENT IN_TAIO_CONTENT,
                 TO_CHAR(INCIDENT.ACT_DATE,'yyyy/mm/dd hh24:mi:ss') IN_ACT_DATE,
-                INCIDENT.ACT_TYPE IN_ACT_TYPE,
+                INCIDENT.ACT_TYPE_CD IN_ACT_TYPE_CD,
                 TO_CHAR(INCIDENT.ACT_START_TIME,'yyyy/mm/dd hh24:mi:ss') IN_ACT_START_TIME,
                 TO_CHAR(INCIDENT.ACT_END_TIME,'yyyy/mm/dd hh24:mi:ss') IN_ACT_END_TIME,
                 INCIDENT.ACT_DEPT_CD IN_ACT_DEPT_CD,
@@ -184,7 +184,11 @@ SQL_INCIDENT_INFO;
                 INCIDENT.ACT_TEL IN_ACT_TEL,
                 INCIDENT.ACT_MAIL IN_ACT_MAIL,
                 INCIDENT.ACT_CONTENT IN_ACT_CONTENT,
-                INCIDENT.PRODUCT_TYPE IN_PRODUCT_TYPE,
+                INCIDENT.SOTI_KBN_CD IN_SOTI_KBN_CD,
+                INCIDENT.SOTI_KBN_NM IN_SOTI_KBN_NM,
+                INCIDENT.KISYU_KBN_CD IN_KISYU_KBN_CD,
+                INCIDENT.KISYU_KBN_NM IN_KISYU_KBN_NM,
+                INCIDENT.KISYU_NM IN_KISYU_NM,
                 INCIDENT.PRODUCT_TRIGGER IN_PRODUCT_TRIGGER,
                 INCIDENT.PRODUCT_HINDO IN_PRODUCT_HINDO,
                 INCIDENT.PRODUCT_GENSYO IN_PRODUCT_GENSYO,
@@ -220,6 +224,8 @@ SQL_INCIDENT_INFO;
         if ($conditions['excludeIncidentId'] != null) {
             $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.INCIDENT_ID != " . "'" . $conditions['excludeIncidentId'] . "'";
         }
+        
+        $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " ORDER BY TO_CHAR(INCIDENT.CALL_START_DATE,'yyyy/mm/dd hh24:mi:ss') DESC NULLS LAST ";
 
         $MultiExecSql = new MultiExecSql();
         $sqlResult = array();
@@ -232,7 +238,7 @@ SQL_INCIDENT_INFO;
             SELECT
                 INCIDENT.INCIDENT_ID IN_INCIDENT_ID,
                 INCIDENT.INCIDENT_NO IN_INCIDENT_NO,
-                INCIDENT.INCIDENT_TYPE IN_INCIDENT_TYPE,
+                INCIDENT.INCIDENT_TYPE_CD IN_INCIDENT_TYPE_CD_CD,
                 TO_CHAR(INCIDENT.INCIDENT_START_DATETIME,'yyyy/mm/dd') IN_INCIDENT_START_DATETIME,
                 INCIDENT.KIJO_NM IN_KIJO_NM,
                 INCIDENT.CUST_NM IN_CUST_NM,
@@ -270,10 +276,10 @@ SQL_INCIDENT_INFO;
                     INCIDENT.INCIDENT_ID IN_INCIDENT_ID,
                     INCIDENT.INCIDENT_NO IN_INCIDENT_NO,
                     INCIDENT.INCIDENT_STS IN_INCIDENT_STS,
-                    INCIDENT.INCIDENT_TYPE IN_INCIDENT_TYPE,
+                    INCIDENT.INCIDENT_TYPE_CD IN_INCIDENT_TYPE_CD,
                     INCIDENT.PARENT_INCIDENT_NO IN_PARENT_INCIDENT_NO,
                     TO_CHAR(INCIDENT.INCIDENT_START_DATETIME,'yyyy/mm/dd hh24:mi:ss') IN_INCIDENT_START_DATETIME,
-                    INCIDENT.INDUSTRY_TYPE IN_INDUSTRY_TYPE,
+                    INCIDENT.INDUSTRY_TYPE_CD IN_INDUSTRY_TYPE_CD,
                     INCIDENT.INFO_SOURCE IN_INFO_SOURCE,
                     INCIDENT.INFO_PROVIDER IN_INFO_PROVIDER,
                     INCIDENT.INFO_PROVIDER_TEL IN_INFO_PROVIDER_TEL,
@@ -284,10 +290,8 @@ SQL_INCIDENT_INFO;
                     INCIDENT.JIGYOSYUTAI_NM IN_JIGYOSYUTAI_NM,
                     INCIDENT.SETUBI_ID IN_SETUBI_ID,
                     INCIDENT.SETUBI_NM IN_SETUBI_NM,
-                    INCIDENT.PREF_ID IN_PREF_ID,
                     INCIDENT.PREF_NM IN_PREF_NM,
                     INCIDENT.DELIVERY_PJ_NO IN_DELIVERY_PJ_NO,
-                    INCIDENT.DELIVERY_PJ_NM IN_DELIVERY_PJ_NM,
                     INCIDENT.CUST_ID IN_CUST_ID,
                     INCIDENT.CUST_NM IN_CUST_NM,
                     INCIDENT.CUST_TYPE_CD IN_CUST_TYPE_CD,
@@ -324,7 +328,7 @@ SQL_INCIDENT_INFO;
                     INCIDENT.TAIO_MAIL IN_TAIO_MAIL,
                     INCIDENT.TAIO_CONTENT IN_TAIO_CONTENT,
                     TO_CHAR(INCIDENT.ACT_DATE,'yyyy/mm/dd hh24:mi:ss') IN_ACT_DATE,
-                    INCIDENT.ACT_TYPE IN_ACT_TYPE,
+                    INCIDENT.ACT_TYPE_CD IN_ACT_TYPE_CD,
                     TO_CHAR(INCIDENT.ACT_START_TIME,'yyyy/mm/dd hh24:mi:ss') IN_ACT_START_TIME,
                     TO_CHAR(INCIDENT.ACT_END_TIME,'yyyy/mm/dd hh24:mi:ss') IN_ACT_END_TIME,
                     INCIDENT.ACT_DEPT_CD IN_ACT_DEPT_CD,
@@ -334,7 +338,11 @@ SQL_INCIDENT_INFO;
                     INCIDENT.ACT_TEL IN_ACT_TEL,
                     INCIDENT.ACT_MAIL IN_ACT_MAIL,
                     INCIDENT.ACT_CONTENT IN_ACT_CONTENT,
-                    INCIDENT.PRODUCT_TYPE IN_PRODUCT_TYPE,
+                    INCIDENT.SOTI_KBN_CD IN_SOTI_KBN_CD,
+                    INCIDENT.SOTI_KBN_NM IN_SOTI_KBN_NM,
+                    INCIDENT.KISYU_KBN_CD IN_KISYU_KBN_CD,
+                    INCIDENT.KISYU_KBN_NM IN_KISYU_KBN_NM,
+                    INCIDENT.KISYU_NM IN_KISYU_NM,
                     INCIDENT.PRODUCT_TRIGGER IN_PRODUCT_TRIGGER,
                     INCIDENT.PRODUCT_HINDO IN_PRODUCT_HINDO,
                     INCIDENT.PRODUCT_GENSYO IN_PRODUCT_GENSYO,
@@ -372,6 +380,8 @@ SQL_INCIDENT_INFO;
             $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . $custNm . " ) ";
         }
 
+        $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " ORDER BY TO_CHAR(INCIDENT.CALL_START_DATE,'yyyy/mm/dd hh24:mi:ss') DESC NULLS LAST ";
+
         $MultiExecSql = new MultiExecSql();
         $sqlResult = array();
         $MultiExecSql->getResultData($SQL_INCIDENT_INFO, $sqlResult);
@@ -386,10 +396,10 @@ SQL_INCIDENT_INFO;
                     INCIDENT_ID,
                     INCIDENT_NO,
                     INCIDENT_STS,
-                    INCIDENT_TYPE,
+                    INCIDENT_TYPE_CD,
                     PARENT_INCIDENT_NO,
                     INCIDENT_START_DATETIME,
-                    INDUSTRY_TYPE,
+                    INDUSTRY_TYPE_CD,
                     INFO_SOURCE,
                     INFO_PROVIDER,
                     INFO_PROVIDER_TEL,
@@ -400,10 +410,8 @@ SQL_INCIDENT_INFO;
                     JIGYOSYUTAI_NM,
                     SETUBI_ID,
                     SETUBI_NM,
-                    PREF_ID,
                     PREF_NM,
                     DELIVERY_PJ_NO,
-                    DELIVERY_PJ_NM,
                     CUST_ID,
                     CUST_NM,
                     CUST_TYPE_CD,
@@ -440,7 +448,7 @@ SQL_INCIDENT_INFO;
                     TAIO_MAIL,
                     TAIO_CONTENT,
                     ACT_DATE,
-                    ACT_TYPE,
+                    ACT_TYPE_CD,
                     ACT_START_TIME,
                     ACT_END_TIME,
                     ACT_DEPT_CD,
@@ -450,7 +458,11 @@ SQL_INCIDENT_INFO;
                     ACT_TEL,
                     ACT_MAIL,
                     ACT_CONTENT,
-                    PRODUCT_TYPE,
+                    SOTI_KBN_CD,
+                    SOTI_KBN_NM,
+                    KISYU_KBN_CD,
+                    KISYU_KBN_NM,
+                    KISYU_NM,
                     PRODUCT_TRIGGER,
                     PRODUCT_HINDO,
                     PRODUCT_GENSYO,
@@ -464,7 +476,7 @@ SQL_INCIDENT_INFO;
                 )
                  VALUES(
                     '{$conditions['incidentId']}',
-                    FC_GET_INCIDENT_NO,
+                    to_char(sysdate,'yyyymm') || 'I' || '{$conditions['incidentNo']}',
                     '{$conditions['incidentStsCd']}',
                     '{$conditions['incidentTypeCd']}',
                     '{$conditions['parentIncidentNo']}',
@@ -480,10 +492,8 @@ SQL_INCIDENT_INFO;
                     '{$conditions['jigyosyutaiNm']}',
                     '{$conditions['setubiId']}',
                     '{$conditions['setubiNm']}',
-                    '{$conditions['prefId']}',
                     '{$conditions['prefNm']}',
                     '{$conditions['deliveryPjNo']}',
-                    '{$conditions['deliveryPjNm']}',
                     '{$conditions['custId']}',
                     '{$conditions['custNm']}',
                     '{$conditions['custTypeCd']}',
@@ -530,7 +540,11 @@ SQL_INCIDENT_INFO;
                     '{$conditions['actTel']}',
                     '{$conditions['actMail']}',
                     '{$conditions['actContent']}',
-                    '{$conditions['productType']}',
+                    '{$conditions['sotiKbnCd']}',
+                    '{$conditions['sotiKbnNm']}',
+                    '{$conditions['kisyuKbnCd']}',
+                    '{$conditions['kisyuKbnNm']}',
+                    '{$conditions['kisyuNm']}',
                     '{$conditions['productTrigger']}',
                     '{$conditions['productHindo']}',
                     '{$conditions['productGensyo']}',
@@ -564,228 +578,82 @@ SQL_INCIDENT_INFO;
         if ($conditions['incidentNo'] != null) {
             $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " INCIDENT_NO = '{$conditions['incidentNo']}',";
         }
-//        if ($conditions['incidentStsCd'] != null) {
             $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " INCIDENT_STS = '{$conditions['incidentStsCd']}',";
-//        }
-//        if ($conditions['incidentTypeCd'] != null) {
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " INCIDENT_TYPE = '{$conditions['incidentTypeCd']}',";
-//        }
-//        if ($conditions['parentIncidentNo'] != null) {
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " INCIDENT_TYPE_CD = '{$conditions['incidentTypeCd']}',";
             $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " PARENT_INCIDENT_NO = '{$conditions['parentIncidentNo']}',";
-//        }
-//        if ($conditions['incidentStartDateTime'] != null) {
             $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " INCIDENT_START_DATETIME = to_date('{$conditions['incidentStartDateTime']}','yyyy-mm-dd hh24:mi:ss'),";
-//        }
-//        if ($conditions['industryTypeCd'] != null) {
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " INDUSTRY_TYPE = '{$conditions['industryTypeCd']}',";
-//        }
-//        if ($conditions['infoSource'] != null) {
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " INDUSTRY_TYPE_CD = '{$conditions['industryTypeCd']}',";
             $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " INFO_SOURCE = '{$conditions['infoSource']}',";
-//        }
-//        if ($conditions['infoProvider'] != null) {
             $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " INFO_PROVIDER = '{$conditions['infoProvider']}',";
-//        }
-//        if ($conditions['infoProviderTel'] != null) {
             $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " INFO_PROVIDER_TEL = '{$conditions['infoProviderTel']}',";
-//        }
-//        if ($conditions['memo'] != null) {
             $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " MEMO = '{$conditions['memo']}',";
-//        }
-//        if ($conditions['kijoId'] != null) {
             $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " KIJO_ID = '{$conditions['kijoId']}',";
-//        }
-//        if ($conditions['kijoNm'] != null) {
             $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " KIJO_NM = '{$conditions['kijoNm']}',";
-//        }
-//        if ($conditions['jigyosyutaiId'] != null) {
             $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " JIGYOSYUTAI_ID = '{$conditions['jigyosyutaiId']}',";
-//        }
-//        if ($conditions['jigyosyutaiNm'] != null) {
             $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " JIGYOSYUTAI_NM = '{$conditions['jigyosyutaiNm']}',";
-//        }
-//        if ($conditions['setubiId'] != null) {
             $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " SETUBI_ID = '{$conditions['setubiId']}',";
-//        }
-//        if ($conditions['setubiNm'] != null) {
             $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " SETUBI_NM = '{$conditions['setubiNm']}',";
-//        }
-//        if ($conditions['prefId'] != null) {
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " PREF_ID = '{$conditions['prefId']}',";
-//        }
-//        if ($conditions['prefNm'] != null) {
             $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " PREF_NM = '{$conditions['prefNm']}',";
-//        }
-//        if ($conditions['deliveryPjNo'] != null) {
             $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " DELIVERY_PJ_NO = '{$conditions['deliveryPjNo']}',";
-//        }
-//        if ($conditions['deliveryPjNm'] != null) {
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " DELIVERY_PJ_NM = '{$conditions['deliveryPjNm']}',";
-//        }
-//        if ($conditions['custId'] != null) {
             $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " CUST_ID = '{$conditions['custId']}',";
-//        }
-//        if ($conditions['custNm'] != null) {
             $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " CUST_NM = '{$conditions['custNm']}',";
-//        }
-//        if ($conditions['custTypeCd'] != null) {
             $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " CUST_TYPE_CD = '{$conditions['custTypeCd']}',";
-//        }
-//        if ($conditions['custTypeNm'] != null) {
             $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " CUST_TYPE_NM = '{$conditions['custTypeNm']}',";
-//        }
-//        if ($conditions['custDept'] != null) {
             $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " CUST_DEPT = '{$conditions['custDept']}',";
-//        }
-//        if ($conditions['requester'] != null) {
             $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " REQUESTER = '{$conditions['requester']}',";
-//        }
-//        if ($conditions['contactTel'] != null) {
             $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " CONTACT_TEL = '{$conditions['contactTel']}',";
-//        }
-//        if ($conditions['contactFax'] != null) {
             $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " CONTACT_FAX = '{$conditions['contactFax']}',";
-//        }
-//        if ($conditions['contactMail'] != null) {
             $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " CONTACT_MAIL = '{$conditions['contactMail']}',";
-//        }
-//        if ($conditions['salesDeptCd'] != null) {
             $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " SALES_DEPT_CD = '{$conditions['salesDeptCd']}',";
-//        }
-//        if ($conditions['salesDeptNm'] != null) {
             $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " SALES_DEPT_NM = '{$conditions['salesDeptNm']}',";
-//        }
-//        if ($conditions['salesUserId'] != null) {
             $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " SALES_USER_ID = '{$conditions['salesUserId']}',";
-//        }
-//        if ($conditions['salesUserNm'] != null) {
             $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " SALES_USER_NM = '{$conditions['salesUserNm']}',";
-//        }
-//        if ($conditions['skanDeptCd'] != null) {
             $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " SKAN_DEPT_CD = '{$conditions['skanDeptCd']}',";
-//        }
-//        if ($conditions['skanDeptNm'] != null) {
             $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " SKAN_DEPT_NM = '{$conditions['skanDeptNm']}',";
-//        }
-//        if ($conditions['skanUserId'] != null) {
             $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " SKAN_USER_ID = '{$conditions['skanUserId']}',";
-//        }
-//        if ($conditions['skanUserNm'] != null) {
             $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " SKAN_USER_NM = '{$conditions['skanUserNm']}',";
-//        }
-//        if ($conditions['callStartDate'] != null) {
             $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " CALL_START_DATE = to_date('{$conditions['callStartDate']}','yyyy-mm-dd hh24:mi:ss'),";
-//        }
-//        if ($conditions['callEndDate'] != null) {
             $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " CALL_END_DATE = to_date('{$conditions['callEndDate']}','yyyy-mm-dd hh24:mi:ss'),";
-//        }
-//        if ($conditions['callDeptCd'] != null) {
             $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " CALL_DEPT_CD = '{$conditions['callDeptCd']}',";
-//        }
-//        if ($conditions['callDeptNm'] != null) {
             $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " CALL_DEPT_NM = '{$conditions['callDeptNm']}',";
-//        }
-//        if ($conditions['callUserId'] != null) {
             $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " CALL_USER_CD = '{$conditions['callUserId']}',";
-//        }
-//        if ($conditions['callUserNm'] != null) {
             $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " CALL_USER_NM = '{$conditions['callUserNm']}',";
-//        }
-//        if ($conditions['callTel'] != null) {
             $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " CALL_TEL = '{$conditions['callTel']}',";
-//        }
-//        if ($conditions['callMail'] != null) {
             $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " CALL_MAIL = '{$conditions['callMail']}',";
-//        }
-//        if ($conditions['callContent'] != null) {
             $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " CALL_CONTENT = '{$conditions['callContent']}',";
-//        }
-//        if ($conditions['taioStartDate'] != null) {
             $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " TAIO_START_DATE = to_date('{$conditions['taioStartDate']}','yyyy-mm-dd hh24:mi:ss'),";
-//        }
-//        if ($conditions['taioEndDate'] != null) {
             $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " TAIO_END_DATE = to_date('{$conditions['taioEndDate']}','yyyy-mm-dd hh24:mi:ss'),";
-//        }
-//        if ($conditions['taioDeptCd'] != null) {
             $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " TAIO_DEPT_CD = '{$conditions['taioDeptCd']}',";
-//        }
-//        if ($conditions['taioDeptNm'] != null) {
             $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " TAIO_DEPT_NM = '{$conditions['taioDeptNm']}',";
-//        }
-//        if ($conditions['taioUserId'] != null) {
             $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " TAIO_USER_ID = '{$conditions['taioUserId']}',";
-//        }
-//        if ($conditions['taioUserNm'] != null) {
             $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " TAIO_USER_NM = '{$conditions['taioUserNm']}',";
-//        }
-//        if ($conditions['taioTel'] != null) {
             $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " TAIO_TEL = '{$conditions['taioTel']}',";
-//        }
-//        if ($conditions['taioMail'] != null) {
             $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " TAIO_MAIL = '{$conditions['taioMail']}',";
-//        }
-//        if ($conditions['taioContent'] != null) {
             $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " TAIO_CONTENT = '{$conditions['taioContent']}',";
-//        }
-//        if ($conditions['actDate'] != null) {
             $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " ACT_DATE = to_date('{$conditions['actDate']}','yyyy-mm-dd hh24:mi:ss'),";
-//        }
-//        if ($conditions['actType'] != null) {
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " ACT_TYPE = '{$conditions['actType']}',";
-//        }
-//        if ($conditions['actStartTime'] != null) {
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " ACT_TYPE_CD = '{$conditions['actType']}',";
             $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " ACT_START_TIME = to_date('{$conditions['actStartTime']}','yyyy-mm-dd hh24:mi:ss'),";
-//        }
-//        if ($conditions['actEndTime'] != null) {
             $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " ACT_END_TIME = to_date('{$conditions['actEndTime']}','yyyy-mm-dd hh24:mi:ss'),";
-//        }
-//        if ($conditions['actDeptCd'] != null) {
             $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " ACT_DEPT_CD = '{$conditions['actDeptCd']}',";
-//        }
-//        if ($conditions['actDeptNm'] != null) {
             $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " ACT_DEPT_NM = '{$conditions['actDeptNm']}',";
-//        }
-//        if ($conditions['actUserId'] != null) {
             $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " ACT_USER_ID = '{$conditions['actUserId']}',";
-//        }
-//        if ($conditions['actUserNm'] != null) {
             $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " ACT_USER_NM = '{$conditions['actUserNm']}',";
-//        }
-//        if ($conditions['actTel'] != null) {
             $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " ACT_TEL = '{$conditions['actTel']}',";
-//        }
-//        if ($conditions['actMail'] != null) {
             $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " ACT_MAIL = '{$conditions['actMail']}',";
-//        }
-//        if ($conditions['actContent'] != null) {
             $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " ACT_CONTENT = '{$conditions['actContent']}',";
-//        }
-//        if ($conditions['productType'] != null) {
-            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " PRODUCT_TYPE = '{$conditions['productType']}',";
-//        }
-//        if ($conditions['productTrigger'] != null) {
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " SOTI_KBN_CD = '{$conditions['sotiKbnCd']}',";
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " SOTI_KBN_NM = '{$conditions['sotiKbnNm']}',";
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " KISYU_KBN_CD = '{$conditions['kisyuKbnCd']}',";
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " KISYU_KBN_NM = '{$conditions['kisyuKbnNm']}',";
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " KISYU_NM = '{$conditions['kisyuNm']}',";
             $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " PRODUCT_TRIGGER = '{$conditions['productTrigger']}',";
-//        }
-//        if ($conditions['productHindo'] != null) {
             $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " PRODUCT_HINDO = '{$conditions['productHindo']}',";
-//        }
-//        if ($conditions['productGensyo'] != null) {
             $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " PRODUCT_GENSYO = '{$conditions['productGensyo']}',";
-//        }
-//        if ($conditions['productStatus'] != null) {
             $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " PRODUCT_STATUS = '{$conditions['productStatus']}',";
-//        }
-//        if ($conditions['loginUserId'] != null) {
             $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " UPD_USER_ID = '{$conditions['loginUserId']}',";
-//        }
-//        if ($conditions['loginUserNm'] != null) {
             $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " UPD_USER_NAME = '{$conditions['loginUserNm']}',";
-//        }
-//        if ($conditions['loginSectionCd'] != null) {
             $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " UPD_SECTION_CD = '{$conditions['loginSectionCd']}',";
-//        }
-//        if ($conditions['loginSectionNm'] != null) {
             $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " UPD_SECTION_NAME = '{$conditions['loginSectionNm']}',";
-//        }
 
         $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . "UPD_DATE = SYSDATE, DEL_FLG = '0' WHERE INCIDENT_ID = {$conditions['incidentId']}";
 
@@ -807,6 +675,20 @@ SQL_INCIDENT_INFO;
 SQL_INCIDENT_INFO;
 
         $MultiExecSql = new MultiExecSql();
+        $sqlResult = array();
+        $MultiExecSql->getResultData($SQL_INCIDENT_INFO, $sqlResult);
+        return $sqlResult;
+    }
+    
+    // インシデント番号の下3桁を発番する
+    public function selcetInsertIncidentNo($conditions, $MultiExecSql) {
+        $SQL_INCIDENT_INFO = <<< SQL_INCIDENT_INFO
+                SELECT
+                    Lpad(INCIDENT_NUMBERING.fetchNumbering('インシデント番号', to_char(sysdate,'yyyymm') || 'I', '{$conditions['loginUserId']}'), 3, '0') INCIDENT_NO
+                FROM
+                    DUAL
+SQL_INCIDENT_INFO;
+
         $sqlResult = array();
         $MultiExecSql->getResultData($SQL_INCIDENT_INFO, $sqlResult);
         return $sqlResult;

@@ -76,7 +76,6 @@ class IncidentSaveLogic extends CommonLogic {
         $incidentDataArrayNew['prefId'] = $incidentDataDtoNew->getPrefId();
         $incidentDataArrayNew['prefNm'] = $incidentDataDtoNew->getPrefNm();
         $incidentDataArrayNew['deliveryPjNo'] = $incidentDataDtoNew->getDeliveryPjNo();
-        $incidentDataArrayNew['deliveryPjNm'] = $incidentDataDtoNew->getDeliveryPjNm();
         $incidentDataArrayNew['custId'] = $incidentDataDtoNew->getCustId();
         $incidentDataArrayNew['custNm'] = $incidentDataDtoNew->getCustNm();
         $incidentDataArrayNew['custTypeCd'] = $incidentDataDtoNew->getCustTypeCd();
@@ -129,7 +128,7 @@ class IncidentSaveLogic extends CommonLogic {
         $incidentDataArrayNew['taioMail'] = $incidentDataDtoNew->getTaioMail();
         $incidentDataArrayNew['taioContent'] = $incidentDataDtoNew->getTaioContent();
         $incidentDataArrayNew['actDate'] = $incidentDataDtoNew->getActDate();
-        $incidentDataArrayNew['actType'] = $incidentDataDtoNew->getActType();
+        $incidentDataArrayNew['actType'] = $incidentDataDtoNew->getActTypeCd();
         $incidentDataArrayNew['actStartTime'] = $incidentDataDtoNew->getActStartTime();
         $incidentDataArrayNew['actEndTime'] = $incidentDataDtoNew->getActEndTime();
         if ($incidentDataDtoNew->getActDept() != null) {
@@ -143,7 +142,11 @@ class IncidentSaveLogic extends CommonLogic {
         $incidentDataArrayNew['actTel'] = $incidentDataDtoNew->getActTel();
         $incidentDataArrayNew['actMail'] = $incidentDataDtoNew->getActMail();
         $incidentDataArrayNew['actContent'] = $incidentDataDtoNew->getActContent();
-        $incidentDataArrayNew['productType'] = $incidentDataDtoNew->getProductType();
+        $incidentDataArrayNew['sotiKbnCd'] = $incidentDataDtoNew->getSotiKbnCd();
+        $incidentDataArrayNew['sotiKbnNm'] = $incidentDataDtoNew->getSotiKbnNm();
+        $incidentDataArrayNew['kisyuKbnCd'] = $incidentDataDtoNew->getKisyuKbnCd();
+        $incidentDataArrayNew['kisyuKbnNm'] = $incidentDataDtoNew->getKisyuKbnNm();
+        $incidentDataArrayNew['kisyuNm'] = $incidentDataDtoNew->getKisyuNm();
         $incidentDataArrayNew['productTrigger'] = $incidentDataDtoNew->getProductTrigger();
         $incidentDataArrayNew['productHindo'] = $incidentDataDtoNew->getProductHindo();
         $incidentDataArrayNew['productGensyo'] = $incidentDataDtoNew->getProductGensyo();
@@ -179,6 +182,24 @@ class IncidentSaveLogic extends CommonLogic {
             $incidentDataArrayNew['incidentId'] = $incidentIdArray[0]['NEXTVAL'];
             // インシデントIdはセット
             $incidentId = $incidentIdArray[0]['NEXTVAL'];
+
+            // 新規作成用インシデントNoを採番
+            $incidentNoArray = $IdentTIncidentModel->selcetInsertIncidentNo($incidentDataArrayNew, $MultiExecSql);
+            if ($incidentNoArray && is_array($incidentNoArray) && count($incidentNoArray) > 0) {
+                // インシデントIdはインシデント情報の配列にセット
+                $incidentDataArrayNew['incidentNo'] = $incidentNoArray[0]['INCIDENT_NO'];
+            } else {
+                // 発番失敗
+                // 登録結果FALSE($insertResultFlg)⇒IncidentSaveResultDtoのセット
+                $IncidentSaveResultDto->setReturnRst(SAVE_FALSE);
+                // インシデントID NULL ($incidentId)⇒IncidentSaveResultDtoのセット
+                $IncidentSaveResultDto->setIncidentId(NULL);
+                // MultiExecSql　オブジェクトのrollback()を実行
+                $MultiExecSql->rollback();
+                // 戻りオブジェクト(IncidentSaveResultDto)
+                return $IncidentSaveResultDto;
+            }
+
             // インシデント情報の登録処理
             $insertResultFlg = $IdentTIncidentModel->insert($incidentDataArrayNew, $MultiExecSql);
 

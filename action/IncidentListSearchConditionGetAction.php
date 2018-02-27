@@ -197,10 +197,10 @@ class IncidentListSearchConditionGetAction extends CommonAction {
                         $conditionAry['condVal'] = $setubiNm;
                         array_push($conditionListAry,$conditionAry);
                         break;
-                    case "prefCd":// 都道府県
-                        $prefCd = $conditionDt->getCondVal();
-                        $conditionAry['condFld'] = "prefCd";
-                        $conditionAry['condVal'] = $prefCd;
+                    case "prefNm":// 都道府県
+                        $prefNm = $conditionDt->getCondVal();
+                        $conditionAry['condFld'] = "prefNm";
+                        $conditionAry['condVal'] = $prefNm;
                         array_push($conditionListAry,$conditionAry);
                         break;
                     case "custNm":// 顧客
@@ -289,7 +289,7 @@ class IncidentListSearchConditionGetAction extends CommonAction {
             $IncidentListGetDto->setKijoNm($kijoNm);
             $IncidentListGetDto->setJigyosyutaiNm($jigyosyutaiNm);
             $IncidentListGetDto->setSetubiNm($setubiNm);
-            $IncidentListGetDto->setPrefCd($prefCd);
+            $IncidentListGetDto->setPrefNm($prefNm);
             $IncidentListGetDto->setCustNm($custNm);
             $IncidentListGetDto->setCustTypeNenkan($custTypeNenkan);
             $IncidentListGetDto->setCustTypeTenken($custTypeTenken);

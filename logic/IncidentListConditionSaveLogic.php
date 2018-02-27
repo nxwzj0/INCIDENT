@@ -21,25 +21,25 @@ require_once('./model/IdentTSearchCondDtModel.php');
 
 class IncidentListConditionSaveLogic extends CommonLogic {
 
-    public function execute(IncidentListConditionSaveDto $IncidentListConditionSaveDto) {
+    public function execute(IncidentListConditionSaveDto $incidentListConditionSaveDto) {
 
         // 実例化model
         $IdentTSearchCondModel = new IdentTSearchCondModel();
         $IdentTSearchCondDtModel = new IdentTSearchCondDtModel();
 
         // 実例化model
-        $IncidentListConditionSaveResultDto = new IncidentListConditionSaveResultDto();
+        $incidentListConditionSaveResultDto = new IncidentListConditionSaveResultDto();
 
         // 検索条件名の重複チェックFlg
-        $CondNmExisFlg = $this->checkDataExistence($IdentTSearchCondModel->findCondNm($IncidentListConditionSaveDto->getCondNm()));
+        $CondNmExisFlg = $this->checkDataExistence($IdentTSearchCondModel->findCondNm($incidentListConditionSaveDto->getCondNm()));
 
         if($CondNmExisFlg){// 検索条件名重複の場合
             // LOGIC結果　検索条件名が重複の場合 '1' をセット
-            $IncidentListConditionSaveResultDto->setLogicResult(LOGIC_RESULT_SQL_ERROR);
+            $incidentListConditionSaveResultDto->setLogicResult(LOGIC_RESULT_SQL_ERROR);
             // LOGIC結果メッセージ　'検索条件名が重複しています'
-            $IncidentListConditionSaveResultDto->setResultMsg(LOGIC_RESULT_CONDNM_DUPLICATE);
-            // 戻りオブジェクト($IncidentListConditionSaveResultDto)
-            return $IncidentListConditionSaveResultDto;
+            $incidentListConditionSaveResultDto->setResultMsg(LOGIC_RESULT_CONDNM_DUPLICATE);
+            // 戻りオブジェクト($incidentListConditionSaveResultDto)
+            return $incidentListConditionSaveResultDto;
         }
 
         // 登録用の MultiExecSql　オブジェクトを作成 
@@ -50,170 +50,170 @@ class IncidentListConditionSaveLogic extends CommonLogic {
 
         // IncidentListConditionSaveDtoから、パラメータを取得する
         // 検索条件名
-        if($IncidentListConditionSaveDto->getCondNm() != null){
-            $condNm = $IncidentListConditionSaveDto->getCondNm();
+        if($incidentListConditionSaveDto->getCondNm() != null){
+            $condNm = $incidentListConditionSaveDto->getCondNm();
         }
         // 登録者ID
-        if($IncidentListConditionSaveDto->getUpdUserId() != null){
-            $userId = $IncidentListConditionSaveDto->getUpdUserId();
+        if($incidentListConditionSaveDto->getUpdUserId() != null){
+            $userId = $incidentListConditionSaveDto->getUpdUserId();
         }
         // 登録者名
-        if($IncidentListConditionSaveDto->getUpdUserNm() != null){
-            $userName = $IncidentListConditionSaveDto->getUpdUserNm();
+        if($incidentListConditionSaveDto->getUpdUserNm() != null){
+            $userName = $incidentListConditionSaveDto->getUpdUserNm();
         }
         // 登録者部署コード
-        if($IncidentListConditionSaveDto->getUpdSectionCd() != null){
-            $sectionCd = $IncidentListConditionSaveDto->getUpdSectionCd();
+        if($incidentListConditionSaveDto->getUpdSectionCd() != null){
+            $sectionCd = $incidentListConditionSaveDto->getUpdSectionCd();
         }
         // 登録者部署名
-        if($IncidentListConditionSaveDto->getUpdSectionNm() != null){
-            $sectionName = $IncidentListConditionSaveDto->getUpdSectionNm();
+        if($incidentListConditionSaveDto->getUpdSectionNm() != null){
+            $sectionName = $incidentListConditionSaveDto->getUpdSectionNm();
         }
         // インシデント分類（障害）
-        if($IncidentListConditionSaveDto->getIncidentTypeSyougai() != null){
-            $condList['incidentTypeSyougai'] = $IncidentListConditionSaveDto->getIncidentTypeSyougai();
+        if($incidentListConditionSaveDto->getIncidentTypeSyougai() != null){
+            $condList['incidentTypeSyougai'] = $incidentListConditionSaveDto->getIncidentTypeSyougai();
         }
         // インシデント分類（事故）
-        if($IncidentListConditionSaveDto->getIncidentTypeJiko() != null){
-            $condList['incidentTypeJiko'] = $IncidentListConditionSaveDto->getIncidentTypeJiko();
+        if($incidentListConditionSaveDto->getIncidentTypeJiko() != null){
+            $condList['incidentTypeJiko'] = $incidentListConditionSaveDto->getIncidentTypeJiko();
         }
         
         // インシデント分類（クレーム）
-        if($IncidentListConditionSaveDto->getIncidentTypeClaim() != null){
-            $condList['incidentTypeClaim'] = $IncidentListConditionSaveDto->getIncidentTypeClaim();
+        if($incidentListConditionSaveDto->getIncidentTypeClaim() != null){
+            $condList['incidentTypeClaim'] = $incidentListConditionSaveDto->getIncidentTypeClaim();
         }
         
         // インシデント分類（問合せ）
-        if($IncidentListConditionSaveDto->getIncidentTypeToiawase() != null){
-            $condList['incidentTypeToiawase'] = $IncidentListConditionSaveDto->getIncidentTypeToiawase();
+        if($incidentListConditionSaveDto->getIncidentTypeToiawase() != null){
+            $condList['incidentTypeToiawase'] = $incidentListConditionSaveDto->getIncidentTypeToiawase();
         }
         // インシデント分類（情報）
-        if($IncidentListConditionSaveDto->getIncidentTypeInfo() != null){
-            $condList['incidentTypeInfo'] = $IncidentListConditionSaveDto->getIncidentTypeInfo();
+        if($incidentListConditionSaveDto->getIncidentTypeInfo() != null){
+            $condList['incidentTypeInfo'] = $incidentListConditionSaveDto->getIncidentTypeInfo();
         }
         // インシデント分類（その他）
-        if($IncidentListConditionSaveDto->getIncidentTypeOther() != null){
-            $condList['incidentTypeOther'] = $IncidentListConditionSaveDto->getIncidentTypeOther();
+        if($incidentListConditionSaveDto->getIncidentTypeOther() != null){
+            $condList['incidentTypeOther'] = $incidentListConditionSaveDto->getIncidentTypeOther();
         }
         // ステータス（受入済）
-        if($IncidentListConditionSaveDto->getIncidentStatusCall() != null){
-            $condList['incidentStatusCall'] = $IncidentListConditionSaveDto->getIncidentStatusCall();
+        if($incidentListConditionSaveDto->getIncidentStatusCall() != null){
+            $condList['incidentStatusCall'] = $incidentListConditionSaveDto->getIncidentStatusCall();
         }
         // ステータス（対応入力済）
-        if($IncidentListConditionSaveDto->getIncidentStatusTaio() != null){
-            $condList['incidentStatusTaio'] = $IncidentListConditionSaveDto->getIncidentStatusTaio();
+        if($incidentListConditionSaveDto->getIncidentStatusTaio() != null){
+            $condList['incidentStatusTaio'] = $incidentListConditionSaveDto->getIncidentStatusTaio();
         }
         // ステータス（処置入力済）
-        if($IncidentListConditionSaveDto->getIncidentStatusAct() != null){
-            $condList['incidentStatusAct'] = $IncidentListConditionSaveDto->getIncidentStatusAct();
+        if($incidentListConditionSaveDto->getIncidentStatusAct() != null){
+            $condList['incidentStatusAct'] = $incidentListConditionSaveDto->getIncidentStatusAct();
         }
         // インシデント番号
-        if($IncidentListConditionSaveDto->getIncidentNo() != null){
-            $condList['incidentNo'] = $IncidentListConditionSaveDto->getIncidentNo();
+        if($incidentListConditionSaveDto->getIncidentNo() != null){
+            $condList['incidentNo'] = $incidentListConditionSaveDto->getIncidentNo();
         }
         // 受付内容
-        if($IncidentListConditionSaveDto->getCallContent() != null){
-            $condList['callContent'] = $IncidentListConditionSaveDto->getCallContent();
+        if($incidentListConditionSaveDto->getCallContent() != null){
+            $condList['callContent'] = $incidentListConditionSaveDto->getCallContent();
         }
         // 親インシデント番号
-        if($IncidentListConditionSaveDto->getParentIncidentNo() != null){
-            $condList['parentIncidentNo'] = $IncidentListConditionSaveDto->getParentIncidentNo();
+        if($incidentListConditionSaveDto->getParentIncidentNo() != null){
+            $condList['parentIncidentNo'] = $incidentListConditionSaveDto->getParentIncidentNo();
         }
         // 発生日時（開始）
-        if($IncidentListConditionSaveDto->getIncidentStartDateTimeFrom() != null){
-            $condList['incidentStartDateTimeFrom'] = $IncidentListConditionSaveDto->getIncidentStartDateTimeFrom();
+        if($incidentListConditionSaveDto->getIncidentStartDateTimeFrom() != null){
+            $condList['incidentStartDateTimeFrom'] = $incidentListConditionSaveDto->getIncidentStartDateTimeFrom();
         }
         // 発生日時（終了）
-        if($IncidentListConditionSaveDto->getIncidentStartDateTimeTo() != null){
-            $condList['incidentStartDateTimeTo'] = $IncidentListConditionSaveDto->getIncidentStartDateTimeTo();
+        if($incidentListConditionSaveDto->getIncidentStartDateTimeTo() != null){
+            $condList['incidentStartDateTimeTo'] = $incidentListConditionSaveDto->getIncidentStartDateTimeTo();
         }
         // 受付日（開始）
-        if($IncidentListConditionSaveDto->getCallStartDateFrom() != null){
-            $condList['callStartDateFrom'] = $IncidentListConditionSaveDto->getCallStartDateFrom();
+        if($incidentListConditionSaveDto->getCallStartDateFrom() != null){
+            $condList['callStartDateFrom'] = $incidentListConditionSaveDto->getCallStartDateFrom();
         }
         // 受付日（終了）
-        if($IncidentListConditionSaveDto->getCallStartDateTo() != null){
-            $condList['callStartDateTo'] = $IncidentListConditionSaveDto->getCallStartDateTo();
+        if($incidentListConditionSaveDto->getCallStartDateTo() != null){
+            $condList['callStartDateTo'] = $incidentListConditionSaveDto->getCallStartDateTo();
         }
         // 業種区分（機械）
-        if($IncidentListConditionSaveDto->getIndustryTypeMachinery() != null){
-            $condList['industryTypeMachinery'] = $IncidentListConditionSaveDto->getIndustryTypeMachinery();
+        if($incidentListConditionSaveDto->getIndustryTypeMachinery() != null){
+            $condList['industryTypeMachinery'] = $incidentListConditionSaveDto->getIndustryTypeMachinery();
         }
         // 業種区分（電機（E））
-        if($IncidentListConditionSaveDto->getIndustryTypeElectricalMachinery() != null){
-            $condList['industryTypeElectricalMachinery'] = $IncidentListConditionSaveDto->getIndustryTypeElectricalMachinery();
+        if($incidentListConditionSaveDto->getIndustryTypeElectricalMachinery() != null){
+            $condList['industryTypeElectricalMachinery'] = $incidentListConditionSaveDto->getIndustryTypeElectricalMachinery();
         }
         // 業種区分（計装（I））
-        if($IncidentListConditionSaveDto->getIndustryTypeInstrumentation() != null){
-            $condList['industryTypeInstrumentation'] = $IncidentListConditionSaveDto->getIndustryTypeInstrumentation();
+        if($incidentListConditionSaveDto->getIndustryTypeInstrumentation() != null){
+            $condList['industryTypeInstrumentation'] = $incidentListConditionSaveDto->getIndustryTypeInstrumentation();
         }
         // 業種区分（情報（C））
-        if($IncidentListConditionSaveDto->getIndustryTypeInfo() != null){
-            $condList['industryTypeInfo'] = $IncidentListConditionSaveDto->getIndustryTypeInfo();
+        if($incidentListConditionSaveDto->getIndustryTypeInfo() != null){
+            $condList['industryTypeInfo'] = $incidentListConditionSaveDto->getIndustryTypeInfo();
         }
         // 業種区分（環境）
-        if($IncidentListConditionSaveDto->getIndustryTypeEnvironment() != null){
-            $condList['industryTypeEnvironment'] = $IncidentListConditionSaveDto->getIndustryTypeEnvironment();
+        if($incidentListConditionSaveDto->getIndustryTypeEnvironment() != null){
+            $condList['industryTypeEnvironment'] = $incidentListConditionSaveDto->getIndustryTypeEnvironment();
         }
         // 業種区分（WBC）
-        if($IncidentListConditionSaveDto->getIndustryTypeWBC() != null){
-            $condList['industryTypeWBC'] = $IncidentListConditionSaveDto->getIndustryTypeWBC();
+        if($incidentListConditionSaveDto->getIndustryTypeWBC() != null){
+            $condList['industryTypeWBC'] = $incidentListConditionSaveDto->getIndustryTypeWBC();
         }
         // 業種区分（その他）
-        if($IncidentListConditionSaveDto->getIndustryTypeOther() != null){
-            $condList['industryTypeOther'] = $IncidentListConditionSaveDto->getIndustryTypeOther();
+        if($incidentListConditionSaveDto->getIndustryTypeOther() != null){
+            $condList['industryTypeOther'] = $incidentListConditionSaveDto->getIndustryTypeOther();
         }
         // 機場
-        if($IncidentListConditionSaveDto->getKijoNm() != null){
-            $condList['kijoNm'] = $IncidentListConditionSaveDto->getKijoNm();
+        if($incidentListConditionSaveDto->getKijoNm() != null){
+            $condList['kijoNm'] = $incidentListConditionSaveDto->getKijoNm();
         }
         // 事業主体
-        if($IncidentListConditionSaveDto->getJigyosyutaiNm() != null){
-            $condList['jigyosyutaiNm'] = $IncidentListConditionSaveDto->getJigyosyutaiNm();
+        if($incidentListConditionSaveDto->getJigyosyutaiNm() != null){
+            $condList['jigyosyutaiNm'] = $incidentListConditionSaveDto->getJigyosyutaiNm();
         }
         // 設備
-        if($IncidentListConditionSaveDto->getSetubiNm() != null){
-            $condList['setubiNm'] = $IncidentListConditionSaveDto->getSetubiNm();
+        if($incidentListConditionSaveDto->getSetubiNm() != null){
+            $condList['setubiNm'] = $incidentListConditionSaveDto->getSetubiNm();
         }
         // 都道府県
-        if($IncidentListConditionSaveDto->getPrefCd() != null){
-            $condList['prefCd'] = $IncidentListConditionSaveDto->getPrefCd();
+        if($incidentListConditionSaveDto->getPrefNm() != null){
+            $condList['prefNm'] = $incidentListConditionSaveDto->getPrefNm();
         }
         // 顧客
-        if($IncidentListConditionSaveDto->getCustNm() != null){
-            $condList['custNm'] = $IncidentListConditionSaveDto->getCustNm();
+        if($incidentListConditionSaveDto->getCustNm() != null){
+            $condList['custNm'] = $incidentListConditionSaveDto->getCustNm();
         }
         // 顧客分類（年間契約）
-        if($IncidentListConditionSaveDto->getCustTypeNenkan() != null){
-            $condList['custTypeNenkan'] = $IncidentListConditionSaveDto->getCustTypeNenkan();
+        if($incidentListConditionSaveDto->getCustTypeNenkan() != null){
+            $condList['custTypeNenkan'] = $incidentListConditionSaveDto->getCustTypeNenkan();
         }
         // 顧客分類（点検契約）
-        if($IncidentListConditionSaveDto->getCustTypeTenken() != null){
-            $condList['custTypeTenken'] = $IncidentListConditionSaveDto->getCustTypeTenken();
+        if($incidentListConditionSaveDto->getCustTypeTenken() != null){
+            $condList['custTypeTenken'] = $incidentListConditionSaveDto->getCustTypeTenken();
         }
         // 顧客分類（契約なし）
-        if($IncidentListConditionSaveDto->getCustTypeNasi() != null){
-            $condList['custTypeNasi'] = $IncidentListConditionSaveDto->getCustTypeNasi();
+        if($incidentListConditionSaveDto->getCustTypeNasi() != null){
+            $condList['custTypeNasi'] = $incidentListConditionSaveDto->getCustTypeNasi();
         }
         // 顧客分類（瑕疵期間中）
-        if($IncidentListConditionSaveDto->getCustTypeKasi() != null){
-            $condList['custTypeKasi'] = $IncidentListConditionSaveDto->getCustTypeKasi();
+        if($incidentListConditionSaveDto->getCustTypeKasi() != null){
+            $condList['custTypeKasi'] = $incidentListConditionSaveDto->getCustTypeKasi();
         }
         // 顧客分類（その他）
-        if($IncidentListConditionSaveDto->getCustTypeOther() != null){
-            $condList['custTypeOther'] = $IncidentListConditionSaveDto->getCustTypeOther();
+        if($incidentListConditionSaveDto->getCustTypeOther() != null){
+            $condList['custTypeOther'] = $incidentListConditionSaveDto->getCustTypeOther();
         }
         // 営業部門
-        if($IncidentListConditionSaveDto->getSalesDeptNm() != null){
-            $condList['salesDeptNm'] = $IncidentListConditionSaveDto->getSalesDeptNm();
+        if($incidentListConditionSaveDto->getSalesDeptNm() != null){
+            $condList['salesDeptNm'] = $incidentListConditionSaveDto->getSalesDeptNm();
         }
         // 営業担当者
-        if($IncidentListConditionSaveDto->getSalesUserNm() != null){
-            $condList['salesUserNm'] = $IncidentListConditionSaveDto->getSalesUserNm();
+        if($incidentListConditionSaveDto->getSalesUserNm() != null){
+            $condList['salesUserNm'] = $incidentListConditionSaveDto->getSalesUserNm();
         }
         // 関係者
-        if($IncidentListConditionSaveDto->getRelateUserNm() != null){
-            $condList['relateUserNm'] = $IncidentListConditionSaveDto->getRelateUserNm();
+        if($incidentListConditionSaveDto->getRelateUserNm() != null){
+            $condList['relateUserNm'] = $incidentListConditionSaveDto->getRelateUserNm();
         }
         
         // 検索条件ID(Sequence)で新規作成用検索条件IDを取得
@@ -227,11 +227,11 @@ class IncidentListConditionSaveLogic extends CommonLogic {
             // MultiExecSql　オブジェクトのrollback()を実行
             $MultiExecSql->rollback();
             // LOGIC結果　SQLエラー '1' をセット
-            $IncidentListConditionSaveResultDto->setLogicResult(LOGIC_RESULT_SQL_ERROR);
+            $incidentListConditionSaveResultDto->setLogicResult(LOGIC_RESULT_SQL_ERROR);
             // LOGIC結果メッセージ　'登録に失敗しました'
-            $IncidentListConditionSaveResultDto->setResultMsg(LOGIC_RESULT_INSERT_FAIL);
-            // 戻りオブジェクト($IncidentListConditionSaveResultDto)
-            return $IncidentListConditionSaveResultDto;
+            $incidentListConditionSaveResultDto->setResultMsg(LOGIC_RESULT_INSERT_FAIL);
+            // 戻りオブジェクト($incidentListConditionSaveResultDto)
+            return $incidentListConditionSaveResultDto;
         }
 
         $condListKey = array();// 検索条件のKEYのArray作成
@@ -247,22 +247,22 @@ class IncidentListConditionSaveLogic extends CommonLogic {
                 // MultiExecSql　オブジェクトのrollback()を実行
                 $MultiExecSql->rollback();
                 // LOGIC結果　SQLエラー '1' をセット
-                $IncidentListConditionSaveResultDto->setLogicResult(LOGIC_RESULT_SQL_ERROR);
+                $incidentListConditionSaveResultDto->setLogicResult(LOGIC_RESULT_SQL_ERROR);
                 // LOGIC結果メッセージ　'登録に失敗しました'
-                $IncidentListConditionSaveResultDto->setResultMsg(LOGIC_RESULT_INSERT_FAIL);
-                // 戻りオブジェクト($IncidentListConditionSaveResultDto)
-                return $IncidentListConditionSaveResultDto;
+                $incidentListConditionSaveResultDto->setResultMsg(LOGIC_RESULT_INSERT_FAIL);
+                // 戻りオブジェクト($incidentListConditionSaveResultDto)
+                return $incidentListConditionSaveResultDto;
             }
         }
 
         // MultiExecSql　オブジェクトのcommit()を実行
         $MultiExecSql->commit();
         // LOGIC結果　正常時 '0' をセット
-        $IncidentListConditionSaveResultDto->setLogicResult(LOGIC_RESULT_SEIJOU);
+        $incidentListConditionSaveResultDto->setLogicResult(LOGIC_RESULT_SEIJOU);
         // LOGIC結果メッセージ　'登録完了'
-        $IncidentListConditionSaveResultDto->setResultMsg(LOGIC_RESULT_INSERT_SUCCESS);
-        // 戻りオブジェクト($IncidentListConditionSaveResultDto)
-        return $IncidentListConditionSaveResultDto;
+        $incidentListConditionSaveResultDto->setResultMsg(LOGIC_RESULT_INSERT_SUCCESS);
+        // 戻りオブジェクト($incidentListConditionSaveResultDto)
+        return $incidentListConditionSaveResultDto;
     }
 
 }

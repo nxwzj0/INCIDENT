@@ -1,5 +1,4 @@
 <?php
-
 //*****************************************************************************
 //	システム名　　　：インシデント管理システム
 //	サブシステム名　：
@@ -49,7 +48,6 @@ require_once('./dto/CommonDto.php');
  * @property String $jigyosyutaiNm
  * @property String $setubiNm
  * @property String $prefNm
- * @property String $deliveryPjNm
  * @property String $custNm
  * @property String $custTypeNm
  * @property String $custDept
@@ -70,13 +68,18 @@ require_once('./dto/CommonDto.php');
  * @property String $taioMail
  * @property String $taioContent
  * @property String $actDate
- * @property String $actType
+ * @property String $actTypeCd
+ * @property String $actTypeNm
  * @property String $actStartTime
  * @property String $actEndTime
  * @property String $actTel
  * @property String $actMail
  * @property String $actContent
- * @property String $productType
+ * @property String $sotiKbnCd
+ * @property String $sotiKbnNm
+ * @property String $kisyuKbnCd
+ * @property String $kisyuKbnNm
+ * @property String $kisyuNm
  * @property String $productTrigger
  * @property String $productHindo
  * @property String $productGensyo
@@ -119,7 +122,6 @@ class IncidentMainDto extends CommonDto {
     private $jigyosyutaiNm;
     private $setubiNm;
     private $prefNm;
-    private $deliveryPjNm;
     private $custNm;
     private $custTypeNm;
     private $custDept;
@@ -140,13 +142,18 @@ class IncidentMainDto extends CommonDto {
     private $taioMail;
     private $taioContent;
     private $actDate;
-    private $actType;
+    private $actTypeCd;
+    private $actTypeNm;
     private $actStartTime;
     private $actEndTime;
     private $actTel;
     private $actMail;
     private $actContent;
-    private $productType;
+    private $sotiKbnCd;
+    private $sotiKbnNm;
+    private $kisyuKbnCd;
+    private $kisyuKbnNm;
+    private $kisyuNm;
     private $productTrigger;
     private $productHindo;
     private $productGensyo;
@@ -672,20 +679,6 @@ class IncidentMainDto extends CommonDto {
     /**
      * @return String
      */
-    public function getDeliveryPjNm() {
-        return $this->deliveryPjNm;
-    }
-
-    /**
-     * @param String $deliveryPjNm
-     */
-    public function setDeliveryPjNm($deliveryPjNm) {
-        $this->deliveryPjNm = $deliveryPjNm;
-    }
-
-    /**
-     * @return String
-     */
     public function getCustNm() {
         return $this->custNm;
     }
@@ -966,15 +959,29 @@ class IncidentMainDto extends CommonDto {
     /**
      * @return String
      */
-    public function getActType() {
-        return $this->actType;
+    public function getActTypeCd() {
+        return $this->actTypeCd;
     }
 
     /**
-     * @param String $actType
+     * @param String $actTypeCd
      */
-    public function setActType($actType) {
-        $this->actType = $actType;
+    public function setActTypeCd($actTypeCd) {
+        $this->actTypeCd = $actTypeCd;
+    }
+
+    /**
+     * @return String
+     */
+    public function getActTypeNm() {
+        return $this->actTypeNm;
+    }
+
+    /**
+     * @param String $actTypeNm
+     */
+    public function setActTypeNm($actTypeNm) {
+        $this->actTypeNm = $actTypeNm;
     }
 
     /**
@@ -1050,15 +1057,71 @@ class IncidentMainDto extends CommonDto {
     /**
      * @return String
      */
-    public function getProductType() {
-        return $this->productType;
+    public function getSotiKbnCd() {
+        return $this->sotiKbnCd;
     }
 
     /**
-     * @param String $productType
+     * @param String $sotiKbnCd
      */
-    public function setProductType($productType) {
-        $this->productType = $productType;
+    public function setSotiKbnCd($sotiKbnCd) {
+        $this->sotiKbnCd = $sotiKbnCd;
+    }
+
+    /**
+     * @return String
+     */
+    public function getSotiKbnNm() {
+        return $this->sotiKbnNm;
+    }
+
+    /**
+     * @param String $sotiKbnNm
+     */
+    public function setSotiKbnNm($sotiKbnNm) {
+        $this->sotiKbnNm = $sotiKbnNm;
+    }
+
+    /**
+     * @return String
+     */
+    public function getKisyuKbnCd() {
+        return $this->kisyuKbnCd;
+    }
+
+    /**
+     * @param String $kisyuKbnCd
+     */
+    public function setKisyuKbnCd($kisyuKbnCd) {
+        $this->kisyuKbnCd = $kisyuKbnCd;
+    }
+
+    /**
+     * @return String
+     */
+    public function getKisyuKbnNm() {
+        return $this->kisyuKbnNm;
+    }
+
+    /**
+     * @param String $kisyuKbnNm
+     */
+    public function setKisyuKbnNm($kisyuKbnNm) {
+        $this->kisyuKbnNm = $kisyuKbnNm;
+    }
+
+    /**
+     * @return String
+     */
+    public function getKisyuNm() {
+        return $this->kisyuNm;
+    }
+
+    /**
+     * @param String $kisyuNm
+     */
+    public function setKisyuNm($kisyuNm) {
+        $this->kisyuNm = $kisyuNm;
     }
 
     /**

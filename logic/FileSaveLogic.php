@@ -51,6 +51,7 @@ class FileSaveLogic extends CommonLogic {
             $newDataArray['fileNm'] = $fileData->getFileNm();
             $newDataArray['filePath'] = $fileData->getFilePath();
             $newDataArray['fsvrNm'] = $fileData->getFsvrNm(); // 実ファイル名
+            $newDataArray['fileSize'] = $fileData->getFileSize();
 
             if ($fileSaveDto->getLoginUser() != null) {
                 $newDataArray['loginUserId'] = $fileSaveDto->getLoginUser()->getUserId();

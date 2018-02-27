@@ -27,57 +27,60 @@ class FileUploadAction extends CommonAction {
 
         $P = $GLOBALS[P]; // 共通パラメータ配列取得
         $incidentId = $P['incidentId'];
-
+        $fileCount = $P['fileCount']; // ファイルの件数
         // ファイルID取得用パラメータ
         $fileIdGetDto = new FileIdGetDto();
 
-        /* ファイルID取得処理 */
-        $fileIdGetLogic = new FileIdGetLogic();
-        $fileIdEventResult = $fileIdGetLogic->execute($fileIdGetDto);
-        $rtnAry = array();
-        if ($fileIdEventResult && $fileIdEventResult->getLogicResult() == LOGIC_RESULT_SEIJOU) {
-            $fileId = $fileIdEventResult->getFileId();
+        for ($idx = 0; $idx < $fileCount; $idx++) { // multiple対応版
+            /* ファイルID取得処理 */
+            $fileIdGetLogic = new FileIdGetLogic();
+            $fileIdEventResult = $fileIdGetLogic->execute($fileIdGetDto);
+            $rtnAry = array();
+            if ($fileIdEventResult && $fileIdEventResult->getLogicResult() == LOGIC_RESULT_SEIJOU) {
+                $fileId = $fileIdEventResult->getFileId();
 
-            /* ファイルアップロード処理 */
-            $rtn = $this->SaveUploadedFile('incidentFile', 0, $incidentId, $fileId);
+                /* ファイルアップロード処理 */
+                $rtn = $this->SaveUploadedFile('incidentFile' . $idx, 0, $incidentId, $fileId);
 
-            if (!$rtn["bool"]) {
-                // アップロードに失敗
-                $fileUpResultAry[] = array("result" => false);
-                // 値を返す(Angular)
-                echo $this->returnAngularJSONP($fileUpResultAry);
+                if (!$rtn["bool"]) {
+                    // アップロードに失敗
+                    $fileUpResultAry[] = array("result" => false);
+                    // 値を返す(Angular)
+                    echo $this->returnAngularJSONP($fileUpResultAry);
+                }
+
+                /* ファイルアップロード情報のDB保存処理 */
+                // ファイル情報登録用パラメータ
+                $fileSaveDto = new FileSaveDto();
+                $file = new FileDto();
+                $file->setFileId($fileId);
+                $file->setIncidentId($incidentId);
+                $file->setFileNm($rtn["fname"]);
+                $file->setFilePath($rtn["path"]);
+                $file->setFsvrNm($rtn["fileName"]);
+                $file->setFileSize($rtn["fileSize"]);
+
+                $fileSaveDto->addFileList($file);
+
+                // ログインユーザ
+                $loginuserDto = new UserDto();
+                $loginuserDto->setUserId('newUId');
+                $loginuserDto->setUserNm('newUNm');
+                $loginuserDto->setSectionCd('newSCd');
+                $loginuserDto->setSectionNm('newSNm');
+                $fileSaveDto->setLoginUser($loginuserDto);
+
+                // ファイルアップロード情報登録
+                $fileSaveLogic = new FileSaveLogic();
+                $fileSaveEventResult = $fileSaveLogic->execute($fileSaveDto);
+
+                // 戻り値配列の作成
+                $rtnAry = $this->createReturnArray($fileSaveEventResult);
+            } else {
+                $fileUpResultAry = array();
+                $fileUpResultAry[] = array("result" => true);
+                $rtnAry = $fileUpResultAry;
             }
-
-            /* ファイルアップロード情報のDB保存処理 */
-            // ファイル情報登録用パラメータ
-            $fileSaveDto = new FileSaveDto();
-            $file = new FileDto();
-            $file->setFileId($fileId);
-            $file->setIncidentId($incidentId);
-            $file->setFileNm($rtn["fname"]);
-            $file->setFilePath($rtn["path"]);
-            $file->setFsvrNm($rtn["filename"]);
-
-            $fileSaveDto->addFileList($file);
-
-            // ログインユーザ
-            $loginuserDto = new UserDto();
-            $loginuserDto->setUserId('newUId');
-            $loginuserDto->setUserNm('newUNm');
-            $loginuserDto->setSectionCd('newSCd');
-            $loginuserDto->setSectionNm('newSNm');
-            $fileSaveDto->setLoginUser($loginuserDto);
-
-            // ファイルアップロード情報登録
-            $fileSaveLogic = new FileSaveLogic();
-            $fileSaveEventResult = $fileSaveLogic->execute($fileSaveDto);
-
-            // 戻り値配列の作成
-            $rtnAry = $this->createReturnArray($fileSaveEventResult);
-        } else {
-            $fileUpResultAry = array();
-            $fileUpResultAry[] = array("result" => true);
-            $rtnAry = $fileUpResultAry;
         }
 
         // 値を返す(Angular)
@@ -122,20 +125,24 @@ class FileUploadAction extends CommonAction {
         $filepath = $dir . "/" . $fname;
 
         // 既存ファイルを削除
-        if ($ftp->is_file($filepath) && $ftp->file_exists($filepath))
+        if ($ftp->is_file($filepath) && $ftp->file_exists($filepath)) {
             $ftp->unlink($filepath);
+        }
 
         // ファイルのアップロード
         if (is_array($_FILES[$post_name]["name"])) {
             $rtn["bool"] = (!$ftp->move_uploaded_file($_FILES[$post_name]["tmp_name"][$idx], $filepath) ? FALSE : TRUE);
+            $size = filesize($_FILES[$post_name]["tmp_name"][$idx]);
         } else {
             $rtn["bool"] = (!$ftp->move_uploaded_file($_FILES[$post_name]["tmp_name"], $filepath) ? FALSE : TRUE);
+            $size = filesize($_FILES[$post_name]["tmp_name"]);
         }
 
         // 戻り値
         $rtn["path"] = $dir;
-        $rtn["filename"] = $file_name;
+        $rtn["fileName"] = $file_name;
         $rtn["fname"] = $fname;
+        $rtn["fileSize"] = $size;
 
         return $rtn;
     }

@@ -1,5 +1,0 @@
-/* todoリスト 完了にチェック */
-.done-true {
-    text-decoration: line-through;
-    color: grey;
-}

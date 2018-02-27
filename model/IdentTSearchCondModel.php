@@ -13,7 +13,7 @@ require_once("./model/CommonModel.php");
 
 class IdentTSearchCondModel extends CommonModel {
 
-    public function selectCond() {
+    public function selectCond($conditions) {
         $SQL_INCIDENT_INFO = <<< SQL_INCIDENT_INFO
                 SELECT
                     COND_NM,
@@ -24,6 +24,12 @@ class IdentTSearchCondModel extends CommonModel {
                 WHERE
                     IDENT_T_SEARCH_COND.DEL_FLG = '0'
 SQL_INCIDENT_INFO;
+
+        if ($conditions['loginUserId'] != NULL) {
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND IDENT_T_SEARCH_COND.USER_ID = " . "'" . $conditions['loginUserId'] . "' ";
+        }
+
+        $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " ORDER BY TO_CHAR(IDENT_T_SEARCH_COND.INS_DATE,'yyyy/mm/dd hh24:mi:ss') ASC NULLS LAST ";
 
         $MultiExecSql = new MultiExecSql();
         $sqlResult = array();
@@ -63,7 +69,7 @@ SQL_INCIDENT_INFO;
         return $sqlResult;
     }
 
-    public function insertCond($condId,$condNm,$userId,$userName,$sectionCd,$sectionName,$MultiExecSql) {
+    public function insertCond($condId, $condNm, $userId, $userName, $sectionCd, $sectionName, $MultiExecSql) {
         $SQL_INCIDENT_INFO = <<< SQL_INCIDENT_INFO
                 INSERT INTO
                     IDENT_T_SEARCH_COND
@@ -91,16 +97,16 @@ SQL_INCIDENT_INFO;
                 )
 SQL_INCIDENT_INFO;
 
-        try{
+        try {
             $MultiExecSql->execute($SQL_INCIDENT_INFO, '');
-        }catch (Exception $e){
+        } catch (Exception $e) {
             print $e->getMessage();
             return SAVE_FALSE;
         }
         return SAVE_TRUE;
     }
 
-    public function deleteCond($condId,$MultiExecSql) {
+    public function deleteCond($condId, $MultiExecSql) {
         $SQL_INCIDENT_INFO = <<< SQL_INCIDENT_INFO
                 UPDATE
                     IDENT_T_SEARCH_COND
@@ -112,9 +118,9 @@ SQL_INCIDENT_INFO;
                     DEL_FLG = '0'
 SQL_INCIDENT_INFO;
 
-        try{
+        try {
             $MultiExecSql->execute($SQL_INCIDENT_INFO, '');
-        }catch (Exception $e){
+        } catch (Exception $e) {
             print $e->getMessage();
             return SAVE_FALSE;
         }

@@ -9,7 +9,8 @@ $SYSTEM_COMPANY_NAME = "メタウォーター";
 
 //サーバ環境別の定数定義インクルード
 //$CONFIG_FILE = str_replace(":","_",$HTTP_HOST) . ".conf";
-$CONFIG_FILE = $SERVER_ADDR."_".$SERVER_PORT.".conf";
+//$CONFIG_FILE = $SERVER_ADDR."_".$SERVER_PORT.".conf";
+$CONFIG_FILE = "172.20.108.34_80.conf";
 // $INC_REL_PATHはenv.incで定義済み
 require("$INC_REL_PATH/$CONFIG_FILE");
 //ディレクトリ別の定数定義インクルード

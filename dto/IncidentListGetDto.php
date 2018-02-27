@@ -28,7 +28,7 @@ require_once('./dto/CommonDto.php');
  * @property String $jigyosyutaiNm
  * @property String $setubiNm
  * @property String $prefNm
- * @property String $deliveryPjNm
+ * @property String $deliveryPjNo
  * @property String $custNm
  * @property String $custTypeNm
  * @property String $custDept
@@ -118,7 +118,7 @@ class IncidentListGetDto extends CommonDto {
     private $jigyosyutaiNm;
     private $setubiNm;
     private $prefNm;
-    private $deliveryPjNm;
+    private $deliveryPjNo;
     private $custNm;
     private $custTypeNm;
     private $custDept;
@@ -420,15 +420,15 @@ class IncidentListGetDto extends CommonDto {
     /**
      * @return String
      */
-    public function getDeliveryPjNm() {
-        return $this->deliveryPjNm;
+    public function getDeliveryPjNo() {
+        return $this->deliveryPjNo;
     }
 
     /**
-     * @param String $deliveryPjNm
+     * @param String $deliveryPjNo
      */
-    public function setDeliveryPjNm($deliveryPjNm) {
-        $this->deliveryPjNm = $deliveryPjNm;
+    public function setDeliveryPjNo($deliveryPjNo) {
+        $this->deliveryPjNo = $deliveryPjNo;
     }
 
     /**
