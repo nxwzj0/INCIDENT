@@ -34,7 +34,11 @@ mb_http_output("pass");
 
 //エラーハンドラ
 function TestFunc($a,$b,$c,$d){
-	print "<html><body><center><b>ファイルがダウンロードできません。($a:$b:$c:$d)</b></center></body></html>";
+//	print "<html><body><center><b>ファイルがダウンロードできません。($a:$b:$c:$d)</b></center></body></html>";
+	// 2018/02/27 add st  Angular用
+	// エラーがあった場合、例外ページを開く
+	header("Location: ".$GLOBALS["COMMON_HOME_URL"]."/".$GLOBALS["COMMON_VIEW_FOLDER"]."/#/errorHandler/500");
+	// 2018/02/27 add end Angular用
 	exit;
 	return;
 }

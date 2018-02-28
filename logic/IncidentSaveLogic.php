@@ -205,7 +205,7 @@ class IncidentSaveLogic extends CommonLogic {
 
             // 変更履歴配列($changeLogArray)を作成
             $changeLogArray[0]['changeItem'] = SINKI_SAKUSEI;
-            $changeLogArray[0]['sortNo'] = SORT_NO_FIRST;
+            $sortNo = SORT_NO_FIRST;
         }
 
         // 登録処理成功判定フラグ FALSE

@@ -40,7 +40,7 @@ class FileUploadAction extends CommonAction {
                 $fileId = $fileIdEventResult->getFileId();
 
                 /* ファイルアップロード処理 */
-                $rtn = $this->SaveUploadedFile('incidentFile' . $idx, 0, $incidentId, $fileId);
+                $rtn = $this->saveUploadedFile('incidentFile' . $idx, 0, $incidentId, $fileId);
 
                 if (!$rtn["bool"]) {
                     // アップロードに失敗
@@ -100,7 +100,7 @@ class FileUploadAction extends CommonAction {
         return $fileUpResultAry;
     }
 
-    function SaveUploadedFile($post_name, $idx, $incidentId, $fileId) {
+    function saveUploadedFile($post_name, $idx, $incidentId, $fileId) {
 
         global $IDENT_ATTACH_FILE_PATH;
 
@@ -139,7 +139,7 @@ class FileUploadAction extends CommonAction {
         }
 
         // 戻り値
-        $rtn["path"] = $dir;
+        $rtn["path"] = $incidentId;
         $rtn["fileName"] = $file_name;
         $rtn["fname"] = $fname;
         $rtn["fileSize"] = $size;

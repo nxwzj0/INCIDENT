@@ -1,10 +1,15 @@
 <?php
+// 開発環境のみPHPエラーログを出力する
+ini_set('error_log', '/opt/WWW/htdocs/INCIDENT/log/php_error_log.txt');
+ini_set('log_errors', 'On');
+error_reporting(E_ALL);
+
 $SYSTEM_TITLE = "META-INCIDENT";
 $COMMON_TITLE_SUFFIX = "META-INCIDENT";
 
-$COMMON_ORA_USER = "incident";
-$COMMON_ORA_PASSWD = "incident";
-$COMMON_ORA_SERVER = "BNV01";
+$COMMON_ORA_USER = "INCIDENT";
+$COMMON_ORA_PASSWD = "INCIDENT";
+$COMMON_ORA_SERVER = "ORCL";
 $COMMON_BASE_PATH = "/opt/WWW/htdocs/INCIDENT";
 $COMMON_HOME_PATH = "$COMMON_BASE_PATH";
 $COMMON_HOME_ALIAS = "/INCIDENT";
@@ -23,7 +28,7 @@ $COMMON_DEBUG_LOG_PATH = $COMMON_HOME_PATH."/log";
 #$COMMON_CHARSET = "EUC-JP";
 $COMMON_CHARSET = "UTF-8";
 $COMMON_DEFINC_PATH = "./:/opt/php5/lib/php";
-#$COMMON_SYSTEM_TYPE = "";
+$COMMON_SYSTEM_TYPE = "";
 $COMMON_VIRTUAL_TABLE_MOUNT = array();
 
 $COMMON_CONVERT_SQL_SJIS=1; //NLS_LANGはSJISが前提
@@ -31,7 +36,7 @@ $COMMON_ORACLE_SERVER_CHARSET="JA16SJIS"; //DBサーバのSJISが前提
 
 $COMMON_MESSAGE_ORA_USER = "message";
 $COMMON_MESSAGE_ORA_PASSWD = "msging";
-$COMMON_MESSAGE_ORA_SERVER = "BNV01";
+$COMMON_MESSAGE_ORA_SERVER = "BNV00";
 $COMMON_MESSAGE_ORACLE_SERVER_CHARSET = "JA16SJIS";
 
 $PRO_ATTACH_TPL_PATH = "/storage/WEB_SYSTEM/PROJECT/TPL";
@@ -41,46 +46,44 @@ $PRO_ATTACH_PRT_PATH = "/storage/WEB_SYSTEM/PROJECT/PRINT";
 $ARR_PRO_ATTACH_FILE_PATH = array(
 	"0" => "/storage/WEB_SYSTEM/PROJECT/FILE",
 	"1" => "/storage2/WEB_SYSTEM/PROJECT/FILE",
-	"2" => "/storage3/WEB_SYSTEM/PROJECT/FILE",
+	"2" => "/storage2/WEB_SYSTEM/PROJECT/FILE",
 );
 
-$COMMON_HOME_URL = "http://w50h-bnvweb1.metawater.co.jp/INCIDENT/";
+$COMMON_HOME_URL = "http://172.20.108.34/INCIDENT/";
 $COMMON_VIEW_FOLDER = "view"; // Angularソースを格納するフォルダ名
-//$COMMON_INTRA_URL = "http://w50h-bnvweb1.metawater.co.jp/PROJECT/"; //メールに記載する社内URL
-//$COMMON_EXTRA_URL = "http://w50h-bnvweb1.metawater.co.jp/PROJECT/"; //メールに記載する社外URL
+//$COMMON_INTRA_URL = "http://172.20.108.34/PROJECT/"; //メールに記載する社内URL
+//$COMMON_EXTRA_URL = "http://172.20.108.34/PROJECT/"; //メールに記載する社外URL
 
-$COMMON_MR2API_URL = "http://ap04.water-biz-c.com/wbc-psc-api/PSC/index/"; // MR2情報を取得するURL
+$COMMON_MR2API_URL = "http://172.20.108.156:8080/wbc-psc-api/PSC/"; // MR2情報を取得するURL
 
-$COMMON_WORKFLOW_URL = "http://w50h-bnvweb3.metawater.co.jp/WORKFLOW";
-$COMMON_MESSAGE_URL = "http://w50h-bnvweb1.metawater.co.jp/MESSAGE";
-$COMMON_BNAVIDO_URL = "http://w50h-bnvweb1.metawater.co.jp/BNAVIDO";
-$COMMON_INTELLICAD_URL = "http://w50h-bnvweb1.metawater.co.jp/SOFT";
-$COMMON_GENTI_URL = "http://w50h-bnvweb1.metawater.co.jp/GENTI";
-$COMMON_GAICYUU_URL = "http://w50h-bnvweb3.metawater.co.jp/GAICYUU";
-$COMMON_RESOURCE_URL = "http://w50h-bnvweb2.metawater.co.jp/RESOURCE";
-$COMMON_SYUTYO_URL = "http://w50h-bnvweb3.metawater.co.jp/SYUTYO";
-$COMMON_INTRA_URL = "http://w50h-bnvweb1.metawater.co.jp/intra";
-$COMMON_SYUTI_URL = "http://w50h-bnvweb1.metawater.co.jp/SYUTI";
+$COMMON_WORKFLOW_URL = "http://172.20.108.34/WORKFLOW";
+$COMMON_MESSAGE_URL = "http://172.20.108.34/MESSAGE";
+$COMMON_BNAVIDO_URL = "http://172.20.108.34/BNAVIDO";
+$COMMON_INTELLICAD_URL = "http://172.20.108.34/SOFT";
+$COMMON_GENTI_URL = "http://172.20.108.34/GENTI";
+$COMMON_GAICYUU_URL = "http://172.20.108.34/GAICYUU";
+$COMMON_RESOURCE_URL = "http://172.20.108.34/RESOURCE";
+$COMMON_SYUTYO_URL = "http://172.20.108.34/SYUTYO";
+$COMMON_INTRA_URL = "http://172.20.108.34/intra";
+$COMMON_SYUTI_URL = "http://172.20.108.34/SYUTI";
 //$COMMON_LOG_WRITER_URL = "http://10.197.21.1/LOG/logwriter.php";
-$COMMON_FORUM_URL = "http://w50h-bnvweb1.metawater.co.jp/FORUM/";
-$COMMON_SANPAI_URL = "http://w50h-bnvweb1.metawater.co.jp/sanpaihp";
-$COMMON_IDB_URL = "http://w50h-bnvweb3.metawater.co.jp/i-DB";
-//$COMMON_PJCOST_URL = "http://w50h-bnvweb3.metawater.co.jp/PJCOST_MNG";	//原価情報システム
-$COMMON_PJCOST_URL = "http://10.197.26.3:9090/PJCOST_MNG";	//原価情報システム
-$COMMON_SOFTDEV_URL = "http://w50h-bnvweb1.metawater.co.jp/SOFTDEV";	//ソフト製作管理
-$COMMON_SECHP_URL = "http://w50h-bnvweb1.metawater.co.jp/SECHP";
-$COMMON_KOJIJISEKI_URL = "http://w50h-bnvweb2.metawater.co.jp/KOJIJISEKI";	//工事実績 2016.11.02 ADF)tanik add
+$COMMON_FORUM_URL = "http://172.20.108.34/FORUM/";
+$COMMON_SANPAI_URL = "http://172.20.108.34/sanpaihp";
+$COMMON_IDB_URL = "http://172.20.108.34/i-DB";
+$COMMON_PJCOST_URL = "http://172.20.108.34/PJCOST_MNG";	//原価情報システム
+$COMMON_SOFTDEV_URL = "http://172.20.108.34/SOFTDEV";	//ソフト製作管理
+$COMMON_SECHP_URL = "http://172.20.108.34/SECHP";
+$COMMON_KOJIJISEKI_URL = "http://172.20.108.34/KOJIJISEKI";	//工事実績
 
-$COMMON_BBS_URL = "http://w50h-bnvweb1.metawater.co.jp/PROJECT/";
+$COMMON_BBS_URL = "http://172.20.108.34/PROJECT/";
 
-//$COMMON_TASKCHART_URL = "http://w50h-bnvweb1a.metawater.co.jp";
-$COMMON_TASKCHART_URL = "http://10.197.26.3:9090";
+$COMMON_TASKCHART_URL = "http://172.20.108.81";
 
-//$COMMON_NINSYO_BASE = "../PROJECT/kyoninsyo";
+//$COMMON_NINSYO_BASE = "../INCIDENT/kyoninsyo";
 //if( file_exists($COMMON_NINSYO_BASE) ){
-	$COMMON_NINSYO_LOGIN_URL = "http://w50h-bnvweb1.metawater.co.jp/PROJECT/kyoninsyo/kyo_login.php";
-	$COMMON_NINSYO_LOGOUT_URL = "http://w50h-bnvweb1.metawater.co.jp/PROJECT/kyoninsyo/kyo_logout.php";
-	$SYSTEM_LOGOUT_URL = "http://w50h-bnvweb1.metawater.co.jp/AUTH/PROJECT/logoff.php";
+	$COMMON_NINSYO_LOGIN_URL = "http://172.20.108.34/PROJECT/kyoninsyo/kyo_login.php";
+	$COMMON_NINSYO_LOGOUT_URL = "http://172.20.108.34/PROJECT/kyoninsyo/kyo_logout.php";
+	$SYSTEM_LOGOUT_URL = "http://172.20.108.34/AUTH/PROJECT/logoff.php";
 //}
 
 //$CLS_MAIL_SMTP_ADDR = "w50h-infodev1.metawater.co.jp";
@@ -92,24 +95,23 @@ mb_http_output("EUC-JP");
 $COMMON_FTP_TEMP_PATH = $COMMON_HOME_PATH."/FTP_TEMP";
 // $FTP_SERVER = "10.190.36.55";
 //$FTP_SERVER = "w50h-bnvfs";
-//$FTP_SERVER = "10.197.23.2";
-$FTP_SERVER = "w50h-bnvfs";
+$FTP_SERVER = "172.20.108.35";
 $FTP_USER_NAME = "www";
 $FTP_USER_PASS = "www";
+$IDENT_ATTACH_FILE_PATH = "/storage/WEB_SYSTEM/INCIDENT/ATTACH";
 
 //評価表テンプレート転送用
-$JD_FTP_SERVER = "w50h-bnvap1";
+//$JD_FTP_SERVER = "w50h-bnvap2";
+$JD_FTP_SERVER = "172.20.108.35";
 $JD_FTP_USER_NAME = "www";
 $JD_FTP_USER_PASS = "www";
 
-$IDENT_ATTACH_FILE_PATH = "/storage/WEB_SYSTEM/INCIDENT/ATTACH";
-
-$SYSTEM_MANAGER_MAIL_ADDR = array("osanai-satoshi@metawater.co.jp");
+$SYSTEM_MANAGER_MAIL_ADDR = array("s.hayato@adf.co.jp");
 
 // ファイルダウンロード処理(ファイルサーバ) 2008.03.11
-$COMMON_FILE_DOWNLOAD_URL = "http://w50h-bnvfs.metawater.co.jp/FS/file_download.php";
+$COMMON_FILE_DOWNLOAD_URL = "http://172.20.108.35/FS/file_download.php";
 // PDFファイルダウンロード処理(ファイルサーバ) 2011.08.26
-$COMMON_PDF_FILE_DOWNLOAD_URL = "http://w50h-bnvfs.metawater.co.jp/FS/file_download_pdf.php";
+$COMMON_PDF_FILE_DOWNLOAD_URL = "http://172.20.108.35/FS/file_download_pdf.php";
 
 //	問合せシステムのＩＤ
 $CMN_QA_SYS_ID = "100";
@@ -127,22 +129,34 @@ $ARR_PRO_GYOMUPTN_NO = array(
 $PRO_MAILING_USER = "ml00042";
 
 //ファイルDD対応
-//$COMMON_CODEBASE_URL = "http://10.197.23.2/FILEDD/";
-$COMMON_CODEBASE_URL = "http://w50h-bnvfs.metawater.co.jp/FILEDD/";
-//$COMMON_FILEDD_DOWN_URL = "http://10.197.23.2/FILEDD/filedd_download.php";
-$COMMON_FILEDD_DOWN_URL = "http://w50h-bnvfs.metawater.co.jp/FILEDD/filedd_download.php";
+//$COMMON_CODEBASE_URL = "http://172.20.108.35/FILEDD/";
+$COMMON_CODEBASE_URL = "http://172.20.108.35/FILEDD/";
+//$COMMON_FILEDD_DOWN_URL = "http://172.20.108.35/FILEDD/filedd_download.php";
+$COMMON_FILEDD_DOWN_URL = "http://172.20.108.35/FILEDD/filedd_download.php";
 $COMMON_CONVERT_FILEDD_PATH = "/storage/WEB_SYSTEM/FILEDD_TMP/";
-//$COMMON_ARCHIVE_URL = "http://10.197.23.2/FILEDD/FileDD.jar";
-$COMMON_ARCHIVE_URL = "http://w50h-bnvfs.metawater.co.jp/FILEDD/FileDD.jar";
-//$COMMON_APP_SEND_URL = "http://10.197.23.2";
-$COMMON_APP_SEND_URL = "http://w50h-bnvfs.metawater.co.jp";
+//$COMMON_ARCHIVE_URL = "http://172.20.108.35/FILEDD/FileDD.jar";
+$COMMON_ARCHIVE_URL = "http://172.20.108.35/FILEDD/FileDD.jar";
+//$COMMON_APP_SEND_URL = "http://172.20.108.35";
+$COMMON_APP_SEND_URL = "http://172.20.108.35";
 $COMMON_APP_SEND_PAGE = "/FILEDD/filedd_entry.php";
 
 //1：Javaアプレット、0：Jイニシエーター
+/*
+Java1.3.1
+$JAVA_APP_FLG = 131
+Java1.4.2
+$JAVA_APP_FLG = 142
+Java5
+$JAVA_APP_FLG = 5
+Java6
+$JAVA_APP_FLG = 6
+Java7
+$JAVA_APP_FLG = 7
+*/
 $JAVA_APP_FLG = 1;
 
 //写真管理機能用
-$COMMON_PHOTO_DISP_URL = "http://w50h-bnvfs.metawater.co.jp/PROJECT/";
+$COMMON_PHOTO_DISP_URL = "http://172.20.108.35/PROJECT/";
 
 //文言変更の定義
 $FWS_BUNSYO = "バインダー";	//2011.09.14 add 文書
@@ -154,7 +168,7 @@ $DEBUG_FLG = "0";
 
 //2013/12/12 add start
 //書類自動作成 ファイルサーバープログラムURL
-$COMMON_DOC_AUTO_FILEURL = "http://w50h-bnvfs.metawater.co.jp/PROJECT/DOCAUTO/";
+$COMMON_DOC_AUTO_FILEURL = "http://172.20.108.35/PROJECT/DOCAUTO/";
 //書類自動作成 紐付け無しDB格納FWBSコード
 $DOC_AUTO_FWBSNULL = "XXXXX";
 //書類自動作成 ＪＳ判断条件[日本下水道事業団]BNAVI_PJ_EXT:顧客番号：0004135***
