@@ -481,7 +481,7 @@ SQL_INCIDENT_INFO;
         }   
         
         $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " ORDER BY TO_CHAR(INCIDENT.CALL_START_DATE,'yyyy/mm/dd hh24:mi:ss') DESC NULLS LAST ";
-               
+        
         $MultiExecSql = new MultiExecSql();
         $sqlResult = array();
         $MultiExecSql->getResultData($SQL_INCIDENT_INFO, $sqlResult);
