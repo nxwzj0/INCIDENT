@@ -5,18 +5,21 @@
 	ini_set("memory_limit", -1);
 	
 	// PHPExcel用ディレクトリ
-	$COMMON_PHPEXCEL_PATH = "/opt/php5/lib/php/PHPExcel/Classes";
+	$COMMON_PHPEXCEL_PATH = "PHPExcel";
 
 	require_once("{$COMMON_PHPEXCEL_PATH}/PHPExcel.php");
 	require_once("{$COMMON_PHPEXCEL_PATH}/PHPExcel/IOFactory.php");
 	require_once("{$COMMON_PHPEXCEL_PATH}/PHPExcel/RichText.php");
+        require_once('./action/CommonAction.php');
+        
+        $common = new CommonAction();
 
 	// テンプレート
-	$templatePath = $COMMON_HOME_PATH. "/PHPExcel_sample.xlsx";
+	$templatePath =  "PHPExcel_sample.xlsx";
 	// 出力ファイル名
-	$filename = "インシデント一覧.xlsx";
+	$filename = "test.xlsx";
 	// タイトル
-	$title = "インシデント一覧";
+	$title = "INCIDENT List";
 
 	// マルチブラウザ対応
 	$ua = $_SERVER["HTTP_USER_AGENT"];
@@ -137,18 +140,38 @@ sql;
 	// Excel出力
 	$writer = PHPExcel_IOFactory::createWriter($excel, "Excel2007");
 
+        header("Content-Type:application/force-download");
+        header("Content-Type:application/octet-stream");
+        header("Content-Type:application/download");
+        header("Content-Transfer-Encoding:binary");
+        header("Last-Modified:".gmdate("D,dMYH:i:s")."GMT");
+        header("Cache-Control:must-revalidate,post-check=0,pre-check=0");
+        header("Pragma:no-cache");
 	header("Content-type: application/octet-stream");
 	if( preg_match("/Firefox/", $ua) ) {
 		header("Content-Disposition: attachment; filename*=utf-8'ja'$filename");
 	} else {
 		header("Content-Disposition: attachment; filename='$filename'");
 	}
-	mb_http_output("pass");
-	set_time_limit(0);
-	$writer->save("php://output");
+	//mb_http_output("pass");
+	//set_time_limit(0);
+//	$writer->save("php://output");
 
 	// 文字コード変換
 	function exCharset($str) {
 		return mb_convert_encoding($str, "UTF-8", "CP51932");
 	}
+        
+         function saveExcelToLocalFile($objWriter,$filename){  
+            // make sure you have permission to write to directory  
+            $filePath = 'FTP_TEMP/'.$filename;  
+            $objWriter->save($filePath);  
+            return $filePath;  
+        } 
+        
+        $objWriter = new PHPExcel_Writer_Excel2007($excel); 
+        $response = array();
+        $response[] = array("result" => true,"url"=>saveExcelToLocalFile($objWriter,$filename));
+        echo $common->returnAngularJSONP($response);
+        exit;
 ?>
