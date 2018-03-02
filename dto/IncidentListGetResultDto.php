@@ -13,9 +13,11 @@ require_once('./dto/CommonDto.php');
  * Class IncidentListGetResultDto
  *
  * @property IncidentDto[] $incidentList
+ * @property String $count
  */
 class IncidentListGetResultDto extends CommonDto{
     private $incidentList;
+    private $count;
 
     /**
      * @return IncidentListGetResultDto[]
@@ -43,4 +45,17 @@ class IncidentListGetResultDto extends CommonDto{
         $this->incidentList[] = $incidentDto;
     }
 
+    /**
+     * @return String
+     */
+    public function getCount() {
+        return $this->count;
+    }
+
+    /**
+     * @param String $count
+     */
+    public function setCount($count) {
+        $this->count = $count;
+    }
 }

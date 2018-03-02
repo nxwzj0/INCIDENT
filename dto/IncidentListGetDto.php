@@ -7,7 +7,7 @@
 //	修正履歴　　　　：
 //*****************************************************************************
 
-require_once('./dto/CommonDto.php');
+require_once('./dto/PagingDto.php');
 
 /**
  * Class IncidentListGetDto
@@ -100,7 +100,7 @@ require_once('./dto/CommonDto.php');
  * @property String $custTypeOther
  * @property String $condId
  */
-class IncidentListGetDto extends CommonDto {
+class IncidentListGetDto extends PagingDto {
 
     private $RelateFlg;
     private $keywordStr;

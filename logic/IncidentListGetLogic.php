@@ -166,6 +166,12 @@ class IncidentListGetLogic extends CommonLogic {
         $custType = $this->madeCheckboxCondtion($custType, $conditions, CUST_TYPE_VALUE, "custTypeOther");
         $conditions['custType'] = $custType;
         // 2018.01.09 Newtouch追加　end
+        
+        // ::: 2018.03.02 [#44] ページング修正：インシデント検索、インシデントモーダル Add Start newtouch
+        $conditions['pagingStart'] = $IncidentListGetDto->getPagingStart();
+        $conditions['pagingEnd'] = $IncidentListGetDto->getPagingEnd();
+        // ::: 2018.03.02 [#44] ページング修正：インシデント検索、インシデントモーダル Add End   newtouch
+
         try {
             // O_インシデントモデルを作成
             $OIdentTIncidentModel = new OIdentTIncidentModel();
@@ -174,9 +180,15 @@ class IncidentListGetLogic extends CommonLogic {
             if ($relateFlg == RELATE_FLG_ON) {
                 // インシデント情報、プロジェクト情報、MR2情報、事故クレーム情報、費用決裁申請情報を取得
                 $incidentDataAll = $OIdentTIncidentModel->getIncidentWithRel($conditions);
+                // ::: 2018.03.02 [#44] ページング修正：インシデント検索、インシデントモーダル Add Start newtouch
+                $incidentListCount = $OIdentTIncidentModel->getIncidentWithRelCount($conditions);
+                // ::: 2018.03.02 [#44] ページング修正：インシデント検索、インシデントモーダル Add End   newtouch
             } else {
                 // インシデント情報を取得
                 $incidentDataAll = $OIdentTIncidentModel->getIncident($conditions);
+                // ::: 2018.03.02 [#44] ページング修正：インシデント検索、インシデントモーダル Add Start newtouch
+                $incidentListCount = $OIdentTIncidentModel->getIncidentCount($conditions);
+                // ::: 2018.03.02 [#44] ページング修正：インシデント検索、インシデントモーダル Add End   newtouch
             }
         } catch (Exception $e) {
             // LOGIC結果　SQLエラー '1' をセット
@@ -400,6 +412,12 @@ class IncidentListGetLogic extends CommonLogic {
             // IncidentDto⇒IncidentGetResultDtoのセット
             $IncidentListGetResultDto->addIncidentList($IncidentDto);
         }
+
+        // ::: 2018.03.02 [#44] ページング修正：インシデント検索、インシデントモーダル Add Start newtouch
+        if ($incidentListCount) {
+            $IncidentListGetResultDto->setCount($incidentListCount["COUNT"]);
+        }
+        // ::: 2018.03.02 [#44] ページング修正：インシデント検索、インシデントモーダル Add End   newtouch
 
         // LOGIC結果　正常時 '0' をセット
         $IncidentListGetResultDto->setLogicResult(LOGIC_RESULT_SEIJOU);
