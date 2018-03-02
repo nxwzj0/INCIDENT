@@ -28,6 +28,10 @@ class IncidentListSearchConditionGetAction extends CommonAction {
         $IncidentListGetDto->setRelateFlg(TRUE);
         $IncidentListGetDto->setLogFlg(FALSE);
         $IncidentListGetDto->setCondId($condId);
+        // ::: 2018.03.02 [#44] ページング修正：インシデント検索、インシデントモーダル Add Start newtouch
+        $IncidentListGetDto->setPagingStart($P['pagingStart']);
+        $IncidentListGetDto->setPagingEnd($P['pagingEnd']);
+        // ::: 2018.03.02 [#44] ページング修正：インシデント検索、インシデントモーダル Add End   newtouch
 
         if($condId != CONDITION_NONE){
             // 検索条件を取得
@@ -319,7 +323,12 @@ class IncidentListSearchConditionGetAction extends CommonAction {
 
         // 戻り値の作成
         if ($eventResult && $eventResult->getLogicResult() == LOGIC_RESULT_SEIJOU) {
-            array_push($incidentListAry, array("result" => true));
+            // ::: 2018.03.02 [#44] ページング修正：インシデント検索、インシデントモーダル Del Start newtouch
+            // ::: array_push($incidentListAry, array("result" => true));
+            // ::: 2018.03.02 [#44] ページング修正：インシデント検索、インシデントモーダル Del End   newtouch
+            // ::: 2018.03.02 [#44] ページング修正：インシデント検索、インシデントモーダル Add Start newtouch
+            $incidentListAry[] = array("result" => true, "count" => $eventResult->getCount());
+            // ::: 2018.03.02 [#44] ページング修正：インシデント検索、インシデントモーダル Add End   newtouch
 
             if ($eventResult->getIncidentList() && is_array($eventResult->getIncidentList()) && count($eventResult->getIncidentList()) > 0) {
                 foreach ($eventResult->getIncidentList() as $incident) {
@@ -351,11 +360,21 @@ class IncidentListSearchConditionGetAction extends CommonAction {
                     $incidentAry["relateHiyo"] = $this->checkDataExistence($incidentRelateLinkInfo->getHiyoInfo());
 
                     // 1件分の情報をセット
-                    array_push($incidentListAry, $incidentAry);
+                    // ::: 2018.03.02 [#44] ページング修正：インシデント検索、インシデントモーダル Del Start newtouch
+                    // ::: array_push($incidentListAry, $incidentAry);
+                    // ::: 2018.03.02 [#44] ページング修正：インシデント検索、インシデントモーダル Del End   newtouch
+                    // ::: 2018.03.02 [#44] ページング修正：インシデント検索、インシデントモーダル Add Start newtouch
+                    $incidentListAry[] = $incidentAry;
+                    // ::: 2018.03.02 [#44] ページング修正：インシデント検索、インシデントモーダル Add End   newtouch
                 }
             }
         } else {
-            array_push($incidentListAry, array("result" => false));
+            // ::: 2018.03.02 [#44] ページング修正：インシデント検索、インシデントモーダル Del Start newtouch
+            // ::: array_push($incidentListAry, array("result" => false));
+            // ::: 2018.03.02 [#44] ページング修正：インシデント検索、インシデントモーダル Del End   newtouch
+            // ::: 2018.03.02 [#44] ページング修正：インシデント検索、インシデントモーダル Add Start newtouch
+            $incidentListAry[] = array("result" => false);
+            // ::: 2018.03.02 [#44] ページング修正：インシデント検索、インシデントモーダル Add End   newtouch
         }
 
         return $incidentListAry;
