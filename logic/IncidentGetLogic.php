@@ -188,7 +188,7 @@ class IncidentGetLogic extends CommonLogic {
                 // IdentTIncidentRelateUserModelを作成
                 $IdentTIncidentRelateUserModel = new IdentTIncidentRelateUserModel();
                 // インシデントメイン情報(IncidentMainDto)の関係者リスト(relateList)の取得
-                $incidentRelateUserData = $IdentTIncidentRelateUserModel->getByIncidentId($incidentId);
+                $incidentRelateUserData = $IdentTIncidentRelateUserModel->getByIncidentId($incidentId, DEL_FLG_SURVIVAL);
             } catch (Exception $e) {
                 // LOGIC結果　SQLエラー '1' をセット
                 $IncidentGetResultDto->setLogicResult(LOGIC_RESULT_SQL_ERROR);

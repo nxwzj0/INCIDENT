@@ -439,6 +439,13 @@ class IncidentMainDto extends CommonDto {
     }
 
     /**
+     * @param UserDto[] $relateList
+     */
+    public function setRelateList($relateList) {
+        $this->relateList = $relateList;
+    }
+
+    /**
      * @return String
      */
     public function getIncidentId() {

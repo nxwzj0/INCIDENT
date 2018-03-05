@@ -229,6 +229,19 @@ class IncidentSaveAction extends CommonAction {
         $IncidentMainDto->setProductGensyo($productGensyoCd);
         $IncidentMainDto->setProductStatus($productStatusCd);
 
+        // 関係者
+        $relateUserList = array();
+        $relateUserLength = $P['relateUserLength'];
+        for ($i = 0; $i < $relateUserLength; $i++) {
+            $relateUserDto = new UserDto();
+            $relateUserDto->setUserId($P['relateUserId' . $i]);
+            $relateUserDto->setUserNm($P['relateUserNm' . $i]);
+            $relateUserDto->setSectionCd($P['relateDeptCd' . $i]);
+            $relateUserDto->setSectionNm($P['relateDeptNm' . $i]);
+            $relateUserList[] = $relateUserDto;
+        }
+        $IncidentMainDto->setRelateList($relateUserList);
+
         $IncidentDto->setIncidentMainInfo($IncidentMainDto);
         $IncidentSaveDto->setIncidentInfo($IncidentDto);
 

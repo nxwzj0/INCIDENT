@@ -46,10 +46,14 @@ class RelateIncidentGetAction extends CommonAction {
             // ロジック処理が正常終了した場合
             array_push($relateIncidentAry, array("result" => true));
 
-            $relateIncidentKijiIdList = (array)$eventResult->getRelateIncidentKijiIdList();
+            $relateIncidentKijiIdList = (array)$eventResult->getRelateIncidentKijiIdList();// 機場Idの関連インシデント情報
             $relateIncidentKijiIdAry = array();
-            $relateIncidentCustIdList = (array)$eventResult->getRelateIncidentCustIdList();
+            $relateIncidentCustIdList = (array)$eventResult->getRelateIncidentCustIdList();// 顧客IDの関連インシデント情報
             $relateIncidentCustIdAry = array();
+            $relateIncidentKisyuKbnCdList = (array)$eventResult->getRelateIncidentKisyuKbnCdList();// 機種区分の関連インシデント情報
+            $relateIncidentKisyuKbnCdAry = array();
+            $relateIncidentProductList = (array)$eventResult->getRelateIncidentProductList();// 類似障害の関連インシデント情報(障害状況トリガー、障害状況頻度、障害状況現象、障害状況状態で)
+            $relateIncidentProductAry = array();
 
             // 機場Idの関連インシデント情報
             if ($relateIncidentKijiIdList) {
@@ -81,6 +85,38 @@ class RelateIncidentGetAction extends CommonAction {
                     array_push($relateIncidentCustIdAry, $tmp);
                 }
                 $relateIncidentAry['relateIncidentCustIdAry'] = $relateIncidentCustIdAry;
+            }
+
+            // 機種区分の関連インシデント情報
+            if ($relateIncidentKisyuKbnCdList) {
+                foreach ($relateIncidentKisyuKbnCdList as $kisyuKbnCdOne) {
+                    $tmp = array();
+                    $tmp["relateIncidentId"] = $kisyuKbnCdOne->getRelateIncidentId();
+                    $tmp["relateIncidentNo"] = $kisyuKbnCdOne->getRelateIncidentNo();
+                    $tmp["relateIncidentType"] = $kisyuKbnCdOne->getRelateIncidentType();
+                    $tmp["relateIncidentStartDateTime"] = $kisyuKbnCdOne->getRelateIncidentStartDateTime();
+                    $tmp["relateIncidentKijoNm"] = $kisyuKbnCdOne->getRelateIncidentKijoNm();
+                    $tmp["relateIncidentCustNm"] = $kisyuKbnCdOne->getRelateIncidentCustNm();
+                    $tmp["relateIncidentContent"] = $kisyuKbnCdOne->getRelateIncidentContent();
+                    array_push($relateIncidentKisyuKbnCdAry, $tmp);
+                }
+                $relateIncidentAry['relateIncidentKisyuKbnCdAry'] = $relateIncidentKisyuKbnCdAry;
+            }
+
+            // 類似障害の関連インシデント情報(障害状況トリガー、障害状況頻度、障害状況現象、障害状況状態で)
+            if ($relateIncidentProductList) {
+                foreach ($relateIncidentProductList as $productOne) {
+                    $tmp = array();
+                    $tmp["relateIncidentId"] = $productOne->getRelateIncidentId();
+                    $tmp["relateIncidentNo"] = $productOne->getRelateIncidentNo();
+                    $tmp["relateIncidentType"] = $productOne->getRelateIncidentType();
+                    $tmp["relateIncidentStartDateTime"] = $productOne->getRelateIncidentStartDateTime();
+                    $tmp["relateIncidentKijoNm"] = $productOne->getRelateIncidentKijoNm();
+                    $tmp["relateIncidentCustNm"] = $productOne->getRelateIncidentCustNm();
+                    $tmp["relateIncidentContent"] = $productOne->getRelateIncidentContent();
+                    array_push($relateIncidentProductAry, $tmp);
+                }
+                $relateIncidentAry['relateIncidentProductAry'] = $relateIncidentProductAry;
             }
 
         } else {

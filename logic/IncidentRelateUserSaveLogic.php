@@ -1,5 +1,4 @@
 <?php
-
 //*****************************************************************************
 //	システム名　　　：インシデント管理システム
 //	サブシステム名　：
@@ -42,8 +41,19 @@ class IncidentRelateUserSaveLogic extends CommonLogic {
         $conditions['loginSectionCd'] = $conditionDto->getInsSectionCd();
         $conditions['loginSectionNm'] = $conditionDto->getInsSectionNm();
 
-        // IDENT_T_SEARCH_CONDの削除処理
-        $resultFlg = $model->insert($conditions, $MultiExecSql);
+        // インシデント関係者のデータ重複チェック(削除済みも含む検索)
+        $relateUserOld = $model->getByIncidentIdAndUserId($conditionDto->getIncidentId(), $conditionDto->getRelateUserId(), null);
+
+        // 既存レコードがある（更新処理）
+        if ($relateUserOld != NULL) {
+            // 関係者の更新登録処理
+            $conditions['relateId'] = $relateUserOld[0]['RELATE_ID'];
+            $conditions['delFlg'] = DEL_FLG_SURVIVAL;
+            $resultFlg = $model->update($conditions, $MultiExecSql);
+        } else {
+            // 関係者の新規登録処理
+            $resultFlg = $model->insert($conditions, $MultiExecSql);
+        }
 
         // 削除処理成功判定フラグ FALSE
         if ($resultFlg == SAVE_FALSE) {

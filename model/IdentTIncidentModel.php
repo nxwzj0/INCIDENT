@@ -238,7 +238,7 @@ SQL_INCIDENT_INFO;
             SELECT
                 INCIDENT.INCIDENT_ID IN_INCIDENT_ID,
                 INCIDENT.INCIDENT_NO IN_INCIDENT_NO,
-                INCIDENT.INCIDENT_TYPE_CD IN_INCIDENT_TYPE_CD_CD,
+                INCIDENT.INCIDENT_TYPE_CD IN_INCIDENT_TYPE_CD,
                 TO_CHAR(INCIDENT.INCIDENT_START_DATETIME,'yyyy/mm/dd') IN_INCIDENT_START_DATETIME,
                 INCIDENT.KIJO_NM IN_KIJO_NM,
                 INCIDENT.CUST_NM IN_CUST_NM,
@@ -254,9 +254,42 @@ SQL_INCIDENT_INFO;
             $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.KIJO_ID = " . "'" . $conditions['kijoId'] . "'";
         }
 
-        // 顧客名
+        // 顧客ID
         if ($conditions['custId'] != null) {
             $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.CUST_ID = " . "'" . $conditions['custId'] . "'";
+        }
+
+        // 機種区分コード
+        if ($conditions['KisyuKbnCd'] != null) {
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND INCIDENT.KISYU_KBN_CD = " . "'" . $conditions['KisyuKbnCd'] . "'";
+        }
+
+        // 類似障害(障害状況トリガー、障害状況頻度、障害状況現象、障害状況状態で)
+        if ($conditions['productTrigger'] != null || $conditions['productHindo'] != null ||
+            $conditions['productGensyo'] != null || $conditions['productStatus'] != null) {
+            
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . " AND (";
+                        
+            if ($conditions['productTrigger'] != null) {//障害状況トリガー
+                $SQL_PRODUCT = $SQL_PRODUCT . " OR INCIDENT.PRODUCT_TRIGGER = " . "'" . $conditions['productTrigger'] . "'";
+            }
+
+            if ($conditions['productHindo'] != null) {//障害状況頻度
+                $SQL_PRODUCT = $SQL_PRODUCT . " OR INCIDENT.PRODUCT_HINDO = " . "'" . $conditions['productHindo'] . "'";
+            }
+
+            if ($conditions['productGensyo'] != null) {//障害状況現象
+                $SQL_PRODUCT = $SQL_PRODUCT . " OR INCIDENT.PRODUCT_GENSYO = " . "'" . $conditions['productGensyo'] . "'";
+            }
+
+            if ($conditions['productStatus'] != null) {//障害状況状態
+                $SQL_PRODUCT = $SQL_PRODUCT . " OR INCIDENT.PRODUCT_STATUS = " . "'" . $conditions['productStatus'] . "'";
+            }
+
+            $SQL_PRODUCT = substr($SQL_PRODUCT, 4);
+ 
+            $SQL_INCIDENT_INFO = $SQL_INCIDENT_INFO . $SQL_PRODUCT . " )";
+            
         }
 
         // 除外するインシデントID

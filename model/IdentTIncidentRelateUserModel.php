@@ -1,5 +1,4 @@
 <?php
-
 //*****************************************************************************
 //	システム名　　　：インシデント管理システム
 //	サブシステム名　：
@@ -14,7 +13,7 @@ require_once("./model/CommonModel.php");
 
 class IdentTIncidentRelateUserModel extends CommonModel {
 
-    public function getByIncidentId($incidentId) {
+    public function getByIncidentId($incidentId, $delFlg) {
         $SQL_RELATE_USER_INFO = <<< SQL_RELATE_USER_INFO
                 SELECT
                     RELATE_ID,
@@ -27,10 +26,12 @@ class IdentTIncidentRelateUserModel extends CommonModel {
                 FROM
                     IDENT_T_INCIDENT_RELATE_USER
                 WHERE
-                    DEL_FLG = '0'
-                AND
                     INCIDENT_ID = '$incidentId'
 SQL_RELATE_USER_INFO;
+
+        if ($delFlg != null) {
+            $SQL_RELATE_USER_INFO = $SQL_RELATE_USER_INFO . " AND DEL_FLG = '" . $delFlg . "' ";
+        }
 
         $MultiExecSql = new MultiExecSql();
         $sqlResult = array();
@@ -96,7 +97,10 @@ SQL_RELATE_USER_INFO;
         if ($conditions['loginSectionNm'] != null) {
             $SQL_RELATE_USER_INFO = $SQL_RELATE_USER_INFO . " UPD_SECTION_NAME = '{$conditions['loginSectionNm']}',";
         }
-        $SQL_RELATE_USER_INFO = $SQL_RELATE_USER_INFO . " UPD_DATE = SYSDATE, DEL_FLG = '0' WHERE RELATE_USER_ID = '{$conditions['userId']}'";
+        if ($conditions['delFlg'] != null) {
+            $SQL_RELATE_USER_INFO = $SQL_RELATE_USER_INFO . " DEL_FLG = '{$conditions['delFlg']}',";
+        }
+        $SQL_RELATE_USER_INFO = $SQL_RELATE_USER_INFO . " UPD_DATE = SYSDATE WHERE RELATE_ID = '{$conditions['relateId']}'";
 
         try {
             $MultiExecSql->execute($SQL_RELATE_USER_INFO, '');
@@ -150,7 +154,7 @@ SQL_RELATE_USER_INFO;
         return SAVE_TRUE;
     }
 
-        public function delete($MultiExecSql, $conditions) {
+    public function delete($MultiExecSql, $conditions) {
         $SQL_INCIDENT_INFO = <<< SQL_INCIDENT_INFO
                 UPDATE
                     IDENT_T_INCIDENT_RELATE_USER 
@@ -173,7 +177,7 @@ SQL_INCIDENT_INFO;
         }
         return SAVE_TRUE;
     }
-    
+
     public function check($incidentId, $deptCd, $userId) {
         $SQL_INCIDENT_INFO = <<< SQL_INCIDENT_INFO
                 SELECT
@@ -191,6 +195,32 @@ SQL_INCIDENT_INFO;
         $sqlResult = array();
         $MultiExecSql->getResultData($SQL_INCIDENT_INFO, $sqlResult);
         return $sqlResult[0]["RESULT"];
+    }
+
+    public function getByIncidentIdAndUserId($incidentId, $userId, $delFlg = null) {
+        $SQL_RELATE_USER_INFO = <<< SQL_RELATE_USER_INFO
+                SELECT
+                    RELATE_ID,
+                    INCIDENT_ID,
+                    RELATE_USER_ID,
+                    RELATE_USER_NM,
+                    RELATE_USER_SECTION_CD,
+                    RELATE_USER_SECTION_NM,
+                    TO_CHAR(KIDOKU_DATE,'yyyy/mm/dd') AS KIDOKU_DATE
+                FROM
+                    IDENT_T_INCIDENT_RELATE_USER
+                WHERE
+                    INCIDENT_ID = '$incidentId'
+                    AND RELATE_USER_ID = '$userId'
+SQL_RELATE_USER_INFO;
+        if ($delFlg != null) {
+            $SQL_RELATE_USER_INFO = $SQL_RELATE_USER_INFO . " AND DEL_FLG = '" . $delFlg . "' ";
+        }
+
+        $MultiExecSql = new MultiExecSql();
+        $sqlResult = array();
+        $MultiExecSql->getResultData($SQL_RELATE_USER_INFO, $sqlResult);
+        return $sqlResult;
     }
 
 // ::: 2018.02.02 [#34] 関係者の既読処理 Add Start newtouch
@@ -256,6 +286,6 @@ SQL_INCIDENT_INFO;
         }
         return SAVE_TRUE;
     }
-// ::: 2018.02.02 [#34] 関係者の既読処理 Add End   newtouch
 
+// ::: 2018.02.02 [#34] 関係者の既読処理 Add End   newtouch
 }

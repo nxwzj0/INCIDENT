@@ -244,24 +244,25 @@ class IncidentSaveLogic extends CommonLogic {
                 $relateUserArray['sectionCd'] = $relateUser->getSectionCd();
                 $relateUserArray['sectionNm'] = $relateUser->getSectionNm();
                 if ($relateUserArray['userId'] != null) {
-                    array_push($relateUserArrayNew, $relateUserArray);
+                    $relateUserArrayNew[] = $relateUserArray;
                 }
             }
 
             // 既存関係者情報を取得
-            $RelateUserOld = $IdentTIncidentRelateUserModel->getByIncidentId($incidentId);
+            $RelateUserOld = $IdentTIncidentRelateUserModel->getByIncidentId($incidentId, null);
 
             // 既存インシデント関係者のデータArray
             $relateUserArrayOld = array();
             foreach ($RelateUserOld as $one) {
                 $relateUserArray = array();
 
+                $relateUserArray['relateId'] = $one['RELATE_ID'];
                 $relateUserArray['userId'] = $one['RELATE_USER_ID'];
                 $relateUserArray['userNm'] = $one['RELATE_USER_NM'];
                 $relateUserArray['sectionCd'] = $one['RELATE_USER_SECTION_CD'];
                 $relateUserArray['sectionNm'] = $one['RELATE_USER_SECTION_NM'];
                 if ($relateUserArray['userId'] != null) {
-                    array_push($relateUserArrayOld, $relateUserArray);
+                    $relateUserArrayOld[] = $relateUserArray;
                 }
             }
 
@@ -274,20 +275,25 @@ class IncidentSaveLogic extends CommonLogic {
             $relateUserUpdateFlg = RELATE_USER_FLG_FALSE;
             //　関係者情報の配列（更新用）　と　関係者情報の配列（登録用）　をセット値
             foreach ($relateUserArrayNew as $new) {
+                $relateId = null;
                 foreach ($relateUserArrayOld as $old) {
                     if ($new['userId'] == $old['userId']) {
                         $relateUserUpdateFlg = RELATE_USER_FLG_TRUE;
+                        $relateId = $old['relateId'];
                     }
                 }
+
+                $new['relateId'] = $relateId;
                 $new['loginUserId'] = $incidentDataArrayNew['loginUserId'];
                 $new['loginUserNm'] = $incidentDataArrayNew['loginUserNm'];
                 $new['loginSectionCd'] = $incidentDataArrayNew['loginSectionCd'];
                 $new['loginSectionNm'] = $incidentDataArrayNew['loginSectionNm'];
+                $new['delFlg'] = DEL_FLG_SURVIVAL;
                 if ($relateUserUpdateFlg == true) {
-                    array_push($relateUserArrayUpdate, $new);
+                    $relateUserArrayUpdate[] = $new;
                 } else {
                     $new['incidentId'] = $incidentDataArrayNew['incidentId'];
-                    array_push($relateUserArrayInsert, $new);
+                    $relateUserArrayInsert[] = $new;
                 }
                 $relateUserUpdateFlg = RELATE_USER_FLG_FALSE;
             }
